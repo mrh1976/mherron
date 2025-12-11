@@ -1089,10 +1089,26 @@ export default function Index() {
 
             {/* Contact Form */}
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                console.log("Form submitted:", formData);
-                setFormData({ name: "", email: "" });
+                try {
+                  const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                  });
+                  if (response.ok) {
+                    setFormData({ name: "", email: "" });
+                    alert("Message sent successfully!");
+                  } else {
+                    alert("Failed to send message. Please try again.");
+                  }
+                } catch (error) {
+                  alert("Error sending message. Please try again.");
+                  console.error(error);
+                }
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
