@@ -814,7 +814,7 @@ export default function Index() {
                 </div>
 
                 {/* New England Patriots */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406"
                     alt="New England Patriots"
@@ -823,7 +823,7 @@ export default function Index() {
                 </div>
 
                 {/* State Street */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458"
                     alt="State Street"
@@ -832,7 +832,7 @@ export default function Index() {
                 </div>
 
                 {/* United Airlines */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484"
                     alt="United Airlines"
@@ -841,7 +841,7 @@ export default function Index() {
                 </div>
 
                 {/* Samsung */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502"
                     alt="Samsung"
@@ -850,7 +850,7 @@ export default function Index() {
                 </div>
 
                 {/* Tiffany & Co */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490"
                     alt="Tiffany & Co"
@@ -859,7 +859,7 @@ export default function Index() {
                 </div>
 
                 {/* AT&T */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436"
                     alt="AT&T"
@@ -868,7 +868,7 @@ export default function Index() {
                 </div>
 
                 {/* Disney */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442"
                     alt="Disney"
@@ -877,7 +877,7 @@ export default function Index() {
                 </div>
 
                 {/* Bloomberg */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488"
                     alt="Bloomberg"
@@ -886,7 +886,7 @@ export default function Index() {
                 </div>
 
                 {/* Google */}
-                <div className="flex items-center justify-center h-20 w-full">
+                <div className="flex items-center justify-center h-12 w-12">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404"
                     alt="Google"
