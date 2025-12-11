@@ -86,7 +86,7 @@ export default function Index() {
                 <span className="text-gray-600">Quantifiable ROI<span className="text-orange">.</span></span>
               </h1>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-16 lg:mt-96">
+              <div className="flex flex-col sm:flex-row gap-3 mb-16">
                 <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
                   Let's Chat
                 </button>
