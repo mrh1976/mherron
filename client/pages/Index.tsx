@@ -12,6 +12,7 @@ const projectModals = Array.from({ length: 12 }, (_, i) => ({
 
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
+  const [formData, setFormData] = useState({ name: "", email: "" });
 
   return (
     <div className="min-h-screen bg-white">
