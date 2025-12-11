@@ -214,7 +214,7 @@ export default function Index() {
             <div className="lg:col-span-2 space-y-12 divide-y divide-gray-200">
               {/* Kadena */}
               <div className="pt-12 first:pt-0">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9394984ab56d49318277639d40031b24?format=webp&width=800"
                     alt="Kadena"
@@ -282,7 +282,7 @@ export default function Index() {
 
               {/* Chain */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc09e204150174a489ae08ab32725d764?format=webp&width=800"
                     alt="Chain"
@@ -335,7 +335,7 @@ export default function Index() {
 
               {/* Lukka */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda5358d50e26487d909c74e5402762fa?format=webp&width=800"
                     alt="Lukka"
@@ -389,7 +389,7 @@ export default function Index() {
 
               {/* Work & Co */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/f9a952caa622f1b34ebb2e5d1217b5d022627766?width=266"
                     alt="Work & Co"
@@ -436,7 +436,7 @@ export default function Index() {
 
               {/* MCS Consulting */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/364cdce97b6a21af5a17e8ed3fa80147b0efa0db?width=430"
                     alt="MCS Consulting"
@@ -485,7 +485,7 @@ export default function Index() {
 
               {/* US Cellular */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/da9ede529f3b039e3f7e90e2dcb5f2928ac1c616?width=366"
                     alt="US Cellular"
@@ -541,7 +541,7 @@ export default function Index() {
 
               {/* SOLO */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
                     alt="SOLO"
@@ -600,7 +600,7 @@ export default function Index() {
 
               {/* XFO */}
               <div className="pt-12">
-                <div className="h-10 w-40 mb-6 flex items-center">
+                <div className="h-14 w-56 mb-6 flex items-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/93aedf901d177a1302e95a4cd88df3b642450477?width=286"
                     alt="XFO"
