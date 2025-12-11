@@ -803,7 +803,7 @@ export default function Index() {
 
             {/* Right Column - Company Logos Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 gap-x-3 gap-y-8 items-center justify-items-center">
+              <div className="grid grid-cols-2 gap-x-1 gap-y-8 items-center justify-items-center">
                 {/* H&R Block */}
                 <div className="flex items-center justify-center h-20 w-full">
                   <img
