@@ -1,6 +1,17 @@
 import { useState } from "react";
 
+const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+const projectModals = Array.from({ length: 12 }, (_, i) => ({
+  id: i + 1,
+  title: "Name",
+  description: loremIpsum,
+  videoId: "40Y-DL20UGg",
+}));
+
 export default function Index() {
+  const [activeModal, setActiveModal] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header Navigation */}
