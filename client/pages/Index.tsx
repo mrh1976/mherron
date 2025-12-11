@@ -478,7 +478,7 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/da9ede529f3b039e3f7e90e2dcb5f2928ac1c616?width=366"
                   alt="US Cellular"
-                  className="h-10 mb-6"
+                  className="h-10 w-auto max-w-[200px] object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Global Head of Marketing{" "}
