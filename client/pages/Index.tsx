@@ -24,7 +24,7 @@ export default function Index() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/42415debce8e00ddf92bfd6b5bede46b12554bf6?width=512"
               alt="Mike Herron"
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
@@ -32,24 +32,24 @@ export default function Index() {
           <nav className="hidden md:flex items-center gap-16">
             <a
               href="#about"
-              className="text-gray-900 font-medium text-sm transition relative group"
+              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               About
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </a>
             <a
               href="#resume"
-              className="text-gray-900 font-medium text-sm transition relative group"
+              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               Resume
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </a>
             <a
               href="#contact"
-              className="text-gray-900 font-medium text-sm transition relative group"
+              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </a>
           </nav>
 
@@ -59,10 +59,10 @@ export default function Index() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 hover:text-orange transition"
+              className="text-gray-900 hover:text-[#0077b5] transition"
               aria-label="LinkedIn"
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
               </svg>
             </a>
@@ -89,9 +89,6 @@ export default function Index() {
               <div className="flex flex-col sm:flex-row gap-3 mb-16">
                 <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
                   Let's Chat
-                </button>
-                <button className="border border-gray-900 hover:bg-gray-50 text-gray-900 px-6 py-2 rounded-full font-medium text-sm transition">
-                  Services
                 </button>
               </div>
             </div>
