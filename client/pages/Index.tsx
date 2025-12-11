@@ -96,7 +96,7 @@ export default function Index() {
               </div>
 
               {/* Want to learn more section */}
-              <div className="space-y-4 mt-52 flex flex-col items-end">
+              <div className="space-y-4 mt-57 flex flex-col items-end">
                 <h3 className="text-2xl font-bold text-gray-900">
                   Want to learn more<span className="text-orange">?</span>
                 </h3>
@@ -116,7 +116,7 @@ export default function Index() {
               />
 
               {/* Newsletter Card - positioned to overlap */}
-              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-36 relative z-10 shadow-lg">
+              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-31 relative z-10 shadow-lg">
                 {/* Logo/Icon */}
                 <div className="flex-shrink-0 w-24 h-24">
                   <img
