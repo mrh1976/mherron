@@ -1124,18 +1124,9 @@ export default function Index() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            {/* Left Column - Logo */}
-            <div className="flex items-center justify-center md:justify-start">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/dc7288d32ef8e770c7e38a0ca30aecce0066b49f?width=478"
-                alt="Mike Herron"
-                className="h-16 w-auto"
-              />
-            </div>
-
-            {/* Center Column - Disclaimer */}
-            <div className="text-center text-sm text-gray-400 leading-relaxed">
+          {/* Disclaimer - Full Width */}
+          <div className="mb-12">
+            <div className="text-sm text-gray-400 leading-relaxed">
               <p>
                 All trademarks, logos, and brand names displayed on this website
                 are the property of their respective owners. They are used here
@@ -1149,13 +1140,21 @@ export default function Index() {
                 experience.
               </p>
             </div>
+          </div>
 
-            {/* Right Column - Copyright */}
-            <div className="flex items-center justify-center md:justify-end">
-              <p className="text-white text-base font-medium">
-                ©2026 Michael Herron LLC
-              </p>
-            </div>
+          {/* Logo and Copyright - Bottom Row */}
+          <div className="flex items-center justify-between mb-12">
+            {/* Left - Logo */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/dc7288d32ef8e770c7e38a0ca30aecce0066b49f?width=478"
+              alt="Mike Herron"
+              className="h-16 w-auto"
+            />
+
+            {/* Right - Copyright */}
+            <p className="text-white text-base font-medium">
+              ©2026 Michael Herron LLC
+            </p>
           </div>
 
           {/* Design Credit */}
