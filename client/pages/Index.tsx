@@ -75,7 +75,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Content */}
-            <div className="flex flex-col justify-start mt-16">
+            <div className="flex flex-col justify-start mt-32">
               <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
