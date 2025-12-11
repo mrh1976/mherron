@@ -783,7 +783,7 @@ export default function Index() {
               </div>
 
               {/* Right Column - Video */}
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-start">
                 <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                   <iframe
                     width="100%"
