@@ -73,45 +73,10 @@ export default function Index() {
       {/* Hero Section with Profile Image */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4">
-          <div className="relative">
-            {/* Right Content - Profile Image and Newsletter Card */}
-            <div className="relative flex flex-col items-start justify-start">
-              {/* Profile Image */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
-                alt="Mike Herron"
-                className="w-full max-w-md lg:max-w-lg object-cover mb-8"
-              />
-
-              {/* Newsletter Card - positioned to overlap */}
-              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-32 relative z-10 shadow-lg">
-                {/* Logo/Icon */}
-                <div className="flex-shrink-0 w-24 h-24">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
-                    alt="Dear Founders Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-
-                {/* Text Content */}
-                <div className="flex-1">
-                  <div className="text-orange text-xs font-semibold tracking-wider mb-1">
-                    LINKEDIN NEWSLETTER
-                  </div>
-                  <h3 className="text-white text-3xl font-bold mb-1">
-                    Dear Founders
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    Marketing clarity for the modern entrepreneur
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Left Content - Overlaid on Image */}
-            <div className="absolute inset-0 flex flex-col justify-start mt-32 lg:justify-center lg:max-w-lg pointer-events-none">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-none mb-8 pointer-events-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+            {/* Left Content */}
+            <div className="flex flex-col justify-start mt-32">
+              <h1 className="text-4xl lg:text-5xl font-bold leading-snug mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
