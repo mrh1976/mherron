@@ -70,7 +70,7 @@ export default function Index() {
           {/* LinkedIn Icon */}
           <div className="flex items-center">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mherron54/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-900 hover:text-[#0077b5] transition"
