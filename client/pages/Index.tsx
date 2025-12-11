@@ -575,13 +575,137 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Column - Project Grid Image */}
+            {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=2762"
-                alt="Campaign examples and projects"
-                className="w-full h-auto object-cover rounded-lg"
-              />
+              <div className="grid grid-cols-4 gap-4 auto-rows-max">
+                {/* US Cellular */}
+                <div className="col-span-1 row-span-2">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=690"
+                      alt="US Cellular project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Campaign */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Campaign project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* H&R Block */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="H&R Block project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Lukka */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Lukka project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Lukka Dark */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Lukka project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Uniswap */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Uniswap project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Chain Wallet */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Chain Wallet project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Helmet */}
+                <div className="col-span-1 row-span-2">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=690"
+                      alt="Football helmet project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Miami Heat */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Miami Heat project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Creative Fashion */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Creative fashion project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Black */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-900 aspect-square rounded-lg overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
+                      alt="Dark project"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Chainweb EVM */}
+                <div className="col-span-1 row-span-1">
+                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <p className="text-gray-600 text-sm font-medium text-center px-4">Chainweb EVM</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
