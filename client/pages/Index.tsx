@@ -119,11 +119,12 @@ export default function Index() {
               {/* Newsletter Card - positioned to overlap */}
               <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-12 relative z-10 shadow-lg">
                 {/* Logo/Icon */}
-                <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-orange to-orange/80 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-white font-bold text-2xl">Df</div>
-                    <div className="text-white/60 text-xs mt-1">Marketing</div>
-                  </div>
+                <div className="flex-shrink-0 w-24 h-24">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
+                    alt="Dear Founders Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Text Content */}
