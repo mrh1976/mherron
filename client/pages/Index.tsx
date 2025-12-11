@@ -147,7 +147,7 @@ export default function Index() {
       {/* About Me Section */}
       <section id="about" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Left Column - Title and Subtitle */}
             <div className="flex flex-col gap-8">
               <h2 className="text-5xl lg:text-5xl font-medium">
@@ -161,7 +161,7 @@ export default function Index() {
             </div>
 
             {/* Right Column - Bio Content */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 lg:col-span-2">
               <p className="text-gray-900 text-base leading-relaxed">
                 I am a lifelong Chicagoan, a husband, and a father of four, and
                 I have spent my entire career building, leading, and scaling
