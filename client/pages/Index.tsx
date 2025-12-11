@@ -105,6 +105,16 @@ export default function Index() {
                 </button>
               </div>
             </div>
+
+            {/* Right Content - Profile Image */}
+            <div className="relative flex flex-col items-start justify-start">
+              {/* Profile Image */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
+                alt="Mike Herron"
+                className="w-full max-w-md lg:max-w-lg object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
