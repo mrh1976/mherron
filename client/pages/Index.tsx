@@ -70,13 +70,19 @@ export default function Index() {
         </div>
       </header>
 
-      {/* Hero Section with Profile Image */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+      {/* Hero Section with Profile Image as Background */}
+      <section
+        className="relative bg-cover bg-center bg-no-repeat py-24 lg:py-40"
+        style={{
+          backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1200')"
+        }}
+      >
+        <div className="absolute inset-0 bg-white/10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl">
             {/* Left Content */}
-            <div className="flex flex-col justify-start mt-32">
-              <h1 className="text-4xl lg:text-5xl font-bold leading-snug mb-8">
+            <div className="flex flex-col justify-start">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
