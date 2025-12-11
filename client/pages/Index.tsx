@@ -390,6 +390,173 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Worked With Section */}
+      <section id="worked-with" className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            {/* Left Column - Title, Description, and Notable Companies */}
+            <div className="flex flex-col gap-12">
+              {/* Title and Description */}
+              <div className="flex flex-col gap-6">
+                <h2 className="text-5xl lg:text-5xl font-medium">
+                  <span className="text-gray-900">Worked with</span>
+                  <span className="text-orange">.</span>
+                </h2>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  I have had the privilege of working with some of the biggest and most influential brands in the world. These partnerships brought me into conversations that shaped global sports, luxury, technology, and consumer culture, and gave me the opportunity to help launch products, tell powerful stories, and create marketing that delivers real business results.
+                </p>
+              </div>
+
+              {/* Other Notable Companies */}
+              <div className="flex flex-col gap-4">
+                <h3 className="text-gray-900 text-base font-medium">Other Notable Companies:</h3>
+                <div className="grid grid-cols-3 gap-6 sm:gap-8">
+                  {/* Column 1 */}
+                  <div className="flex flex-col gap-3">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Formula 1<br />
+                      Formula E<br />
+                      State Street<br />
+                      Blackrock<br />
+                      S&P<br />
+                      Choice Hotels<br />
+                      New England Patriots<br />
+                      Miami Heat<br />
+                      Chicago White Sox
+                    </p>
+                  </div>
+
+                  {/* Column 2 */}
+                  <div className="flex flex-col gap-3">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Zurich<br />
+                      Nintendo<br />
+                      Lucasfilms<br />
+                      CAA<br />
+                      MLB<br />
+                      NBA<br />
+                      NCAA<br />
+                      NFL<br />
+                      DJI
+                    </p>
+                  </div>
+
+                  {/* Column 3 */}
+                  <div className="flex flex-col gap-3">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      SummerFest<br />
+                      Facebook<br />
+                      Twitter<br />
+                      MasterCard<br />
+                      Yuga Labs<br />
+                      Uniswap<br />
+                      Garmin<br />
+                      NCAA<br />
+                      NFL
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Company Logos Grid */}
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-10 items-center justify-items-center">
+                {/* H&R Block */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406"
+                    alt="H&R Block"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* New England Patriots */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406"
+                    alt="New England Patriots"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* State Street */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458"
+                    alt="State Street"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* United Airlines */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484"
+                    alt="United Airlines"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* Samsung */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502"
+                    alt="Samsung"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* Tiffany & Co */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490"
+                    alt="Tiffany & Co"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* AT&T */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436"
+                    alt="AT&T"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* Disney */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442"
+                    alt="Disney"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* Bloomberg */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488"
+                    alt="Bloomberg"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+
+                {/* Google */}
+                <div className="flex items-center justify-center h-28 w-full">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404"
+                    alt="Google"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
