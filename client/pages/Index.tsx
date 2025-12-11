@@ -589,7 +589,7 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/93aedf901d177a1302e95a4cd88df3b642450477?width=286"
                   alt="XFO"
-                  className="h-10 mb-6"
+                  className="h-10 w-auto max-w-[200px] object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Partner{" "}
