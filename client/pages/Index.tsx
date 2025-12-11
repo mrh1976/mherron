@@ -805,7 +805,7 @@ export default function Index() {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-4 gap-x-6 gap-y-8 items-center justify-items-center">
                 {/* H&R Block */}
-                <div className="flex items-center justify-center h-32 w-full">
+                <div className="flex items-center justify-center h-20 w-full">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406"
                     alt="H&R Block"
