@@ -56,10 +56,10 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-white py-12 sm:py-20">
+      <section className="bg-white py-12 sm:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="order-2 lg:order-1">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center">
+            <div className="order-2 lg:order-1 z-10">
               <h1 className="text-5xl sm:text-6xl font-bold leading-tight mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
@@ -79,14 +79,12 @@ export default function Index() {
                 </button>
               </div>
             </div>
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/92d0abb246b5692237e32af1bd0d4710c3895465?width=2096"
-                  alt="Mike Herron"
-                  className="w-full max-w-md rounded-lg shadow-lg"
-                />
-              </div>
+            <div className="order-1 lg:order-2 flex justify-end -mr-8 lg:-mr-20">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/92d0abb246b5692237e32af1bd0d4710c3895465?width=2096"
+                alt="Mike Herron"
+                className="w-full max-w-2xl lg:max-w-3xl object-cover"
+              />
             </div>
           </div>
         </div>
