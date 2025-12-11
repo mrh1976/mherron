@@ -331,6 +331,11 @@ export default function Index() {
 
               {/* Lukka */}
               <div className="pt-12">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda5358d50e26487d909c74e5402762fa?format=webp&width=800"
+                  alt="Lukka"
+                  className="h-10 mb-6"
+                />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Global Head of Marketing{" "}
                   <span className="text-gray-600 font-normal">
