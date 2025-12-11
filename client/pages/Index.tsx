@@ -78,11 +78,11 @@ export default function Index() {
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-2xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex items-center">
+          <div className="max-w-2xl py-16">
             {/* Left Content */}
             <div className="flex flex-col justify-start">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
