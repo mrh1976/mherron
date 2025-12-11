@@ -112,7 +112,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
                 alt="Mike Herron"
-                className="w-full max-w-md lg:max-w-lg object-cover rounded-lg"
+                className="w-full max-w-lg lg:max-w-xl object-cover rounded-lg"
               />
             </div>
           </div>
