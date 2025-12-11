@@ -239,7 +239,7 @@ export default function Index() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9394984ab56d49318277639d40031b24?format=webp&width=800"
                   alt="Kadena"
-                  className="h-14 object-contain mb-6"
+                  className="h-14 object-contain mb-6 w-auto"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Chief Marketing Officer{" "}
