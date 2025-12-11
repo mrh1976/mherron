@@ -35,21 +35,21 @@ export default function Index() {
               className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               About
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
             </a>
             <a
               href="#resume"
               className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               Resume
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
             </a>
             <a
               href="#contact"
               className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
             </a>
           </nav>
 
