@@ -557,6 +557,35 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Worked On Section */}
+      <section id="worked-on" className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+            {/* Left Column - Title and Description */}
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6">
+                <h2 className="text-5xl lg:text-5xl font-medium">
+                  <span className="text-gray-900">Worked on</span>
+                  <span className="text-orange">.</span>
+                </h2>
+                <p className="text-gray-600 text-base leading-relaxed max-w-sm">
+                  Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results. This body of work has been recognized by organizations such as Adweek, Adweek Arc, Cannes Lions, the Hatch Awards, the Obies, the Shorty Awards, and the Webby Awards.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Project Grid Image */}
+            <div className="lg:col-span-2">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=2762"
+                alt="Campaign examples and projects"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
