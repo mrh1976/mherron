@@ -110,7 +110,7 @@ export default function Index() {
             <div className="relative flex flex-col items-center justify-start">
               {/* Profile Image */}
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/92d0abb246b5692237e32af1bd0d4710c3895465?width=2096"
+                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
                 alt="Mike Herron"
                 className="w-full max-w-md lg:max-w-lg object-cover mb-8"
               />
