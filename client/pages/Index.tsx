@@ -577,7 +577,7 @@ export default function Index() {
 
             {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-3 gap-4 sm:gap-5">
+              <div className="grid grid-cols-3 grid-rows-4 gap-4 sm:gap-5">
                 {/* Box 1 - Lukka Formula E */}
                 <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
                   <img
