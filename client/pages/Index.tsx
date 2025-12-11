@@ -112,7 +112,7 @@ export default function Index() {
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-end gap-16">
-          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg">
+          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg flex-shrink-0">
             {/* Logo/Icon */}
             <div className="flex-shrink-0 w-24 h-24">
               <img
