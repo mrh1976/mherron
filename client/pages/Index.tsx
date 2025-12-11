@@ -334,7 +334,7 @@ export default function Index() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda5358d50e26487d909c74e5402762fa?format=webp&width=800"
                   alt="Lukka"
-                  className="h-12 object-contain mb-6"
+                  className="h-10 object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Global Head of Marketing{" "}
@@ -532,7 +532,7 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
                   alt="SOLO"
-                  className="h-12 object-contain mb-6"
+                  className="h-10 object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Manager, Online Engagement{" "}
@@ -589,7 +589,7 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/93aedf901d177a1302e95a4cd88df3b642450477?width=286"
                   alt="XFO"
-                  className="h-12 object-contain mb-6"
+                  className="h-14 object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Partner{" "}
