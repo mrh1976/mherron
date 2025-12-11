@@ -111,7 +111,17 @@ export default function Index() {
 
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-end gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-between gap-16">
+          {/* Want to learn more section */}
+          <div className="space-y-4 flex flex-col items-start">
+            <h3 className="text-2xl font-bold text-gray-900">
+              Want to learn more<span className="text-orange">?</span>
+            </h3>
+            <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
+              Subscribe on LinkedIn
+            </button>
+          </div>
+
           <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg flex-shrink-0">
             {/* Logo/Icon */}
             <div className="flex-shrink-0 w-24 h-24">
@@ -134,16 +144,6 @@ export default function Index() {
                 Marketing clarity for the modern entrepreneur
               </p>
             </div>
-          </div>
-
-          {/* Want to learn more section */}
-          <div className="space-y-4 flex flex-col items-start">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Want to learn more<span className="text-orange">?</span>
-            </h3>
-            <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
-              Subscribe on LinkedIn
-            </button>
           </div>
         </div>
       </section>
