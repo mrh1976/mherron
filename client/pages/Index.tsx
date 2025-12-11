@@ -45,9 +45,18 @@ export default function Index() {
               </a>
             </nav>
             <div className="hidden md:flex items-center">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange transition">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z"/>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-900 hover:text-orange transition"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
                 </svg>
               </a>
             </div>
@@ -104,9 +113,15 @@ export default function Index() {
                       className="h-12 mx-auto"
                     />
                   </div>
-                  <div className="text-orange text-sm mb-2">LINKEDIN NEWSLETTER</div>
-                  <h3 className="text-white text-4xl font-bold mb-2">Dear Founders</h3>
-                  <p className="text-gray-300 text-sm">Marketing clarity for the modern entrepreneur</p>
+                  <div className="text-orange text-sm mb-2">
+                    LINKEDIN NEWSLETTER
+                  </div>
+                  <h3 className="text-white text-4xl font-bold mb-2">
+                    Dear Founders
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Marketing clarity for the modern entrepreneur
+                  </p>
                 </div>
               </div>
             </div>
@@ -115,7 +130,8 @@ export default function Index() {
                 Want to learn more<span className="text-orange">?</span>
               </h2>
               <p className="text-gray-400 text-lg mb-8">
-                Subscribe to my LinkedIn newsletter, Dear Founders, where I share marketing insights and clarity for modern entrepreneurs.
+                Subscribe to my LinkedIn newsletter, Dear Founders, where I
+                share marketing insights and clarity for modern entrepreneurs.
               </p>
               <button className="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
                 Subscribe on LinkedIn
@@ -134,18 +150,37 @@ export default function Index() {
                 About Me<span className="text-orange">.</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                I've built my career by asking, "Why are we doing this" and "What does success look like."
+                I've built my career by asking, "Why are we doing this" and
+                "What does success look like."
               </p>
             </div>
             <div>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                I am a lifelong Chicagoan, a husband, and a father of four, and I have spent my entire career building, leading, and scaling marketing organizations that help companies grow with clarity and purpose. Over the past twenty five years I have worked across every corner of the marketing world. I have been client side inside large enterprises, agency side serving global brands, an entrepreneur building ventures from scratch, and a consultant trusted by companies to solve hard problems.
+                I am a lifelong Chicagoan, a husband, and a father of four, and
+                I have spent my entire career building, leading, and scaling
+                marketing organizations that help companies grow with clarity
+                and purpose. Over the past twenty five years I have worked
+                across every corner of the marketing world. I have been client
+                side inside large enterprises, agency side serving global
+                brands, an entrepreneur building ventures from scratch, and a
+                consultant trusted by companies to solve hard problems.
               </p>
               <p className="text-gray-700 text-base leading-relaxed mb-6">
-                I have led marketing at fast moving blockchain and fintech companies, managed multi million dollar brand partnerships, guided agency teams supporting Fortune 500 clients, and helped launch new products for startups and established businesses. No matter the setting, I am at my best when I am building something and helping people see what is possible.
+                I have led marketing at fast moving blockchain and fintech
+                companies, managed multi million dollar brand partnerships,
+                guided agency teams supporting Fortune 500 clients, and helped
+                launch new products for startups and established businesses. No
+                matter the setting, I am at my best when I am building something
+                and helping people see what is possible.
               </p>
               <p className="text-gray-700 text-base leading-relaxed">
-                At work and at home, I try to show up with honesty, curiosity, and a calm leadership style that gives teams confidence. I believe in clear goals, transparent conversations, and creating an environment where people can do the best work of their careers. And after all of it, Chicago is still home. It is where I grew up, where my family is, and where my career continues to grow.
+                At work and at home, I try to show up with honesty, curiosity,
+                and a calm leadership style that gives teams confidence. I
+                believe in clear goals, transparent conversations, and creating
+                an environment where people can do the best work of their
+                careers. And after all of it, Chicago is still home. It is where
+                I grew up, where my family is, and where my career continues to
+                grow.
               </p>
             </div>
           </div>
@@ -159,7 +194,8 @@ export default function Index() {
             Worked for<span className="text-orange">.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-16">
-            I have been a part of the high quality design process for several companies.
+            I have been a part of the high quality design process for several
+            companies.
           </p>
           <div className="space-y-12">
             {/* Kadena */}
@@ -173,18 +209,54 @@ export default function Index() {
                 Chief Marketing Officer | September 2023 - November 2025
               </h3>
               <p className="text-gray-600 mb-6">
-                High performing Layer 1 blockchain driving institutional adoption and developer growth through secure, scalable infrastructure. Built and matured the global marketing organization, leading brand, growth, product marketing, content, community, and partnerships.
+                High performing Layer 1 blockchain driving institutional
+                adoption and developer growth through secure, scalable
+                infrastructure. Built and matured the global marketing
+                organization, leading brand, growth, product marketing, content,
+                community, and partnerships.
               </p>
               <div className="text-gray-600 text-sm space-y-2">
-                <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                <p className="font-semibold text-gray-700">
+                  Top Level Highlights:
+                </p>
                 <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2">
-                  <li>Built and scaled a 10 person in house marketing team and onboarded top tier PR and creative partners.</li>
-                  <li>Led a complete end to end rebrand to reposition Kadena for institutional trust and developer adoption.</li>
-                  <li>Designed a community strategy that increased positive sentiment by more than <span className="font-semibold">200 percent</span> while maintaining engagement rates above <span className="font-semibold">7 percent</span>.</li>
-                  <li>Established the company's paid media framework, expanding budget from <span className="font-semibold">100K to 500K</span> across paid social, KOLs, search, and sponsorships.</li>
-                  <li>Finalized a major partnership with the Croatian National Football Federation including jersey placement, World Cup activations, and mobile app integration.</li>
-                  <li>Secured coverage across Forbes, Bloomberg, CoinDesk, The Block, and other global outlets.</li>
-                  <li>Developed the GTM strategy for a multi chain EVM product attracting more than <span className="font-semibold">8,000</span> testnet users and <span className="font-semibold">1,000</span> deployed smart contracts.</li>
+                  <li>
+                    Built and scaled a 10 person in house marketing team and
+                    onboarded top tier PR and creative partners.
+                  </li>
+                  <li>
+                    Led a complete end to end rebrand to reposition Kadena for
+                    institutional trust and developer adoption.
+                  </li>
+                  <li>
+                    Designed a community strategy that increased positive
+                    sentiment by more than{" "}
+                    <span className="font-semibold">200 percent</span> while
+                    maintaining engagement rates above{" "}
+                    <span className="font-semibold">7 percent</span>.
+                  </li>
+                  <li>
+                    Established the company's paid media framework, expanding
+                    budget from{" "}
+                    <span className="font-semibold">100K to 500K</span> across
+                    paid social, KOLs, search, and sponsorships.
+                  </li>
+                  <li>
+                    Finalized a major partnership with the Croatian National
+                    Football Federation including jersey placement, World Cup
+                    activations, and mobile app integration.
+                  </li>
+                  <li>
+                    Secured coverage across Forbes, Bloomberg, CoinDesk, The
+                    Block, and other global outlets.
+                  </li>
+                  <li>
+                    Developed the GTM strategy for a multi chain EVM product
+                    attracting more than{" "}
+                    <span className="font-semibold">8,000</span> testnet users
+                    and <span className="font-semibold">1,000</span> deployed
+                    smart contracts.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -230,16 +302,39 @@ export default function Index() {
                 Chief Marketing Officer | May 2022 - September 2023
               </h3>
               <p className="text-gray-600 mb-6">
-                Blockchain infrastructure company delivering enterprise grade financial technology for global brands. Directed global brand, growth, communications, product marketing, and partnerships.
+                Blockchain infrastructure company delivering enterprise grade
+                financial technology for global brands. Directed global brand,
+                growth, communications, product marketing, and partnerships.
               </p>
               <div className="text-gray-600 text-sm space-y-2">
-                <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                <p className="font-semibold text-gray-700">
+                  Top Level Highlights:
+                </p>
                 <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2">
-                  <li>Built and led the global marketing function for a multibillion dollar blockchain company.</li>
-                  <li>Negotiated and activated major professional sports sponsorships with the New England Patriots, Miami Heat, and New England Revolution.</li>
-                  <li>Launched three new B2B products and the company's first direct to consumer digital wallet.</li>
-                  <li>Closed a landmark Tiffany & Co and Yuga Labs partnership that generated <span className="font-semibold">15M</span> in revenue and sold out in under <span className="font-semibold">15 minutes</span>.</li>
-                  <li>Oversaw investor relations initiatives that supported <span className="font-semibold">120M</span> in token purchases from major investors.</li>
+                  <li>
+                    Built and led the global marketing function for a
+                    multibillion dollar blockchain company.
+                  </li>
+                  <li>
+                    Negotiated and activated major professional sports
+                    sponsorships with the New England Patriots, Miami Heat, and
+                    New England Revolution.
+                  </li>
+                  <li>
+                    Launched three new B2B products and the company's first
+                    direct to consumer digital wallet.
+                  </li>
+                  <li>
+                    Closed a landmark Tiffany & Co and Yuga Labs partnership
+                    that generated <span className="font-semibold">15M</span> in
+                    revenue and sold out in under{" "}
+                    <span className="font-semibold">15 minutes</span>.
+                  </li>
+                  <li>
+                    Oversaw investor relations initiatives that supported{" "}
+                    <span className="font-semibold">120M</span> in token
+                    purchases from major investors.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -250,16 +345,40 @@ export default function Index() {
                 Global Head of Marketing | August 2020 - May 2022
               </h3>
               <p className="text-gray-600 mb-6">
-                Blockchain and crypto asset data provider serving the world's largest financial institutions, fund administrators, and government agencies. Led all global marketing during significant company growth and valuation inflection.
+                Blockchain and crypto asset data provider serving the world's
+                largest financial institutions, fund administrators, and
+                government agencies. Led all global marketing during significant
+                company growth and valuation inflection.
               </p>
               <div className="text-gray-600 text-sm space-y-2">
-                <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                <p className="font-semibold text-gray-700">
+                  Top Level Highlights:
+                </p>
                 <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2">
-                  <li>Directed global marketing for a <span className="font-semibold">1.35B</span> institutional blockchain data company.</li>
-                  <li>Executive team member contributing to multiple successful funding rounds.</li>
-                  <li>Scaled the marketing team from <span className="font-semibold">2 to 16</span> in one year and implemented more than <span className="font-semibold">100</span> standardized processes.</li>
-                  <li>Built Lukka's first comprehensive brand and go to market strategy across positioning, messaging, and segmentation.</li>
-                  <li>Negotiated a multi year global title sponsorship with Formula E to support international expansion.</li>
+                  <li>
+                    Directed global marketing for a{" "}
+                    <span className="font-semibold">1.35B</span> institutional
+                    blockchain data company.
+                  </li>
+                  <li>
+                    Executive team member contributing to multiple successful
+                    funding rounds.
+                  </li>
+                  <li>
+                    Scaled the marketing team from{" "}
+                    <span className="font-semibold">2 to 16</span> in one year
+                    and implemented more than{" "}
+                    <span className="font-semibold">100</span> standardized
+                    processes.
+                  </li>
+                  <li>
+                    Built Lukka's first comprehensive brand and go to market
+                    strategy across positioning, messaging, and segmentation.
+                  </li>
+                  <li>
+                    Negotiated a multi year global title sponsorship with
+                    Formula E to support international expansion.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -275,15 +394,33 @@ export default function Index() {
                 Group Account Director | July 2019 - August 2020
               </h3>
               <p className="text-gray-600 mb-6">
-                Full service digital marketing and innovation agency serving Fortune 500 clients across finance, telecom, insurance, and retail. Directed strategy, client success, and revenue growth across a large enterprise portfolio.
+                Full service digital marketing and innovation agency serving
+                Fortune 500 clients across finance, telecom, insurance, and
+                retail. Directed strategy, client success, and revenue growth
+                across a large enterprise portfolio.
               </p>
               <div className="text-gray-600 text-sm space-y-2">
-                <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                <p className="font-semibold text-gray-700">
+                  Top Level Highlights:
+                </p>
                 <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2">
-                  <li>Managed a portfolio of global brands including H&R Block, AT&T, and Zurich generating more than <span className="font-semibold">16M</span> in agency fees.</li>
-                  <li>Oversaw integrated digital, social, UX, media, and experiential programs across multiple verticals.</li>
-                  <li>Led multidisciplinary creative, media, and strategy teams to exceed performance KPIs.</li>
-                  <li>Strengthened client relationships through data driven strategy and ROI focused execution.</li>
+                  <li>
+                    Managed a portfolio of global brands including H&R Block,
+                    AT&T, and Zurich generating more than{" "}
+                    <span className="font-semibold">16M</span> in agency fees.
+                  </li>
+                  <li>
+                    Oversaw integrated digital, social, UX, media, and
+                    experiential programs across multiple verticals.
+                  </li>
+                  <li>
+                    Led multidisciplinary creative, media, and strategy teams to
+                    exceed performance KPIs.
+                  </li>
+                  <li>
+                    Strengthened client relationships through data driven
+                    strategy and ROI focused execution.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -298,7 +435,10 @@ export default function Index() {
             Worked with<span className="text-orange">.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-16">
-            I have had the privilege of working with some of the biggest and most influential brands in the world. These partnerships brought me into conversations that shaped global sports, luxury, technology, and consumer culture.
+            I have had the privilege of working with some of the biggest and
+            most influential brands in the world. These partnerships brought me
+            into conversations that shaped global sports, luxury, technology,
+            and consumer culture.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-80 mb-16">
@@ -355,7 +495,11 @@ export default function Index() {
           </div>
 
           <p className="text-gray-600 text-sm">
-            Other Notable Companies: Formula 1, Formula E, State Street, Blackrock, S&P, Choice Hotels, New England Patriots, Miami Heat, Chicago White Sox, Zurich, Nintendo, Lucasfilms, CAA, MLB, NBA, NCAA, NFL, DJI, SummerFest, Facebook, Twitter, MasterCard, Yuga Labs, Uniswap, Garmin
+            Other Notable Companies: Formula 1, Formula E, State Street,
+            Blackrock, S&P, Choice Hotels, New England Patriots, Miami Heat,
+            Chicago White Sox, Zurich, Nintendo, Lucasfilms, CAA, MLB, NBA,
+            NCAA, NFL, DJI, SummerFest, Facebook, Twitter, MasterCard, Yuga
+            Labs, Uniswap, Garmin
           </p>
         </div>
       </section>
@@ -367,7 +511,11 @@ export default function Index() {
             Worked on<span className="text-orange">.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-16">
-            Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results.
+            Here are a few examples of the campaigns, partnerships, launches,
+            and brand moments I helped create. These projects brought together
+            cross functional teams, creative talent, enterprise partners, and
+            global audiences, and reflect the kind of marketing that moves
+            people and drives results.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -434,11 +582,18 @@ export default function Index() {
               <p className="text-sm text-gray-500">©2026 Michael Herron LLC</p>
             </div>
             <p className="text-xs text-gray-600 text-center md:text-right max-w-md">
-              All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career.
+              All trademarks, logos, and brand names displayed on this website
+              are the property of their respective owners. They are used here
+              strictly for identification and informational purposes to
+              represent companies I have worked for or partnered with throughout
+              my career.
             </p>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-900 text-center text-xs text-gray-600">
-            <p>Designed in partnership with <span className="font-semibold">nzmotiondesign.com</span></p>
+            <p>
+              Designed in partnership with{" "}
+              <span className="font-semibold">nzmotiondesign.com</span>
+            </p>
           </div>
         </div>
       </footer>
