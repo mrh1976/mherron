@@ -73,49 +73,47 @@ export default function Index() {
       {/* Hero Section with Profile Image */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-          <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-              {/* Left Content */}
-              <div className="flex flex-col justify-start mt-16 lg:absolute lg:left-0 lg:top-16 lg:z-10">
-                <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
-                  <span className="text-gray-900">Executive Leadership</span>
-                  <br />
-                  <span className="text-gray-400">That Turns </span>
-                  <span className="text-gray-600">Complex Ideas</span>
-                  <br />
-                  <span className="text-gray-400">Into </span>
-                  <span className="text-gray-600">Quantifiable ROI<span className="text-orange">.</span></span>
-                </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            {/* Left Content */}
+            <div className="flex flex-col justify-start mt-16">
+              <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8 lg:absolute lg:left-0 lg:top-0 lg:z-10 lg:max-w-2xl">
+                <span className="text-gray-900">Executive Leadership</span>
+                <br />
+                <span className="text-gray-400">That Turns </span>
+                <span className="text-gray-600">Complex Ideas</span>
+                <br />
+                <span className="text-gray-400">Into </span>
+                <span className="text-gray-600">Quantifiable ROI<span className="text-orange">.</span></span>
+              </h1>
 
-                <div className="flex flex-col sm:flex-row gap-3 mb-16">
-                  <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
-                    Let's Chat
-                  </button>
-                  <button className="border border-gray-900 hover:bg-gray-50 text-gray-900 px-6 py-2 rounded-full font-medium text-sm transition">
-                    Services
-                  </button>
-                </div>
-
-                {/* Want to learn more section */}
-                <div className="space-y-4 mt-32 flex flex-col items-start lg:items-start">
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    Want to learn more<span className="text-orange">?</span>
-                  </h3>
-                  <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
-                    Subscribe on LinkedIn
-                  </button>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-3 mb-16 lg:mt-96">
+                <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
+                  Let's Chat
+                </button>
+                <button className="border border-gray-900 hover:bg-gray-50 text-gray-900 px-6 py-2 rounded-full font-medium text-sm transition">
+                  Services
+                </button>
               </div>
 
-              {/* Right Content - Profile Image */}
-              <div className="lg:ml-auto">
-                {/* Profile Image */}
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
-                  alt="Mike Herron"
-                  className="w-full max-w-xl lg:max-w-2xl object-cover rounded-lg"
-                />
+              {/* Want to learn more section */}
+              <div className="space-y-4 mt-32 flex flex-col items-start lg:items-start">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Want to learn more<span className="text-orange">?</span>
+                </h3>
+                <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
+                  Subscribe on LinkedIn
+                </button>
               </div>
+            </div>
+
+            {/* Right Content - Profile Image */}
+            <div className="relative flex flex-col items-start justify-start">
+              {/* Profile Image */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
+                alt="Mike Herron"
+                className="w-full max-w-xl lg:max-w-2xl object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
