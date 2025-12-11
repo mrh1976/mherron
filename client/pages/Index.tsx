@@ -805,92 +805,92 @@ export default function Index() {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-x-[100px] gap-y-[50px] items-center justify-items-end">
                 {/* H&R Block */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406"
                     alt="H&R Block"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* New England Patriots */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406"
                     alt="New England Patriots"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* State Street */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458"
                     alt="State Street"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* United Airlines */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484"
                     alt="United Airlines"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* Samsung */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502"
                     alt="Samsung"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* Tiffany & Co */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490"
                     alt="Tiffany & Co"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* AT&T */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436"
                     alt="AT&T"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* Disney */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442"
                     alt="Disney"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* Bloomberg */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488"
                     alt="Bloomberg"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
 
                 {/* Google */}
-                <div className="flex items-center justify-center h-6 w-6">
+                <div className="flex items-center justify-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404"
                     alt="Google"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-[250px] max-h-[250px] object-contain"
                   />
                 </div>
               </div>
