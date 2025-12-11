@@ -76,7 +76,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Content */}
             <div className="flex flex-col justify-start pt-8">
-              <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
