@@ -83,8 +83,7 @@ export default function Index() {
                 <span className="text-gray-600">Complex Ideas</span>
                 <br />
                 <span className="text-gray-400">Into Clear </span>
-                <span className="text-gray-600">Growth</span>
-                <span className="text-orange">.</span>
+                <span className="text-gray-600">Growth<span className="text-orange">.</span></span>
               </h1>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-16">
