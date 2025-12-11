@@ -737,6 +737,70 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Project Modal */}
+      {activeModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+          onClick={() => setActiveModal(null)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left Column - Content */}
+              <div className="flex flex-col justify-between">
+                <div>
+                  <h2 className="text-4xl font-bold mb-6 text-gray-900">
+                    {projectModals[activeModal - 1].title}
+                  </h2>
+                  <p className="text-gray-600 text-base leading-relaxed mb-8">
+                    {projectModals[activeModal - 1].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Video */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${projectModals[activeModal - 1].videoId}`}
+                    title="Project Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setActiveModal(null)}
+              className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 transition-colors"
+              aria-label="Close modal"
+            >
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
