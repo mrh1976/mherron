@@ -125,7 +125,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-between gap-16">
           {/* Want to learn more section */}
           <div className="space-y-4 flex flex-col items-start lg:ml-[200px]">
-            <h3 className="text-4xl font-bold text-gray-900">
+            <h3 className="text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
             <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition self-end">
