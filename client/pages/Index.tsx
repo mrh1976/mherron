@@ -532,7 +532,7 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
                   alt="SOLO"
-                  className="h-10 mb-6"
+                  className="h-10 w-auto max-w-[200px] object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Manager, Online Engagement{" "}
