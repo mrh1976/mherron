@@ -122,9 +122,9 @@ export default function Index() {
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16">
-          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center gap-8 shadow-lg lg:ml-auto">
+          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 shadow-lg lg:ml-auto">
             {/* Logo/Icon */}
-            <div className="flex-shrink-0 w-24 h-24">
+            <div className="w-20 h-20">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
                 alt="Dear Founders Logo"
@@ -133,7 +133,7 @@ export default function Index() {
             </div>
 
             {/* Text Content */}
-            <div className="flex-1">
+            <div className="text-center">
               <div className="text-orange text-sm font-semibold tracking-wider mb-2">
                 LINKEDIN NEWSLETTER
               </div>
