@@ -128,9 +128,14 @@ export default function Index() {
             <h3 className="text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
-            <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition self-end">
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition self-end inline-block"
+            >
               Subscribe on LinkedIn
-            </button>
+            </a>
           </div>
 
           <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg flex-shrink-0">
