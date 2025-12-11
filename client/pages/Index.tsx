@@ -1086,7 +1086,7 @@ export default function Index() {
             {/* Close Button */}
             <button
               onClick={() => setActiveModal(null)}
-              className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 transition-colors z-10"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20 bg-white rounded-full p-2"
               aria-label="Close modal"
             >
               <svg
