@@ -1074,6 +1074,68 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section id="contact" className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-gray-900">Let's work </span>
+              <span className="text-gray-400">together</span>
+              <span className="text-orange">.</span>
+            </h2>
+
+            <p className="text-gray-900 text-lg md:text-2xl font-medium mb-12">
+              <span>Audits </span>
+              <span className="text-orange">|</span>
+              <span> Consulting </span>
+              <span className="text-orange">|</span>
+              <span> Fractional </span>
+              <span className="text-orange">|</span>
+              <span> Full-Time</span>
+            </p>
+
+            {/* Contact Form */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("Form submitted:", formData);
+                setFormData({ name: "", email: "" });
+              }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                required
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                required
+              />
+
+              <button
+                type="submit"
+                className="px-8 py-3 rounded-full bg-gray-600 hover:bg-gray-700 text-white font-medium transition-colors"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Project Modal */}
       {activeModal && (
         <div
