@@ -96,7 +96,7 @@ export default function Index() {
               </div>
 
               {/* Want to learn more section */}
-              <div className="space-y-4 mt-32">
+              <div className="space-y-4 mt-48">
                 <h3 className="text-2xl font-bold text-gray-900">
                   Want to learn more<span className="text-orange">?</span>
                 </h3>
