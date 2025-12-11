@@ -140,41 +140,6 @@ export default function Index() {
                 </button>
               </div>
             </div>
-
-            {/* Right Content - Profile Image and Newsletter Card */}
-            <div className="relative flex flex-col items-start justify-start">
-              {/* Profile Image */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=800"
-                alt="Mike Herron"
-                className="w-full max-w-md lg:max-w-lg object-cover mb-8"
-              />
-
-              {/* Newsletter Card - positioned to overlap */}
-              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-32 relative z-10 shadow-lg">
-                {/* Logo/Icon */}
-                <div className="flex-shrink-0 w-24 h-24">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
-                    alt="Dear Founders Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-
-                {/* Text Content */}
-                <div className="flex-1">
-                  <div className="text-orange text-xs font-semibold tracking-wider mb-1">
-                    LINKEDIN NEWSLETTER
-                  </div>
-                  <h3 className="text-white text-3xl font-bold mb-1">
-                    Dear Founders
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    Marketing clarity for the modern entrepreneur
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
