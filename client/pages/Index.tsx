@@ -126,6 +126,37 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* About Me Section */}
+      <section id="about" className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left Column - Title and Subtitle */}
+            <div className="flex flex-col gap-8">
+              <h2 className="text-5xl lg:text-5xl font-medium">
+                <span className="text-gray-900">About Me</span>
+                <span className="text-orange">.</span>
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed">
+                I've built my career by asking, "Why are we doing this" and "What does success look like."
+              </p>
+            </div>
+
+            {/* Right Column - Bio Content */}
+            <div className="flex flex-col gap-6">
+              <p className="text-gray-900 text-base leading-relaxed">
+                I am a lifelong Chicagoan, a husband, and a father of four, and I have spent my entire career building, leading, and scaling marketing organizations that help companies grow with clarity and purpose. Over the past twenty five years I have worked across every corner of the marketing world. I have been client side inside large enterprises, agency side serving global brands, an entrepreneur building ventures from scratch, and a consultant trusted by companies to solve hard problems.
+              </p>
+              <p className="text-gray-900 text-base leading-relaxed">
+                I have led marketing at fast moving blockchain and fintech companies, managed multi million dollar brand partnerships, guided agency teams supporting Fortune 500 clients, and helped launch new products for startups and established businesses. No matter the setting, I am at my best when I am building something and helping people see what is possible.
+              </p>
+              <p className="text-gray-900 text-base leading-relaxed">
+                At work and at home, I try to show up with honesty, curiosity, and a calm leadership style that gives teams confidence. I believe in clear goals, transparent conversations, and creating an environment where people can do the best work of their careers. And after all of it, Chicago is still home. It is where I grew up, where my family is, and where my career continues to grow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
