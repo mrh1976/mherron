@@ -1165,13 +1165,24 @@ export default function Index() {
             {/* Center Column - Disclaimer */}
             <div className="text-center text-sm text-gray-400 leading-relaxed">
               <p>
-                All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
+                All trademarks, logos, and brand names displayed on this website
+                are the property of their respective owners. They are used here
+                strictly for identification and informational purposes to
+                represent companies I have worked for or partnered with
+                throughout my career. Their appearance does not imply any
+                endorsement, approval, sponsorship, or affiliation with this
+                website or with me personally. Any references to past work,
+                partnerships, or collaborations are historical in nature and are
+                presented solely to provide context regarding my professional
+                experience.
               </p>
             </div>
 
             {/* Right Column - Copyright */}
             <div className="flex items-center justify-center md:justify-end">
-              <p className="text-white text-base font-medium">©2026 Michael Herron LLC</p>
+              <p className="text-white text-base font-medium">
+                ©2026 Michael Herron LLC
+              </p>
             </div>
           </div>
 
