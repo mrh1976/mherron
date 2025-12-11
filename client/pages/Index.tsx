@@ -745,9 +745,30 @@ export default function Index() {
           onClick={() => setActiveModal(null)}
         >
           <div
-            className="bg-white rounded-2xl shadow-2xl p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
+            className="relative bg-white rounded-2xl shadow-2xl p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
+            <button
+              onClick={() => setActiveModal(null)}
+              className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 transition-colors z-10"
+              aria-label="Close modal"
+            >
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Left Column - Content */}
               <div className="flex flex-col justify-between">
@@ -777,27 +798,6 @@ export default function Index() {
                 </div>
               </div>
             </div>
-
-            {/* Close Button */}
-            <button
-              onClick={() => setActiveModal(null)}
-              className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 transition-colors"
-              aria-label="Close modal"
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       )}
