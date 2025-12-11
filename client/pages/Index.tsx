@@ -577,133 +577,109 @@ export default function Index() {
 
             {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-4 gap-4 auto-rows-max">
-                {/* US Cellular */}
-                <div className="col-span-1 row-span-2">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=690"
-                      alt="US Cellular project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+              <div className="grid grid-cols-3 gap-4 sm:gap-5">
+                {/* Box 1 - US Cellular */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff7ea088c2436441c8f1ffb1ed7b5a74d?format=webp&width=400"
+                    alt="US Cellular - Future of Good"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Campaign */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Campaign project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 2 - H&R Block */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe2435c7cbdb64a75a0239a34aac13848?format=webp&width=400"
+                    alt="H&R Block Tax Software"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* H&R Block */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="H&R Block project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 3 - Lukka */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/3d1b85af496426558d01cf2e2efe2254d61c6f55?width=400"
+                    alt="Lukka - Driven by Data"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Lukka */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Lukka project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 4 - Blank/Placeholder */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe15fd0f1ec194e85b7abe8f4a5145555?format=webp&width=400"
+                    alt="Project placeholder"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Lukka Dark */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Lukka project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 5 - Chain Wallet App */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-900">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe15fd0f1ec194e85b7abe8f4a5145555?format=webp&width=400"
+                    alt="Chain Wallet App"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Uniswap */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Uniswap project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 6 - Project Image */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/065b4fbcfdda5f9e05df1f2bc7cb61e01f7e051a?width=400"
+                    alt="Project showcase"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Chain Wallet */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Chain Wallet project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 7 - Miami Heat */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9cac4063fe0343d2a7c53c9e5bbfd699?format=webp&width=400"
+                    alt="Miami Heat campaign"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Helmet */}
-                <div className="col-span-1 row-span-2">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=690"
-                      alt="Football helmet project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 8 - Placeholder */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/3d075b0b9fe2a7ad04f572ef1151b6520499c1c2?width=400"
+                    alt="Project"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Miami Heat */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Miami Heat project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 9 - Dark Project */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-900">
+                  <div className="w-full h-full bg-gray-900"></div>
                 </div>
 
-                {/* Creative Fashion */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Creative fashion project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 10 - Helmet */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffe5d69766d3a4142b0cc0c62804c3865?format=webp&width=400"
+                    alt="Football helmet campaign"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Black */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-900 aspect-square rounded-lg overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ce5fda7bed6c882b81cfcfd10110480e27c07aed?width=345&height=345"
-                      alt="Dark project"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Box 11 - Placeholder */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/7580b83b95dfe5ba1698824dcced6dc7acaca169?width=400"
+                    alt="Project"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Chainweb EVM */}
-                <div className="col-span-1 row-span-1">
-                  <div className="bg-gray-200 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
-                    <p className="text-gray-600 text-sm font-medium text-center px-4">Chainweb EVM</p>
-                  </div>
+                {/* Box 12 - Chain Meta Image */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/a400d31fb8b78fc0b55cfe19b15489a70329a522?width=400"
+                    alt="Chain project"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
