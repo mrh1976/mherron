@@ -1136,6 +1136,61 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "url(https://api.builder.io/api/v1/image/assets/TEMP/903284eb0b0fd2db5e5cb6a2795cd37d6e8819bd?width=5328)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            {/* Left Column - Logo */}
+            <div className="flex items-center justify-center md:justify-start">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/dc7288d32ef8e770c7e38a0ca30aecce0066b49f?width=478"
+                alt="Mike Herron"
+                className="h-16 w-auto"
+              />
+            </div>
+
+            {/* Center Column - Disclaimer */}
+            <div className="text-center text-sm text-gray-400 leading-relaxed">
+              <p>
+                All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
+              </p>
+            </div>
+
+            {/* Right Column - Copyright */}
+            <div className="flex items-center justify-center md:justify-end">
+              <p className="text-white text-base font-medium">©2026 Michael Herron LLC</p>
+            </div>
+          </div>
+
+          {/* Design Credit */}
+          <div className="text-center pt-8 border-t border-gray-700">
+            <p className="text-xs text-gray-500">
+              Designed in partnership with{" "}
+              <a
+                href="https://nzmotiondesign.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-gray-400 hover:text-white transition-colors"
+              >
+                nzmotiondesign.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+
       {/* Project Modal */}
       {activeModal && (
         <div
