@@ -80,9 +80,7 @@ export default function Index() {
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
-                <span className="text-gray-600">Complex</span>
-                <br />
-                <span className="text-gray-600">Ideas</span>
+                <span className="text-gray-600">Complex Ideas</span>
                 <br />
                 <span className="text-gray-400">Into Clear </span>
                 <span className="text-gray-600">Growth<span className="text-orange">.</span></span>
