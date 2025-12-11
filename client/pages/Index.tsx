@@ -133,7 +133,7 @@ export default function Index() {
             </div>
 
             {/* Text Content */}
-            <div className="flex-1 text-center">
+            <div className="flex-1">
               <div className="text-orange text-sm font-semibold tracking-wider mb-2">
                 LINKEDIN NEWSLETTER
               </div>
