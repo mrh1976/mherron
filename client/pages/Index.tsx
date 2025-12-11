@@ -135,6 +135,16 @@ export default function Index() {
               </p>
             </div>
           </div>
+
+          {/* Want to learn more section */}
+          <div className="space-y-4 flex flex-col items-start">
+            <h3 className="text-2xl font-bold text-gray-900">
+              Want to learn more<span className="text-orange">?</span>
+            </h3>
+            <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition">
+              Subscribe on LinkedIn
+            </button>
+          </div>
         </div>
       </section>
 
