@@ -283,7 +283,7 @@ export default function Index() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc09e204150174a489ae08ab32725d764?format=webp&width=800"
                   alt="Chain"
-                  className="h-10 mb-6"
+                  className="h-10 w-auto max-w-[200px] object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Chief Marketing Officer{" "}
