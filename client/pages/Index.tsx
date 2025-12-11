@@ -72,12 +72,12 @@ export default function Index() {
 
       {/* Hero Section with Profile Image as Background */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat py-24 lg:py-40"
+        className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
         style={{
           backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1200')"
         }}
       >
-        <div className="absolute inset-0 bg-white/10"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">
             {/* Left Content */}
