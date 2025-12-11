@@ -577,7 +577,7 @@ export default function Index() {
 
             {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-3 grid-rows-4 gap-4 sm:gap-5">
+              <div className="grid grid-cols-4 grid-rows-3 gap-4 sm:gap-5">
                 {/* Box 1 - Lukka Formula E */}
                 <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
                   <img
@@ -668,12 +668,22 @@ export default function Index() {
                   />
                 </div>
 
-                {/* Box 11 - Empty */}
-                <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
+                {/* Box 11 - New Kadena */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-gray-900">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400"
+                    alt="New Kadena"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Box 12 - Empty */}
-                <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
+                {/* Box 12 - Croatian Football Federation */}
+                <div className="aspect-square rounded-lg overflow-hidden bg-red-600">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fed0ea93f040f4729a2ea432b157dad56?format=webp&width=400"
+                    alt="Croatian Football Federation"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
