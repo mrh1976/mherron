@@ -298,6 +298,94 @@ export default function Index() {
                   </ul>
                 </div>
               </div>
+
+              {/* US Cellular */}
+              <div className="pt-12">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/da9ede529f3b039e3f7e90e2dcb5f2928ac1c616?width=366"
+                  alt="US Cellular"
+                  className="h-8 mb-6"
+                />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Global Head of Marketing <span className="text-gray-600 font-normal">| December 2013 - November 2017</span>
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Major national wireless carrier. Led digital, social, and brand marketing for B2C, B2B, and HR audiences across national markets. Managed an 11 person team responsible for digital content, performance marketing, and social strategy.
+                </p>
+                <div className="text-gray-600 text-sm space-y-2">
+                  <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                    <li>Increased annual revenues by <span className="font-semibold">14 percent</span> through new partner acquisition programs.</li>
+                    <li>Grew digital and social budgets by more than <span className="font-semibold">1,200 percent</span> while improving ROI.</li>
+                    <li>Produced <span className="font-semibold">200+</span> branded videos generating <span className="font-semibold">50M+</span> views and a <span className="font-semibold">9 point</span> lift in brand consideration.</li>
+                    <li>Collaborated with Disney, Lucasfilm, Apple, Samsung, Google, MLB, NCAA, and NBA.</li>
+                    <li>Digital and social channels delivered <span className="font-semibold">40 percent</span> of all online gross adds at a lower acquisition cost.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* SOLO */}
+              <div className="pt-12">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
+                  alt="SOLO"
+                  className="h-10 mb-6"
+                />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Manager, Online Engagement <span className="text-gray-600 font-normal">| April 2011 - December 2013</span>
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  National consumer products company known for one of the most recognizable brands in retail and food service. Led digital engagement, influencer marketing, and social strategy supporting large scale consumer growth.
+                </p>
+                <div className="text-gray-600 text-sm space-y-2">
+                  <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                    <li>Directed influencer and blogger programs that generated more than <span className="font-semibold">6 million</span> impressions per year and expanded national brand visibility.</li>
+                    <li>Managed a <span className="font-semibold">900k</span> social media budget and led an <span className="font-semibold">11 person</span> team across internal contributors and two agency partners.</li>
+                    <li>Increased social engagement rates by an estimated <span className="font-semibold">40 percent</span> through targeted campaigns, platform testing, and audience segmentation.</li>
+                    <li>Improved website traffic by an estimated <span className="font-semibold">35 percent</span> after leading the consumer site redesign and strengthening SEO and SEM programs.</li>
+                    <li>Delivered double digit growth in campaign reach and participation across national promotions by launching new social activation frameworks.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* XFO */}
+              <div className="pt-12">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/93aedf901d177a1302e95a4cd88df3b642450477?width=286"
+                  alt="XFO"
+                  className="h-12 mb-6"
+                />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Partner <span className="text-gray-600 font-normal">| January 2011 - May 2017</span>
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Mixed martial arts promotion recognized as one of the premier combat sports organizations in the Midwest. Led brand development, event growth, and commercial strategy for one of the longest running regional MMA promotions in the United States.
+                </p>
+                <div className="text-gray-600 text-sm space-y-2">
+                  <p className="font-semibold text-gray-700">Top Level Highlights:</p>
+                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                    <li>Helped build the XFO into the Midwest's leading MMA organization, sending more than <span className="font-semibold">100 fighters</span> to the UFC.</li>
+                    <li>Oversaw attendee experience marketing and audience growth that increased regional visibility and boosted average event attendance by an estimated <span className="font-semibold">30 percent</span>.</li>
+                    <li>Grew sponsorship and partnership revenue through local and regional brand deals, securing <span className="font-semibold">six figure</span> annual commitments.</li>
+                    <li>Expanded ticket sales year over year through targeted promotion, fighter storytelling, and market specific activations.</li>
+                    <li>Managed event promotion, sponsorships, and operational planning across more than a decade of live events, culminating in the UFC purchasing the full fight library for exclusive distribution on UFC Fight Pass.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Earlier Career */}
+              <div className="pt-12">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Earlier Career in E-Commerce & Brand Marketing
+                </h3>
+                <div className="text-gray-600 text-sm space-y-3">
+                  <p><span className="font-semibold">Marketing Manager</span> — Benchmark Hospitality (2009–2011)</p>
+                  <p><span className="font-semibold">Director of Sales & Marketing</span> — KemperSports (2007–2009)</p>
+                  <p><span className="font-semibold">Business Development Manager</span> — Excel Golf Products (2001–2007)</p>
+                  <p><span className="font-semibold">E-Commerce Manager</span> — Tour Edge Golf (1999–2001)</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
