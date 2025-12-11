@@ -215,7 +215,7 @@ export default function Index() {
               {/* Kadena */}
               <div className="pt-12 first:pt-0">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/9e8c05a0e808ff97ab3a15f21987e700427c69d9?width=272"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9394984ab56d49318277639d40031b24?format=webp&width=800"
                   alt="Kadena"
                   className="h-10 mb-6"
                 />
