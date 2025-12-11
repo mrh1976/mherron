@@ -116,7 +116,7 @@ export default function Index() {
               />
 
               {/* Newsletter Card - positioned to overlap */}
-              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-12 relative z-10 shadow-lg">
+              <div className="w-full max-w-md bg-black rounded-2xl p-6 flex items-center gap-6 -mt-40 relative z-10 shadow-lg">
                 {/* Logo/Icon */}
                 <div className="flex-shrink-0 w-24 h-24">
                   <img
