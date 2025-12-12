@@ -107,16 +107,15 @@ export default function Index() {
                   Let's Chat
                 </button>
               </div>
-            </div>
 
-            {/* Right Content - Profile Image */}
-            <div className="hidden lg:flex lg:justify-end lg:absolute lg:right-4 lg:top-8 lg:h-[600px] lg:items-start overflow-hidden">
-              {/* Profile Image */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1600"
-                alt="Mike Herron"
-                className="max-w-xl lg:max-w-2xl object-cover object-top rounded-lg"
-              />
+              {/* Profile Image - Below Button */}
+              <div className="w-full sm:w-3/4 lg:w-full overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1600"
+                  alt="Mike Herron"
+                  className="w-full object-cover object-top rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
