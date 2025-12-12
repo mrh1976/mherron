@@ -90,7 +90,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
             <div className="flex flex-col justify-start mt-16 lg:absolute lg:left-4 lg:top-8 lg:z-10 lg:w-2/3">
-              <h1 className="text-[55px] lg:text-[67px] font-bold leading-none mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[67px] font-bold leading-none mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
@@ -124,25 +124,25 @@ export default function Index() {
 
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-between gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
           {/* Want to learn more section */}
-          <div className="space-y-4 flex flex-col items-start lg:ml-[200px]">
-            <h3 className="text-3xl font-bold text-gray-900">
+          <div className="space-y-4 flex flex-col items-start lg:ml-[200px] order-2 lg:order-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
             <a
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition self-end inline-block"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition"
             >
               Subscribe on LinkedIn
             </a>
           </div>
 
-          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg flex-shrink-0">
+          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 shadow-lg order-1 lg:order-2 flex-shrink-0">
             {/* Logo/Icon */}
-            <div className="flex-shrink-0 w-24 h-24">
+            <div className="flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
                 alt="Dear Founders Logo"
@@ -172,7 +172,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Left Column - Title and Subtitle */}
             <div className="flex flex-col gap-8">
-              <h2 className="text-5xl lg:text-5xl font-medium">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
                 <span className="text-gray-900">About Me</span>
                 <span className="text-orange">.</span>
               </h2>
@@ -222,7 +222,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
             {/* Left Sticky Column */}
             <div className="lg:sticky lg:top-24 h-fit">
-              <h2 className="text-5xl lg:text-5xl font-medium mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-6">
                 <span className="text-gray-900">Worked for</span>
                 <span className="text-orange">.</span>
               </h2>
