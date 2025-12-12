@@ -1,19 +1,24 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/spa",
-  "framework": "vite",
+  "outputDirectory": ".",
+  "framework": "other",
   "env": {
     "NODE_ENV": "production"
   },
-  "serverlessFunctions": {
-    "dist/server/**/*.js": {
+  "public": "dist/spa",
+  "functions": {
+    "server/**/*.ts": {
       "runtime": "nodejs20.x"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "/"
+      "src": "/api/(.*)",
+      "dest": "dist/server/node-build.mjs"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/spa/index.html"
     }
   ]
 }
