@@ -1339,7 +1339,11 @@ export default function Index() {
                         <iframe
                           width="100%"
                           height="100%"
-                          src={`https://www.youtube.com/embed/${videoId}`}
+                          src={
+                            projectModals[activeModal - 1].isPlaylist
+                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                              : `https://www.youtube.com/embed/${videoId}`
+                          }
                           title={`Project Video ${index + 1}`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
