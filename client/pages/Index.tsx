@@ -199,31 +199,13 @@ export default function Index() {
             {/* Right Column - Bio Content */}
             <div className="flex flex-col gap-6 lg:col-span-2">
               <p className="text-gray-900 text-base leading-relaxed">
-                I am a lifelong Chicagoan, a husband, and a father of four, and
-                I have spent my entire career building, leading, and scaling
-                marketing organizations that help companies grow with clarity
-                and purpose. Over the past twenty five years I have worked
-                across every corner of the marketing world. I have been client
-                side inside large enterprises, agency side serving global
-                brands, an entrepreneur building ventures from scratch, and a
-                consultant trusted by companies to solve hard problems.
+                I am a lifelong Chicagoan, a husband, and a father of four. I have spent my career building, leading, and scaling marketing organizations that help companies grow with clarity and purpose. Over the past twenty-five years, I have worked across every corner of the marketing world, including client-side roles inside large enterprises, agency leadership supporting global brands, entrepreneurial ventures built from the ground up, and consulting engagements trusted to solve complex challenges.
               </p>
               <p className="text-gray-900 text-base leading-relaxed">
-                I have led marketing at fast moving blockchain and fintech
-                companies, managed multi million dollar brand partnerships,
-                guided agency teams supporting Fortune 500 clients, and helped
-                launch new products for startups and established businesses. No
-                matter the setting, I am at my best when I am building something
-                and helping people see what is possible.
+                I have led marketing for fast-moving blockchain and fintech companies, managed multi-million dollar brand partnerships, guided agency teams serving Fortune 500 clients, and helped launch new products for both startups and established businesses. No matter the setting, I am at my best when I am building something and helping people see what is possible.
               </p>
               <p className="text-gray-900 text-base leading-relaxed">
-                At work and at home, I try to show up with honesty, curiosity,
-                and a calm leadership style that gives teams confidence. I
-                believe in clear goals, transparent conversations, and creating
-                an environment where people can do the best work of their
-                careers. And after all of it, Chicago is still home. It is where
-                I grew up, where my family is, and where my career continues to
-                grow.
+                At work and at home, I lead with honesty, curiosity, and a calm, steady presence that gives teams confidence. I believe in clear goals, transparent conversations, and creating environments where people can do the best work of their careers.
               </p>
             </div>
           </div>
