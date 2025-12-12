@@ -116,7 +116,7 @@ export default function Index() {
             <div className="flex lg:hidden w-full justify-center order-2">
               {/* Mobile/Tablet Profile Image */}
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1600"
+                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F875596f229e0406dbb9ca3ee09836094?format=webp&width=800"
                 alt="Mike Herron"
                 className="w-full max-w-sm object-cover object-top rounded-lg"
               />
@@ -126,7 +126,7 @@ export default function Index() {
             <div className="hidden lg:flex lg:justify-end lg:absolute lg:right-4 lg:top-[17px] lg:h-[600px] lg:items-start overflow-hidden">
               {/* Profile Image */}
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4542bba0111b423286bce0c28bd41a0e?format=webp&width=1600"
+                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F875596f229e0406dbb9ca3ee09836094?format=webp&width=800"
                 alt="Mike Herron"
                 className="max-w-xl lg:max-w-2xl object-cover object-top rounded-lg"
               />
