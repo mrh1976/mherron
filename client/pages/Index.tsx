@@ -1263,7 +1263,7 @@ export default function Index() {
               </svg>
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
               {/* Left Column - Content */}
               <div className="flex flex-col justify-between">
                 <div>
