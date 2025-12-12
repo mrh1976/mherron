@@ -34,7 +34,29 @@ const projectModals = [
       "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
     videoIds: ["L-ddhlBMFz0"],
   },
-  { id: 4, title: "US Cellular Brand Activations", description: "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences.\n\nThe programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.", videoIds: ["PLPvHOrmUSleyDIvAZFMgup2VXp1GyxZba", "PLPvHOrmUSlewGuWFuOv9O5dDiK0huG4vJ", "PLPvHOrmUSlex9ZYBzFjcQ_LAaXw9NKqDy", "PLPvHOrmUSlexAeyBJMx35tt80CXlzWtDJ", "PLPvHOrmUSlez8mxAZpqMfbG9t4zx6aApy", "PLPvHOrmUSleytGBta2Q2a9GQpR2l8Mn9i"], videoTitles: ["30 Days of Good", "Future of Good", "Summerfest", "Season of Traditions", "Tech Content", "360 Degree Storytelling"], isPlaylist: true },
+  {
+    id: 4,
+    title: "US Cellular Brand Activations",
+    description:
+      "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences.\n\nThe programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
+    videoIds: [
+      "PLPvHOrmUSleyDIvAZFMgup2VXp1GyxZba",
+      "PLPvHOrmUSlewGuWFuOv9O5dDiK0huG4vJ",
+      "PLPvHOrmUSlex9ZYBzFjcQ_LAaXw9NKqDy",
+      "PLPvHOrmUSlexAeyBJMx35tt80CXlzWtDJ",
+      "PLPvHOrmUSlez8mxAZpqMfbG9t4zx6aApy",
+      "PLPvHOrmUSleytGBta2Q2a9GQpR2l8Mn9i",
+    ],
+    videoTitles: [
+      "30 Days of Good",
+      "Future of Good",
+      "Summerfest",
+      "Season of Traditions",
+      "Tech Content",
+      "360 Degree Storytelling",
+    ],
+    isPlaylist: true,
+  },
   {
     id: 5,
     title: "Unicorn Valuation",
@@ -1336,7 +1358,11 @@ export default function Index() {
                         {projectModals[activeModal - 1].videoTitles &&
                           projectModals[activeModal - 1].videoTitles[index] && (
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                              {projectModals[activeModal - 1].videoTitles[index]}
+                              {
+                                projectModals[activeModal - 1].videoTitles[
+                                  index
+                                ]
+                              }
                             </h3>
                           )}
                         <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
