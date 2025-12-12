@@ -1,24 +1,23 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".",
-  "framework": "other",
+  "buildCommand": "npm run build:client",
+  "outputDirectory": "dist/spa",
+  "framework": "vite",
   "env": {
     "NODE_ENV": "production"
   },
-  "public": "dist/spa",
   "functions": {
-    "server/**/*.ts": {
+    "api/**/*.ts": {
       "runtime": "nodejs20.x"
     }
   },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "dist/server/node-build.mjs"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "dist/spa/index.html"
+      "dest": "/index.html"
     }
   ]
 }
