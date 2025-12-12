@@ -223,8 +223,7 @@ export default function Index() {
                 <span className="text-orange">.</span>
               </h2>
               <p className="text-gray-600 text-base leading-relaxed">
-                I have been a part of the high quality design process for
-                several companies.
+                I have partnered with world class teams to deliver high impact campaigns, product launches, and brand experiences across a wide range of industries.
               </p>
             </div>
 
