@@ -89,7 +89,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 lg:pb-[620px] relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
-            <div className="flex flex-col justify-start mt-16 lg:absolute lg:left-4 lg:top-8 lg:z-10 lg:w-2/3">
+            <div className="flex flex-col justify-start mt-16 lg:absolute lg:left-4 lg:top-[-22px] lg:z-10 lg:w-2/3">
               <h1 className="text-[55px] lg:text-[60px] font-bold leading-none mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
