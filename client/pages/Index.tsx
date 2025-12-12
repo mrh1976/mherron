@@ -6,7 +6,12 @@ const loremIpsum =
 const projectModals = [
   { id: 1, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
   { id: 2, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 3, title: "Distracted Driving PSA", description: loremIpsum, videoId: "L-ddhlBMFz0" },
+  {
+    id: 3,
+    title: "Distracted Driving PSA",
+    description: loremIpsum,
+    videoId: "L-ddhlBMFz0",
+  },
   { id: 4, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
   { id: 5, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
   { id: 6, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
