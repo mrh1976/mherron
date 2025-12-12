@@ -700,7 +700,7 @@ export default function Index() {
       {/* Worked With Section */}
       <section id="worked-with" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
             {/* Left Column - Title, Description, and Notable Companies */}
             <div className="flex flex-col gap-8">
               {/* Title and Description */}
