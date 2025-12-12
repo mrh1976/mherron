@@ -1398,7 +1398,7 @@ export default function Index() {
                         <div
                           key={`image-${index}`}
                           className={`w-full rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center ${
-                            index === arr.length - 1 ? "col-span-full" : ""
+                            arr.length === 1 && index === arr.length - 1 ? "col-span-full" : ""
                           }`}
                         >
                           <img
