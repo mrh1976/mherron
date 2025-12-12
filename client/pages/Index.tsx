@@ -91,14 +91,14 @@ export default function Index() {
             {/* Left Content */}
             <div className="flex flex-col justify-start mt-6 lg:mt-16 lg:absolute lg:left-8 lg:top-[17px] lg:z-10 lg:w-2/3">
               <h1 className="text-[26px] sm:text-[40px] lg:text-[57px] font-bold leading-none mb-6 sm:mb-8">
-                <span className="text-gray-900">Executive Leadership</span>
+                <span className="text-gray-900">Marketing Executive</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
                 <span className="text-gray-600">Complex Ideas</span>
                 <br />
                 <span className="text-gray-400">Into </span>
                 <span className="text-gray-600">
-                  Quantifiable ROI<span className="text-orange">.</span>
+                  Clear, Measurable Results<span className="text-orange">.</span>
                 </span>
               </h1>
 
