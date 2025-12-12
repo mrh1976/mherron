@@ -797,7 +797,7 @@ export default function Index() {
 
             {/* Right Column - Company Logos Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 gap-x-[50px] gap-y-[50px] items-center justify-items-end">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-[50px] items-center">
                 {/* H&R Block */}
                 <div className="flex items-center justify-center">
                   <img
