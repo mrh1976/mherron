@@ -155,7 +155,7 @@ export default function Index() {
               <div className="text-orange text-sm font-semibold tracking-wider mb-2">
                 LINKEDIN NEWSLETTER
               </div>
-              <h3 className="text-white text-2xl sm:text-4xl font-bold mb-2">
+              <h3 className="text-white text-2xl lg:text-4xl font-bold mb-2">
                 Dear Founders
               </h3>
               <p className="text-gray-300 text-sm sm:text-base">
