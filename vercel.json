@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/spa",
+  "framework": "vite",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "serverlessFunctions": {
+    "dist/server/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/"
+    }
+  ]
+}
