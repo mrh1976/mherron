@@ -124,7 +124,7 @@ export default function Index() {
 
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-[95px] relative z-20 mb-16 flex items-center justify-between gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-[100px] relative z-20 mb-16 flex items-center justify-between gap-16">
           {/* Want to learn more section */}
           <div className="space-y-4 flex flex-col items-start lg:ml-[50px]">
             <h3 className="text-3xl font-bold text-gray-900">
