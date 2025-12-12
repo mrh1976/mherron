@@ -21,7 +21,13 @@ const projectModals = [
   { id: 9, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 11, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
-  { id: 12, title: "Croatian Men's National Football Club", description: "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.", videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0"] },
+  {
+    id: 12,
+    title: "Croatian Men's National Football Club",
+    description:
+      "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.",
+    videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0"],
+  },
 ];
 
 export default function Index() {
@@ -1284,21 +1290,28 @@ export default function Index() {
 
               {/* Right Column - Video(s) */}
               <div className="flex flex-col items-start gap-4">
-                <div className={`w-full grid gap-4 ${projectModals[activeModal - 1].videoIds.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-                  {projectModals[activeModal - 1].videoIds.map((videoId, index) => (
-                    <div key={index} className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        src={`https://www.youtube.com/embed/${videoId}`}
-                        title={`Project Video ${index + 1}`}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      ></iframe>
-                    </div>
-                  ))}
+                <div
+                  className={`w-full grid gap-4 ${projectModals[activeModal - 1].videoIds.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
+                >
+                  {projectModals[activeModal - 1].videoIds.map(
+                    (videoId, index) => (
+                      <div
+                        key={index}
+                        className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900"
+                      >
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`Project Video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
