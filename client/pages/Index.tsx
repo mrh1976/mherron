@@ -21,7 +21,7 @@ const projectModals = [
   { id: 9, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 11, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
-  { id: 12, title: "Croatian Men's National Football Club", description: loremIpsum, videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0"] },
+  { id: 12, title: "Croatian Men's National Football Club", description: "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.", videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0"] },
 ];
 
 export default function Index() {
