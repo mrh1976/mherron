@@ -9,7 +9,7 @@ const projectModals = [
   {
     id: 3,
     title: "Distracted Driving PSA",
-    description: loremIpsum,
+    description: "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
     videoId: "L-ddhlBMFz0",
   },
   { id: 4, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
