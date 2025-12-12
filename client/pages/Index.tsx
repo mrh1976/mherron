@@ -1289,7 +1289,7 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Right Column - Video(s) */}
+              {/* Right Column - Video(s) and Image */}
               <div className="flex flex-col items-start gap-4">
                 <div
                   className={`w-full grid gap-4 ${projectModals[activeModal - 1].videoIds.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
@@ -1314,6 +1314,15 @@ export default function Index() {
                     ),
                   )}
                 </div>
+                {projectModals[activeModal - 1].image && (
+                  <div className="w-full rounded-lg overflow-hidden bg-gray-100">
+                    <img
+                      src={projectModals[activeModal - 1].image}
+                      alt="Project Image"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
