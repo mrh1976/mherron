@@ -1176,8 +1176,8 @@ export default function Index() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Disclaimer - Full Width */}
-          <div className="mb-12">
-            <div className="text-sm text-gray-400 leading-relaxed">
+          <div className="mb-12 lg:text-center">
+            <div className="text-sm lg:text-xs text-gray-400 lg:text-gray-600 leading-relaxed">
               <p>
                 All trademarks, logos, and brand names displayed on this website
                 are the property of their respective owners. They are used here
