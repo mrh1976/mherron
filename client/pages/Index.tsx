@@ -1334,10 +1334,12 @@ export default function Index() {
                   )}
                   {projectModals[activeModal - 1].images &&
                     projectModals[activeModal - 1].images.map(
-                      (imageUrl, index) => (
+                      (imageUrl, index, arr) => (
                         <div
                           key={`image-${index}`}
-                          className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100"
+                          className={`w-full aspect-video rounded-lg overflow-hidden bg-gray-100 ${
+                            index === arr.length - 1 ? "col-span-full" : ""
+                          }`}
                         >
                           <img
                             src={imageUrl}
