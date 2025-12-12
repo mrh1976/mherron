@@ -1337,14 +1337,16 @@ export default function Index() {
                       (imageUrl, index, arr) => (
                         <div
                           key={`image-${index}`}
-                          className={`w-full aspect-video rounded-lg overflow-hidden bg-gray-100 ${
-                            index === arr.length - 1 ? "col-span-full" : ""
+                          className={`w-full rounded-lg overflow-hidden bg-gray-100 ${
+                            index === arr.length - 1 ? "col-span-full" : "aspect-video"
                           }`}
                         >
                           <img
                             src={imageUrl}
                             alt={`Project Image ${index + 1}`}
-                            className="w-full h-full object-cover"
+                            className={`w-full h-full ${
+                              index === arr.length - 1 ? "object-contain" : "object-cover"
+                            }`}
                           />
                         </div>
                       ),
