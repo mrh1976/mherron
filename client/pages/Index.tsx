@@ -180,12 +180,12 @@ export default function Index() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="bg-white py-32">
+      <section id="about" className="bg-white py-12 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Left Column - Title and Subtitle */}
             <div className="flex flex-col gap-8">
-              <h2 className="text-5xl lg:text-5xl font-medium">
+              <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
                 <span className="text-gray-900">About Me</span>
                 <span className="text-orange">.</span>
               </h2>
@@ -230,12 +230,12 @@ export default function Index() {
       </section>
 
       {/* Worked For Section */}
-      <section id="worked-for" className="bg-white py-20">
+      <section id="worked-for" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
             {/* Left Sticky Column */}
             <div className="lg:sticky lg:top-24 h-fit">
-              <h2 className="text-5xl lg:text-5xl font-medium mb-6">
+              <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium mb-6">
                 <span className="text-gray-900">Worked for</span>
                 <span className="text-orange">.</span>
               </h2>
@@ -711,14 +711,14 @@ export default function Index() {
       </section>
 
       {/* Worked With Section */}
-      <section id="worked-with" className="bg-white py-20">
+      <section id="worked-with" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
             {/* Left Column - Title, Description, and Notable Companies */}
             <div className="flex flex-col gap-8">
               {/* Title and Description */}
               <div className="flex flex-col gap-6">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
+                <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked with</span>
                   <span className="text-orange">.</span>
                 </h2>
@@ -816,7 +816,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406"
                     alt="H&R Block"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -825,7 +825,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406"
                     alt="New England Patriots"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -834,7 +834,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458"
                     alt="State Street"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -843,7 +843,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484"
                     alt="United Airlines"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -852,7 +852,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502"
                     alt="Samsung"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -861,7 +861,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490"
                     alt="Tiffany & Co"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -870,7 +870,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436"
                     alt="AT&T"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -879,7 +879,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442"
                     alt="Disney"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -888,7 +888,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488"
                     alt="Bloomberg"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
 
@@ -897,7 +897,7 @@ export default function Index() {
                   <img
                     src="https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404"
                     alt="Google"
-                    className="max-w-[200px] max-h-[200px] object-contain"
+                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
                   />
                 </div>
               </div>
@@ -907,13 +907,13 @@ export default function Index() {
       </section>
 
       {/* Worked On Section */}
-      <section id="worked-on" className="bg-white py-20">
+      <section id="worked-on" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
             {/* Left Column - Title and Description */}
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
+                <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked on</span>
                   <span className="text-orange">.</span>
                 </h2>
