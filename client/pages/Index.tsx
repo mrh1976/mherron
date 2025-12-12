@@ -3,12 +3,20 @@ import { useState } from "react";
 const loremIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
-const projectModals = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  title: "Name",
-  description: loremIpsum,
-  videoId: "40Y-DL20UGg",
-}));
+const projectModals = [
+  { id: 1, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 2, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 3, title: "Distracted Driving PSA", description: loremIpsum, videoId: "L-ddhlBMFz0" },
+  { id: 4, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 5, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 6, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 7, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 8, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 9, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 10, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 11, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 12, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+];
 
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
