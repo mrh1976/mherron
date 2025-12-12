@@ -1397,7 +1397,7 @@ export default function Index() {
                       (imageUrl, index, arr) => (
                         <div
                           key={`image-${index}`}
-                          className={`w-full rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center ${
+                          className={`w-full aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center ${
                             arr.length === 1 && index === arr.length - 1
                               ? "col-span-full"
                               : ""
@@ -1406,7 +1406,7 @@ export default function Index() {
                           <img
                             src={imageUrl}
                             alt={`Project Image ${index + 1}`}
-                            className="w-full h-auto object-contain"
+                            className="w-full h-full object-contain"
                             style={index === 1 ? { marginBottom: "-2px" } : {}}
                           />
                         </div>
