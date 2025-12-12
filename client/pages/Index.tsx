@@ -1304,7 +1304,7 @@ export default function Index() {
                   {projectModals[activeModal - 1].videoIds.map(
                     (videoId, index) => (
                       <div
-                        key={index}
+                        key={`video-${index}`}
                         className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900"
                       >
                         <iframe
