@@ -4,24 +4,24 @@ const loremIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const projectModals = [
-  { id: 1, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 2, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
+  { id: 1, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 2, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 3,
     title: "Distracted Driving PSA",
     description:
       "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
-    videoId: "L-ddhlBMFz0",
+    videoIds: ["L-ddhlBMFz0"],
   },
-  { id: 4, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 5, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 6, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 7, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 8, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 9, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 10, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 11, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 12, title: "Croatian Men's National Football Club", description: loremIpsum, videoId: "hFFI4Ke2xrY" },
+  { id: 4, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 5, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 6, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 7, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 8, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 9, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 11, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 12, title: "Croatian Men's National Football Club", description: loremIpsum, videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0"] },
 ];
 
 export default function Index() {
