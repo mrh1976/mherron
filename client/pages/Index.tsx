@@ -705,7 +705,7 @@ export default function Index() {
             <div className="flex flex-col gap-8">
               {/* Title and Description */}
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl lg:text-5xl font-medium">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked with</span>
                   <span className="text-orange">.</span>
                 </h2>
@@ -900,7 +900,7 @@ export default function Index() {
             {/* Left Column - Title and Description */}
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl lg:text-5xl font-medium">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked on</span>
                   <span className="text-orange">.</span>
                 </h2>
