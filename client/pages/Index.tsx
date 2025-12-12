@@ -148,7 +148,7 @@ export default function Index() {
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full lg:w-auto bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition text-center lg:self-end lg:inline-block"
+              className="w-fit lg:w-auto bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition text-center lg:self-end lg:inline-block"
             >
               Subscribe on LinkedIn
             </a>
