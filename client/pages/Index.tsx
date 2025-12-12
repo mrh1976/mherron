@@ -98,7 +98,8 @@ export default function Index() {
                 <br />
                 <span className="text-gray-400">Into </span>
                 <span className="text-gray-600">
-                  Clear, Measurable Results<span className="text-orange">.</span>
+                  Clear, Measurable Results
+                  <span className="text-orange">.</span>
                 </span>
               </h1>
 
