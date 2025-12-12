@@ -705,7 +705,7 @@ export default function Index() {
             <div className="flex flex-col gap-8">
               {/* Title and Description */}
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl lg:text-5xl font-medium">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked with</span>
                   <span className="text-orange">.</span>
                 </h2>
@@ -900,7 +900,7 @@ export default function Index() {
             {/* Left Column - Title and Description */}
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl lg:text-5xl font-medium">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked on</span>
                   <span className="text-orange">.</span>
                 </h2>
@@ -919,7 +919,7 @@ export default function Index() {
 
             {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-4 grid-rows-3 gap-4 sm:gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 grid-rows-auto gap-3 sm:gap-4 lg:gap-5">
                 {/* Box 1 - Lukka Formula E */}
                 <button
                   onClick={() => setActiveModal(1)}
@@ -1073,13 +1073,13 @@ export default function Index() {
       <section id="contact" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-gray-900">Let's work </span>
               <span className="text-gray-400">together</span>
               <span className="text-orange">.</span>
             </h2>
 
-            <p className="text-gray-900 text-lg md:text-2xl font-medium mb-12">
+            <p className="text-gray-900 text-sm md:text-lg lg:text-2xl font-medium mb-12">
               <span>Audits </span>
               <span className="text-orange">|</span>
               <span> Consulting </span>
