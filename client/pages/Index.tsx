@@ -1181,7 +1181,7 @@ export default function Index() {
           </div>
 
           {/* Logo and Copyright - Bottom Row */}
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-0 mb-12">
             {/* Left - Logo */}
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/dc7288d32ef8e770c7e38a0ca30aecce0066b49f?width=478"
