@@ -4,7 +4,7 @@ const loremIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const projectModals = [
-  { id: 1, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 1, title: "Lukka Driven by Data", description: loremIpsum, videoIds: ["9Q2ySJDRUF8"] },
   { id: 2, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 3,
