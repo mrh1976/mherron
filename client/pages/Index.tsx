@@ -1293,7 +1293,8 @@ export default function Index() {
               <div className="flex flex-col items-start gap-4">
                 <div
                   className={`w-full grid gap-4 ${
-                    projectModals[activeModal - 1].image
+                    projectModals[activeModal - 1].images &&
+                    projectModals[activeModal - 1].images.length > 0
                       ? "grid-cols-2"
                       : projectModals[activeModal - 1].videoIds.length > 1
                         ? "grid-cols-2"
