@@ -1332,24 +1332,29 @@ export default function Index() {
                 >
                   {projectModals[activeModal - 1].videoIds.map(
                     (videoId, index) => (
-                      <div
-                        key={`video-${index}`}
-                        className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900"
-                      >
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={
-                            projectModals[activeModal - 1].isPlaylist
-                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                              : `https://www.youtube.com/embed/${videoId}`
-                          }
-                          title={`Project Video ${index + 1}`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full"
-                        ></iframe>
+                      <div key={`video-${index}`} className="w-full">
+                        {projectModals[activeModal - 1].videoTitles &&
+                          projectModals[activeModal - 1].videoTitles[index] && (
+                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                              {projectModals[activeModal - 1].videoTitles[index]}
+                            </h3>
+                          )}
+                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={
+                              projectModals[activeModal - 1].isPlaylist
+                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                : `https://www.youtube.com/embed/${videoId}`
+                            }
+                            title={`Project Video ${index + 1}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full"
+                          ></iframe>
+                        </div>
                       </div>
                     ),
                   )}
