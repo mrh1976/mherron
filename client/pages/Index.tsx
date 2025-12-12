@@ -87,7 +87,7 @@ export default function Index() {
       {/* Hero Section with Profile Image */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-12 lg:pb-[620px] relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-start">
             {/* Left Content */}
             <div className="flex flex-col justify-start mt-6 lg:mt-16 lg:absolute lg:left-8 lg:top-[17px] lg:z-10 lg:w-2/3">
               <h1 className="text-[26px] sm:text-[40px] lg:text-[57px] font-bold leading-none mb-6 sm:mb-8">
