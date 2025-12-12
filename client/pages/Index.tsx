@@ -140,7 +140,7 @@ export default function Index() {
             </a>
           </div>
 
-          <div className="w-full max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 flex items-center justify-center gap-8 shadow-lg flex-shrink-0">
+          <div className="w-full sm:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-6 sm:gap-8 shadow-lg sm:flex-shrink-0">
             {/* Logo/Icon */}
             <div className="flex-shrink-0 w-24 h-24">
               <img
