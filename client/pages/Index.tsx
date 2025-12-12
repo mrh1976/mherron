@@ -142,7 +142,7 @@ export default function Index() {
 
           <div className="w-full sm:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-6 sm:gap-8 shadow-lg sm:flex-shrink-0">
             {/* Logo/Icon */}
-            <div className="flex-shrink-0 w-24 h-24">
+            <div className="flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
                 alt="Dear Founders Logo"
@@ -155,10 +155,10 @@ export default function Index() {
               <div className="text-orange text-sm font-semibold tracking-wider mb-2">
                 LINKEDIN NEWSLETTER
               </div>
-              <h3 className="text-white text-4xl font-bold mb-2">
+              <h3 className="text-white text-2xl sm:text-4xl font-bold mb-2">
                 Dear Founders
               </h3>
-              <p className="text-gray-300 text-base">
+              <p className="text-gray-300 text-sm sm:text-base">
                 Marketing clarity for the modern entrepreneur
               </p>
             </div>
