@@ -1355,9 +1355,8 @@ export default function Index() {
                           <img
                             src={imageUrl}
                             alt={`Project Image ${index + 1}`}
-                            className={`w-full h-auto object-contain ${
-                              index === 1 ? "mb-16" : ""
-                            }`}
+                            className="w-full h-auto object-contain"
+                            style={index === 1 ? { marginBottom: "-2px" } : {}}
                           />
                         </div>
                       ),
