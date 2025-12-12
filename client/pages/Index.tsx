@@ -66,7 +66,7 @@ const projectModals = [
   },
   { id: 6, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 7, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
-  { id: 8, title: "Tiffany and Co. NFTiff", description: loremIpsum, videoIds: ["MbxJGAtORiU"] },
+  { id: 8, title: "Tiffany and Co. NFTiff", description: loremIpsum, videoIds: ["MbxJGAtORiU"], images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F691e6888967148b09d1b09d067563d99?format=webp&width=800"] },
   { id: 9, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   { id: 11, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
