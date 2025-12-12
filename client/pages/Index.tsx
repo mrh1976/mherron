@@ -1282,19 +1282,23 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Right Column - Video */}
-              <div className="flex flex-col items-start">
-                <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${projectModals[activeModal - 1].videoId}`}
-                    title="Project Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
+              {/* Right Column - Video(s) */}
+              <div className="flex flex-col items-start gap-4">
+                <div className={`w-full grid gap-4 ${projectModals[activeModal - 1].videoIds.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                  {projectModals[activeModal - 1].videoIds.map((videoId, index) => (
+                    <div key={index} className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        title={`Project Video ${index + 1}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
