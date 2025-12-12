@@ -4,7 +4,17 @@ const loremIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const projectModals = [
-  { id: 1, title: "Driven by Data", description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.", videoIds: ["9Q2ySJDRUF8", "G8-FdfGhK3s"], images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F14d8743fe1ed4fbebdd58856407160ac?format=webp&width=800", "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800"] },
+  {
+    id: 1,
+    title: "Driven by Data",
+    description:
+      "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
+    videoIds: ["9Q2ySJDRUF8", "G8-FdfGhK3s"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F14d8743fe1ed4fbebdd58856407160ac?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800",
+    ],
+  },
   { id: 2, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 3,
@@ -27,7 +37,9 @@ const projectModals = [
     description:
       "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.",
     videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0", "xWJqESUrC5Y"],
-    images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fddff427a0c444091b5022394add40b8e?format=webp&width=800"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fddff427a0c444091b5022394add40b8e?format=webp&width=800",
+    ],
   },
 ];
 
@@ -1321,18 +1333,20 @@ export default function Index() {
                     ),
                   )}
                   {projectModals[activeModal - 1].images &&
-                    projectModals[activeModal - 1].images.map((imageUrl, index) => (
-                      <div
-                        key={`image-${index}`}
-                        className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100"
-                      >
-                        <img
-                          src={imageUrl}
-                          alt={`Project Image ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
+                    projectModals[activeModal - 1].images.map(
+                      (imageUrl, index) => (
+                        <div
+                          key={`image-${index}`}
+                          className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100"
+                        >
+                          <img
+                            src={imageUrl}
+                            alt={`Project Image ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ),
+                    )}
                 </div>
               </div>
             </div>
