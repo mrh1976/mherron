@@ -1203,7 +1203,7 @@ export default function Index() {
             />
 
             {/* Right - Copyright */}
-            <p className="text-white text-base font-medium">
+            <p className="text-gray-400 text-sm font-medium">
               ©2026 Michael Herron LLC
             </p>
           </div>
