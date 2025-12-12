@@ -1095,11 +1095,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fbdd2fc26b9d54f32b18e8b118634aded?format=webp&width=400"
                     alt="Chain Patriots helmet"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">View Project</span>
-                  </div>
                 </button>
 
                 {/* Box 7 - Tiffany & Co NFT */}
@@ -1110,11 +1107,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F3cbaf395ebe14ab791ad4e9041d89cb1?format=webp&width=400"
                     alt="Tiffany & Co NFT"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">View Project</span>
-                  </div>
                 </button>
 
                 {/* Box 8 - Chain Wallet App */}
@@ -1140,11 +1134,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff6c63303bba445518833f99b005c1015?format=webp&width=400"
                     alt="Miami Heat player"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">View Project</span>
-                  </div>
                 </button>
 
                 {/* Box 10 - Chainweb EVM */}
@@ -1155,11 +1146,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe811583a315942fc847cc150544fe89a?format=webp&width=400"
                     alt="Chainweb EVM"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">View Project</span>
-                  </div>
                 </button>
 
                 {/* Box 11 - New Kadena */}
@@ -1170,11 +1158,8 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400"
                     alt="New Kadena"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">View Project</span>
-                  </div>
                 </button>
 
                 {/* Box 12 - Croatian Football Federation */}
