@@ -158,7 +158,7 @@ export default function Index() {
               <h3 className="text-white text-2xl lg:text-4xl font-bold mb-2">
                 Dear Founders
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base">
+              <p className="text-gray-300 text-sm lg:text-base">
                 Marketing clarity for the modern entrepreneur
               </p>
             </div>
