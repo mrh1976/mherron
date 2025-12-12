@@ -34,7 +34,7 @@ const projectModals = [
       "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
     videoIds: ["L-ddhlBMFz0"],
   },
-  { id: 4, title: "US Cellular Brand Activations", description: loremIpsum, videoIds: ["PLPvHOrmUSleyDIvAZFMgup2VXp1GyxZba", "PLPvHOrmUSlewGuWFuOv9O5dDiK0huG4vJ", "PLPvHOrmUSlex9ZYBzFjcQ_LAaXw9NKqDy", "PLPvHOrmUSlexAeyBJMx35tt80CXlzWtDJ", "PLPvHOrmUSlez8mxAZpqMfbG9t4zx6aApy", "PLPvHOrmUSleytGBta2Q2a9GQpR2l8Mn9i"], isPlaylist: true },
+  { id: 4, title: "US Cellular Brand Activations", description: loremIpsum, videoIds: ["PLPvHOrmUSleyDIvAZFMgup2VXp1GyxZba", "PLPvHOrmUSlewGuWFuOv9O5dDiK0huG4vJ", "PLPvHOrmUSlex9ZYBzFjcQ_LAaXw9NKqDy", "PLPvHOrmUSlexAeyBJMx35tt80CXlzWtDJ", "PLPvHOrmUSlez8mxAZpqMfbG9t4zx6aApy", "PLPvHOrmUSleytGBta2Q2a9GQpR2l8Mn9i"], videoTitles: ["30 Days of Good", "Future of Good", "Summerfest", "Season of Traditions", "Tech Content", "360 Degree Storytelling"], isPlaylist: true },
   {
     id: 5,
     title: "Unicorn Valuation",
