@@ -135,8 +135,8 @@ export default function Index() {
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 lg:-mt-[100px] relative z-20 mb-8 lg:mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
-          {/* Want to learn more section */}
-          <div className="space-y-4 flex flex-col items-start lg:ml-[50px]">
+          {/* Want to learn more section - Order 3 on mobile, 1 on desktop */}
+          <div className="space-y-4 flex flex-col items-start lg:ml-[50px] order-3 lg:order-1 w-full lg:w-auto">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
@@ -150,7 +150,7 @@ export default function Index() {
             </a>
           </div>
 
-          <div className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0">
+          <div className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 order-2 lg:order-2">
             {/* Logo/Icon */}
             <div className="flex-shrink-0 w-16 h-16 lg:w-24 lg:h-24">
               <img
