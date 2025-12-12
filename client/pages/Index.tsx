@@ -90,7 +90,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
             <div className="flex flex-col justify-start mt-16 lg:absolute lg:left-8 lg:top-[17px] lg:z-10 lg:w-2/3">
-              <h1 className="text-[55px] lg:text-[57px] font-bold leading-none mb-8">
+              <h1 className="text-[32px] sm:text-[40px] lg:text-[57px] font-bold leading-none mb-6 sm:mb-8">
                 <span className="text-gray-900">Executive Leadership</span>
                 <br />
                 <span className="text-gray-400">That Turns </span>
@@ -124,10 +124,10 @@ export default function Index() {
 
       {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-[100px] relative z-20 mb-16 flex items-center justify-between gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-[100px] relative z-20 mb-12 sm:mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-16">
           {/* Want to learn more section */}
-          <div className="space-y-4 flex flex-col items-start lg:ml-[50px]">
-            <h3 className="text-3xl font-bold text-gray-900">
+          <div className="space-y-4 flex flex-col items-start lg:ml-[50px] order-2 lg:order-1">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
             <a
