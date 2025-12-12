@@ -4,7 +4,7 @@ const loremIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const projectModals = [
-  { id: 1, title: "Lukka Driven by Data", description: loremIpsum, videoIds: ["9Q2ySJDRUF8", "G8-FdfGhK3s"], images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F14d8743fe1ed4fbebdd58856407160ac?format=webp&width=800", "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800"] },
+  { id: 1, title: "Lukka Driven by Data", description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.", videoIds: ["9Q2ySJDRUF8", "G8-FdfGhK3s"], images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F14d8743fe1ed4fbebdd58856407160ac?format=webp&width=800", "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800"] },
   { id: 2, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 3,
