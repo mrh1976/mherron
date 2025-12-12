@@ -1213,7 +1213,9 @@ export default function Index() {
               <span className="text-orange">|</span>
               <span> Fractional </span>
               <span className="text-orange">|</span>
-              <span> Full-Time</span>
+              <span> Full-Time </span>
+              <span className="text-orange">|</span>
+              <span> Board Member</span>
             </p>
 
             {/* Contact Form */}
