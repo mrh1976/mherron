@@ -106,7 +106,7 @@ export default function Index() {
               <div className="flex flex-col sm:flex-row gap-3 mb-4 lg:mb-16">
                 <a
                   href="#contact"
-                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition inline-block"
+                  className="w-fit bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition inline-block"
                 >
                   Let's Chat
                 </a>
