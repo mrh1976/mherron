@@ -918,7 +918,7 @@ export default function Index() {
 
             {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 grid-rows-auto gap-3 sm:gap-4 lg:gap-5">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-5">
                 {/* Box 1 - Lukka Formula E */}
                 <button
                   onClick={() => setActiveModal(1)}
