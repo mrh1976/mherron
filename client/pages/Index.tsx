@@ -1320,15 +1320,19 @@ export default function Index() {
                       </div>
                     ),
                   )}
-                  {projectModals[activeModal - 1].image && (
-                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
-                      <img
-                        src={projectModals[activeModal - 1].image}
-                        alt="Project Image"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
+                  {projectModals[activeModal - 1].images &&
+                    projectModals[activeModal - 1].images.map((imageUrl, index) => (
+                      <div
+                        key={`image-${index}`}
+                        className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src={imageUrl}
+                          alt={`Project Image ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
