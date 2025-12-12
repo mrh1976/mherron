@@ -15,7 +15,7 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800",
     ],
   },
-  { id: 2, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 2, title: "H&R Block Retail Tax Software", description: "At Fusion92, I led the strategic partnership with H&R Block to reinvent how consumers experience tax preparation. We built a direct-to-consumer sales channel that delivered software to people's homes, introduced patented authentication technology, and elevated in-store and online customer experiences. The partnership endured for 19 tax seasons, resulting in more than 45 million software products designed, produced, and distributed, and hundreds of millions of dollars in revenue. The work also served as a trusted strategic resource across product innovation, digital acquisition, and customer experience for H&R Block.", videoIds: ["40Y-DL20UGg"] },
   {
     id: 3,
     title: "Distracted Driving PSA",
