@@ -21,7 +21,7 @@ const projectModals = [
   { id: 9, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
   { id: 10, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
   { id: 11, title: "Name", description: loremIpsum, videoId: "40Y-DL20UGg" },
-  { id: 12, title: "Name", description: loremIpsum, videoId: "hFFI4Ke2xrY" },
+  { id: 12, title: "Croatian Men's National Football Club", description: loremIpsum, videoId: "hFFI4Ke2xrY" },
 ];
 
 export default function Index() {
