@@ -15,7 +15,18 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F17e023be95b94adbbab0b5bbb94fb61e?format=webp&width=800",
     ],
   },
-  { id: 2, title: "H&R Block Retail Tax Software", description: "At Fusion92, I led the strategic partnership with H&R Block to reinvent how consumers experience tax preparation. We built a direct-to-consumer sales channel that delivered software to people's homes, introduced patented authentication technology, and elevated in-store and online customer experiences. The partnership endured for 19 tax seasons, resulting in more than 45 million software products designed, produced, and distributed, and hundreds of millions of dollars in revenue. The work also served as a trusted strategic resource across product innovation, digital acquisition, and customer experience for H&R Block.", videoIds: [], images: ["https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fad466a460cc542bcab62bf1490002503?format=webp&width=800", "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F46c0ca02949a45cb97340041d5116153?format=webp&width=800", "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc08651ab53e8484aa55eccf66342c4f9?format=webp&width=800"] },
+  {
+    id: 2,
+    title: "H&R Block Retail Tax Software",
+    description:
+      "At Fusion92, I led the strategic partnership with H&R Block to reinvent how consumers experience tax preparation. We built a direct-to-consumer sales channel that delivered software to people's homes, introduced patented authentication technology, and elevated in-store and online customer experiences. The partnership endured for 19 tax seasons, resulting in more than 45 million software products designed, produced, and distributed, and hundreds of millions of dollars in revenue. The work also served as a trusted strategic resource across product innovation, digital acquisition, and customer experience for H&R Block.",
+    videoIds: [],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fad466a460cc542bcab62bf1490002503?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F46c0ca02949a45cb97340041d5116153?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc08651ab53e8484aa55eccf66342c4f9?format=webp&width=800",
+    ],
+  },
   {
     id: 3,
     title: "Distracted Driving PSA",
