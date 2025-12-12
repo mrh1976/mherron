@@ -126,7 +126,7 @@ export default function Index() {
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 mb-16 flex items-center justify-between gap-16">
           {/* Want to learn more section */}
-          <div className="space-y-4 flex flex-col items-start lg:ml-[200px]">
+          <div className="space-y-4 flex flex-col items-start lg:ml-0">
             <h3 className="text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
