@@ -1292,7 +1292,13 @@ export default function Index() {
               {/* Right Column - Video(s) and Image */}
               <div className="flex flex-col items-start gap-4">
                 <div
-                  className={`w-full grid gap-4 ${projectModals[activeModal - 1].videoIds.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
+                  className={`w-full grid gap-4 ${
+                    projectModals[activeModal - 1].image
+                      ? "grid-cols-2"
+                      : projectModals[activeModal - 1].videoIds.length > 1
+                        ? "grid-cols-2"
+                        : "grid-cols-1"
+                  }`}
                 >
                   {projectModals[activeModal - 1].videoIds.map(
                     (videoId, index) => (
@@ -1313,16 +1319,16 @@ export default function Index() {
                       </div>
                     ),
                   )}
+                  {projectModals[activeModal - 1].image && (
+                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+                      <img
+                        src={projectModals[activeModal - 1].image}
+                        alt="Project Image"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
-                {projectModals[activeModal - 1].image && (
-                  <div className="w-full rounded-lg overflow-hidden bg-gray-100">
-                    <img
-                      src={projectModals[activeModal - 1].image}
-                      alt="Project Image"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                )}
               </div>
             </div>
           </div>
