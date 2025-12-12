@@ -1015,145 +1015,181 @@ export default function Index() {
                 {/* Box 1 - Lukka Formula E */}
                 <button
                   onClick={() => setActiveModal(1)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F88d20ef8b082451b8105ca7ae1767a27?format=webp&width=400"
                     alt="Lukka Formula E"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 2 - Fusion 92 H&R Block */}
                 <button
                   onClick={() => setActiveModal(2)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F57b2e77ba8444e99a4b6c00ea18dbcc7?format=webp&width=400"
                     alt="Fusion 92 H&R Block"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 3 - US Cellular Campaign */}
                 <button
                   onClick={() => setActiveModal(3)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F036e9110d57545f4909f28fcf01c9b44?format=webp&width=400"
                     alt="US Cellular campaign"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 4 - US Cellular Future of Good */}
                 <button
                   onClick={() => setActiveModal(4)}
-                  className="aspect-square rounded-lg overflow-hidden bg-white cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-white cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fa44c6f08b0bf40cb8ea08f61968b988c?format=webp&width=400"
                     alt="US Cellular Future of Good"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 5 - Lukka Data Visualization */}
                 <button
                   onClick={() => setActiveModal(5)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F74eb105410174fef8bb2485c242e4791?format=webp&width=400"
                     alt="Lukka data visualization"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 6 - Chain Patriots Helmet */}
                 <button
                   onClick={() => setActiveModal(6)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fbdd2fc26b9d54f32b18e8b118634aded?format=webp&width=400"
                     alt="Chain Patriots helmet"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 7 - Tiffany & Co NFT */}
                 <button
                   onClick={() => setActiveModal(7)}
-                  className="aspect-square rounded-lg overflow-hidden bg-teal-100 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-teal-100 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F3cbaf395ebe14ab791ad4e9041d89cb1?format=webp&width=400"
                     alt="Tiffany & Co NFT"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 8 - Chain Wallet App */}
                 <button
                   onClick={() => setActiveModal(8)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda94d5220fa14f78aca333eaa563a96a?format=webp&width=400"
                     alt="Chain Wallet App"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 9 - Miami Heat Player */}
                 <button
                   onClick={() => setActiveModal(9)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff6c63303bba445518833f99b005c1015?format=webp&width=400"
                     alt="Miami Heat player"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 10 - Chainweb EVM */}
                 <button
                   onClick={() => setActiveModal(10)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe811583a315942fc847cc150544fe89a?format=webp&width=400"
                     alt="Chainweb EVM"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 11 - New Kadena */}
                 <button
                   onClick={() => setActiveModal(11)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400"
                     alt="New Kadena"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
 
                 {/* Box 12 - Croatian Football Federation */}
                 <button
                   onClick={() => setActiveModal(12)}
-                  className="aspect-square rounded-lg overflow-hidden bg-red-600 cursor-pointer hover:opacity-80 transition-opacity"
+                  className="aspect-square rounded-lg overflow-hidden bg-red-600 cursor-pointer group relative"
                 >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fed0ea93f040f4729a2ea432b157dad56?format=webp&width=400"
                     alt="Croatian Football Federation"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">View Project</span>
+                  </div>
                 </button>
               </div>
             </div>
