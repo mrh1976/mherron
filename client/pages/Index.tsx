@@ -85,7 +85,7 @@ const projectModals = [
       "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.",
     videoIds: ["hFFI4Ke2xrY", "HMnaUcnEOR0", "xWJqESUrC5Y"],
     images: [
-      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fddff427a0c444091b5022394add40b8e?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fab6fc358834b40bd9cd5725ad4d5b692?format=webp&width=800",
     ],
   },
 ];
