@@ -1513,8 +1513,9 @@ export default function Index() {
 
                   {/* Right: Stacked Images (Vertical on Desktop, Horizontal on Mobile) */}
                   <div
-                    className="w-full lg:w-52 flex flex-row lg:flex-col gap-3 lg:gap-6 lg:flex-shrink-0 lg:justify-between"
+                    className="w-full lg:w-52 flex flex-row lg:flex-col lg:flex-shrink-0 lg:justify-between"
                     style={{
+                      gap: "50px",
                       height: "auto",
                     }}
                   >
@@ -1523,7 +1524,7 @@ export default function Index() {
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className="flex-1 lg:flex-none lg:w-full h-24 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
+                            className="flex-1 lg:flex-none lg:w-full h-40 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
                           >
                             <img
                               src={imageUrl}
