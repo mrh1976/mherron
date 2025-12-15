@@ -93,6 +93,9 @@ const projectModals = [
       "At Kadena, I led #NewKadena, a full rebrand and relaunch of the platform designed to reset how the community and the market understood the company's vision, technology, and future. The work encompassed a new logo and visual identity, brand system, website redesign, messaging and positioning framework, refined ICPs, and a fundamentally new way of thinking about the Kadena brand.\n\nThe integrated campaign launched with a deliberate moment of disruption. Elements of the website began to glitch, signaling change before it was explained. That visual language carried across social channels, including individual profile imagery and coordinated community participation. The effect created immediate attention, widespread discussion, and strong organic reach. The momentum extended beyond awareness, breaking Kadena's token price out of its typical correlation with broader BTC and ETH market patterns and reinforcing the power of brand-led narrative to influence perception, engagement, and market behavior.",
     videoIds: ["PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl", "OCna9S7tnL4"],
     videoTitles: ["Teaser Posts", "Reveal"],
+    images: [
+      "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff5424c18a64b4981afc930c1d6bc2b23?alt=media&token=c85a39ee-0bcd-4b8e-a5e8-e42fa3f38457&apiKey=5031849ff5814a4cae6f958ac9f10229",
+    ],
   },
   {
     id: 12,
