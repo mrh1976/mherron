@@ -1453,7 +1453,7 @@ export default function Index() {
                       width="100%"
                       height="100%"
                       src={
-                        projectModals[activeModal - 1].isPlaylist
+                        projectModals[activeModal - 1].isPlaylist || videoId.startsWith("PL")
                           ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
                           : `https://www.youtube.com/embed/${videoId}`
                       }
