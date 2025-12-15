@@ -57,7 +57,10 @@ const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ success: true, message: "Email sent successfully" }),
+      body: JSON.stringify({
+        success: true,
+        message: "Email sent successfully",
+      }),
     };
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
