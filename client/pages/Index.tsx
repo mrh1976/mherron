@@ -93,6 +93,8 @@ const projectModals = [
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [formMessage, setFormMessage] = useState("");
 
   return (
     <div className="min-h-screen bg-white">
