@@ -90,8 +90,8 @@ const projectModals = [
     id: 11,
     title: "Name",
     description: loremIpsum,
-    videoIds: ["OCna9S7tnL4", "PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl"],
-    videoTitles: ["Video", "Playlist"],
+    videoIds: ["PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl", "OCna9S7tnL4"],
+    videoTitles: ["Playlist", "Video"],
   },
   {
     id: 12,
