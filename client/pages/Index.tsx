@@ -1218,26 +1218,24 @@ export default function Index() {
               <span> Board Member</span>
             </p>
 
-            {/* Contact Form - Netlify Forms */}
+            {/* Contact Form */}
             <form
-              name="contact"
-              method="POST"
               onSubmit={async (e) => {
                 e.preventDefault();
                 try {
-                  const body = `form-name=contact&name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
-                  const response = await fetch("/", {
+                  const response = await fetch("/api/contact", {
                     method: "POST",
                     headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
+                      "Content-Type": "application/json",
                     },
-                    body,
+                    body: JSON.stringify(formData),
                   });
-                  if (response.ok || response.status === 200) {
+                  const data = await response.json();
+                  if (response.ok) {
                     setFormData({ name: "", email: "" });
                     alert("Message sent successfully!");
                   } else {
-                    alert("Error sending message. Please try again.");
+                    alert(`Error: ${data.error || "Failed to send message"}`);
                   }
                 } catch (error) {
                   console.error("Form submission error:", error);
