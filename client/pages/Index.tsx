@@ -1224,6 +1224,7 @@ export default function Index() {
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
+                setFormStatus("loading");
                 try {
                   const response = await fetch("/.netlify/functions/contact", {
                     method: "POST",
@@ -1236,13 +1237,17 @@ export default function Index() {
                   console.log("Response:", { status: response.status, data });
                   if (response.ok) {
                     setFormData({ name: "", email: "" });
-                    alert("Message sent successfully!");
+                    setFormStatus("success");
+                    setFormMessage("Thank you! Your message has been sent successfully.");
+                    setTimeout(() => setFormStatus("idle"), 5000);
                   } else {
-                    alert(`Error: ${data.error || "Failed to send message"}`);
+                    setFormStatus("error");
+                    setFormMessage(`Error: ${data.error || "Failed to send message"}`);
                   }
                 } catch (error) {
                   console.error("Form submission error:", error);
-                  alert("Error sending message. Please try again.");
+                  setFormStatus("error");
+                  setFormMessage("Error sending message. Please try again.");
                 }
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
