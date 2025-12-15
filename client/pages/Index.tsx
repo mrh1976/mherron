@@ -93,7 +93,9 @@ const projectModals = [
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "" });
-  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [formMessage, setFormMessage] = useState("");
 
   return (
@@ -1238,11 +1240,15 @@ export default function Index() {
                   if (response.ok) {
                     setFormData({ name: "", email: "" });
                     setFormStatus("success");
-                    setFormMessage("Thank you! Your message has been sent successfully.");
+                    setFormMessage(
+                      "Thank you! Your message has been sent successfully.",
+                    );
                     setTimeout(() => setFormStatus("idle"), 5000);
                   } else {
                     setFormStatus("error");
-                    setFormMessage(`Error: ${data.error || "Failed to send message"}`);
+                    setFormMessage(
+                      `Error: ${data.error || "Failed to send message"}`,
+                    );
                   }
                 } catch (error) {
                   console.error("Form submission error:", error);
