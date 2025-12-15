@@ -1308,31 +1308,33 @@ export default function Index() {
                   setFormMessage("Error sending message. Please try again.");
                 }
               }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col gap-4 justify-center items-center"
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
-                required
-              />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                  required
+                />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
-                required
-              />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                  required
+                />
+              </div>
 
               <button
                 type="submit"
