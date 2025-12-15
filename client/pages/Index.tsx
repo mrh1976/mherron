@@ -95,6 +95,7 @@ const projectModals = [
     videoTitles: ["Teaser Posts", "Reveal"],
     images: [
       "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff5424c18a64b4981afc930c1d6bc2b23?alt=media&token=c85a39ee-0bcd-4b8e-a5e8-e42fa3f38457&apiKey=5031849ff5814a4cae6f958ac9f10229",
+      "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F85fc35581529429ab7278d7a8e7539c4?alt=media&token=ffed1761-1a94-4187-b1c0-ce43916aca19&apiKey=5031849ff5814a4cae6f958ac9f10229",
     ],
   },
   {
