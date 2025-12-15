@@ -1447,15 +1447,15 @@ export default function Index() {
             {activeModal === 11 ? (
               <div className="w-full space-y-6">
                 {/* First Video with Images on Right */}
+                {projectModals[activeModal - 1].videoTitles &&
+                  projectModals[activeModal - 1].videoTitles[0] && (
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {projectModals[activeModal - 1].videoTitles[0]}
+                    </h3>
+                  )}
                 <div className="flex gap-6 items-start">
                   {/* Left: First Video */}
                   <div className="flex-1 min-w-0">
-                    {projectModals[activeModal - 1].videoTitles &&
-                      projectModals[activeModal - 1].videoTitles[0] && (
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                          {projectModals[activeModal - 1].videoTitles[0]}
-                        </h3>
-                      )}
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
