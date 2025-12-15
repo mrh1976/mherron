@@ -1244,7 +1244,6 @@ export default function Index() {
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <input type="hidden" name="form-name" value="contact" />
               <input
                 type="text"
                 name="name"
