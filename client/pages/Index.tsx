@@ -1476,12 +1476,12 @@ export default function Index() {
                   </div>
 
                   {/* Right: Stacked Images */}
-                  <div className="w-40 flex flex-col gap-3 flex-shrink-0 h-fit">
+                  <div className="w-52 flex flex-col gap-3 flex-shrink-0 h-fit">
                     {projectModals[activeModal - 1].images &&
                       projectModals[activeModal - 1].images.map((imageUrl, index) => (
                         <div
                           key={`image-${index}`}
-                          className="w-full h-32 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                          className="w-full h-44 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
                         >
                           <img
                             src={imageUrl}
