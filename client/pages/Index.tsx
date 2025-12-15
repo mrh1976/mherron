@@ -1446,7 +1446,7 @@ export default function Index() {
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 {projectModals[activeModal - 1].title}
               </h2>
-              {React.isValidElement(projectModals[activeModal - 1].description) ? (
+              {typeof projectModals[activeModal - 1].description !== "string" ? (
                 <div className="text-gray-600 text-base leading-relaxed">
                   {projectModals[activeModal - 1].description}
                 </div>
