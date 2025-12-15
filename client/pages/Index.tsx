@@ -1447,7 +1447,7 @@ export default function Index() {
             {activeModal === 11 ? (
               <div className="w-full space-y-6">
                 {/* First Video with Images on Right */}
-                <div className="flex gap-6 items-start">
+                <div className="flex gap-6 items-start pt-12">
                   {/* Left: First Video */}
                   <div className="flex-1 min-w-0">
                     {projectModals[activeModal - 1].videoTitles &&
