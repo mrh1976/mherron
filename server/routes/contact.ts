@@ -29,10 +29,16 @@ export async function handleContact(req: Request, res: Response) {
     });
 
     // Test the connection
-    await transporter.verify();
+    try {
+      await transporter.verify();
+      console.log("Gmail SMTP connection verified");
+    } catch (verifyError) {
+      console.error("Gmail verification failed:", verifyError);
+      throw new Error(`Gmail verification failed: ${verifyError}`);
+    }
 
     // Send email to the recipient
-    await transporter.sendMail({
+    const mailResult = await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: "mherron54@gmail.com",
       subject: `New Contact Form Submission from ${name}`,
@@ -43,6 +49,7 @@ export async function handleContact(req: Request, res: Response) {
       `,
     });
 
+    console.log("Email sent successfully:", mailResult.messageId);
     res.json({ success: true, message: "Email sent successfully" });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
