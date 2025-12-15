@@ -1218,43 +1218,34 @@ export default function Index() {
               <span> Board Member</span>
             </p>
 
-            {/* Contact Form */}
+            {/* Contact Form - Netlify Forms */}
             <form
-              onSubmit={async (e) => {
+              name="contact"
+              method="POST"
+              netlify
+              onSubmit={(e) => {
                 e.preventDefault();
-                try {
-                  const response = await fetch("/api/contact", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                  });
-                  const responseData = await response.json();
-                  console.log("Contact form response:", {
-                    status: response.status,
-                    ok: response.ok,
-                    data: responseData,
-                  });
-                  if (response.ok) {
+                const form = e.currentTarget as HTMLFormElement;
+                fetch("/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: new URLSearchParams(new FormData(form) as any).toString(),
+                })
+                  .then(() => {
                     setFormData({ name: "", email: "" });
                     alert("Message sent successfully!");
-                  } else {
-                    alert(
-                      `Failed to send message: ${responseData.error || "Unknown error"}`,
-                    );
-                  }
-                } catch (error) {
-                  const errorMsg =
-                    error instanceof Error ? error.message : String(error);
-                  alert(`Error sending message: ${errorMsg}`);
-                  console.error("Contact form error:", error);
-                }
+                  })
+                  .catch((error) => {
+                    console.error("Form submission error:", error);
+                    alert("Error sending message. Please try again.");
+                  });
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
                 value={formData.name}
                 onChange={(e) =>
@@ -1266,6 +1257,7 @@ export default function Index() {
 
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={(e) =>
