@@ -11,7 +11,9 @@ export async function handleContact(req: Request, res: Response) {
   // Check if Gmail credentials are set
   if (!process.env.GMAIL_USER || !process.env.GMAIL_PASSWORD) {
     console.error("Gmail credentials not configured");
-    return res.status(500).json({ error: "Server configuration error: Gmail credentials not set" });
+    return res
+      .status(500)
+      .json({ error: "Server configuration error: Gmail credentials not set" });
   }
 
   try {
