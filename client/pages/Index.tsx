@@ -85,7 +85,7 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F997e55cfbf9648ef90b61a70e09ed98a?format=webp&width=800",
     ],
   },
-  { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
+  { id: 10, title: "Name", description: loremIpsum, videoIds: ["OCna9S7tnL4"] },
   { id: 11, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 12,
