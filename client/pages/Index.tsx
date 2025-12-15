@@ -78,7 +78,8 @@ const projectModals = [
   {
     id: 9,
     title: "Chain Wallet App",
-    description: loremIpsum,
+    description:
+      "At Chain, I led the end-to-end development and launch of Chain Wallet, a non-custodial wallet designed to give users full control over their digital assets through a secure and intuitive experience. My scope included product positioning, UX and UI direction, brand and visual design, user education, production, and go-to-market execution. The result was a self-custody product built around clarity, trust, and usability, helping bridge the gap between crypto native users and a broader audience entering Web3.",
     videoIds: ["-vWANkv-ZyE"],
     images: [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F997e55cfbf9648ef90b61a70e09ed98a?format=webp&width=800",
