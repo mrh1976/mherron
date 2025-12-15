@@ -1230,15 +1230,18 @@ export default function Index() {
                     },
                     body: JSON.stringify(formData),
                   });
+                  const responseData = await response.json();
+                  console.log("Contact form response:", { status: response.status, ok: response.ok, data: responseData });
                   if (response.ok) {
                     setFormData({ name: "", email: "" });
                     alert("Message sent successfully!");
                   } else {
-                    alert("Failed to send message. Please try again.");
+                    alert(`Failed to send message: ${responseData.error || "Unknown error"}`);
                   }
                 } catch (error) {
-                  alert("Error sending message. Please try again.");
-                  console.error(error);
+                  const errorMsg = error instanceof Error ? error.message : String(error);
+                  alert(`Error sending message: ${errorMsg}`);
+                  console.error("Contact form error:", error);
                 }
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
