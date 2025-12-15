@@ -8,6 +8,12 @@ export async function handleContact(req: Request, res: Response) {
     return res.status(400).json({ error: "Name and email are required" });
   }
 
+  // Check if Gmail credentials are set
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_PASSWORD) {
+    console.error("Gmail credentials not configured");
+    return res.status(500).json({ error: "Server configuration error: Gmail credentials not set" });
+  }
+
   try {
     // Create a transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
@@ -19,6 +25,9 @@ export async function handleContact(req: Request, res: Response) {
         pass: process.env.GMAIL_PASSWORD,
       },
     });
+
+    // Test the connection
+    await transporter.verify();
 
     // Send email to the recipient
     await transporter.sendMail({
@@ -34,8 +43,9 @@ export async function handleContact(req: Request, res: Response) {
 
     res.json({ success: true, message: "Email sent successfully" });
   } catch (error) {
-    console.error("Email error:", error);
-    res.status(500).json({ error: "Failed to send email" });
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("Email error:", errorMessage);
+    res.status(500).json({ error: `Failed to send email: ${errorMessage}` });
   }
 }
 
