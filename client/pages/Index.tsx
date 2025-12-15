@@ -92,10 +92,24 @@ const projectModals = [
     description: (
       <div className="space-y-4">
         <div>
-          At Kadena, I led #NewKadena, a full rebrand and relaunch of the platform designed to reset how the community and the market understood the company's vision, technology, and future. The work encompassed a new logo and visual identity, brand system, website redesign, messaging and positioning framework, refined ICPs, and a fundamentally new way of thinking about the Kadena brand.
+          At Kadena, I led #NewKadena, a full rebrand and relaunch of the
+          platform designed to reset how the community and the market understood
+          the company's vision, technology, and future. The work encompassed a
+          new logo and visual identity, brand system, website redesign,
+          messaging and positioning framework, refined ICPs, and a fundamentally
+          new way of thinking about the Kadena brand.
         </div>
         <div className="mt-4">
-          The integrated campaign launched with a deliberate moment of disruption. Elements of the website began to glitch, signaling change before it was explained. That visual language carried across social channels, including individual profile imagery and coordinated community participation. The effect created immediate attention, widespread discussion, and strong organic reach. The momentum extended beyond awareness, breaking Kadena's token price out of its typical correlation with broader BTC and ETH market patterns and reinforcing the power of brand-led narrative to influence perception, engagement, and market behavior.
+          The integrated campaign launched with a deliberate moment of
+          disruption. Elements of the website began to glitch, signaling change
+          before it was explained. That visual language carried across social
+          channels, including individual profile imagery and coordinated
+          community participation. The effect created immediate attention,
+          widespread discussion, and strong organic reach. The momentum extended
+          beyond awareness, breaking Kadena's token price out of its typical
+          correlation with broader BTC and ETH market patterns and reinforcing
+          the power of brand-led narrative to influence perception, engagement,
+          and market behavior.
         </div>
       </div>
     ),
@@ -1451,7 +1465,8 @@ export default function Index() {
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 {projectModals[activeModal - 1].title}
               </h2>
-              {typeof projectModals[activeModal - 1].description !== "string" ? (
+              {typeof projectModals[activeModal - 1].description !==
+              "string" ? (
                 <div className="text-gray-600 text-base leading-relaxed">
                   {projectModals[activeModal - 1].description}
                 </div>
@@ -1481,7 +1496,9 @@ export default function Index() {
                         height="100%"
                         src={
                           projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[0].startsWith("PL")
+                          projectModals[activeModal - 1].videoIds[0].startsWith(
+                            "PL",
+                          )
                             ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[0]}`
                             : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[0]}`
                         }
@@ -1495,20 +1512,25 @@ export default function Index() {
                   </div>
 
                   {/* Right: Stacked Images */}
-                  <div className="w-52 flex flex-col gap-6 flex-shrink-0 justify-between" style={{ height: "22.75rem" }}>
+                  <div
+                    className="w-52 flex flex-col gap-6 flex-shrink-0 justify-between"
+                    style={{ height: "22.75rem" }}
+                  >
                     {projectModals[activeModal - 1].images &&
-                      projectModals[activeModal - 1].images.map((imageUrl, index) => (
-                        <div
-                          key={`image-${index}`}
-                          className="w-full h-44 rounded-lg overflow-hidden flex items-center justify-center"
-                        >
-                          <img
-                            src={imageUrl}
-                            alt={`Project Image ${index + 1}`}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      ))}
+                      projectModals[activeModal - 1].images.map(
+                        (imageUrl, index) => (
+                          <div
+                            key={`image-${index}`}
+                            className="w-full h-44 rounded-lg overflow-hidden flex items-center justify-center"
+                          >
+                            <img
+                              src={imageUrl}
+                              alt={`Project Image ${index + 1}`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ),
+                      )}
                   </div>
                 </div>
 
@@ -1527,7 +1549,9 @@ export default function Index() {
                         height="100%"
                         src={
                           projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[1].startsWith("PL")
+                          projectModals[activeModal - 1].videoIds[1].startsWith(
+                            "PL",
+                          )
                             ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[1]}`
                             : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[1]}`
                         }
@@ -1545,49 +1569,58 @@ export default function Index() {
               <div className="w-full space-y-4">
                 {/* Default layout for other modals */}
                 <div className="w-full flex flex-col gap-4">
-                  {projectModals[activeModal - 1].videoIds.map((videoId, index) => (
-                    <div key={`video-${index}`} className="w-full">
-                      {projectModals[activeModal - 1].videoTitles &&
-                        projectModals[activeModal - 1].videoTitles[index] && (
-                          <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                            {projectModals[activeModal - 1].videoTitles[index]}
-                          </h3>
-                        )}
-                      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={
-                            projectModals[activeModal - 1].isPlaylist || videoId.startsWith("PL")
-                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                              : `https://www.youtube.com/embed/${videoId}`
-                          }
-                          title={`Project Video ${index + 1}`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full"
-                        ></iframe>
+                  {projectModals[activeModal - 1].videoIds.map(
+                    (videoId, index) => (
+                      <div key={`video-${index}`} className="w-full">
+                        {projectModals[activeModal - 1].videoTitles &&
+                          projectModals[activeModal - 1].videoTitles[index] && (
+                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                              {
+                                projectModals[activeModal - 1].videoTitles[
+                                  index
+                                ]
+                              }
+                            </h3>
+                          )}
+                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={
+                              projectModals[activeModal - 1].isPlaylist ||
+                              videoId.startsWith("PL")
+                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                : `https://www.youtube.com/embed/${videoId}`
+                            }
+                            title={`Project Video ${index + 1}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full"
+                          ></iframe>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
 
                 {projectModals[activeModal - 1].images &&
                   projectModals[activeModal - 1].images.length > 0 && (
                     <div className="w-full flex flex-col gap-4">
-                      {projectModals[activeModal - 1].images.map((imageUrl, index) => (
-                        <div
-                          key={`image-${index}`}
-                          className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
-                        >
-                          <img
-                            src={imageUrl}
-                            alt={`Project Image ${index + 1}`}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      ))}
+                      {projectModals[activeModal - 1].images.map(
+                        (imageUrl, index) => (
+                          <div
+                            key={`image-${index}`}
+                            className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                          >
+                            <img
+                              src={imageUrl}
+                              alt={`Project Image ${index + 1}`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ),
+                      )}
                     </div>
                   )}
               </div>
