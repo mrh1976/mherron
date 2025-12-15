@@ -89,8 +89,19 @@ const projectModals = [
   {
     id: 11,
     title: "#NewKadena",
-    description:
-      "At Kadena, I led #NewKadena, a full rebrand and relaunch of the platform designed to reset how the community and the market understood the company's vision, technology, and future. The work encompassed a new logo and visual identity, brand system, website redesign, messaging and positioning framework, refined ICPs, and a fundamentally new way of thinking about the Kadena brand.\n\nThe integrated campaign launched with a deliberate moment of disruption. Elements of the website began to glitch, signaling change before it was explained. That visual language carried across social channels, including individual profile imagery and coordinated community participation. The effect created immediate attention, widespread discussion, and strong organic reach. The momentum extended beyond awareness, breaking Kadena's token price out of its typical correlation with broader BTC and ETH market patterns and reinforcing the power of brand-led narrative to influence perception, engagement, and market behavior.",
+    description: (
+      <div className="space-y-4">
+        <p>
+          At Kadena, I led #NewKadena, a full rebrand and relaunch of the platform designed to reset how the community and the market understood the company's vision, technology, and future. The work encompassed a new logo and visual identity, brand system, website redesign, messaging and positioning framework, refined ICPs, and a fundamentally new way of thinking about the Kadena brand.{" "}
+        </p>
+        <p>
+          <br />
+        </p>
+        <p>
+          The integrated campaign launched with a deliberate moment of disruption. Elements of the website began to glitch, signaling change before it was explained. That visual language carried across social channels, including individual profile imagery and coordinated community participation. The effect created immediate attention, widespread discussion, and strong organic reach. The momentum extended beyond awareness, breaking Kadena's token price out of its typical correlation with broader BTC and ETH market patterns and reinforcing the power of brand-led narrative to influence perception, engagement, and market behavior.
+        </p>
+      </div>
+    ),
     videoIds: ["PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl", "OCna9S7tnL4"],
     videoTitles: ["Teaser Posts", "Reveal"],
     images: [
