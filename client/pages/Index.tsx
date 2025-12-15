@@ -1223,7 +1223,7 @@ export default function Index() {
               onSubmit={async (e) => {
                 e.preventDefault();
                 try {
-                  const response = await fetch("/api/contact", {
+                  const response = await fetch("/.netlify/functions/contact", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -1231,6 +1231,7 @@ export default function Index() {
                     body: JSON.stringify(formData),
                   });
                   const data = await response.json();
+                  console.log("Response:", { status: response.status, data });
                   if (response.ok) {
                     setFormData({ name: "", email: "" });
                     alert("Message sent successfully!");
