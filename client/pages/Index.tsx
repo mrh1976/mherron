@@ -1476,7 +1476,7 @@ export default function Index() {
                   </div>
 
                   {/* Right: Stacked Images */}
-                  <div className="w-52 flex flex-col gap-3 flex-shrink-0 justify-between" style={{ height: "22.75rem" }}>
+                  <div className="w-52 flex flex-col gap-6 flex-shrink-0 justify-between" style={{ height: "22.75rem" }}>
                     {projectModals[activeModal - 1].images &&
                       projectModals[activeModal - 1].images.map((imageUrl, index) => (
                         <div
