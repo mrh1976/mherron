@@ -1336,7 +1336,7 @@ export default function Index() {
 
               <button
                 type="submit"
-                className="px-8 py-3 rounded-full md:rounded-lg lg:rounded-full bg-gray-600 hover:bg-gray-700 text-white font-medium transition-colors"
+                className="px-8 py-3 rounded-full md:rounded bg-gray-600 hover:bg-gray-700 text-white font-medium transition-colors"
               >
                 Submit
               </button>
