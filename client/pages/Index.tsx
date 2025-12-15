@@ -1481,7 +1481,7 @@ export default function Index() {
                       projectModals[activeModal - 1].images.map((imageUrl, index) => (
                         <div
                           key={`image-${index}`}
-                          className="w-full h-44 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                          className="w-full h-44 rounded-lg overflow-hidden flex items-center justify-center"
                         >
                           <img
                             src={imageUrl}
