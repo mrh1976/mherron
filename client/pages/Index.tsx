@@ -1222,7 +1222,6 @@ export default function Index() {
             <form
               name="contact"
               method="POST"
-              netlify
               onSubmit={(e) => {
                 e.preventDefault();
                 const form = e.currentTarget as HTMLFormElement;
