@@ -92,7 +92,6 @@ const projectModals = [
     description: loremIpsum,
     videoIds: ["OCna9S7tnL4", "PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl"],
     videoTitles: ["Video", "Playlist"],
-    isPlaylist: true,
   },
   {
     id: 12,
