@@ -1228,8 +1228,12 @@ export default function Index() {
                 const form = e.currentTarget as HTMLFormElement;
                 fetch("/", {
                   method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: new URLSearchParams(new FormData(form) as any).toString(),
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                  },
+                  body: new URLSearchParams(
+                    new FormData(form) as any,
+                  ).toString(),
                 })
                   .then(() => {
                     setFormData({ name: "", email: "" });
