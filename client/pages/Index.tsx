@@ -1207,8 +1207,13 @@ export default function Index() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400"
                     alt="New Kadena"
-                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-semibold text-lg">
+                      View Project
+                    </span>
+                  </div>
                 </button>
 
                 {/* Box 12 - Croatian Football Federation */}
