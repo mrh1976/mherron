@@ -11,7 +11,9 @@ export async function handleContact(req: Request, res: Response) {
   try {
     // Create a transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASSWORD,
