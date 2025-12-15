@@ -1222,26 +1222,27 @@ export default function Index() {
             <form
               name="contact"
               method="POST"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                const form = e.currentTarget as HTMLFormElement;
-                fetch("/", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                  },
-                  body: new URLSearchParams(
-                    new FormData(form) as any,
-                  ).toString(),
-                })
-                  .then(() => {
+                try {
+                  const body = `form-name=contact&name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
+                  const response = await fetch("/", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body,
+                  });
+                  if (response.ok || response.status === 200) {
                     setFormData({ name: "", email: "" });
                     alert("Message sent successfully!");
-                  })
-                  .catch((error) => {
-                    console.error("Form submission error:", error);
+                  } else {
                     alert("Error sending message. Please try again.");
-                  });
+                  }
+                } catch (error) {
+                  console.error("Form submission error:", error);
+                  alert("Error sending message. Please try again.");
+                }
               }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
