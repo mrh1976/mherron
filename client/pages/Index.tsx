@@ -91,7 +91,7 @@ const projectModals = [
     title: "Name",
     description: loremIpsum,
     videoIds: ["PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl", "OCna9S7tnL4"],
-    videoTitles: ["Playlist", "Video"],
+    videoTitles: ["Teaser Posts", "Reveal"],
   },
   {
     id: 12,
