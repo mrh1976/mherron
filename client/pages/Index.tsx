@@ -1462,7 +1462,7 @@ export default function Index() {
 
             {/* Header and Description */}
             <div className="mb-8">
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
                 {projectModals[activeModal - 1].title}
               </h2>
               {typeof projectModals[activeModal - 1].description !==
