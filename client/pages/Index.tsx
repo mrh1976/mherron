@@ -1283,6 +1283,25 @@ export default function Index() {
                 Submit
               </button>
             </form>
+
+            {/* Form Status Message */}
+            {formStatus === "success" && (
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                <p className="font-medium">✓ {formMessage}</p>
+              </div>
+            )}
+
+            {formStatus === "error" && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                <p className="font-medium">✗ {formMessage}</p>
+              </div>
+            )}
+
+            {formStatus === "loading" && (
+              <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg text-blue-800">
+                <p className="font-medium">Sending...</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
