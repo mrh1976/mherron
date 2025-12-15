@@ -1435,9 +1435,9 @@ export default function Index() {
                   className={`w-full grid gap-4 ${
                     projectModals[activeModal - 1].images &&
                     projectModals[activeModal - 1].images.length > 0
-                      ? "grid-cols-1 md:grid-cols-2"
+                      ? "grid-cols-2"
                       : projectModals[activeModal - 1].videoIds.length > 1
-                        ? "grid-cols-1 md:grid-cols-2"
+                        ? "grid-cols-2"
                         : "grid-cols-1"
                   }`}
                 >
