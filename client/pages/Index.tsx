@@ -1513,8 +1513,7 @@ export default function Index() {
 
                   {/* Right: Stacked Images (Vertical on Desktop, Horizontal on Mobile) */}
                   <div
-                    className="w-full lg:w-52 flex flex-row lg:flex-col gap-3 lg:gap-6 lg:flex-shrink-0 lg:justify-between"
-                    style={{ height: "auto", lg: "22.75rem" }}
+                    className="w-full lg:w-52 flex flex-row lg:flex-col gap-3 lg:gap-6 lg:flex-shrink-0 lg:justify-between lg:h-96"
                   >
                     {projectModals[activeModal - 1].images &&
                       projectModals[activeModal - 1].images.map(
