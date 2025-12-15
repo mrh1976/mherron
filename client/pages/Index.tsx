@@ -1487,9 +1487,9 @@ export default function Index() {
                       {projectModals[activeModal - 1].videoTitles[0]}
                     </h3>
                   )}
-                <div className="flex gap-6 items-start">
+                <div className="flex flex-col lg:flex-row gap-6 items-start">
                   {/* Left: First Video */}
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 w-full lg:w-auto">
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
@@ -1511,17 +1511,17 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Right: Stacked Images */}
+                  {/* Right: Stacked Images (Vertical on Desktop, Horizontal on Mobile) */}
                   <div
-                    className="w-52 flex flex-col gap-6 flex-shrink-0 justify-between"
-                    style={{ height: "22.75rem" }}
+                    className="w-full lg:w-52 flex flex-row lg:flex-col gap-3 lg:gap-6 lg:flex-shrink-0 lg:justify-between"
+                    style={{ height: "auto", lg: "22.75rem" }}
                   >
                     {projectModals[activeModal - 1].images &&
                       projectModals[activeModal - 1].images.map(
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className="w-full h-44 rounded-lg overflow-hidden flex items-center justify-center"
+                            className="flex-1 lg:flex-none lg:w-full h-24 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
                           >
                             <img
                               src={imageUrl}
