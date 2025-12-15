@@ -86,7 +86,13 @@ const projectModals = [
     ],
   },
   { id: 10, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
-  { id: 11, title: "Name", description: loremIpsum, videoIds: ["OCna9S7tnL4"] },
+  {
+    id: 11,
+    title: "Name",
+    description: loremIpsum,
+    videoIds: ["OCna9S7tnL4", "PLPvHOrmUSlewKYes8PGiJyS_XQ2NAQDVl"],
+    videoTitles: ["Video", "Playlist"],
+  },
   {
     id: 12,
     title: "Croatian Men's National Football Club",
