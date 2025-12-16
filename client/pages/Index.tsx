@@ -1642,12 +1642,12 @@ export default function Index() {
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${activeModal === 10 ? "" : "bg-gray-100"}`}
+                            className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${(activeModal === 10 || activeModal === 12) ? "" : "bg-gray-100"}`}
                           >
                             <img
                               src={imageUrl}
                               alt={`Project Image ${index + 1}`}
-                              className={`w-full h-full ${activeModal === 10 ? "object-cover" : "object-contain"}`}
+                              className={`w-full h-full ${(activeModal === 10 || activeModal === 12) ? "object-cover" : "object-contain"}`}
                             />
                           </div>
                         ),
