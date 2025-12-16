@@ -79,10 +79,22 @@ const projectModals = [
     description: (
       <div className="space-y-4">
         <div>
-          At Kadena, I led the launch of Chainweb EVM, a major product milestone designed to expand the ecosystem and accelerate developer adoption. The launch combined product storytelling, partner momentum, and a coordinated teaser strategy that built anticipation before revealing the full scope of the platform.
+          At Kadena, I led the launch of Chainweb EVM, a major product milestone
+          designed to expand the ecosystem and accelerate developer adoption.
+          The launch combined product storytelling, partner momentum, and a
+          coordinated teaser strategy that built anticipation before revealing
+          the full scope of the platform.
         </div>
         <div>
-          The campaign reintroduced the hidden-logo motif from #NewKadena, using covered partner logos and staged reveals to signal credibility and scale before launch. Once live, the response was immediate. Within the first 90 days, the ecosystem signed more than 70 development partners, processed over 50,000 transactions, onboarded more than 7,500 users, created 6,500 wallets, and saw the deployment of more than 1,000 smart contracts. The work demonstrated how disciplined narrative, strong partner alignment, and product-led marketing can drive rapid, measurable adoption at launch.
+          The campaign reintroduced the hidden-logo motif from #NewKadena, using
+          covered partner logos and staged reveals to signal credibility and
+          scale before launch. Once live, the response was immediate. Within the
+          first 90 days, the ecosystem signed more than 70 development partners,
+          processed over 50,000 transactions, onboarded more than 7,500 users,
+          created 6,500 wallets, and saw the deployment of more than 1,000 smart
+          contracts. The work demonstrated how disciplined narrative, strong
+          partner alignment, and product-led marketing can drive rapid,
+          measurable adoption at launch.
         </div>
       </div>
     ),
