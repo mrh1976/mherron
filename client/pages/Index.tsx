@@ -924,8 +924,6 @@ export default function Index() {
                       <br />
                       Garmin
                       <br />
-                      NCAA
-                      <br />
                       NFL
                     </p>
                   </div>
