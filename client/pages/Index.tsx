@@ -1630,7 +1630,7 @@ export default function Index() {
                           <img
                             src={projectModals[activeModal - 1].images[1]}
                             alt="Project Image 2"
-                            className="w-full h-full object-contain rotate-90"
+                            className="w-full h-full object-contain rotate-90 scale-125"
                           />
                         </div>
                       </div>
