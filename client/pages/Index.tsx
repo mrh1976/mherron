@@ -1609,13 +1609,18 @@ export default function Index() {
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className="flex-1 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                            className="flex-1 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center group relative cursor-pointer"
                           >
                             <img
                               src={imageUrl}
                               alt={`Project Image ${index + 1}`}
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-contain group-hover:brightness-75 transition-all duration-300"
                             />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <span className="text-white font-semibold text-lg">
+                                View Project
+                              </span>
+                            </div>
                           </div>
                         ),
                       )}
