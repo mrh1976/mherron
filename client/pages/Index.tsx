@@ -1640,33 +1640,54 @@ export default function Index() {
                 {/* Remaining Videos */}
                 {projectModals[activeModal - 1].videoIds.length > 1 &&
                   projectModals[activeModal - 1].videoIds.slice(1).map(
-                    (videoId, index) => (
-                      <div key={`video-${index + 1}`} className="w-full">
-                        {projectModals[activeModal - 1].videoTitles &&
-                          projectModals[activeModal - 1].videoTitles[index + 1] && (
-                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                              {projectModals[activeModal - 1].videoTitles[index + 1]}
-                            </h3>
+                    (videoId, index) => {
+                      const isLastVideo =
+                        index === projectModals[activeModal - 1].videoIds.length - 2;
+
+                      return (
+                        <div
+                          key={`video-${index + 1}`}
+                          className={isLastVideo ? "flex flex-col lg:flex-row gap-6" : "w-full"}
+                        >
+                          <div className={isLastVideo ? "flex-1" : "w-full"}>
+                            {projectModals[activeModal - 1].videoTitles &&
+                              projectModals[activeModal - 1].videoTitles[index + 1] && (
+                                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                                  {projectModals[activeModal - 1].videoTitles[index + 1]}
+                                </h3>
+                              )}
+                            <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                              <iframe
+                                width="100%"
+                                height="100%"
+                                src={
+                                  projectModals[activeModal - 1].isPlaylist ||
+                                  videoId.startsWith("PL")
+                                    ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                    : `https://www.youtube.com/embed/${videoId}`
+                                }
+                                title={`Project Video ${index + 2}`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full"
+                              ></iframe>
+                            </div>
+                          </div>
+
+                          {/* Image to right of last video */}
+                          {isLastVideo && (
+                            <div className="flex-1">
+                              <img
+                                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4e5501b81ec24df48b9ceeb62d50f441?format=webp&width=800"
+                                alt="Season Ticket Giveaway"
+                                className="w-full h-full object-cover rounded-lg"
+                              />
+                            </div>
                           )}
-                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                          <iframe
-                            width="100%"
-                            height="100%"
-                            src={
-                              projectModals[activeModal - 1].isPlaylist ||
-                              videoId.startsWith("PL")
-                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                                : `https://www.youtube.com/embed/${videoId}`
-                            }
-                            title={`Project Video ${index + 2}`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full"
-                          ></iframe>
                         </div>
-                      </div>
-                    ),
+                      );
+                    },
                   )}
               </div>
             ) : activeModal === 7 ? (
