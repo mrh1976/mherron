@@ -88,8 +88,24 @@ const projectModals = [
   {
     id: 10,
     title: "Miami Heat",
-    description:
-      "At Chain, I built an official partnership with the Miami Heat designed to engage the community, activate fans, and connect blockchain technology to real-world impact. The program blended sports marketing, local business engagement, and charitable initiatives, with a focus on supporting local schools and STEM-related programs.\n\nThe activation included announcement and in-game content, in-stadium jumbotron signage for ticket giveaways, and community moments that brought students and families directly into the experience. The work demonstrated how brand partnerships can move beyond visibility to create meaningful engagement at both a fan and community level.",
+    description: (
+      <div className="space-y-4">
+        <div>
+          At Chain, I built an official partnership with the Miami Heat designed
+          to engage the community, activate fans, and connect blockchain
+          technology to real-world impact. The program blended sports marketing,
+          local business engagement, and charitable initiatives, with a focus on
+          supporting local schools and STEM-related programs.
+        </div>
+        <div>
+          The activation included announcement and in-game content, in-stadium
+          jumbotron signage for ticket giveaways, and community moments that
+          brought students and families directly into the experience. The work
+          demonstrated how brand partnerships can move beyond visibility to
+          create meaningful engagement at both a fan and community level.
+        </div>
+      </div>
+    ),
     videoIds: ["jscocvv5oeg", "7xnRCndGu3M", "Ao_nKj_CYQY"],
   },
   {
