@@ -77,7 +77,16 @@ const projectModals = [
     id: 7,
     title: "Chainweb EVM",
     description: loremIpsum,
-    videoIds: ["NfrziZosU5U", "Imbi1h_ks8w", "aszqDeyLkSQ", "XAnMjppWL6g", "E-Hd6-V5ick", "GUHUpt1fsR4", "tEvjvZLfGV8", "fR0QhDeln68"],
+    videoIds: [
+      "NfrziZosU5U",
+      "Imbi1h_ks8w",
+      "aszqDeyLkSQ",
+      "XAnMjppWL6g",
+      "E-Hd6-V5ick",
+      "GUHUpt1fsR4",
+      "tEvjvZLfGV8",
+      "fR0QhDeln68",
+    ],
   },
   {
     id: 8,
@@ -165,7 +174,8 @@ const projectModals = [
     images: [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F12ad31dffe84476ab186908c88e898bc?format=webp&width=800",
     ],
-    animatedGif: "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F6c9eeb5fe1ff4728ad4c6a18c97212b2?alt=media&token=3d7fd63a-3429-4135-aabf-2060f203c573&apiKey=5031849ff5814a4cae6f958ac9f10229",
+    animatedGif:
+      "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F6c9eeb5fe1ff4728ad4c6a18c97212b2?alt=media&token=3d7fd63a-3429-4135-aabf-2060f203c573&apiKey=5031849ff5814a4cae6f958ac9f10229",
   },
 ];
 
@@ -1531,15 +1541,16 @@ export default function Index() {
             )}
 
             {/* Animated GIF section for modal 12 */}
-            {activeModal === 12 && projectModals[activeModal - 1].animatedGif && (
-              <div className="w-full">
-                <img
-                  src={projectModals[activeModal - 1].animatedGif}
-                  alt="Animated GIF"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            )}
+            {activeModal === 12 &&
+              projectModals[activeModal - 1].animatedGif && (
+                <div className="w-full">
+                  <img
+                    src={projectModals[activeModal - 1].animatedGif}
+                    alt="Animated GIF"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              )}
 
             {/* Videos and Images Layout */}
             {activeModal === 7 ? (
@@ -1577,9 +1588,9 @@ export default function Index() {
                         height="100%"
                         src={
                           projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[projectModals[activeModal - 1].videoIds.length - 1].startsWith(
-                            "PL",
-                          )
+                          projectModals[activeModal - 1].videoIds[
+                            projectModals[activeModal - 1].videoIds.length - 1
+                          ].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[projectModals[activeModal - 1].videoIds.length - 1]}`
                             : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[projectModals[activeModal - 1].videoIds.length - 1]}`
                         }
@@ -1595,13 +1606,20 @@ export default function Index() {
 
                 {/* Remaining Videos */}
                 {projectModals[activeModal - 1].videoIds.length > 2 &&
-                  projectModals[activeModal - 1].videoIds.slice(1, -1).map(
-                    (videoId, index) => (
+                  projectModals[activeModal - 1].videoIds
+                    .slice(1, -1)
+                    .map((videoId, index) => (
                       <div key={`video-${index + 1}`} className="w-full">
                         {projectModals[activeModal - 1].videoTitles &&
-                          projectModals[activeModal - 1].videoTitles[index + 1] && (
+                          projectModals[activeModal - 1].videoTitles[
+                            index + 1
+                          ] && (
                             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                              {projectModals[activeModal - 1].videoTitles[index + 1]}
+                              {
+                                projectModals[activeModal - 1].videoTitles[
+                                  index + 1
+                                ]
+                              }
                             </h3>
                           )}
                         <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
@@ -1622,8 +1640,7 @@ export default function Index() {
                           ></iframe>
                         </div>
                       </div>
-                    ),
-                  )}
+                    ))}
               </div>
             ) : activeModal === 11 ? (
               <div className="w-full space-y-6">
@@ -1725,12 +1742,12 @@ export default function Index() {
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${(activeModal === 10 || activeModal === 12) ? "" : "bg-gray-100"}`}
+                            className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${activeModal === 10 || activeModal === 12 ? "" : "bg-gray-100"}`}
                           >
                             <img
                               src={imageUrl}
                               alt={`Project Image ${index + 1}`}
-                              className={`w-full h-full ${(activeModal === 10 || activeModal === 12) ? "object-cover" : "object-contain"}`}
+                              className={`w-full h-full ${activeModal === 10 || activeModal === 12 ? "object-cover" : "object-contain"}`}
                             />
                           </div>
                         ),
