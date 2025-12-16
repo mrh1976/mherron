@@ -1615,7 +1615,7 @@ export default function Index() {
                 {activeModal === 10 && (
                   <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
                     <img
-                      src="https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F5acdb48e0a3e4c3eaabfbdcce06945e2?alt=media&token=af51093d-0b4b-45c1-bc85-44e5d288df59&apiKey=5031849ff5814a4cae6f958ac9f10229"
+                      src="https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F5374f82ad01e4df8b6c17e775cee59d6?alt=media&token=76e4856c-3cb9-4103-90ac-7cba388f1d27&apiKey=5031849ff5814a4cae6f958ac9f10229"
                       alt="Animated GIF"
                       className="w-full h-full object-contain"
                     />
