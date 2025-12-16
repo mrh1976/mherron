@@ -1599,7 +1599,7 @@ export default function Index() {
                 {/* Images section - displayed horizontally at top */}
                 {projectModals[activeModal - 1].images &&
                   projectModals[activeModal - 1].images.length > 0 && (
-                    <div className="w-full flex flex-col lg:flex-row gap-4 h-64 lg:h-96">
+                    <div className="w-full flex flex-col lg:flex-row gap-4 h-64 md:h-full lg:h-96">
                       {projectModals[activeModal - 1].images.map(
                         (imageUrl, index) => (
                           <div
