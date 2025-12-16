@@ -1595,7 +1595,81 @@ export default function Index() {
               )}
 
             {/* Videos and Images Layout */}
-            {activeModal === 7 ? (
+            {activeModal === 6 ? (
+              <div className="w-full space-y-6">
+                {/* First Video and Second Image - Horizontal Layout */}
+                <div className="flex flex-col lg:flex-row gap-6 items-start">
+                  {/* First Video (Vertical) */}
+                  <div className="flex-1">
+                    <div className="w-full aspect-[9/16] rounded-lg overflow-hidden bg-gray-900">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={
+                          projectModals[activeModal - 1].isPlaylist ||
+                          projectModals[activeModal - 1].videoIds[0].startsWith(
+                            "PL",
+                          )
+                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[0]}`
+                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[0]}`
+                        }
+                        title="Project Video 1"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                    </div>
+                  </div>
+
+                  {/* Second Image (Rotated) */}
+                  {projectModals[activeModal - 1].images &&
+                    projectModals[activeModal - 1].images.length > 1 && (
+                      <div className="flex-1">
+                        <div className="w-full h-96 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                          <img
+                            src={projectModals[activeModal - 1].images[1]}
+                            alt="Project Image 2"
+                            className="w-full h-full object-contain rotate-90"
+                          />
+                        </div>
+                      </div>
+                    )}
+                </div>
+
+                {/* Remaining Videos */}
+                {projectModals[activeModal - 1].videoIds.length > 1 &&
+                  projectModals[activeModal - 1].videoIds.slice(1).map(
+                    (videoId, index) => (
+                      <div key={`video-${index + 1}`} className="w-full">
+                        {projectModals[activeModal - 1].videoTitles &&
+                          projectModals[activeModal - 1].videoTitles[index + 1] && (
+                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                              {projectModals[activeModal - 1].videoTitles[index + 1]}
+                            </h3>
+                          )}
+                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={
+                              projectModals[activeModal - 1].isPlaylist ||
+                              videoId.startsWith("PL")
+                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                : `https://www.youtube.com/embed/${videoId}`
+                            }
+                            title={`Project Video ${index + 2}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full"
+                          ></iframe>
+                        </div>
+                      </div>
+                    ),
+                  )}
+              </div>
+            ) : activeModal === 7 ? (
               <div className="w-full space-y-6">
                 {/* First and Last Video - Horizontal Layout */}
                 <div className="flex flex-col lg:flex-row gap-6">
