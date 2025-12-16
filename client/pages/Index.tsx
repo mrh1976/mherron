@@ -85,7 +85,7 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F997e55cfbf9648ef90b61a70e09ed98a?format=webp&width=800",
     ],
   },
-  { id: 10, title: "Miami Heat", description: loremIpsum, videoIds: ["jscocvv5oeg"] },
+  { id: 10, title: "Miami Heat", description: loremIpsum, videoIds: ["jscocvv5oeg", "7xnRCndGu3M"] },
   {
     id: 11,
     title: "#NewKadena",
