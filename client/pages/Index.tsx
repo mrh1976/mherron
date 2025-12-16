@@ -1518,6 +1518,17 @@ export default function Index() {
               )}
             </div>
 
+            {/* Animated GIF section for modal 10 */}
+            {activeModal === 10 && (
+              <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+                <img
+                  src="https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F872f87fef677478a8bc7535b1585edf9?alt=media&token=0c66e98d-731d-4ad8-af17-f79d1dbb0cd3&apiKey=5031849ff5814a4cae6f958ac9f10229"
+                  alt="Animated GIF"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            )}
+
             {/* Videos and Images Layout */}
             {activeModal === 11 ? (
               <div className="w-full space-y-6">
