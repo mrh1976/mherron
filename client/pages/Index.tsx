@@ -1609,7 +1609,7 @@ export default function Index() {
                             <img
                               src={imageUrl}
                               alt={`Project Image ${index + 1}`}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain"
                             />
                           </div>
                         ),
