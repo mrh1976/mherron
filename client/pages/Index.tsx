@@ -1598,10 +1598,10 @@ export default function Index() {
             {activeModal === 6 ? (
               <div className="w-full space-y-6">
                 {/* First Video and Second Image - Horizontal Layout */}
-                <div className="flex flex-col lg:flex-row gap-6 items-start">
+                <div className="flex flex-col lg:flex-row gap-6 items-stretch">
                   {/* First Video (Vertical) */}
-                  <div className="flex-1">
-                    <div className="w-full aspect-[9/16] rounded-lg overflow-hidden bg-gray-900">
+                  <div className="flex-1 min-w-0">
+                    <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
@@ -1625,8 +1625,8 @@ export default function Index() {
                   {/* Second Image (Rotated) */}
                   {projectModals[activeModal - 1].images &&
                     projectModals[activeModal - 1].images.length > 1 && (
-                      <div className="flex-1">
-                        <div className="w-full aspect-[9/16] rounded-lg overflow-hidden flex items-center justify-center">
+                      <div className="flex-1 min-w-0">
+                        <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden">
                           <img
                             src={projectModals[activeModal - 1].images[1]}
                             alt="Project Image 2"
