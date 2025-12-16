@@ -1599,17 +1599,17 @@ export default function Index() {
                 {/* Images section - displayed horizontally at top */}
                 {projectModals[activeModal - 1].images &&
                   projectModals[activeModal - 1].images.length > 0 && (
-                    <div className="w-full flex flex-row gap-4">
+                    <div className="w-full flex flex-row gap-4 h-96">
                       {projectModals[activeModal - 1].images.map(
                         (imageUrl, index) => (
                           <div
                             key={`image-${index}`}
-                            className="flex-1 aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                            className="flex-1 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
                           >
                             <img
                               src={imageUrl}
                               alt={`Project Image ${index + 1}`}
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-cover"
                             />
                           </div>
                         ),
