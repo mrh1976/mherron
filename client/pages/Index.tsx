@@ -1626,11 +1626,11 @@ export default function Index() {
                   {projectModals[activeModal - 1].images &&
                     projectModals[activeModal - 1].images.length > 1 && (
                       <div className="flex-1 min-w-0">
-                        <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden">
+                        <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden flex items-center justify-center">
                           <img
                             src={projectModals[activeModal - 1].images[1]}
                             alt="Project Image 2"
-                            className="w-full h-full object-cover rotate-90"
+                            className="w-full h-full object-contain rotate-90"
                           />
                         </div>
                       </div>
