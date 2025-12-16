@@ -1547,7 +1547,7 @@ export default function Index() {
                 {/* First and Last Video - Horizontal Layout */}
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* First Video */}
-                  <div className="flex-1">
+                  <div className="flex-1 lg:flex-[2]">
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
