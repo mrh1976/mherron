@@ -1596,6 +1596,27 @@ export default function Index() {
               </div>
             ) : (
               <div className="w-full space-y-4">
+                {/* Images section - displayed horizontally at top */}
+                {projectModals[activeModal - 1].images &&
+                  projectModals[activeModal - 1].images.length > 0 && (
+                    <div className="w-full flex flex-row gap-4">
+                      {projectModals[activeModal - 1].images.map(
+                        (imageUrl, index) => (
+                          <div
+                            key={`image-${index}`}
+                            className="flex-1 aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
+                          >
+                            <img
+                              src={imageUrl}
+                              alt={`Project Image ${index + 1}`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  )}
+
                 {/* Default layout for other modals */}
                 <div className="w-full flex flex-col gap-4">
                   {projectModals[activeModal - 1].videoIds.map(
@@ -1632,26 +1653,6 @@ export default function Index() {
                     ),
                   )}
                 </div>
-
-                {projectModals[activeModal - 1].images &&
-                  projectModals[activeModal - 1].images.length > 0 && (
-                    <div className="w-full flex flex-col gap-4">
-                      {projectModals[activeModal - 1].images.map(
-                        (imageUrl, index) => (
-                          <div
-                            key={`image-${index}`}
-                            className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center"
-                          >
-                            <img
-                              src={imageUrl}
-                              alt={`Project Image ${index + 1}`}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  )}
               </div>
             )}
           </div>
