@@ -1656,7 +1656,7 @@ export default function Index() {
                                   {projectModals[activeModal - 1].videoTitles[index + 1]}
                                 </h3>
                               )}
-                            <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                            <div className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}>
                               <iframe
                                 width="100%"
                                 height="100%"
