@@ -1886,7 +1886,7 @@ export default function Index() {
                               }
                             </h3>
                           )}
-                        <div className={`w-full ${activeModal === 6 && index === 0 ? "aspect-[9/16]" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}>
+                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                           <iframe
                             width="100%"
                             height="100%"
