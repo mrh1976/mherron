@@ -1573,7 +1573,7 @@ export default function Index() {
 
             {/* Animated GIF section for modal 6 */}
             {activeModal === 6 && projectModals[activeModal - 1].animatedGif && (
-              <div className="w-full">
+              <div className="w-full pb-[10px]">
                 <img
                   src={projectModals[activeModal - 1].animatedGif}
                   alt="Animated GIF"
