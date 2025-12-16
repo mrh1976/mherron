@@ -165,6 +165,7 @@ const projectModals = [
     images: [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F12ad31dffe84476ab186908c88e898bc?format=webp&width=800",
     ],
+    animatedGif: "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F6c9eeb5fe1ff4728ad4c6a18c97212b2?alt=media&token=3d7fd63a-3429-4135-aabf-2060f203c573&apiKey=5031849ff5814a4cae6f958ac9f10229",
   },
 ];
 
