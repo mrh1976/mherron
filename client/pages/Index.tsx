@@ -76,7 +76,8 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F1fe83172c7ab462c883c9f2abeba2be8?format=webp&width=800",
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4c3e24c6ebe44fc9aad4aae30c31ba66?format=webp&width=800",
     ],
-    animatedGif: "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fb0a1a8f09abe4dba9f3bab735a542da0?alt=media&token=ebb92a5b-bf98-4ca8-806e-df1fdb6ca6ce&apiKey=5031849ff5814a4cae6f958ac9f10229",
+    animatedGif:
+      "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fb0a1a8f09abe4dba9f3bab735a542da0?alt=media&token=ebb92a5b-bf98-4ca8-806e-df1fdb6ca6ce&apiKey=5031849ff5814a4cae6f958ac9f10229",
   },
   {
     id: 7,
@@ -1572,15 +1573,16 @@ export default function Index() {
             )}
 
             {/* Animated GIF section for modal 6 */}
-            {activeModal === 6 && projectModals[activeModal - 1].animatedGif && (
-              <div className="w-full pb-[10px]">
-                <img
-                  src={projectModals[activeModal - 1].animatedGif}
-                  alt="Animated GIF"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            )}
+            {activeModal === 6 &&
+              projectModals[activeModal - 1].animatedGif && (
+                <div className="w-full pb-[10px]">
+                  <img
+                    src={projectModals[activeModal - 1].animatedGif}
+                    alt="Animated GIF"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              )}
 
             {/* Animated GIF section for modal 12 */}
             {activeModal === 12 &&
@@ -1639,24 +1641,38 @@ export default function Index() {
 
                 {/* Remaining Videos */}
                 {projectModals[activeModal - 1].videoIds.length > 1 &&
-                  projectModals[activeModal - 1].videoIds.slice(1).map(
-                    (videoId, index) => {
+                  projectModals[activeModal - 1].videoIds
+                    .slice(1)
+                    .map((videoId, index) => {
                       const isLastVideo =
-                        index === projectModals[activeModal - 1].videoIds.length - 2;
+                        index ===
+                        projectModals[activeModal - 1].videoIds.length - 2;
 
                       return (
                         <div
                           key={`video-${index + 1}`}
-                          className={isLastVideo ? "flex flex-col lg:flex-row gap-6" : "w-full"}
+                          className={
+                            isLastVideo
+                              ? "flex flex-col lg:flex-row gap-6"
+                              : "w-full"
+                          }
                         >
                           <div className={isLastVideo ? "flex-1" : "w-full"}>
                             {projectModals[activeModal - 1].videoTitles &&
-                              projectModals[activeModal - 1].videoTitles[index + 1] && (
+                              projectModals[activeModal - 1].videoTitles[
+                                index + 1
+                              ] && (
                                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                                  {projectModals[activeModal - 1].videoTitles[index + 1]}
+                                  {
+                                    projectModals[activeModal - 1].videoTitles[
+                                      index + 1
+                                    ]
+                                  }
                                 </h3>
                               )}
-                            <div className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}>
+                            <div
+                              className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}
+                            >
                               <iframe
                                 width="100%"
                                 height="100%"
@@ -1687,8 +1703,7 @@ export default function Index() {
                           )}
                         </div>
                       );
-                    },
-                  )}
+                    })}
               </div>
             ) : activeModal === 7 ? (
               <div className="w-full space-y-6">
