@@ -73,7 +73,7 @@ const projectModals = [
     description: loremIpsum,
     videoIds: ["n_HkTymf7_4"],
   },
-  { id: 7, title: "Chainweb EVM", description: loremIpsum, videoIds: ["Imbi1h_ks8w"] },
+  { id: 7, title: "Chainweb EVM", description: loremIpsum, videoIds: ["Imbi1h_ks8w", "aszqDeyLkSQ"] },
   {
     id: 8,
     title: "Tiffany and Co. NFTiff",
