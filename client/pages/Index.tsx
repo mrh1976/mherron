@@ -354,7 +354,12 @@ export default function Index() {
             </a>
           </div>
 
-          <div className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 order-2 lg:order-2">
+          <a
+            href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 order-2 lg:order-2 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          >
             {/* Logo/Icon */}
             <div className="flex-shrink-0 w-16 h-16 lg:w-24 lg:h-24">
               <img
@@ -376,7 +381,7 @@ export default function Index() {
                 Marketing clarity for the modern entrepreneur
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
