@@ -67,7 +67,12 @@ const projectModals = [
       "When I joined Lukka, the company had just undergone a CEO transition and was preparing for its next phase of growth and funding. Working closely with the CEO, I led the marketing and positioning efforts that supported more than 200 million in capital raised and helped establish Lukka as a unicorn with a 1.35 billion valuation. The effort brought together institutional partners, including Marshall Wace, S&P, CPA.com, State Street, Liberty City Ventures, and Soros, reinforcing Lukka's credibility as the institutional standard for crypto data.",
     videoIds: ["_jKHNlL6Kq4"],
   },
-  { id: 6, title: "New England Patriots", description: loremIpsum, videoIds: ["n_HkTymf7_4"] },
+  {
+    id: 6,
+    title: "New England Patriots",
+    description: loremIpsum,
+    videoIds: ["n_HkTymf7_4"],
+  },
   { id: 7, title: "Name", description: loremIpsum, videoIds: ["40Y-DL20UGg"] },
   {
     id: 8,
