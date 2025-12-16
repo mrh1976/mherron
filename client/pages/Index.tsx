@@ -1530,6 +1530,17 @@ export default function Index() {
               </div>
             )}
 
+            {/* Animated GIF section for modal 12 */}
+            {activeModal === 12 && projectModals[activeModal - 1].animatedGif && (
+              <div className="w-full">
+                <img
+                  src={projectModals[activeModal - 1].animatedGif}
+                  alt="Animated GIF"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+
             {/* Videos and Images Layout */}
             {activeModal === 11 ? (
               <div className="w-full space-y-6">
