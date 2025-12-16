@@ -71,7 +71,7 @@ const projectModals = [
     id: 6,
     title: "New England Patriots",
     description: loremIpsum,
-    videoIds: ["n_HkTymf7_4", "-CNOy4SPTtA", "-CNOy4SPTtA", "9HU4hcpz_Mo"],
+    videoIds: ["n_HkTymf7_4", "-CNOy4SPTtA", "9HU4hcpz_Mo"],
     images: [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F1fe83172c7ab462c883c9f2abeba2be8?format=webp&width=800",
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4c3e24c6ebe44fc9aad4aae30c31ba66?format=webp&width=800",
