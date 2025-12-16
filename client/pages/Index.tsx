@@ -85,7 +85,13 @@ const projectModals = [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F997e55cfbf9648ef90b61a70e09ed98a?format=webp&width=800",
     ],
   },
-  { id: 10, title: "Miami Heat", description: loremIpsum, videoIds: ["jscocvv5oeg", "7xnRCndGu3M", "Ao_nKj_CYQY"] },
+  {
+    id: 10,
+    title: "Miami Heat",
+    description:
+      "At Chain, I built an official partnership with the Miami Heat designed to engage the community, activate fans, and connect blockchain technology to real-world impact. The program blended sports marketing, local business engagement, and charitable initiatives, with a focus on supporting local schools and STEM-related programs.\n\nThe activation included announcement and in-game content, in-stadium jumbotron signage for ticket giveaways, and community moments that brought students and families directly into the experience. The work demonstrated how brand partnerships can move beyond visibility to create meaningful engagement at both a fan and community level.",
+    videoIds: ["jscocvv5oeg", "7xnRCndGu3M", "Ao_nKj_CYQY"],
+  },
   {
     id: 11,
     title: "#NewKadena",
