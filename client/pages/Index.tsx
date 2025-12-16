@@ -1570,8 +1570,8 @@ export default function Index() {
                   </div>
 
                   {/* Last Video */}
-                  <div className="flex-1 lg:flex-[1]">
-                    <div className="w-full aspect-square rounded-lg overflow-hidden bg-gray-900">
+                  <div className="flex-1 lg:flex-[1] flex flex-col">
+                    <div className="w-full h-full min-h-96 rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
