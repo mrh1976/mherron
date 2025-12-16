@@ -71,7 +71,7 @@ const projectModals = [
     id: 6,
     title: "New England Patriots",
     description: loremIpsum,
-    videoIds: ["n_HkTymf7_4"],
+    videoIds: ["n_HkTymf7_4", "-CNOy4SPTtA", "-CNOy4SPTtA"],
     animatedGif: "https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fb0a1a8f09abe4dba9f3bab735a542da0?alt=media&token=ebb92a5b-bf98-4ca8-806e-df1fdb6ca6ce&apiKey=5031849ff5814a4cae6f958ac9f10229",
   },
   {
