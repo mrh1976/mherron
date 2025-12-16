@@ -1611,6 +1611,17 @@ export default function Index() {
               </div>
             ) : (
               <div className="w-full space-y-4">
+                {/* Animated GIF section */}
+                {activeModal === 10 && (
+                  <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+                    <img
+                      src="https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F5acdb48e0a3e4c3eaabfbdcce06945e2?alt=media&token=af51093d-0b4b-45c1-bc85-44e5d288df59&apiKey=5031849ff5814a4cae6f958ac9f10229"
+                      alt="Animated GIF"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                )}
+
                 {/* Images section - displayed horizontally at top */}
                 {projectModals[activeModal - 1].images &&
                   projectModals[activeModal - 1].images.length > 0 && (
