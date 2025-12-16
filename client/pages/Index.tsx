@@ -107,6 +107,10 @@ const projectModals = [
       </div>
     ),
     videoIds: ["Ao_nKj_CYQY", "jscocvv5oeg", "7xnRCndGu3M"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F852a52403956412ca9d4c28424601e32?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fbab29e3f563c47b3963645a8a2fde120?format=webp&width=800",
+    ],
   },
   {
     id: 11,
