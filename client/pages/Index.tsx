@@ -77,7 +77,7 @@ const projectModals = [
     id: 7,
     title: "Chainweb EVM",
     description: loremIpsum,
-    videoIds: ["Imbi1h_ks8w", "aszqDeyLkSQ", "NfrziZosU5U", "XAnMjppWL6g", "E-Hd6-V5ick", "GUHUpt1fsR4", "tEvjvZLfGV8", "fR0QhDeln68"],
+    videoIds: ["NfrziZosU5U", "Imbi1h_ks8w", "aszqDeyLkSQ", "XAnMjppWL6g", "E-Hd6-V5ick", "GUHUpt1fsR4", "tEvjvZLfGV8", "fR0QhDeln68"],
   },
   {
     id: 8,
