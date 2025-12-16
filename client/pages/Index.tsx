@@ -106,7 +106,7 @@ const projectModals = [
         </div>
       </div>
     ),
-    videoIds: ["jscocvv5oeg", "7xnRCndGu3M", "Ao_nKj_CYQY"],
+    videoIds: ["Ao_nKj_CYQY", "jscocvv5oeg", "7xnRCndGu3M"],
   },
   {
     id: 11,
