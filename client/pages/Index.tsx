@@ -467,8 +467,8 @@ export default function Index() {
                 <p className="text-gray-600 text-sm mb-4">
                   Art Investment Group Trust is a private investment platform
                   building institution-grade art funds and infrastructure, with
-                  an emphasis on governance, compliance, investor confidence, and
-                  long-term asset stewardship. Brought in as a fractional
+                  an emphasis on governance, compliance, investor confidence,
+                  and long-term asset stewardship. Brought in as a fractional
                   marketing leader and board member to professionalize the
                   narrative, build go-to-market foundations, and package the
                   business for fundraising, strategic partnerships, and LP
@@ -486,9 +486,10 @@ export default function Index() {
                       affiliated funds.
                     </li>
                     <li>
-                      Leading development of investor-facing materials, including
-                      PPM structure, executive summaries, and plain-English
-                      "good faith" drafts to streamline early-stage diligence.
+                      Leading development of investor-facing materials,
+                      including PPM structure, executive summaries, and
+                      plain-English "good faith" drafts to streamline
+                      early-stage diligence.
                     </li>
                     <li>
                       Establishing the corporate OGSM framework and operating
@@ -506,9 +507,9 @@ export default function Index() {
                       assets.
                     </li>
                     <li>
-                      Overseeing creation of sales enablement materials, including
-                      investor decks, modular fund narratives, and LP-specific
-                      talk tracks.
+                      Overseeing creation of sales enablement materials,
+                      including investor decks, modular fund narratives, and
+                      LP-specific talk tracks.
                     </li>
                   </ul>
                 </div>
