@@ -453,6 +453,11 @@ export default function Index() {
             <div className="lg:col-span-2 space-y-12 divide-y divide-gray-200">
               {/* Art Investment Group Trust */}
               <div className="pt-12 first:pt-0">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fddaee032e5324f05a8c5af8343bad844?format=webp&width=800"
+                  alt="Art Investment Group Trust"
+                  className="h-14 object-contain mb-6 w-auto"
+                />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Board Member | Fractional CMO{" "}
                   <span className="text-gray-600 font-normal">
