@@ -451,70 +451,7 @@ export default function Index() {
 
             {/* Right Scrollable Column - Job Entries */}
             <div className="lg:col-span-2 space-y-12 divide-y divide-gray-200">
-              {/* Art Investment Group Trust */}
-              <div className="pt-12 first:pt-0">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fddaee032e5324f05a8c5af8343bad844?format=webp&width=800"
-                  alt="Art Investment Group Trust"
-                  className="h-14 object-contain mb-6 w-auto"
-                />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Board Member | Fractional CMO{" "}
-                  <span className="text-gray-600 font-normal">
-                    | November 2025 - Present
-                  </span>
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Art Investment Group Trust is a private investment platform
-                  building institution-grade art funds and infrastructure, with
-                  an emphasis on governance, compliance, investor confidence,
-                  and long-term asset stewardship. Brought in as a fractional
-                  marketing leader and board member to professionalize the
-                  narrative, build go-to-market foundations, and package the
-                  business for fundraising, strategic partnerships, and LP
-                  diligence.
-                </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
-                    Top Level Highlights:
-                  </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
-                    <li>
-                      Building the full marketing and communications foundation,
-                      including brand strategy, positioning, messaging
-                      architecture, and launch narrative across AIGT and
-                      affiliated funds.
-                    </li>
-                    <li>
-                      Leading development of investor-facing materials,
-                      including PPM structure, executive summaries, and
-                      plain-English "good faith" drafts to streamline
-                      early-stage diligence.
-                    </li>
-                    <li>
-                      Establishing the corporate OGSM framework and operating
-                      cadence to align leadership on goals, strategy, execution
-                      priorities, and measurable outcomes.
-                    </li>
-                    <li>
-                      Partnering with executive leadership on governance-forward
-                      language, risk disclosures, and institutional positioning
-                      to reduce LP friction and increase credibility.
-                    </li>
-                    <li>
-                      Directing brand identity evolution, including logo, brand
-                      guidelines, website structure, and reusable marketing
-                      assets.
-                    </li>
-                    <li>
-                      Overseeing creation of sales enablement materials,
-                      including investor decks, modular fund narratives, and
-                      LP-specific talk tracks.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
+             
               {/* Kadena */}
               <div className="pt-12 first:pt-0">
                 <img
