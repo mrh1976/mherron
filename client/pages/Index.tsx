@@ -557,7 +557,7 @@ export default function Index() {
 </header>
 
      <section className="relative overflow-hidden bg-white">
-  <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-18 text-center sm:px-8 sm:pb-24 sm:pt-16 lg:px-10 lg:pt-20">
+  <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-20 text-center sm:px-8 sm:pb-24 sm:pt-16 lg:px-10 lg:pt-20">
     <h1 className="mx-auto max-w-[1120px] text-[46px] font-bold leading-[0.9] tracking-[-0.055em] text-[#1f1f1f] sm:text-[72px] lg:text-[92px]">
       Turn Complex Marketing Ideas Into Measurable Results
       <span className="text-orange">.</span>
