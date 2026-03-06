@@ -533,7 +533,7 @@ export default function Index() {
       <img
         src="/MikeHerronHeadshot2026.png"
         alt="Mike Herron"
-        className="w-full max-w-[520px] sm:max-w-[680px] lg:max-w-[820px] object-contain"
+        className="w-full max-w-[640px] sm:max-w-[820px] lg:max-w-[1000px] object-contain"
       />
     </div>
 
