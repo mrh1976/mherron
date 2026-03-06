@@ -529,7 +529,7 @@ export default function Index() {
     </h1>
 
     {/* Hero Image */}
-    <div className="-mt-15 flex justify-center relative z-10">
+   <div className="-mt-16 flex justify-center relative z-10">
   <img
     src="/MikeHerronHeadshot2026.png"
     alt="Mike Herron"
