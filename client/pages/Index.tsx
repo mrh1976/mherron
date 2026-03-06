@@ -3,6 +3,9 @@ import { useState } from "react";
 const nftiffDescription =
   "At Chain, I helped lead the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch.\n\nThe project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.";
 
+const patriotsDescription =
+  "At Chain, I helped build and activate the company's partnership with the New England Patriots, creating branded content, stadium presence, and fan-facing campaign moments designed to connect blockchain technology to one of the most recognizable franchises in professional sports. The work combined premium brand storytelling, team partnership activation, and audience engagement across digital and live environments.";
+
 const projectModals = [
   {
     id: 1,
@@ -37,8 +40,27 @@ const projectModals = [
   {
     id: 4,
     title: "US Cellular Brand Activations",
-    description:
-      "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences.\n\nThe programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
+    description: (
+      <div className="space-y-4">
+        <div>
+          At U.S. Cellular, I oversaw brand content across digital and social
+          channels, producing large-scale activation campaigns designed to
+          engage consumers, build brand awareness, and support new lines of
+          service. The work spanned always-on content, seasonal storytelling,
+          and emerging formats, including playlists such as 30 Days of Good, The
+          Future of Good, A Season of Traditions, and immersive 360-degree video
+          experiences.
+        </div>
+        <div>
+          The programs were built in partnership with brands and organizations
+          including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder,
+          Summerfest, CES, national media outlets, schools, shelters, and
+          charitable organizations. Together, the content helped position U.S.
+          Cellular as a brand rooted in community, innovation, and meaningful
+          connection.
+        </div>
+      </div>
+    ),
     videoIds: [
       "PLPvHOrmUSleyDIvAZFMgup2VXp1GyxZba",
       "PLPvHOrmUSlewGuWFuOv9O5dDiK0huG4vJ",
@@ -67,7 +89,7 @@ const projectModals = [
   {
     id: 6,
     title: "New England Patriots",
-    description: loremIpsum,
+    description: patriotsDescription,
     videoIds: ["n_HkTymf7_4", "-CNOy4SPTtA", "9HU4hcpz_Mo"],
     images: [
       "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F1fe83172c7ab462c883c9f2abeba2be8?format=webp&width=800",
@@ -94,9 +116,9 @@ const projectModals = [
           scale before launch. Once live, the response was immediate. Within the
           first 90 days, the ecosystem signed more than 70 development partners,
           processed over 50,000 transactions, onboarded more than 7,500 users,
-          created 6,500 wallets, and saw the deployment of more than 1,000 smart
-          contracts. The work demonstrated how disciplined narrative, strong
-          partner alignment, and product-led marketing can drive rapid,
+          created 6,500 wallets, and saw the deployment of more than 1,000
+          smart contracts. The work demonstrated how disciplined narrative,
+          strong partner alignment, and product-led marketing can drive rapid,
           measurable adoption at launch.
         </div>
       </div>
@@ -134,11 +156,11 @@ const projectModals = [
     description: (
       <div className="space-y-4">
         <div>
-          At Chain, I built an official partnership with the Miami Heat designed
-          to engage the community, activate fans, and connect blockchain
-          technology to real-world impact. The program blended sports marketing,
-          local business engagement, and charitable initiatives, with a focus on
-          supporting local schools and STEM-related programs.
+          At Chain, I built an official partnership with the Miami Heat
+          designed to engage the community, activate fans, and connect
+          blockchain technology to real-world impact. The program blended sports
+          marketing, local business engagement, and charitable initiatives, with
+          a focus on supporting local schools and STEM-related programs.
         </div>
         <div>
           The activation included announcement and in-game content, in-stadium
@@ -168,7 +190,7 @@ const projectModals = [
           messaging and positioning framework, refined ICPs, and a fundamentally
           new way of thinking about the Kadena brand.
         </div>
-        <div className="mt-4">
+        <div>
           The integrated campaign launched with a deliberate moment of
           disruption. Elements of the website began to glitch, signaling change
           before it was explained. That visual language carried across social
@@ -203,6 +225,105 @@ const projectModals = [
   },
 ];
 
+const projectTiles = [
+  {
+    id: 1,
+    title: "Driven by Data",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F88d20ef8b082451b8105ca7ae1767a27?format=webp&width=400",
+    alt: "Lukka Formula E",
+    bg: "bg-gray-200",
+  },
+  {
+    id: 2,
+    title: "H&R Block Retail Tax Software",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F57b2e77ba8444e99a4b6c00ea18dbcc7?format=webp&width=400",
+    alt: "Fusion92 H&R Block",
+    bg: "bg-gray-100",
+  },
+  {
+    id: 3,
+    title: "Distracted Driving PSA",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F036e9110d57545f4909f28fcf01c9b44?format=webp&width=400",
+    alt: "US Cellular campaign",
+    bg: "bg-gray-200",
+  },
+  {
+    id: 4,
+    title: "US Cellular Brand Activations",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fa44c6f08b0bf40cb8ea08f61968b988c?format=webp&width=400",
+    alt: "US Cellular Future of Good",
+    bg: "bg-white",
+  },
+  {
+    id: 5,
+    title: "Unicorn Valuation",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F74eb105410174fef8bb2485c242e4791?format=webp&width=400",
+    alt: "Lukka data visualization",
+    bg: "bg-gray-900",
+  },
+  {
+    id: 6,
+    title: "New England Patriots",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fbdd2fc26b9d54f32b18e8b118634aded?format=webp&width=400",
+    alt: "Chain Patriots helmet",
+    bg: "bg-gray-100",
+  },
+  {
+    id: 7,
+    title: "Chainweb EVM",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F3cbaf395ebe14ab791ad4e9041d89cb1?format=webp&width=400",
+    alt: "Chainweb EVM",
+    bg: "bg-teal-100",
+  },
+  {
+    id: 8,
+    title: "Tiffany and Co. NFTiff",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda94d5220fa14f78aca333eaa563a96a?format=webp&width=400",
+    alt: "Tiffany and Co NFTiff",
+    bg: "bg-gray-900",
+  },
+  {
+    id: 9,
+    title: "Chain Wallet App",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff6c63303bba445518833f99b005c1015?format=webp&width=400",
+    alt: "Chain Wallet App",
+    bg: "bg-gray-200",
+  },
+  {
+    id: 10,
+    title: "Miami Heat",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe811583a315942fc847cc150544fe89a?format=webp&width=400",
+    alt: "Miami Heat",
+    bg: "bg-gray-100",
+  },
+  {
+    id: 11,
+    title: "#NewKadena",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400",
+    alt: "New Kadena",
+    bg: "bg-gray-900",
+  },
+  {
+    id: 12,
+    title: "Croatian Men's National Football Club",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fed0ea93f040f4729a2ea432b157dad56?format=webp&width=400",
+    alt: "Croatian Football Federation",
+    bg: "bg-red-600",
+  },
+];
+
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "" });
@@ -211,81 +332,54 @@ export default function Index() {
   >("idle");
   const [formMessage, setFormMessage] = useState("");
 
+  const activeProject = projectModals.find((project) => project.id === activeModal);
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Navigation */}
       <header className="sticky top-0 z-50 bg-[#2f2f2f] border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-    {/* Logo */}
-    <div className="flex-shrink-0">
-      <img
-        src="/mh-logo.png"
-        alt="Mike Herron"
-        className="h-12 w-auto"
-      />
-    </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div className="flex-shrink-0">
+            <img src="/MH-logo.png" alt="Mike Herron" className="h-12 w-auto" />
+          </div>
 
-    {/* Navigation Links */}
-    <nav className="hidden md:flex items-center gap-16">
-      <a
-        href="#about"
-        className="text-white font-medium text-base transition relative group hover:text-gray-300"
-      >
-        About Me
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-      </a>
-      <a
-        href="#worked-for"
-        className="text-white font-medium text-base transition relative group hover:text-gray-300"
-      >
-        Worked For
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-      </a>
-      <a
-        href="#worked-with"
-        className="text-white font-medium text-base transition relative group hover:text-gray-300"
-      >
-        Worked With
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-      </a>
-      <a
-        href="#worked-on"
-        className="text-white font-medium text-base transition relative group hover:text-gray-300"
-      >
-        Worked On
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-      </a>
-      <a
-        href="#contact"
-        className="text-white font-medium text-base transition relative group hover:text-gray-300"
-      >
-        Work Together
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-      </a>
-    </nav>
+          <nav className="hidden md:flex items-center gap-16">
+            {[
+              { href: "#about", label: "About Me" },
+              { href: "#worked-for", label: "Worked For" },
+              { href: "#worked-with", label: "Worked With" },
+              { href: "#worked-on", label: "Worked On" },
+              { href: "#contact", label: "Work Together" },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-white font-medium text-base transition relative group hover:text-gray-300"
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+              </a>
+            ))}
+          </nav>
 
-    {/* LinkedIn Icon */}
-    <div className="flex items-center">
-      <a
-        href="https://www.linkedin.com/in/mherron54/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white hover:text-gray-300 transition"
-        aria-label="LinkedIn"
-      >
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</header>
+          <div className="flex items-center">
+            <a
+              href="https://www.linkedin.com/in/mherron54/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-300 transition"
+              aria-label="LinkedIn"
+            >
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
 
-      {/* Hero Section with Profile Image */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-12 lg:pb-[620px] relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-start">
-            {/* Left Content */}
             <div className="flex flex-col justify-start mt-6 lg:mt-16 lg:absolute lg:left-8 lg:top-[17px] lg:z-10 lg:w-2/3">
               <h1 className="text-[26px] sm:text-[40px] lg:text-[57px] font-bold leading-none mb-6 sm:mb-8">
                 <span className="text-gray-900">Marketing Executive</span>
@@ -310,9 +404,7 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Content - Profile Image */}
             <div className="flex lg:hidden w-full justify-center order-2">
-              {/* Mobile/Tablet Profile Image */}
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fd6df606957e743d297d63333c2237ba5?format=webp&width=800"
                 alt="Mike Herron"
@@ -320,9 +412,7 @@ export default function Index() {
               />
             </div>
 
-            {/* Desktop Profile Image */}
             <div className="hidden lg:flex lg:justify-end lg:absolute lg:right-4 lg:top-[17px] lg:h-[600px] lg:items-start overflow-hidden">
-              {/* Profile Image */}
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fd6df606957e743d297d63333c2237ba5?format=webp&width=800"
                 alt="Mike Herron"
@@ -333,10 +423,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Dear Founders Newsletter Card */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 lg:-mt-[100px] relative z-20 mb-8 lg:mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
-          {/* Want to learn more section - Order 3 on mobile, 1 on desktop */}
           <div className="space-y-4 flex flex-col items-start lg:ml-[50px] order-3 lg:order-1 w-full lg:w-auto">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
@@ -357,7 +445,6 @@ export default function Index() {
             rel="noopener noreferrer"
             className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 order-2 lg:order-2 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
           >
-            {/* Logo/Icon */}
             <div className="flex-shrink-0 w-16 h-16 lg:w-24 lg:h-24">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
@@ -366,7 +453,6 @@ export default function Index() {
               />
             </div>
 
-            {/* Text Content */}
             <div className="flex-1">
               <div className="text-orange text-sm font-semibold tracking-wider mb-2">
                 LINKEDIN NEWSLETTER
@@ -382,23 +468,20 @@ export default function Index() {
         </div>
       </section>
 
-      {/* About Me Section */}
       <section id="about" className="bg-white py-12 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            {/* Left Column - Title and Subtitle */}
             <div className="flex flex-col gap-8">
               <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
                 <span className="text-gray-900">About Me</span>
                 <span className="text-orange">.</span>
               </h2>
               <p className="text-gray-600 text-base leading-relaxed">
-                I've built my career by asking, "Why are we doing this" and
-                "What does success look like."
+                I've built my career by asking, &quot;Why are we doing this&quot; and
+                &quot;What does success look like.&quot;
               </p>
             </div>
 
-            {/* Right Column - Bio Content */}
             <div className="flex flex-col gap-6 lg:col-span-2">
               <p className="text-gray-900 text-base leading-relaxed">
                 I am a lifelong Chicagoan, a husband, and a father of four. I
@@ -429,11 +512,9 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Worked For Section */}
       <section id="worked-for" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-            {/* Left Sticky Column */}
             <div className="lg:sticky lg:top-24 h-fit">
               <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium mb-6">
                 <span className="text-gray-900">Worked for</span>
@@ -446,10 +527,7 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Right Scrollable Column - Job Entries */}
             <div className="lg:col-span-2 space-y-12 divide-y divide-gray-200">
-             
-              {/* Kadena */}
               <div className="pt-12 first:pt-0">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9394984ab56d49318277639d40031b24?format=webp&width=800"
@@ -490,8 +568,8 @@ export default function Index() {
                       <span className="font-semibold">7 percent</span>.
                     </li>
                     <li>
-                      Established the company's paid media framework, expanding
-                      budget from{" "}
+                      Established the company&apos;s paid media framework,
+                      expanding budget from{" "}
                       <span className="font-semibold">100K to 500K</span> across
                       paid social, KOLs, search, and sponsorships.
                     </li>
@@ -515,7 +593,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Chain */}
               <div className="pt-12">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc09e204150174a489ae08ab32725d764?format=webp&width=800"
@@ -548,13 +625,14 @@ export default function Index() {
                       and New England Revolution.
                     </li>
                     <li>
-                      Launched three new B2B products and the company's first
-                      direct to consumer digital wallet.
+                      Launched three new B2B products and the company&apos;s
+                      first direct to consumer digital wallet.
                     </li>
                     <li>
-                      Closed a landmark Tiffany & Co and Yuga Labs partnership
-                      that generated <span className="font-semibold">15M</span>{" "}
-                      in revenue and sold out in under{" "}
+                      Closed a landmark Tiffany &amp; Co and Yuga Labs
+                      partnership that generated{" "}
+                      <span className="font-semibold">15M</span> in revenue and
+                      sold out in under{" "}
                       <span className="font-semibold">15 minutes</span>.
                     </li>
                     <li>
@@ -566,7 +644,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Lukka */}
               <div className="pt-12">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda5358d50e26487d909c74e5402762fa?format=webp&width=800"
@@ -580,7 +657,7 @@ export default function Index() {
                   </span>
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Blockchain and crypto asset data provider serving the world's
+                  Blockchain and crypto asset data provider serving the world&apos;s
                   largest financial institutions, fund administrators, and
                   government agencies. Led all global marketing during
                   significant company growth and valuation inflection.
@@ -607,8 +684,9 @@ export default function Index() {
                       processes.
                     </li>
                     <li>
-                      Built Lukka's first comprehensive brand and go to market
-                      strategy across positioning, messaging, and segmentation.
+                      Built Lukka&apos;s first comprehensive brand and go to
+                      market strategy across positioning, messaging, and
+                      segmentation.
                     </li>
                     <li>
                       Negotiated a multi year global title sponsorship with
@@ -618,11 +696,10 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Work & Co */}
               <div className="pt-12">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/f9a952caa622f1b34ebb2e5d1217b5d022627766?width=266"
-                  alt="Work & Co"
+                  alt="Work and Co"
                   className="h-14 object-contain mb-6"
                 />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -643,8 +720,8 @@ export default function Index() {
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
                     <li>
-                      Managed a portfolio of global brands including H&R Block,
-                      AT&T, and Zurich generating more than{" "}
+                      Managed a portfolio of global brands including H&amp;R
+                      Block, AT&amp;T, and Zurich generating more than{" "}
                       <span className="font-semibold">16M</span> in agency fees.
                     </li>
                     <li>
@@ -663,7 +740,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* MCS Consulting */}
               <div className="pt-12">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/364cdce97b6a21af5a17e8ed3fa80147b0efa0db?width=430"
@@ -688,9 +764,9 @@ export default function Index() {
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
                     <li>
-                      Launched United Airlines' MileagePlusGolf.com, unlocking{" "}
-                      <span className="font-semibold">800K</span> in private
-                      investment and exceeding pre launch sales goals by{" "}
+                      Launched United Airlines&apos; MileagePlusGolf.com,
+                      unlocking <span className="font-semibold">800K</span> in
+                      private investment and exceeding pre launch sales goals by{" "}
                       <span className="font-semibold">230 percent</span>.
                     </li>
                     <li>
@@ -710,7 +786,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* US Cellular */}
               <div className="pt-12">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/da9ede529f3b039e3f7e90e2dcb5f2928ac1c616?width=366"
@@ -764,7 +839,6 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* SOLO */}
               <div className="pt-12">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
@@ -821,13 +895,8 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* XFO */}
               <div className="pt-12">
-                <img
-                  src="/xfo.jpg?width=286"
-                  alt="XFO"
-                  className="h-14 object-contain mb-6"
-                />
+                <img src="/xfo.jpg?width=286" alt="XFO" className="h-14 object-contain mb-6" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Partner{" "}
                   <span className="text-gray-600 font-normal">
@@ -847,7 +916,7 @@ export default function Index() {
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
                     <li>
-                      Helped build the XFO into the Midwest's leading MMA
+                      Helped build the XFO into the Midwest&apos;s leading MMA
                       organization, sending more than{" "}
                       <span className="font-semibold">100 fighters</span> to the
                       UFC.
@@ -879,10 +948,9 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Earlier Career */}
               <div className="pt-12">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Earlier Career in E-Commerce & Brand Marketing
+                  Earlier Career in E-Commerce &amp; Brand Marketing
                 </h3>
                 <div className="text-gray-600 text-sm space-y-3">
                   <p>
@@ -891,7 +959,7 @@ export default function Index() {
                   </p>
                   <p>
                     <span className="font-semibold">
-                      Director of Sales & Marketing
+                      Director of Sales &amp; Marketing
                     </span>{" "}
                     — KemperSports (2007–2009)
                   </p>
@@ -912,13 +980,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Worked With Section */}
       <section id="worked-with" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
-            {/* Left Column - Title, Description, and Notable Companies */}
             <div className="flex flex-col gap-8">
-              {/* Title and Description */}
               <div className="flex flex-col gap-6">
                 <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
                   <span className="text-gray-900">Worked with</span>
@@ -934,22 +999,22 @@ export default function Index() {
                 </p>
               </div>
 
-              {/* Other Notable Companies */}
               <div className="flex flex-col gap-3">
                 <h3 className="text-gray-900 text-base font-medium">
                   Other Notable Companies:
                 </h3>
                 <div className="grid grid-cols-3 gap-6">
-                  {/* Column 1 */}
                   <div className="flex flex-col gap-2">
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Formula 1<br />
-                      Formula E<br />
+                      Formula 1
+                      <br />
+                      Formula E
+                      <br />
                       State Street
                       <br />
                       Blackrock
                       <br />
-                      S&P
+                      S&amp;P
                       <br />
                       Choice Hotels
                       <br />
@@ -961,7 +1026,6 @@ export default function Index() {
                     </p>
                   </div>
 
-                  {/* Column 2 */}
                   <div className="flex flex-col gap-2">
                     <p className="text-gray-600 text-sm leading-relaxed">
                       Zurich
@@ -984,7 +1048,6 @@ export default function Index() {
                     </p>
                   </div>
 
-                  {/* Column 3 */}
                   <div className="flex flex-col gap-2">
                     <p className="text-gray-600 text-sm leading-relaxed">
                       SummerFest
@@ -1008,109 +1071,67 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Column - Company Logos Grid */}
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-x-0 gap-y-[50px] items-center">
-                {/* H&R Block */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406"
-                    alt="H&R Block"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* New England Patriots */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406"
-                    alt="New England Patriots"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* State Street */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458"
-                    alt="State Street"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* United Airlines */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484"
-                    alt="United Airlines"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* Samsung */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502"
-                    alt="Samsung"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* Tiffany & Co */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490"
-                    alt="Tiffany & Co"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* AT&T */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436"
-                    alt="AT&T"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* Disney */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442"
-                    alt="Disney"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* Bloomberg */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488"
-                    alt="Bloomberg"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
-
-                {/* Google */}
-                <div className="flex items-center justify-center">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404"
-                    alt="Google"
-                    className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
-                  />
-                </div>
+                {[
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406",
+                    alt: "H&R Block",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406",
+                    alt: "New England Patriots",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458",
+                    alt: "State Street",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484",
+                    alt: "United Airlines",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502",
+                    alt: "Samsung",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490",
+                    alt: "Tiffany & Co",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436",
+                    alt: "AT&T",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442",
+                    alt: "Disney",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488",
+                    alt: "Bloomberg",
+                  },
+                  {
+                    src: "https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404",
+                    alt: "Google",
+                  },
+                ].map((logo) => (
+                  <div key={logo.alt} className="flex items-center justify-center">
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Worked On Section */}
       <section id="worked-on" className="bg-white py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
-            {/* Left Column - Title and Description */}
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
                 <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
@@ -1130,224 +1151,37 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Column - Project Grid */}
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4 sm:gap-5">
-                {/* Box 1 - Lukka Formula E */}
-                <button
-                  onClick={() => setActiveModal(1)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F88d20ef8b082451b8105ca7ae1767a27?format=webp&width=400"
-                    alt="Lukka Formula E"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 2 - Fusion 92 H&R Block */}
-                <button
-                  onClick={() => setActiveModal(2)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F57b2e77ba8444e99a4b6c00ea18dbcc7?format=webp&width=400"
-                    alt="Fusion 92 H&R Block"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 3 - US Cellular Campaign */}
-                <button
-                  onClick={() => setActiveModal(3)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F036e9110d57545f4909f28fcf01c9b44?format=webp&width=400"
-                    alt="US Cellular campaign"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 4 - US Cellular Future of Good */}
-                <button
-                  onClick={() => setActiveModal(4)}
-                  className="aspect-square rounded-lg overflow-hidden bg-white cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fa44c6f08b0bf40cb8ea08f61968b988c?format=webp&width=400"
-                    alt="US Cellular Future of Good"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 5 - Lukka Data Visualization */}
-                <button
-                  onClick={() => setActiveModal(5)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F74eb105410174fef8bb2485c242e4791?format=webp&width=400"
-                    alt="Lukka data visualization"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 6 - Chain Patriots Helmet */}
-                <button
-                  onClick={() => setActiveModal(6)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fbdd2fc26b9d54f32b18e8b118634aded?format=webp&width=400"
-                    alt="Chain Patriots helmet"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 7 - Tiffany & Co NFT */}
-                <button
-                  onClick={() => setActiveModal(7)}
-                  className="aspect-square rounded-lg overflow-hidden bg-teal-100 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F3cbaf395ebe14ab791ad4e9041d89cb1?format=webp&width=400"
-                    alt="Tiffany & Co NFT"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 8 - Chain Wallet App */}
-                <button
-                  onClick={() => setActiveModal(8)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda94d5220fa14f78aca333eaa563a96a?format=webp&width=400"
-                    alt="Chain Wallet App"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 9 - Chain Wallet App */}
-                <button
-                  onClick={() => setActiveModal(9)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-200 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ff6c63303bba445518833f99b005c1015?format=webp&width=400"
-                    alt="Chain Wallet App"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 10 - Miami Heat */}
-                <button
-                  onClick={() => setActiveModal(10)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fe811583a315942fc847cc150544fe89a?format=webp&width=400"
-                    alt="Miami Heat"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 11 - New Kadena */}
-                <button
-                  onClick={() => setActiveModal(11)}
-                  className="aspect-square rounded-lg overflow-hidden bg-gray-900 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F23206d4f72d4440794aa666f55144fab?format=webp&width=400"
-                    alt="New Kadena"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
-
-                {/* Box 12 - Croatian Football Federation */}
-                <button
-                  onClick={() => setActiveModal(12)}
-                  className="aspect-square rounded-lg overflow-hidden bg-red-600 cursor-pointer group relative"
-                >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fed0ea93f040f4729a2ea432b157dad56?format=webp&width=400"
-                    alt="Croatian Football Federation"
-                    className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-semibold text-lg">
-                      View Project
-                    </span>
-                  </div>
-                </button>
+                {projectTiles.map((tile) => (
+                  <button
+                    key={tile.id}
+                    onClick={() => setActiveModal(tile.id)}
+                    className={`aspect-square rounded-lg overflow-hidden ${tile.bg} cursor-pointer group relative`}
+                  >
+                    <img
+                      src={tile.image}
+                      alt={tile.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white font-semibold text-lg">
+                        View Project
+                      </span>
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section id="contact" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-gray-900">Let's work </span>
+              <span className="text-gray-900">Let&apos;s work </span>
               <span className="text-gray-400">together</span>
               <span className="text-orange">.</span>
             </h2>
@@ -1364,11 +1198,11 @@ export default function Index() {
               <span> Board Member</span>
             </p>
 
-            {/* Contact Form */}
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
                 setFormStatus("loading");
+
                 try {
                   const response = await fetch("/.netlify/functions/contact", {
                     method: "POST",
@@ -1377,8 +1211,9 @@ export default function Index() {
                     },
                     body: JSON.stringify(formData),
                   });
+
                   const data = await response.json();
-                  console.log("Response:", { status: response.status, data });
+
                   if (response.ok) {
                     setFormData({ name: "", email: "" });
                     setFormStatus("success");
@@ -1434,7 +1269,6 @@ export default function Index() {
               </button>
             </form>
 
-            {/* Form Status Message */}
             {formStatus === "success" && (
               <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
                 <p className="font-medium">✓ {formMessage}</p>
@@ -1456,9 +1290,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        {/* Background Image */}
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -1469,9 +1301,7 @@ export default function Index() {
           }}
         ></div>
 
-        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Disclaimer - Full Width */}
           <div className="mb-12 lg:text-center">
             <div className="text-sm lg:text-xs text-gray-400 lg:text-gray-600 leading-relaxed">
               <p>
@@ -1489,22 +1319,14 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Logo and Copyright - Bottom Row */}
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-12 gap-4 lg:gap-0">
-            {/* Left - Logo */}
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/dc7288d32ef8e770c7e38a0ca30aecce0066b49f?width=478"
-              alt="Mike Herron"
-              className="h-16 w-auto"
-            />
+            <img src="/mh-logo.png" alt="Mike Herron" className="h-16 w-auto" />
 
-            {/* Right - Copyright */}
             <p className="text-gray-400 text-sm font-medium">
               ©2026 Michael Herron LLC
             </p>
           </div>
 
-          {/* Design Credit */}
           <div className="text-center pt-8 border-t border-gray-700">
             <p className="text-xs text-gray-500">
               Designed in partnership with{" "}
@@ -1521,8 +1343,7 @@ export default function Index() {
         </div>
       </footer>
 
-      {/* Project Modal */}
-      {activeModal && (
+      {activeProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4"
           onClick={() => setActiveModal(null)}
@@ -1531,7 +1352,6 @@ export default function Index() {
             className="relative bg-white rounded-2xl shadow-2xl p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={() => setActiveModal(null)}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20 bg-white rounded-full p-2"
@@ -1552,24 +1372,21 @@ export default function Index() {
               </svg>
             </button>
 
-            {/* Header and Description */}
             <div className="mb-8">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
-                {projectModals[activeModal - 1].title}
+                {activeProject.title}
               </h2>
-              {typeof projectModals[activeModal - 1].description !==
-              "string" ? (
+              {typeof activeProject.description !== "string" ? (
                 <div className="text-gray-600 text-base leading-relaxed">
-                  {projectModals[activeModal - 1].description}
+                  {activeProject.description}
                 </div>
               ) : (
-                <p className="text-gray-600 text-base leading-relaxed">
-                  {projectModals[activeModal - 1].description}
-                </p>
+                <div className="text-gray-600 text-base leading-relaxed whitespace-pre-line">
+                  {activeProject.description}
+                </div>
               )}
             </div>
 
-            {/* Animated GIF section for modal 10 */}
             {activeModal === 10 && (
               <div className="w-full h-16 -my-2">
                 <img
@@ -1580,48 +1397,38 @@ export default function Index() {
               </div>
             )}
 
-            {/* Animated GIF section for modal 6 */}
-            {activeModal === 6 &&
-              projectModals[activeModal - 1].animatedGif && (
-                <div className="w-full pb-[10px]">
-                  <img
-                    src={projectModals[activeModal - 1].animatedGif}
-                    alt="Animated GIF"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              )}
+            {activeModal === 6 && activeProject.animatedGif && (
+              <div className="w-full pb-[10px]">
+                <img
+                  src={activeProject.animatedGif}
+                  alt="Animated GIF"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
 
-            {/* Animated GIF section for modal 12 */}
-            {activeModal === 12 &&
-              projectModals[activeModal - 1].animatedGif && (
-                <div className="w-full">
-                  <img
-                    src={projectModals[activeModal - 1].animatedGif}
-                    alt="Animated GIF"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              )}
+            {activeModal === 12 && activeProject.animatedGif && (
+              <div className="w-full">
+                <img
+                  src={activeProject.animatedGif}
+                  alt="Animated GIF"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
 
-            {/* Videos and Images Layout */}
             {activeModal === 6 ? (
               <div className="w-full space-y-6">
-                {/* First Video and Second Image - Horizontal Layout */}
                 <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-                  {/* First Video (Vertical) */}
                   <div className="flex-1 min-w-0">
                     <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[0].startsWith(
-                            "PL",
-                          )
-                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[0]}`
-                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[0]}`
+                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                            ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
+                            : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
                         title="Project Video 1"
                         frameBorder="0"
@@ -1632,104 +1439,81 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Second Image (Rotated) */}
-                  {projectModals[activeModal - 1].images &&
-                    projectModals[activeModal - 1].images.length > 1 && (
-                      <div className="flex-1 min-w-0">
-                        <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden flex items-center justify-center">
-                          <img
-                            src={projectModals[activeModal - 1].images[1]}
-                            alt="Project Image 2"
-                            className="w-full h-full object-contain rotate-90 scale-[1.77]"
-                          />
-                        </div>
+                  {activeProject.images && activeProject.images.length > 1 && (
+                    <div className="flex-1 min-w-0">
+                      <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden flex items-center justify-center">
+                        <img
+                          src={activeProject.images[1]}
+                          alt="Project Image 2"
+                          className="w-full h-full object-contain rotate-90 scale-[1.77]"
+                        />
                       </div>
-                    )}
+                    </div>
+                  )}
                 </div>
 
-                {/* Remaining Videos */}
-                {projectModals[activeModal - 1].videoIds.length > 1 &&
-                  projectModals[activeModal - 1].videoIds
-                    .slice(1)
-                    .map((videoId, index) => {
-                      const isLastVideo =
-                        index ===
-                        projectModals[activeModal - 1].videoIds.length - 2;
+                {activeProject.videoIds.length > 1 &&
+                  activeProject.videoIds.slice(1).map((videoId, index) => {
+                    const isLastVideo =
+                      index === activeProject.videoIds.length - 2;
 
-                      return (
-                        <div
-                          key={`video-${index + 1}`}
-                          className={
-                            isLastVideo
-                              ? "flex flex-col lg:flex-row gap-6"
-                              : "w-full"
-                          }
-                        >
-                          <div className={isLastVideo ? "flex-1" : "w-full"}>
-                            {projectModals[activeModal - 1].videoTitles &&
-                              projectModals[activeModal - 1].videoTitles[
-                                index + 1
-                              ] && (
-                                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                                  {
-                                    projectModals[activeModal - 1].videoTitles[
-                                      index + 1
-                                    ]
-                                  }
-                                </h3>
-                              )}
-                            <div
-                              className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}
-                            >
-                              <iframe
-                                width="100%"
-                                height="100%"
-                                src={
-                                  projectModals[activeModal - 1].isPlaylist ||
-                                  videoId.startsWith("PL")
-                                    ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                                    : `https://www.youtube.com/embed/${videoId}`
-                                }
-                                title={`Project Video ${index + 2}`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                className="w-full h-full"
-                              ></iframe>
-                            </div>
+                    return (
+                      <div
+                        key={`video-${index + 1}`}
+                        className={isLastVideo ? "flex flex-col lg:flex-row gap-6" : "w-full"}
+                      >
+                        <div className={isLastVideo ? "flex-1" : "w-full"}>
+                          {activeProject.videoTitles &&
+                            activeProject.videoTitles[index + 1] && (
+                              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                                {activeProject.videoTitles[index + 1]}
+                              </h3>
+                            )}
+                          <div
+                            className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}
+                          >
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src={
+                                activeProject.isPlaylist || videoId.startsWith("PL")
+                                  ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                  : `https://www.youtube.com/embed/${videoId}`
+                              }
+                              title={`Project Video ${index + 2}`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              className="w-full h-full"
+                            ></iframe>
                           </div>
-
-                          {/* Image to right of last video */}
-                          {isLastVideo && (
-                            <div className="flex-1">
-                              <img
-                                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4e5501b81ec24df48b9ceeb62d50f441?format=webp&width=800"
-                                alt="Season Ticket Giveaway"
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                          )}
                         </div>
-                      );
-                    })}
+
+                        {isLastVideo && (
+                          <div className="flex-1">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4e5501b81ec24df48b9ceeb62d50f441?format=webp&width=800"
+                              alt="Season Ticket Giveaway"
+                              className="w-full h-full object-cover rounded-lg"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
               </div>
             ) : activeModal === 7 ? (
               <div className="w-full space-y-6">
-                {/* First and Last Video - Horizontal Layout */}
                 <div className="flex flex-col lg:flex-row gap-6">
-                  {/* First Video */}
                   <div className="flex-1 lg:flex-[2]">
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[0].startsWith(
-                            "PL",
-                          )
-                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[0]}`
-                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[0]}`
+                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                            ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
+                            : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
                         title="Project Video 1"
                         frameBorder="0"
@@ -1740,21 +1524,18 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Last Video */}
                   <div className="flex-1 lg:flex-[1]">
                     <div className="w-full h-[344px] rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[
-                            projectModals[activeModal - 1].videoIds.length - 1
-                          ].startsWith("PL")
-                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[projectModals[activeModal - 1].videoIds.length - 1]}`
-                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[projectModals[activeModal - 1].videoIds.length - 1]}`
+                          activeProject.isPlaylist ||
+                          activeProject.videoIds[activeProject.videoIds.length - 1].startsWith("PL")
+                            ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[activeProject.videoIds.length - 1]}`
+                            : `https://www.youtube.com/embed/${activeProject.videoIds[activeProject.videoIds.length - 1]}`
                         }
-                        title={`Project Video ${projectModals[activeModal - 1].videoIds.length}`}
+                        title={`Project Video ${activeProject.videoIds.length}`}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -1764,67 +1545,50 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Remaining Videos */}
-                {projectModals[activeModal - 1].videoIds.length > 2 &&
-                  projectModals[activeModal - 1].videoIds
-                    .slice(1, -1)
-                    .map((videoId, index) => (
-                      <div key={`video-${index + 1}`} className="w-full">
-                        {projectModals[activeModal - 1].videoTitles &&
-                          projectModals[activeModal - 1].videoTitles[
-                            index + 1
-                          ] && (
-                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                              {
-                                projectModals[activeModal - 1].videoTitles[
-                                  index + 1
-                                ]
-                              }
-                            </h3>
-                          )}
-                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                          <iframe
-                            width="100%"
-                            height="100%"
-                            src={
-                              projectModals[activeModal - 1].isPlaylist ||
-                              videoId.startsWith("PL")
-                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                                : `https://www.youtube.com/embed/${videoId}`
-                            }
-                            title={`Project Video ${index + 2}`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full"
-                          ></iframe>
-                        </div>
+                {activeProject.videoIds.length > 2 &&
+                  activeProject.videoIds.slice(1, -1).map((videoId, index) => (
+                    <div key={`video-${index + 1}`} className="w-full">
+                      {activeProject.videoTitles && activeProject.videoTitles[index + 1] && (
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                          {activeProject.videoTitles[index + 1]}
+                        </h3>
+                      )}
+                      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={
+                            activeProject.isPlaylist || videoId.startsWith("PL")
+                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                              : `https://www.youtube.com/embed/${videoId}`
+                          }
+                          title={`Project Video ${index + 2}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
                       </div>
-                    ))}
+                    </div>
+                  ))}
               </div>
             ) : activeModal === 11 ? (
               <div className="w-full space-y-6">
-                {/* First Video with Images on Right */}
-                {projectModals[activeModal - 1].videoTitles &&
-                  projectModals[activeModal - 1].videoTitles[0] && (
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {projectModals[activeModal - 1].videoTitles[0]}
-                    </h3>
-                  )}
+                {activeProject.videoTitles && activeProject.videoTitles[0] && (
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {activeProject.videoTitles[0]}
+                  </h3>
+                )}
                 <div className="flex flex-col lg:flex-row gap-6 items-start">
-                  {/* Left: First Video */}
                   <div className="flex-1 min-w-0 w-full lg:w-auto">
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[0].startsWith(
-                            "PL",
-                          )
-                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[0]}`
-                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[0]}`
+                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                            ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
+                            : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
                         title="Project Video 1"
                         frameBorder="0"
@@ -1835,52 +1599,41 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Right: Stacked Images (Vertical on Desktop, Horizontal on Mobile) */}
                   <div
                     className="w-full lg:w-52 flex flex-row lg:flex-col lg:flex-shrink-0 lg:justify-between"
-                    style={{
-                      gap: "50px",
-                      height: "auto",
-                    }}
+                    style={{ gap: "50px", height: "auto" }}
                   >
-                    {projectModals[activeModal - 1].images &&
-                      projectModals[activeModal - 1].images.map(
-                        (imageUrl, index) => (
-                          <div
-                            key={`image-${index}`}
-                            className="flex-1 lg:flex-none lg:w-full h-40 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
-                          >
-                            <img
-                              src={imageUrl}
-                              alt={`Project Image ${index + 1}`}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                        ),
-                      )}
+                    {activeProject.images &&
+                      activeProject.images.map((imageUrl, index) => (
+                        <div
+                          key={`image-${index}`}
+                          className="flex-1 lg:flex-none lg:w-full h-40 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
+                        >
+                          <img
+                            src={imageUrl}
+                            alt={`Project Image ${index + 1}`}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ))}
                   </div>
                 </div>
 
-                {/* Second Video - Full Width */}
-                {projectModals[activeModal - 1].videoIds.length > 1 && (
+                {activeProject.videoIds.length > 1 && (
                   <div>
-                    {projectModals[activeModal - 1].videoTitles &&
-                      projectModals[activeModal - 1].videoTitles[1] && (
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                          {projectModals[activeModal - 1].videoTitles[1]}
-                        </h3>
-                      )}
+                    {activeProject.videoTitles && activeProject.videoTitles[1] && (
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                        {activeProject.videoTitles[1]}
+                      </h3>
+                    )}
                     <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          projectModals[activeModal - 1].isPlaylist ||
-                          projectModals[activeModal - 1].videoIds[1].startsWith(
-                            "PL",
-                          )
-                            ? `https://www.youtube.com/embed/videoseries?list=${projectModals[activeModal - 1].videoIds[1]}`
-                            : `https://www.youtube.com/embed/${projectModals[activeModal - 1].videoIds[1]}`
+                          activeProject.isPlaylist || activeProject.videoIds[1].startsWith("PL")
+                            ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[1]}`
+                            : `https://www.youtube.com/embed/${activeProject.videoIds[1]}`
                         }
                         title="Project Video 2"
                         frameBorder="0"
@@ -1894,62 +1647,55 @@ export default function Index() {
               </div>
             ) : (
               <div className="w-full space-y-4">
-                {/* Images section - displayed horizontally at top */}
-                {projectModals[activeModal - 1].images &&
-                  projectModals[activeModal - 1].images.length > 0 && (
-                    <div className="w-full flex flex-col lg:flex-row gap-4 h-auto md:h-96 lg:h-96 mt-4">
-                      {projectModals[activeModal - 1].images.map(
-                        (imageUrl, index) => (
-                          <div
-                            key={`image-${index}`}
-                            className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${activeModal === 10 || activeModal === 12 ? "" : "bg-gray-100"}`}
-                          >
-                            <img
-                              src={imageUrl}
-                              alt={`Project Image ${index + 1}`}
-                              className={`w-full h-full ${activeModal === 10 || activeModal === 12 ? "object-cover" : "object-contain"}`}
-                            />
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  )}
-
-                {/* Default layout for other modals */}
-                <div className="w-full flex flex-col gap-4">
-                  {projectModals[activeModal - 1].videoIds.map(
-                    (videoId, index) => (
-                      <div key={`video-${index}`} className="w-full">
-                        {projectModals[activeModal - 1].videoTitles &&
-                          projectModals[activeModal - 1].videoTitles[index] && (
-                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                              {
-                                projectModals[activeModal - 1].videoTitles[
-                                  index
-                                ]
-                              }
-                            </h3>
-                          )}
-                        <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                          <iframe
-                            width="100%"
-                            height="100%"
-                            src={
-                              projectModals[activeModal - 1].isPlaylist ||
-                              videoId.startsWith("PL")
-                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                                : `https://www.youtube.com/embed/${videoId}`
-                            }
-                            title={`Project Video ${index + 1}`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full"
-                          ></iframe>
-                        </div>
+                {activeProject.images && activeProject.images.length > 0 && (
+                  <div className="w-full flex flex-col lg:flex-row gap-4 h-auto md:h-96 lg:h-96 mt-4">
+                    {activeProject.images.map((imageUrl, index) => (
+                      <div
+                        key={`image-${index}`}
+                        className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${
+                          activeModal === 10 || activeModal === 12 ? "" : "bg-gray-100"
+                        }`}
+                      >
+                        <img
+                          src={imageUrl}
+                          alt={`Project Image ${index + 1}`}
+                          className={`w-full h-full ${
+                            activeModal === 10 || activeModal === 12
+                              ? "object-cover"
+                              : "object-contain"
+                          }`}
+                        />
                       </div>
-                    ),
-                  )}
+                    ))}
+                  </div>
+                )}
+
+                <div className="w-full flex flex-col gap-4">
+                  {activeProject.videoIds.map((videoId, index) => (
+                    <div key={`video-${index}`} className="w-full">
+                      {activeProject.videoTitles && activeProject.videoTitles[index] && (
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                          {activeProject.videoTitles[index]}
+                        </h3>
+                      )}
+                      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={
+                            activeProject.isPlaylist || videoId.startsWith("PL")
+                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                              : `https://www.youtube.com/embed/${videoId}`
+                          }
+                          title={`Project Video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
