@@ -214,72 +214,72 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Navigation */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/42415debce8e00ddf92bfd6b5bede46b12554bf6?width=512"
-              alt="Mike Herron"
-              className="h-12 w-auto"
-            />
-          </div>
+      <header className="sticky top-0 z-50 bg-[#2f2f2f] border-b border-white/10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    {/* Logo */}
+    <div className="flex-shrink-0">
+      <img
+        src="/mh-logo.png"
+        alt="Mike Herron"
+        className="h-12 w-auto"
+      />
+    </div>
 
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-16">
-            <a
-              href="#about"
-              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
-            >
-              About Me
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-            </a>
-            <a
-              href="#worked-for"
-              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
-            >
-              Worked For
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-            </a>
-            <a
-              href="#worked-with"
-              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
-            >
-              Worked With
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-            </a>
-            <a
-              href="#worked-on"
-              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
-            >
-              Worked On
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-900 font-medium text-base transition relative group hover:scale-110"
-            >
-              Work Together
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-            </a>
-          </nav>
+    {/* Navigation Links */}
+    <nav className="hidden md:flex items-center gap-16">
+      <a
+        href="#about"
+        className="text-white font-medium text-base transition relative group hover:text-gray-300"
+      >
+        About Me
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a
+        href="#worked-for"
+        className="text-white font-medium text-base transition relative group hover:text-gray-300"
+      >
+        Worked For
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a
+        href="#worked-with"
+        className="text-white font-medium text-base transition relative group hover:text-gray-300"
+      >
+        Worked With
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a
+        href="#worked-on"
+        className="text-white font-medium text-base transition relative group hover:text-gray-300"
+      >
+        Worked On
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a
+        href="#contact"
+        className="text-white font-medium text-base transition relative group hover:text-gray-300"
+      >
+        Work Together
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
+      </a>
+    </nav>
 
-          {/* LinkedIn Icon */}
-          <div className="flex items-center">
-            <a
-              href="https://www.linkedin.com/in/mherron54/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-900 hover:text-[#0077b5] transition"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </header>
+    {/* LinkedIn Icon */}
+    <div className="flex items-center">
+      <a
+        href="https://www.linkedin.com/in/mherron54/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-gray-300 transition"
+        aria-label="LinkedIn"
+      >
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
 
       {/* Hero Section with Profile Image */}
       <section className="bg-white">
