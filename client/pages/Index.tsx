@@ -522,9 +522,8 @@ export default function Index() {
   <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 pt-12 sm:pt-16 lg:pt-20 pb-24 text-center">
 
     {/* Headline */}
-    <h1 className="max-w-[1100px] mx-auto text-[46px] sm:text-[72px] lg:text-[104px] leading-[0.92] font-bold tracking-[-0.05em] text-[#1f1f1f]">
+    <h1 className="max-w-[1100px] mx-auto text-[46px] sm:text-[72px] lg:text-[86px] leading-[0.92] font-bold tracking-[-0.05em] text-[#1f1f1f]">
       Turn Complex Marketing Ideas
-      <br />
       Into Measurable Results
       <span className="text-orange">.</span>
     </h1>
