@@ -481,7 +481,10 @@ export default function Index() {
 
               <div className="flex flex-col gap-6 px-6 py-8 sm:px-8">
                 <div className="mb-2 flex items-center gap-3 text-white sm:hidden">
-                  <span className="block h-3 w-3 rounded-full bg-green-500"></span>
+                 <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.9)]"></span>
+</span>
                   <div className="leading-tight">
                     <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90">
                       Availability
