@@ -384,7 +384,9 @@ export default function Index() {
   >("idle");
   const [formMessage, setFormMessage] = useState("");
 
-  const activeProject = projectModals.find((project) => project.id === activeModal);
+  const activeProject = projectModals.find(
+    (project) => project.id === activeModal,
+  );
 
   useEffect(() => {
     if (mobileMenuOpen || activeModal) {
@@ -402,23 +404,23 @@ export default function Index() {
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-50 bg-[#2f2f2f]">
         <div className="w-full px-5 sm:px-8 lg:px-12">
-          <div className="h-[88px] flex items-center justify-between">
+          <div className="flex h-[88px] items-center justify-between">
             <a href="#" className="flex items-center">
               <img
                 src="/mh-logo.png"
                 alt="Mike Herron"
-                className="h-10 sm:h-12 w-auto"
+                className="h-10 w-auto sm:h-12"
               />
             </a>
 
             <div className="flex items-center gap-5 sm:gap-8">
-              <div className="hidden sm:flex items-center gap-3 text-white">
+              <div className="hidden items-center gap-3 text-white sm:flex">
                 <span className="block h-3 w-3 rounded-full bg-green-500"></span>
                 <div className="leading-tight">
-                  <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/90">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 sm:text-[12px]">
                     Availability
                   </div>
-                  <div className="text-xs sm:text-sm text-white/70">
+                  <div className="text-[13px] font-normal text-white/70 sm:text-[15px]">
                     Available for consulting
                   </div>
                 </div>
@@ -427,7 +429,7 @@ export default function Index() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="flex flex-col justify-center items-center gap-[6px] w-10 h-10"
+                className="flex h-10 w-10 flex-col items-center justify-center gap-[6px]"
                 aria-label="Toggle menu"
                 aria-expanded={mobileMenuOpen}
               >
@@ -457,10 +459,10 @@ export default function Index() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <div
-              className="absolute top-0 right-0 h-full w-full sm:w-[420px] bg-[#2f2f2f] shadow-2xl"
+              className="absolute right-0 top-0 h-full w-full bg-[#2f2f2f] shadow-2xl sm:w-[420px]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-6 sm:px-8 h-[88px] border-b border-white/10">
+              <div className="flex h-[88px] items-center justify-between border-b border-white/10 px-6 sm:px-8">
                 <img
                   src="/mh-logo.png"
                   alt="Mike Herron"
@@ -470,21 +472,21 @@ export default function Index() {
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-white text-sm uppercase tracking-[0.12em]"
+                  className="text-sm uppercase tracking-[0.12em] text-white"
                   aria-label="Close menu"
                 >
                   Close
                 </button>
               </div>
 
-              <div className="px-6 sm:px-8 py-8 flex flex-col gap-6">
-                <div className="flex items-center gap-3 text-white sm:hidden mb-2">
+              <div className="flex flex-col gap-6 px-6 py-8 sm:px-8">
+                <div className="mb-2 flex items-center gap-3 text-white sm:hidden">
                   <span className="block h-3 w-3 rounded-full bg-green-500"></span>
                   <div className="leading-tight">
                     <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90">
                       Availability
                     </div>
-                    <div className="text-sm text-white/70">
+                    <div className="text-[14px] font-normal text-white/70">
                       Available for consulting
                     </div>
                   </div>
@@ -495,7 +497,7 @@ export default function Index() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-white text-2xl sm:text-3xl font-semibold hover:text-white/70 transition-colors"
+                    className="text-[28px] font-semibold leading-[1] tracking-[-0.03em] text-white transition-colors hover:text-white/70 sm:text-[34px]"
                   >
                     {item.label}
                   </a>
@@ -505,12 +507,16 @@ export default function Index() {
                   href="https://www.linkedin.com/in/mherron54/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-3 text-white hover:text-white/70 transition-colors"
+                  className="mt-4 inline-flex items-center gap-3 text-white transition-colors hover:text-white/70"
                 >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
                   </svg>
-                  <span className="text-base">LinkedIn</span>
+                  <span className="text-[15px]">LinkedIn</span>
                 </a>
               </div>
             </div>
@@ -518,72 +524,66 @@ export default function Index() {
         )}
       </header>
 
-     <section className="bg-white relative overflow-hidden">
-  <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 pt-12 sm:pt-16 lg:pt-20 pb-24 text-center">
+      <section className="relative overflow-hidden bg-white">
+        <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-12 text-center sm:px-8 sm:pt-16 lg:px-10 lg:pt-20">
+          <h1 className="mx-auto max-w-[1120px] text-[46px] font-bold leading-[0.9] tracking-[-0.055em] text-[#1f1f1f] sm:text-[72px] lg:text-[92px]">
+            Turn Complex Marketing Ideas Into Measurable Results
+            <span className="text-orange">.</span>
+          </h1>
 
-    {/* Headline */}
-    <h1 className="max-w-[1100px] mx-auto text-[46px] sm:text-[72px] lg:text-[86px] leading-[0.92] font-bold tracking-[-0.05em] text-[#1f1f1f]">
-      Turn Complex Marketing Ideas
-      Into Measurable Results
-      <span className="text-orange">.</span>
-    </h1>
+          <div className="relative z-10 -mt-16 flex justify-center">
+            <img
+              src="/MikeHerronHeadshot2026.png"
+              alt="Mike Herron"
+              className="w-full max-w-[520px] object-contain sm:max-w-[680px] lg:max-w-[820px]"
+            />
+          </div>
 
-    {/* Hero Image */}
-   <div className="-mt-16 flex justify-center relative z-10">
-  <img
-    src="/MikeHerronHeadshot2026.png"
-    alt="Mike Herron"
-    className="w-full max-w-[520px] sm:max-w-[680px] lg:max-w-[820px] object-contain"
-  />
-</div>
+          <div className="relative z-20 mx-auto mt-4 max-w-[900px] sm:mt-6 lg:mt-8">
+            <p className="text-[20px] font-light leading-[1.22] tracking-[-0.02em] text-[#3d3d3d] sm:text-[27px] lg:text-[32px]">
+              I&apos;m a marketing executive with 20+ years of experience and a
+              decade as a CMO helping technology and fintech companies grow. I
+              work with founders and leadership teams to diagnose what&apos;s
+              holding marketing back and build the strategy and positioning
+              needed to create consistent growth.
+            </p>
+          </div>
 
-    {/* Intro Copy */}
-   <div className="mt-4 sm:mt-6 lg:mt-8 max-w-[900px] mx-auto relative z-20">
-      <p className="text-[#3f3f3f] text-[20px] sm:text-[28px] lg:text-[34px] leading-[1.25] font-light">
-        I&apos;m a marketing executive with 20+ years of experience and a decade as a
-        CMO helping technology and fintech companies grow. I work with founders
-        and leadership teams to diagnose what&apos;s holding marketing back and build
-        the strategy and positioning needed to create consistent growth.
-      </p>
-    </div>
-
-    {/* CTA */}
-    <div className="mt-10">
-      <a
-        href="#contact"
-        className="inline-flex items-center gap-3 rounded-md bg-[#111111] hover:bg-[#222222] text-white px-6 py-4 text-sm sm:text-base font-medium transition-colors shadow-sm"
-      >
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.8}
-            d="M8 7V3m8 4V3m-9 8h10m-11 10h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
-          />
-        </svg>
-        Schedule A Free Marketing Audit
-      </a>
-    </div>
-
-  </div>
-</section>
+          <div className="mt-10">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-3 rounded-md bg-[#111111] px-6 py-4 text-[13px] font-medium tracking-[-0.01em] text-white shadow-sm transition-colors hover:bg-[#222222] sm:text-[15px]"
+            >
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.8}
+                  d="M8 7V3m8 4V3m-9 8h10m-11 10h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
+                />
+              </svg>
+              Schedule A Free Marketing Audit
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
-          <div className="space-y-4 flex flex-col items-start lg:ml-[50px] w-full lg:w-auto">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-8 lg:py-16">
+          <div className="flex w-full flex-col items-start space-y-4 lg:ml-[50px] lg:w-auto">
+            <h3 className="text-[26px] font-semibold leading-[0.98] tracking-[-0.035em] text-gray-900 sm:text-[34px] lg:text-[42px]">
               Want to learn more<span className="text-orange">?</span>
             </h3>
             <a
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-fit lg:w-auto bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition text-center lg:self-end lg:inline-block"
+              className="w-fit rounded-full bg-gray-600 px-6 py-2 text-center text-[13px] font-medium text-white transition hover:bg-gray-700 lg:inline-block lg:w-auto lg:self-end sm:text-[14px]"
             >
               Subscribe on LinkedIn
             </a>
@@ -593,47 +593,49 @@ export default function Index() {
             href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+            className="w-full cursor-pointer rounded-2xl bg-gradient-to-r from-black to-gray-800 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:max-w-2xl lg:flex-shrink-0 lg:p-8"
           >
-            <div className="flex-shrink-0 w-16 h-16 lg:w-24 lg:h-24">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
-                alt="Dear Founders Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-
-            <div className="flex-1">
-              <div className="text-orange text-sm font-semibold tracking-wider mb-2">
-                LINKEDIN NEWSLETTER
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-8">
+              <div className="h-16 w-16 flex-shrink-0 lg:h-24 lg:w-24">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Ffaeaced820ad4f3c8fbfdb1ffadbb2a4?format=webp&width=400"
+                  alt="Dear Founders Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
-              <h3 className="text-white text-2xl lg:text-4xl font-bold mb-2">
-                Dear Founders
-              </h3>
-              <p className="text-gray-300 text-sm lg:text-base">
-                Marketing clarity for the modern entrepreneur
-              </p>
+
+              <div className="flex-1">
+                <div className="mb-2 text-[12px] font-semibold tracking-[0.14em] text-orange sm:text-[13px]">
+                  LINKEDIN NEWSLETTER
+                </div>
+                <h3 className="mb-2 text-[28px] font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-[36px] lg:text-[44px]">
+                  Dear Founders
+                </h3>
+                <p className="text-[15px] leading-[1.5] text-gray-300 sm:text-[16px] lg:text-[17px]">
+                  Marketing clarity for the modern entrepreneur
+                </p>
+              </div>
             </div>
           </a>
         </div>
       </section>
 
       <section id="about" className="bg-white py-12 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
             <div className="flex flex-col gap-8">
-              <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
+              <h2 className="text-[28px] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-[42px] lg:text-[56px]">
                 <span className="text-gray-900">About Me</span>
                 <span className="text-orange">.</span>
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed">
-                I&apos;ve built my career by asking, &quot;Why are we doing this&quot; and
-                &quot;What does success look like.&quot;
+              <p className="text-[16px] font-normal leading-[1.65] text-gray-600 sm:text-[17px] lg:text-[18px]">
+                I&apos;ve built my career by asking, &quot;Why are we doing
+                this&quot; and &quot;What does success look like.&quot;
               </p>
             </div>
 
             <div className="flex flex-col gap-6 lg:col-span-2">
-              <p className="text-gray-900 text-base leading-relaxed">
+              <p className="text-[16px] font-normal leading-[1.65] text-gray-900 sm:text-[17px] lg:text-[18px]">
                 I am a lifelong Chicagoan, a husband, and a father of four. I
                 have spent my career building, leading, and scaling marketing
                 organizations that help companies grow with clarity and purpose.
@@ -643,7 +645,7 @@ export default function Index() {
                 brands, entrepreneurial ventures built from the ground up, and
                 consulting engagements trusted to solve complex challenges.
               </p>
-              <p className="text-gray-900 text-base leading-relaxed">
+              <p className="text-[16px] font-normal leading-[1.65] text-gray-900 sm:text-[17px] lg:text-[18px]">
                 I have led marketing for fast-moving blockchain and fintech
                 companies, managed multi-million dollar brand partnerships,
                 guided agency teams serving Fortune 500 clients, and helped
@@ -651,7 +653,7 @@ export default function Index() {
                 businesses. No matter the setting, I am at my best when I am
                 building something and helping people see what is possible.
               </p>
-              <p className="text-gray-900 text-base leading-relaxed">
+              <p className="text-[16px] font-normal leading-[1.65] text-gray-900 sm:text-[17px] lg:text-[18px]">
                 At work and at home, I lead with honesty, curiosity, and a calm,
                 steady presence that gives teams confidence. I believe in clear
                 goals, transparent conversations, and creating environments
@@ -663,45 +665,45 @@ export default function Index() {
       </section>
 
       <section id="worked-for" className="bg-white py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-            <div className="lg:sticky lg:top-24 h-fit">
-              <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium mb-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
+            <div className="h-fit lg:sticky lg:top-24">
+              <h2 className="mb-6 text-[28px] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-[42px] lg:text-[56px]">
                 <span className="text-gray-900">Worked for</span>
                 <span className="text-orange">.</span>
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-[16px] font-normal leading-[1.65] text-gray-600 sm:text-[17px] lg:text-[18px]">
                 I have partnered with world class teams to deliver high impact
                 campaigns, product launches, and brand experiences across a wide
                 range of industries.
               </p>
             </div>
 
-            <div className="lg:col-span-2 space-y-12 divide-y divide-gray-200">
+            <div className="space-y-12 divide-y divide-gray-200 lg:col-span-2">
               <div className="pt-12 first:pt-0">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F9394984ab56d49318277639d40031b24?format=webp&width=800"
                   alt="Kadena"
-                  className="h-14 object-contain mb-6 w-auto"
+                  className="mb-6 h-14 w-auto object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Chief Marketing Officer{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | September 2023 - November 2025
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   High performing Layer 1 blockchain driving institutional
                   adoption and developer growth through secure, scalable
                   infrastructure. Built and matured the global marketing
                   organization, leading brand, growth, product marketing,
                   content, community, and partnerships.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Built and scaled a 10 person in house marketing team and
                       onboarded top tier PR and creative partners.
@@ -747,24 +749,24 @@ export default function Index() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fc09e204150174a489ae08ab32725d764?format=webp&width=800"
                   alt="Chain"
-                  className="h-12 object-contain mb-6"
+                  className="mb-6 h-12 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Chief Marketing Officer{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | May 2022 - September 2023
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   Blockchain infrastructure company delivering enterprise grade
                   financial technology for global brands. Directed global brand,
                   growth, communications, product marketing, and partnerships.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Built and led the global marketing function for a
                       multibillion dollar blockchain company.
@@ -798,25 +800,26 @@ export default function Index() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fda5358d50e26487d909c74e5402762fa?format=webp&width=800"
                   alt="Lukka"
-                  className="h-10 object-contain mb-6"
+                  className="mb-6 h-10 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Global Head of Marketing{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | August 2020 - May 2022
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Blockchain and crypto asset data provider serving the world&apos;s
-                  largest financial institutions, fund administrators, and
-                  government agencies. Led all global marketing during
-                  significant company growth and valuation inflection.
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  Blockchain and crypto asset data provider serving the
+                  world&apos;s largest financial institutions, fund
+                  administrators, and government agencies. Led all global
+                  marketing during significant company growth and valuation
+                  inflection.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Directed global marketing for a{" "}
                       <span className="font-semibold">1.35B</span> institutional
@@ -850,25 +853,25 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/f9a952caa622f1b34ebb2e5d1217b5d022627766?width=266"
                   alt="Work and Co"
-                  className="h-14 object-contain mb-6"
+                  className="mb-6 h-14 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Group Account Director{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | July 2019 - August 2020
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   Full service digital marketing and innovation agency serving
                   Fortune 500 clients across finance, telecom, insurance, and
                   retail. Directed strategy, client success, and revenue growth
                   across a large enterprise portfolio.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Managed a portfolio of global brands including H&amp;R
                       Block, AT&amp;T, and Zurich generating more than{" "}
@@ -894,25 +897,25 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/364cdce97b6a21af5a17e8ed3fa80147b0efa0db?width=430"
                   alt="MCS Consulting"
-                  className="h-12 object-contain mb-6"
+                  className="mb-6 h-12 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Head of Marketing{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | November 2017 - June 2019
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   Digital marketing and strategy consultancy supporting global
                   enterprise clients with e-commerce growth, brand development,
                   and full funnel marketing execution across travel,
                   hospitality, and financial sectors.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Launched United Airlines&apos; MileagePlusGolf.com,
                       unlocking <span className="font-semibold">800K</span> in
@@ -940,25 +943,25 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/da9ede529f3b039e3f7e90e2dcb5f2928ac1c616?width=366"
                   alt="US Cellular"
-                  className="h-12 object-contain mb-6"
+                  className="mb-6 h-12 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Global Head of Marketing{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | December 2013 - November 2017
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   Major national wireless carrier. Led digital, social, and
                   brand marketing for B2C, B2B, and HR audiences across national
                   markets. Managed an 11 person team responsible for digital
                   content, performance marketing, and social strategy.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Increased annual revenues by{" "}
                       <span className="font-semibold">14 percent</span> through
@@ -993,25 +996,25 @@ export default function Index() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7faec79871be3f0740f20030837c6a244d846344?width=366"
                   alt="SOLO"
-                  className="h-10 object-contain mb-6"
+                  className="mb-6 h-10 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Manager, Online Engagement{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | April 2011 - December 2013
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   National consumer products company known for one of the most
                   recognizable brands in retail and food service. Led digital
                   engagement, influencer marketing, and social strategy
                   supporting large scale consumer growth.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Directed influencer and blogger programs that generated
                       more than <span className="font-semibold">6 million</span>{" "}
@@ -1049,26 +1052,26 @@ export default function Index() {
                 <img
                   src="/xfo.jpg?width=286"
                   alt="XFO"
-                  className="h-14 object-contain mb-6"
+                  className="mb-6 h-14 object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Partner{" "}
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-[15px] font-normal text-gray-500 sm:text-[16px]">
                     | January 2011 - May 2017
                   </span>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="mb-4 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   Mixed martial arts promotion recognized as one of the premier
                   combat sports organizations in the Midwest. Led brand
                   development, event growth, and commercial strategy for one of
                   the longest running regional MMA promotions in the United
                   States.
                 </p>
-                <div className="text-gray-600 text-sm space-y-2">
-                  <p className="font-semibold text-gray-700">
+                <div className="space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
+                  <p className="text-[15px] font-semibold text-gray-800 sm:text-[16px]">
                     Top Level Highlights:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 ml-2 text-sm">
+                  <ul className="ml-2 list-inside list-disc space-y-2 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                     <li>
                       Helped build the XFO into the Midwest&apos;s leading MMA
                       organization, sending more than{" "}
@@ -1103,10 +1106,10 @@ export default function Index() {
               </div>
 
               <div className="pt-12">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="mb-4 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-gray-900 sm:text-[22px]">
                   Earlier Career in E-Commerce &amp; Brand Marketing
                 </h3>
-                <div className="text-gray-600 text-sm space-y-3">
+                <div className="space-y-3 text-[15px] leading-[1.6] text-gray-600 sm:text-[16px]">
                   <p>
                     <span className="font-semibold">Marketing Manager</span> —
                     Benchmark Hospitality (2009–2011)
@@ -1135,15 +1138,15 @@ export default function Index() {
       </section>
 
       <section id="worked-with" className="bg-white py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-4">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
-                <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
+                <h2 className="text-[28px] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-[42px] lg:text-[56px]">
                   <span className="text-gray-900">Worked with</span>
                   <span className="text-orange">.</span>
                 </h2>
-                <p className="text-gray-600 text-base leading-relaxed max-w-sm">
+                <p className="max-w-sm text-[16px] font-normal leading-[1.65] text-gray-600 sm:text-[17px] lg:text-[18px]">
                   I have had the privilege of working with some of the biggest
                   and most influential brands in the world. These partnerships
                   brought me into conversations that shaped global sports,
@@ -1154,12 +1157,12 @@ export default function Index() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <h3 className="text-gray-900 text-base font-medium">
+                <h3 className="text-[16px] font-semibold tracking-[-0.01em] text-gray-900 sm:text-[17px]">
                   Other Notable Companies:
                 </h3>
                 <div className="grid grid-cols-3 gap-6">
                   <div className="flex flex-col gap-2">
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-[14px] leading-[1.65] text-gray-600 sm:text-[15px]">
                       Formula 1
                       <br />
                       Formula E
@@ -1181,7 +1184,7 @@ export default function Index() {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-[14px] leading-[1.65] text-gray-600 sm:text-[15px]">
                       Zurich
                       <br />
                       Nintendo
@@ -1203,7 +1206,7 @@ export default function Index() {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-[14px] leading-[1.65] text-gray-600 sm:text-[15px]">
                       SummerFest
                       <br />
                       Facebook
@@ -1226,13 +1229,13 @@ export default function Index() {
             </div>
 
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 gap-x-0 gap-y-[50px] items-center">
+              <div className="grid grid-cols-2 items-center gap-x-0 gap-y-[50px]">
                 {companyLogos.map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center">
                     <img
                       src={logo.src}
                       alt={logo.alt}
-                      className="max-w-[120px] sm:max-w-[160px] lg:max-w-[200px] max-h-[120px] sm:max-h-[160px] lg:max-h-[200px] object-contain"
+                      className="max-h-[120px] max-w-[120px] object-contain sm:max-h-[160px] sm:max-w-[160px] lg:max-h-[200px] lg:max-w-[200px]"
                     />
                   </div>
                 ))}
@@ -1243,15 +1246,15 @@ export default function Index() {
       </section>
 
       <section id="worked-on" className="bg-white py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-20">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-6">
-                <h2 className="text-[26px] sm:text-[40px] lg:text-5xl font-medium">
+                <h2 className="text-[28px] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-[42px] lg:text-[56px]">
                   <span className="text-gray-900">Worked on</span>
                   <span className="text-orange">.</span>
                 </h2>
-                <p className="text-gray-600 text-base leading-relaxed max-w-sm">
+                <p className="max-w-sm text-[16px] font-normal leading-[1.65] text-gray-600 sm:text-[17px] lg:text-[18px]">
                   Here are a few examples of the campaigns, partnerships,
                   launches, and brand moments I helped create. These projects
                   brought together cross functional teams, creative talent,
@@ -1265,20 +1268,20 @@ export default function Index() {
             </div>
 
             <div className="lg:col-span-2">
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4 sm:gap-5">
+              <div className="grid auto-rows-max grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
                 {projectTiles.map((tile) => (
                   <button
                     key={tile.id}
                     onClick={() => setActiveModal(tile.id)}
-                    className={`aspect-square rounded-lg overflow-hidden ${tile.bg} cursor-pointer group relative`}
+                    className={`group relative aspect-square cursor-pointer overflow-hidden rounded-lg ${tile.bg}`}
                   >
                     <img
                       src={tile.image}
                       alt={tile.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                      className="h-full w-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-white font-semibold text-lg">
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="text-lg font-semibold text-white">
                         View Project
                       </span>
                     </div>
@@ -1291,15 +1294,15 @@ export default function Index() {
       </section>
 
       <section id="contact" className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="mb-6 text-[42px] font-bold leading-[0.95] tracking-[-0.045em] sm:text-[58px] lg:text-[72px]">
               <span className="text-gray-900">Let&apos;s work </span>
               <span className="text-gray-400">together</span>
               <span className="text-orange">.</span>
             </h2>
 
-            <p className="text-gray-900 text-lg md:text-2xl font-medium mb-12">
+            <p className="mb-12 text-[18px] font-medium leading-[1.25] tracking-[-0.02em] text-gray-900 sm:text-[24px] lg:text-[28px]">
               <span>Audits </span>
               <span className="text-orange">|</span>
               <span> Consulting </span>
@@ -1346,9 +1349,9 @@ export default function Index() {
                   setFormMessage("Error sending message. Please try again.");
                 }
               }}
-              className="flex flex-col gap-4 justify-center items-center"
+              className="flex flex-col items-center justify-center gap-4"
             >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
+              <div className="flex w-full flex-col justify-center gap-4 sm:flex-row">
                 <input
                   type="text"
                   name="name"
@@ -1357,7 +1360,7 @@ export default function Index() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                  className="flex-1 rounded-full border border-gray-400 px-6 py-3 text-[15px] text-gray-900 placeholder-gray-500 transition-colors focus:border-orange focus:outline-none sm:max-w-xs sm:text-[16px]"
                   required
                 />
 
@@ -1369,33 +1372,33 @@ export default function Index() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="flex-1 sm:max-w-xs px-6 py-3 rounded-full border border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange transition-colors"
+                  className="flex-1 rounded-full border border-gray-400 px-6 py-3 text-[15px] text-gray-900 placeholder-gray-500 transition-colors focus:border-orange focus:outline-none sm:max-w-xs sm:text-[16px]"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="px-8 py-3 rounded-full md:rounded lg:rounded-full bg-gray-600 hover:bg-gray-700 text-white font-medium transition-colors"
+                className="rounded-full bg-gray-600 px-8 py-3 text-[14px] font-medium tracking-[-0.01em] text-white transition-colors hover:bg-gray-700 sm:text-[15px]"
               >
                 Submit
               </button>
             </form>
 
             {formStatus === "success" && (
-              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+              <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-4 text-green-800">
                 <p className="font-medium">✓ {formMessage}</p>
               </div>
             )}
 
             {formStatus === "error" && (
-              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+              <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4 text-red-800">
                 <p className="font-medium">✗ {formMessage}</p>
               </div>
             )}
 
             {formStatus === "loading" && (
-              <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg text-blue-800">
+              <div className="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-4 text-blue-800">
                 <p className="font-medium">Sending...</p>
               </div>
             )}
@@ -1403,71 +1406,69 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-[#2f2f2f] text-white py-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-[#2f2f2f] py-16 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 lg:text-center">
+            <div className="text-[13px] leading-[1.65] text-gray-300 sm:text-[14px]">
+              <p>
+                All trademarks, logos, and brand names displayed on this website
+                are the property of their respective owners. They are used here
+                strictly for identification and informational purposes to
+                represent companies I have worked for or partnered with
+                throughout my career. Their appearance does not imply any
+                endorsement, approval, sponsorship, or affiliation with this
+                website or with me personally. Any references to past work,
+                partnerships, or collaborations are historical in nature and are
+                presented solely to provide context regarding my professional
+                experience.
+              </p>
+            </div>
+          </div>
 
-    <div className="mb-12 lg:text-center">
-      <div className="text-sm lg:text-xs text-gray-400 leading-relaxed">
-        <p>
-          All trademarks, logos, and brand names displayed on this website
-          are the property of their respective owners. They are used here
-          strictly for identification and informational purposes to
-          represent companies I have worked for or partnered with
-          throughout my career. Their appearance does not imply any
-          endorsement, approval, sponsorship, or affiliation with this
-          website or with me personally. Any references to past work,
-          partnerships, or collaborations are historical in nature and are
-          presented solely to provide context regarding my professional
-          experience.
-        </p>
-      </div>
-    </div>
+          <div className="mb-12 flex flex-col items-center gap-4 lg:flex-row lg:justify-between lg:gap-0">
+            <img
+              src="/mh-logo.png"
+              alt="Mike Herron"
+              className="h-16 w-auto"
+            />
 
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-12 gap-4 lg:gap-0">
-      <img
-        src="/mh-logo.png"
-        alt="Mike Herron"
-        className="h-16 w-auto"
-      />
+            <p className="text-[13px] font-medium text-gray-400 sm:text-[14px]">
+              ©2026 Michael Herron LLC
+            </p>
+          </div>
 
-      <p className="text-gray-400 text-sm font-medium">
-        ©2026 Michael Herron LLC
-      </p>
-    </div>
-
-    <div className="text-center pt-8 border-t border-white/20">
-      <p className="text-xs text-gray-400">
-        Designed in partnership with{" "}
-        <a
-          href="https://nzmotiondesign.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold text-gray-300 hover:text-white transition-colors"
-        >
-          nzmotiondesign.com
-        </a>
-      </p>
-    </div>
-
-  </div>
-</footer>
+          <div className="border-t border-white/20 pt-8 text-center">
+            <p className="text-[12px] text-gray-400 sm:text-[13px]">
+              Designed in partnership with{" "}
+              <a
+                href="https://nzmotiondesign.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-gray-300 transition-colors hover:text-white"
+              >
+                nzmotiondesign.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
 
       {activeProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
           onClick={() => setActiveModal(null)}
         >
           <div
-            className="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
+            className="relative h-[85vh] w-full max-w-5xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl sm:p-8 lg:p-12"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveModal(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition-colors z-20 bg-white rounded-full p-2"
+              className="absolute right-4 top-4 z-20 rounded-full bg-white p-2 text-gray-500 transition-colors hover:text-gray-900"
               aria-label="Close modal"
             >
               <svg
-                className="w-8 h-8"
+                className="h-8 w-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -1482,26 +1483,26 @@ export default function Index() {
             </button>
 
             <div className="mb-8 pr-8">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+              <h2 className="mb-6 text-[30px] font-bold leading-[0.98] tracking-[-0.03em] text-gray-900 sm:text-[40px]">
                 {activeProject.title}
               </h2>
               {typeof activeProject.description !== "string" ? (
-                <div className="text-gray-600 text-base leading-relaxed">
+                <div className="text-[16px] leading-[1.65] text-gray-600 sm:text-[17px]">
                   {activeProject.description}
                 </div>
               ) : (
-                <div className="text-gray-600 text-base leading-relaxed whitespace-pre-line">
+                <div className="whitespace-pre-line text-[16px] leading-[1.65] text-gray-600 sm:text-[17px]">
                   {activeProject.description}
                 </div>
               )}
             </div>
 
             {activeModal === 10 && (
-              <div className="w-full h-16 -my-2">
+              <div className="-my-2 h-16 w-full">
                 <img
                   src="https://cdn.builder.io/o/assets%2F5031849ff5814a4cae6f958ac9f10229%2F872f87fef677478a8bc7535b1585edf9?alt=media&token=0c66e98d-731d-4ad8-af17-f79d1dbb0cd3&apiKey=5031849ff5814a4cae6f958ac9f10229"
                   alt="Animated GIF"
-                  className="w-full h-full object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
             )}
@@ -1511,7 +1512,7 @@ export default function Index() {
                 <img
                   src={activeProject.animatedGif}
                   alt="Animated GIF"
-                  className="w-full h-auto object-contain"
+                  className="h-auto w-full object-contain"
                 />
               </div>
             )}
@@ -1521,21 +1522,22 @@ export default function Index() {
                 <img
                   src={activeProject.animatedGif}
                   alt="Animated GIF"
-                  className="w-full h-auto object-contain"
+                  className="h-auto w-full object-contain"
                 />
               </div>
             )}
 
             {activeModal === 6 ? (
               <div className="w-full space-y-6">
-                <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-                  <div className="flex-1 min-w-0">
-                    <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden bg-gray-900">
+                <div className="flex flex-col items-stretch gap-6 lg:flex-row">
+                  <div className="min-w-0 flex-1">
+                    <div className="aspect-[9/16] h-full w-full overflow-hidden rounded-lg bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                          activeProject.isPlaylist ||
+                          activeProject.videoIds[0].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
                             : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
@@ -1543,18 +1545,18 @@ export default function Index() {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full"
+                        className="h-full w-full"
                       ></iframe>
                     </div>
                   </div>
 
                   {activeProject.images && activeProject.images.length > 1 && (
-                    <div className="flex-1 min-w-0">
-                      <div className="w-full h-full aspect-[9/16] rounded-lg overflow-hidden flex items-center justify-center">
+                    <div className="min-w-0 flex-1">
+                      <div className="flex aspect-[9/16] h-full w-full items-center justify-center overflow-hidden rounded-lg">
                         <img
                           src={activeProject.images[1]}
                           alt="Project Image 2"
-                          className="w-full h-full object-contain rotate-90 scale-[1.77]"
+                          className="h-full w-full rotate-90 scale-[1.77] object-contain"
                         />
                       </div>
                     </div>
@@ -1569,23 +1571,30 @@ export default function Index() {
                     return (
                       <div
                         key={`video-${index + 1}`}
-                        className={isLastVideo ? "flex flex-col lg:flex-row gap-6" : "w-full"}
+                        className={
+                          isLastVideo
+                            ? "flex flex-col gap-6 lg:flex-row"
+                            : "w-full"
+                        }
                       >
                         <div className={isLastVideo ? "flex-1" : "w-full"}>
                           {activeProject.videoTitles &&
                             activeProject.videoTitles[index + 1] && (
-                              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                              <h3 className="mb-3 text-lg font-semibold text-gray-900">
                                 {activeProject.videoTitles[index + 1]}
                               </h3>
                             )}
                           <div
-                            className={`w-full ${isLastVideo ? "aspect-square" : "aspect-video"} rounded-lg overflow-hidden bg-gray-900`}
+                            className={`w-full overflow-hidden rounded-lg bg-gray-900 ${
+                              isLastVideo ? "aspect-square" : "aspect-video"
+                            }`}
                           >
                             <iframe
                               width="100%"
                               height="100%"
                               src={
-                                activeProject.isPlaylist || videoId.startsWith("PL")
+                                activeProject.isPlaylist ||
+                                videoId.startsWith("PL")
                                   ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
                                   : `https://www.youtube.com/embed/${videoId}`
                               }
@@ -1593,7 +1602,7 @@ export default function Index() {
                               frameBorder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
-                              className="w-full h-full"
+                              className="h-full w-full"
                             ></iframe>
                           </div>
                         </div>
@@ -1603,7 +1612,7 @@ export default function Index() {
                             <img
                               src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2F4e5501b81ec24df48b9ceeb62d50f441?format=webp&width=800"
                               alt="Season Ticket Giveaway"
-                              className="w-full h-full object-cover rounded-lg"
+                              className="h-full w-full rounded-lg object-cover"
                             />
                           </div>
                         )}
@@ -1613,14 +1622,15 @@ export default function Index() {
               </div>
             ) : activeModal === 7 ? (
               <div className="w-full space-y-6">
-                <div className="flex flex-col lg:flex-row gap-6">
+                <div className="flex flex-col gap-6 lg:flex-row">
                   <div className="flex-1 lg:flex-[2]">
-                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                    <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                          activeProject.isPlaylist ||
+                          activeProject.videoIds[0].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
                             : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
@@ -1628,19 +1638,21 @@ export default function Index() {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full"
+                        className="h-full w-full"
                       ></iframe>
                     </div>
                   </div>
 
                   <div className="flex-1 lg:flex-[1]">
-                    <div className="w-full h-[344px] rounded-lg overflow-hidden bg-gray-900">
+                    <div className="h-[344px] w-full overflow-hidden rounded-lg bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
                           activeProject.isPlaylist ||
-                          activeProject.videoIds[activeProject.videoIds.length - 1].startsWith("PL")
+                          activeProject.videoIds[
+                            activeProject.videoIds.length - 1
+                          ].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[activeProject.videoIds.length - 1]}`
                             : `https://www.youtube.com/embed/${activeProject.videoIds[activeProject.videoIds.length - 1]}`
                         }
@@ -1648,38 +1660,42 @@ export default function Index() {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full"
+                        className="h-full w-full"
                       ></iframe>
                     </div>
                   </div>
                 </div>
 
                 {activeProject.videoIds.length > 2 &&
-                  activeProject.videoIds.slice(1, -1).map((videoId, index) => (
-                    <div key={`video-${index + 1}`} className="w-full">
-                      {activeProject.videoTitles && activeProject.videoTitles[index + 1] && (
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                          {activeProject.videoTitles[index + 1]}
-                        </h3>
-                      )}
-                      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={
-                            activeProject.isPlaylist || videoId.startsWith("PL")
-                              ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
-                              : `https://www.youtube.com/embed/${videoId}`
-                          }
-                          title={`Project Video ${index + 2}`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full"
-                        ></iframe>
+                  activeProject.videoIds
+                    .slice(1, -1)
+                    .map((videoId, index) => (
+                      <div key={`video-${index + 1}`} className="w-full">
+                        {activeProject.videoTitles &&
+                          activeProject.videoTitles[index + 1] && (
+                            <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                              {activeProject.videoTitles[index + 1]}
+                            </h3>
+                          )}
+                        <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={
+                              activeProject.isPlaylist ||
+                              videoId.startsWith("PL")
+                                ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
+                                : `https://www.youtube.com/embed/${videoId}`
+                            }
+                            title={`Project Video ${index + 2}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="h-full w-full"
+                          ></iframe>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
               </div>
             ) : activeModal === 11 ? (
               <div className="w-full space-y-6">
@@ -1688,14 +1704,15 @@ export default function Index() {
                     {activeProject.videoTitles[0]}
                   </h3>
                 )}
-                <div className="flex flex-col lg:flex-row gap-6 items-start">
-                  <div className="flex-1 min-w-0 w-full lg:w-auto">
-                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                <div className="flex flex-col items-start gap-6 lg:flex-row">
+                  <div className="min-w-0 w-full flex-1 lg:w-auto">
+                    <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          activeProject.isPlaylist || activeProject.videoIds[0].startsWith("PL")
+                          activeProject.isPlaylist ||
+                          activeProject.videoIds[0].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[0]}`
                             : `https://www.youtube.com/embed/${activeProject.videoIds[0]}`
                         }
@@ -1703,25 +1720,25 @@ export default function Index() {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full"
+                        className="h-full w-full"
                       ></iframe>
                     </div>
                   </div>
 
                   <div
-                    className="w-full lg:w-52 flex flex-row lg:flex-col lg:flex-shrink-0 lg:justify-between"
+                    className="flex w-full flex-row lg:w-52 lg:flex-shrink-0 lg:flex-col lg:justify-between"
                     style={{ gap: "50px", height: "auto" }}
                   >
                     {activeProject.images &&
                       activeProject.images.map((imageUrl, index) => (
                         <div
                           key={`image-${index}`}
-                          className="flex-1 lg:flex-none lg:w-full h-40 lg:h-44 rounded-lg overflow-hidden flex items-center justify-center"
+                          className="flex h-40 flex-1 items-center justify-center overflow-hidden rounded-lg lg:h-44 lg:w-full lg:flex-none"
                         >
                           <img
                             src={imageUrl}
                             alt={`Project Image ${index + 1}`}
-                            className="w-full h-full object-contain"
+                            className="h-full w-full object-contain"
                           />
                         </div>
                       ))}
@@ -1730,17 +1747,19 @@ export default function Index() {
 
                 {activeProject.videoIds.length > 1 && (
                   <div>
-                    {activeProject.videoTitles && activeProject.videoTitles[1] && (
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                        {activeProject.videoTitles[1]}
-                      </h3>
-                    )}
-                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                    {activeProject.videoTitles &&
+                      activeProject.videoTitles[1] && (
+                        <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                          {activeProject.videoTitles[1]}
+                        </h3>
+                      )}
+                    <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
                       <iframe
                         width="100%"
                         height="100%"
                         src={
-                          activeProject.isPlaylist || activeProject.videoIds[1].startsWith("PL")
+                          activeProject.isPlaylist ||
+                          activeProject.videoIds[1].startsWith("PL")
                             ? `https://www.youtube.com/embed/videoseries?list=${activeProject.videoIds[1]}`
                             : `https://www.youtube.com/embed/${activeProject.videoIds[1]}`
                         }
@@ -1748,7 +1767,7 @@ export default function Index() {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full"
+                        className="h-full w-full"
                       ></iframe>
                     </div>
                   </div>
@@ -1757,18 +1776,20 @@ export default function Index() {
             ) : (
               <div className="w-full space-y-4">
                 {activeProject.images && activeProject.images.length > 0 && (
-                  <div className="w-full flex flex-col lg:flex-row gap-4 h-auto md:h-96 lg:h-96 mt-4">
+                  <div className="mt-4 flex h-auto w-full flex-col gap-4 md:h-96 lg:h-96 lg:flex-row">
                     {activeProject.images.map((imageUrl, index) => (
                       <div
                         key={`image-${index}`}
-                        className={`flex-1 rounded-lg overflow-hidden flex items-center justify-center ${
-                          activeModal === 10 || activeModal === 12 ? "" : "bg-gray-100"
+                        className={`flex flex-1 items-center justify-center overflow-hidden rounded-lg ${
+                          activeModal === 10 || activeModal === 12
+                            ? ""
+                            : "bg-gray-100"
                         }`}
                       >
                         <img
                           src={imageUrl}
                           alt={`Project Image ${index + 1}`}
-                          className={`w-full h-full ${
+                          className={`h-full w-full ${
                             activeModal === 10 || activeModal === 12
                               ? "object-cover"
                               : "object-contain"
@@ -1779,20 +1800,22 @@ export default function Index() {
                   </div>
                 )}
 
-                <div className="w-full flex flex-col gap-4">
+                <div className="flex w-full flex-col gap-4">
                   {activeProject.videoIds.map((videoId, index) => (
                     <div key={`video-${index}`} className="w-full">
-                      {activeProject.videoTitles && activeProject.videoTitles[index] && (
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                          {activeProject.videoTitles[index]}
-                        </h3>
-                      )}
-                      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                      {activeProject.videoTitles &&
+                        activeProject.videoTitles[index] && (
+                          <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                            {activeProject.videoTitles[index]}
+                          </h3>
+                        )}
+                      <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
                         <iframe
                           width="100%"
                           height="100%"
                           src={
-                            activeProject.isPlaylist || videoId.startsWith("PL")
+                            activeProject.isPlaylist ||
+                            videoId.startsWith("PL")
                               ? `https://www.youtube.com/embed/videoseries?list=${videoId}`
                               : `https://www.youtube.com/embed/${videoId}`
                           }
@@ -1800,7 +1823,7 @@ export default function Index() {
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
-                          className="w-full h-full"
+                          className="h-full w-full"
                         ></iframe>
                       </div>
                     </div>
