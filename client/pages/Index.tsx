@@ -538,7 +538,7 @@ export default function Index() {
 </div>
 
     {/* Intro Copy */}
-    <div className="-mt-16 sm:-mt-20 lg:-mt-24 max-w-[900px] mx-auto relative z-20">
+   <div className="mt-4 sm:mt-6 lg:mt-8 max-w-[900px] mx-auto relative z-20">
       <p className="text-[#3f3f3f] text-[20px] sm:text-[28px] lg:text-[34px] leading-[1.25] font-light">
         I&apos;m a marketing executive with 20+ years of experience and a decade as a
         CMO helping technology and fintech companies grow. I work with founders
