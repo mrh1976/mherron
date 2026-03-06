@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const nftiffDescription =
   "At Chain, I helped lead the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch.\n\nThe project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.";
@@ -324,8 +324,60 @@ const projectTiles = [
   },
 ];
 
+const companyLogos = [
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406",
+    alt: "H&R Block",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406",
+    alt: "New England Patriots",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458",
+    alt: "State Street",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484",
+    alt: "United Airlines",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502",
+    alt: "Samsung",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490",
+    alt: "Tiffany & Co",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436",
+    alt: "AT&T",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442",
+    alt: "Disney",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488",
+    alt: "Bloomberg",
+  },
+  {
+    src: "https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404",
+    alt: "Google",
+  },
+];
+
+const navItems = [
+  { href: "#about", label: "About Me" },
+  { href: "#worked-for", label: "Worked For" },
+  { href: "#worked-with", label: "Worked With" },
+  { href: "#worked-on", label: "Worked On" },
+  { href: "#contact", label: "Work Together" },
+];
+
 export default function Index() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [formStatus, setFormStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -334,98 +386,193 @@ export default function Index() {
 
   const activeProject = projectModals.find((project) => project.id === activeModal);
 
+  useEffect(() => {
+    if (mobileMenuOpen || activeModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen, activeModal]);
+
   return (
     <div className="min-h-screen bg-white">
-      <header className="sticky top-0 z-50 bg-[#2f2f2f] border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex-shrink-0">
-            <img src="/MH-logo.png" alt="Mike Herron" className="h-12 w-auto" />
-          </div>
-
-          <nav className="hidden md:flex items-center gap-16">
-            {[
-              { href: "#about", label: "About Me" },
-              { href: "#worked-for", label: "Worked For" },
-              { href: "#worked-with", label: "Worked With" },
-              { href: "#worked-on", label: "Worked On" },
-              { href: "#contact", label: "Work Together" },
-            ].map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-white font-medium text-base transition relative group hover:text-gray-300"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300"></span>
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center">
-            <a
-              href="https://www.linkedin.com/in/mherron54/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
-              </svg>
+      <header className="sticky top-0 z-50 bg-[#2f2f2f]">
+        <div className="w-full px-5 sm:px-8 lg:px-12">
+          <div className="h-[88px] flex items-center justify-between">
+            <a href="#" className="flex items-center">
+              <img
+                src="/mh-logo.png"
+                alt="Mike Herron"
+                className="h-10 sm:h-12 w-auto"
+              />
             </a>
+
+            <div className="flex items-center gap-5 sm:gap-8">
+              <div className="hidden sm:flex items-center gap-3 text-white">
+                <span className="block h-3 w-3 rounded-full bg-green-500"></span>
+                <div className="leading-tight">
+                  <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/90">
+                    Availability
+                  </div>
+                  <div className="text-xs sm:text-sm text-white/70">
+                    Available for consulting
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="flex flex-col justify-center items-center gap-[6px] w-10 h-10"
+                aria-label="Toggle menu"
+                aria-expanded={mobileMenuOpen}
+              >
+                <span
+                  className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
+                    mobileMenuOpen ? "translate-y-[7.5px] rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-8 bg-white transition-opacity duration-300 ${
+                    mobileMenuOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
+                    mobileMenuOpen ? "-translate-y-[7.5px] -rotate-45" : ""
+                  }`}
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </header>
 
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-12 lg:pb-[620px] relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-start">
-            <div className="flex flex-col justify-start mt-6 lg:mt-16 lg:absolute lg:left-8 lg:top-[17px] lg:z-10 lg:w-2/3">
-              <h1 className="text-[26px] sm:text-[40px] lg:text-[57px] font-bold leading-none mb-6 sm:mb-8">
-                <span className="text-gray-900">Marketing Executive</span>
-                <br />
-                <span className="text-gray-400">That Turns </span>
-                <span className="text-gray-600">Complex Ideas</span>
-                <br />
-                <span className="text-gray-400">Into </span>
-                <span className="text-gray-600">
-                  Clear, Measurable Results
-                  <span className="text-orange">.</span>
-                </span>
-              </h1>
+        {mobileMenuOpen && (
+          <div
+            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div
+              className="absolute top-0 right-0 h-full w-full sm:w-[420px] bg-[#2f2f2f] shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-6 sm:px-8 h-[88px] border-b border-white/10">
+                <img
+                  src="/mh-logo.png"
+                  alt="Mike Herron"
+                  className="h-10 w-auto"
+                />
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-4 lg:mb-16">
-                <a
-                  href="#contact"
-                  className="w-fit bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-full font-medium text-sm transition inline-block"
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-white text-sm uppercase tracking-[0.12em]"
+                  aria-label="Close menu"
                 >
-                  Let's Chat
+                  Close
+                </button>
+              </div>
+
+              <div className="px-6 sm:px-8 py-8 flex flex-col gap-6">
+                <div className="flex items-center gap-3 text-white sm:hidden mb-2">
+                  <span className="block h-3 w-3 rounded-full bg-green-500"></span>
+                  <div className="leading-tight">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90">
+                      Availability
+                    </div>
+                    <div className="text-sm text-white/70">
+                      Available for consulting
+                    </div>
+                  </div>
+                </div>
+
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-white text-2xl sm:text-3xl font-semibold hover:text-white/70 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+
+                <a
+                  href="https://www.linkedin.com/in/mherron54/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-3 text-white hover:text-white/70 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
+                  </svg>
+                  <span className="text-base">LinkedIn</span>
                 </a>
               </div>
             </div>
+          </div>
+        )}
+      </header>
 
-            <div className="flex lg:hidden w-full justify-center order-2">
+      <section className="bg-[#f3f3f3]">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20 lg:pb-24">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="max-w-5xl text-[42px] sm:text-[64px] lg:text-[88px] leading-[0.95] font-bold tracking-[-0.04em] text-[#222222]">
+              Turn Complex Marketing Ideas
+              <br />
+              Into Measurable Results
+              <span className="text-orange">.</span>
+            </h1>
+
+            <div className="mt-8 sm:mt-10 lg:mt-12 w-full flex justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fd6df606957e743d297d63333c2237ba5?format=webp&width=800"
+                src="/MikeHerronHeadshot2026.png"
                 alt="Mike Herron"
-                className="w-full max-w-sm object-cover object-top rounded-lg"
+                className="w-full max-w-[320px] sm:max-w-[430px] lg:max-w-[520px] object-contain"
               />
             </div>
 
-            <div className="hidden lg:flex lg:justify-end lg:absolute lg:right-4 lg:top-[17px] lg:h-[600px] lg:items-start overflow-hidden">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F5031849ff5814a4cae6f958ac9f10229%2Fd6df606957e743d297d63333c2237ba5?format=webp&width=800"
-                alt="Mike Herron"
-                className="max-w-xl lg:max-w-2xl object-cover object-top rounded-lg"
-              />
+            <div className="mt-6 sm:mt-8 lg:mt-10 max-w-4xl">
+              <p className="text-[#3f3f3f] text-[20px] sm:text-[28px] lg:text-[34px] leading-[1.25] font-light">
+                I&apos;m a marketing executive with 20+ years of experience and a decade as a
+                CMO helping technology and fintech companies grow. I work with founders
+                and leadership teams to diagnose what&apos;s holding marketing back and build
+                the strategy and positioning needed to create consistent growth.
+              </p>
+            </div>
+
+            <div className="mt-10 sm:mt-12">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 rounded-md bg-[#111111] hover:bg-[#222222] text-white px-6 py-4 text-sm sm:text-base font-medium transition-colors shadow-sm"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.8}
+                    d="M8 7V3m8 4V3m-9 8h10m-11 10h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
+                  />
+                </svg>
+                <span>Schedule A Free Marketing Audit</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 lg:-mt-[100px] relative z-20 mb-8 lg:mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
-          <div className="space-y-4 flex flex-col items-start lg:ml-[50px] order-3 lg:order-1 w-full lg:w-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
+          <div className="space-y-4 flex flex-col items-start lg:ml-[50px] w-full lg:w-auto">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Want to learn more<span className="text-orange">?</span>
             </h3>
@@ -443,7 +590,7 @@ export default function Index() {
             href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401675485820338176"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 order-2 lg:order-2 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+            className="w-full lg:max-w-2xl bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6 lg:gap-8 shadow-lg lg:flex-shrink-0 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
           >
             <div className="flex-shrink-0 w-16 h-16 lg:w-24 lg:h-24">
               <img
@@ -477,7 +624,7 @@ export default function Index() {
                 <span className="text-orange">.</span>
               </h2>
               <p className="text-gray-600 text-base leading-relaxed">
-                I've built my career by asking, &quot;Why are we doing this&quot; and
+                I&apos;ve built my career by asking, &quot;Why are we doing this&quot; and
                 &quot;What does success look like.&quot;
               </p>
             </div>
@@ -896,7 +1043,11 @@ export default function Index() {
               </div>
 
               <div className="pt-12">
-                <img src="/xfo.jpg?width=286" alt="XFO" className="h-14 object-contain mb-6" />
+                <img
+                  src="/xfo.jpg?width=286"
+                  alt="XFO"
+                  className="h-14 object-contain mb-6"
+                />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Partner{" "}
                   <span className="text-gray-600 font-normal">
@@ -1073,48 +1224,7 @@ export default function Index() {
 
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-x-0 gap-y-[50px] items-center">
-                {[
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/5082733f13508ac3584f7a25a02f153f0a3b6e63?width=406",
-                    alt: "H&R Block",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/f1e7c3ab6c3570e6dfb39ccbc33a5bc8ecdc57ad?width=406",
-                    alt: "New England Patriots",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/03cd2a10ecbcef125319fb7d0636129fd7f1e3eb?width=458",
-                    alt: "State Street",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/895176dbecd37f931f3d36003aed32daec12f58b?width=484",
-                    alt: "United Airlines",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/e133ed090e21a7edffb9d88688facd497ee1896d?width=502",
-                    alt: "Samsung",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/450c80fe12f7aa770169037dab2bb97e47015f63?width=490",
-                    alt: "Tiffany & Co",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/51a231e947d45779a880c691b62cdf4a6a7a4158?width=436",
-                    alt: "AT&T",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/148468b93f634ce997e825f7096f3a0e31b854aa?width=442",
-                    alt: "Disney",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/eaa9f4e8443b43ecce394395f210d61bd309a399?width=488",
-                    alt: "Bloomberg",
-                  },
-                  {
-                    src: "https://api.builder.io/api/v1/image/assets/TEMP/28bbdb7f27a8aeb79d5960bcc4c1fcbfea020fe4?width=404",
-                    alt: "Google",
-                  },
-                ].map((logo) => (
+                {companyLogos.map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center">
                     <img
                       src={logo.src}
@@ -1320,7 +1430,11 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-12 gap-4 lg:gap-0">
-            <img src="/mh-logo.png" alt="Mike Herron" className="h-16 w-auto" />
+            <img
+              src="/mh-logo.png"
+              alt="Mike Herron"
+              className="h-16 w-auto"
+            />
 
             <p className="text-gray-400 text-sm font-medium">
               ©2026 Michael Herron LLC
@@ -1345,11 +1459,11 @@ export default function Index() {
 
       {activeProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
           onClick={() => setActiveModal(null)}
         >
           <div
-            className="relative bg-white rounded-2xl shadow-2xl p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
+            className="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-12 max-w-5xl w-full h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -1372,7 +1486,7 @@ export default function Index() {
               </svg>
             </button>
 
-            <div className="mb-8">
+            <div className="mb-8 pr-8">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
                 {activeProject.title}
               </h2>
