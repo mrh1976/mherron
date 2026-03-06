@@ -403,129 +403,158 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-50 bg-[#2f2f2f]">
-        <div className="w-full px-5 sm:px-8 lg:px-12">
-          <div className="flex h-[88px] items-center justify-between">
-            <a href="#" className="flex items-center">
-              <img
-                src="/mh-logo.png"
-                alt="Mike Herron"
-                className="h-10 w-auto sm:h-12"
-              />
-            </a>
+  <div className="w-full px-5 sm:px-8 lg:px-12">
+    <div className="flex h-[88px] items-center justify-between">
+      <a href="#" className="flex items-center">
+        <img
+          src="/mh-logo.png"
+          alt="Mike Herron"
+          className="h-10 w-auto sm:h-12"
+        />
+      </a>
 
-            <div className="flex items-center gap-5 sm:gap-8">
-              <div className="hidden items-center gap-3 text-white sm:flex">
-                <span className="block h-3 w-3 rounded-full bg-green-500"></span>
-                <div className="leading-tight">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 sm:text-[12px]">
-                    Availability
-                  </div>
-                  <div className="text-[13px] font-normal text-white/70 sm:text-[15px]">
-                    Available for consulting
-                  </div>
-                </div>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="flex h-10 w-10 flex-col items-center justify-center gap-[6px]"
-                aria-label="Toggle menu"
-                aria-expanded={mobileMenuOpen}
-              >
-                <span
-                  className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
-                    mobileMenuOpen ? "translate-y-[7.5px] rotate-45" : ""
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] w-8 bg-white transition-opacity duration-300 ${
-                    mobileMenuOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
-                    mobileMenuOpen ? "-translate-y-[7.5px] -rotate-45" : ""
-                  }`}
-                />
-              </button>
+      <div className="flex items-center gap-5 sm:gap-8">
+        <div className="hidden items-center gap-3 text-white sm:flex">
+          <span className="relative flex h-3 w-3">
+            <span
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: "rgba(34,197,94,0.45)",
+                transform: "scale(1.8)",
+                filter: "blur(4px)",
+              }}
+            />
+            <span
+              className="relative block h-3 w-3 rounded-full bg-green-500"
+              style={{
+                boxShadow:
+                  "0 0 10px rgba(34,197,94,0.75), 0 0 20px rgba(34,197,94,0.35)",
+              }}
+            />
+          </span>
+          <div className="leading-tight">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 sm:text-[12px]">
+              Availability
+            </div>
+            <div className="text-[13px] font-normal text-white/70 sm:text-[15px]">
+              Available for consulting
             </div>
           </div>
         </div>
 
-        {mobileMenuOpen && (
-          <div
-            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <div
-              className="absolute right-0 top-0 h-full w-full bg-[#2f2f2f] shadow-2xl sm:w-[420px]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex h-[88px] items-center justify-between border-b border-white/10 px-6 sm:px-8">
-                <img
-                  src="/mh-logo.png"
-                  alt="Mike Herron"
-                  className="h-10 w-auto"
-                />
-
-                <button
-                  type="button"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm uppercase tracking-[0.12em] text-white"
-                  aria-label="Close menu"
-                >
-                  Close
-                </button>
-              </div>
-
-              <div className="flex flex-col gap-6 px-6 py-8 sm:px-8">
-               <div className="hidden items-center gap-3 text-white sm:flex">
-  <span className="relative flex h-3 w-3">
-    <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-50 animate-pulse"></span>
-    <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
-  </span>
-  <div className="leading-tight">
-    <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 sm:text-[12px]">
-      Availability
-    </div>
-    <div className="text-[13px] font-normal text-white/70 sm:text-[15px]">
-      Available for consulting
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="flex h-10 w-10 flex-col items-center justify-center gap-[6px]"
+          aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          <span
+            className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
+              mobileMenuOpen ? "translate-y-[7.5px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-[1.5px] w-8 bg-white transition-opacity duration-300 ${
+              mobileMenuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-[1.5px] w-8 bg-white transition-transform duration-300 ${
+              mobileMenuOpen ? "-translate-y-[7.5px] -rotate-45" : ""
+            }`}
+          />
+        </button>
+      </div>
     </div>
   </div>
-</div>
 
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-[28px] font-semibold leading-[1] tracking-[-0.03em] text-white transition-colors hover:text-white/70 sm:text-[34px]"
-                  >
-                    {item.label}
-                  </a>
-                ))}
+  {mobileMenuOpen && (
+    <div
+      className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      <div
+        className="absolute right-0 top-0 h-full w-full bg-[#2f2f2f] shadow-2xl sm:w-[420px]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex h-[88px] items-center justify-between border-b border-white/10 px-6 sm:px-8">
+          <img
+            src="/mh-logo.png"
+            alt="Mike Herron"
+            className="h-10 w-auto"
+          />
 
-                <a
-                  href="https://www.linkedin.com/in/mherron54/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-3 text-white transition-colors hover:text-white/70"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
-                  </svg>
-                  <span className="text-[15px]">LinkedIn</span>
-                </a>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-sm uppercase tracking-[0.12em] text-white"
+            aria-label="Close menu"
+          >
+            Close
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-6 px-6 py-8 sm:px-8">
+          <div className="flex items-center gap-3 text-white">
+            <span className="relative flex h-3 w-3">
+              <span
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: "rgba(34,197,94,0.45)",
+                  transform: "scale(1.8)",
+                  filter: "blur(4px)",
+                }}
+              />
+              <span
+                className="relative block h-3 w-3 rounded-full bg-green-500"
+                style={{
+                  boxShadow:
+                    "0 0 10px rgba(34,197,94,0.75), 0 0 20px rgba(34,197,94,0.35)",
+                }}
+              />
+            </span>
+            <div className="leading-tight">
+              <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 sm:text-[12px]">
+                Availability
+              </div>
+              <div className="text-[13px] font-normal text-white/70 sm:text-[15px]">
+                Available for consulting
               </div>
             </div>
           </div>
-        )}
-      </header>
+
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-[28px] font-semibold leading-[1] tracking-[-0.03em] text-white transition-colors hover:text-white/70 sm:text-[34px]"
+            >
+              {item.label}
+            </a>
+          ))}
+
+          <a
+            href="https://www.linkedin.com/in/mherron54/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-3 text-white transition-colors hover:text-white/70"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z" />
+            </svg>
+            <span className="text-[15px]">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  )}
+</header>
 
       <section className="relative overflow-hidden bg-white">
         <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-12 text-center sm:px-8 sm:pt-16 lg:px-10 lg:pt-20">
