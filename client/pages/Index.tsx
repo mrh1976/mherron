@@ -521,9 +521,8 @@ export default function Index() {
       <section className="bg-white">
   <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20 lg:pb-24">
     <div className="flex flex-col items-center text-center">
-      <h1 className="max-w-[1120px] text-[44px] sm:text-[72px] lg:text-[104px] leading-[0.92] font-bold tracking-[-0.05em] text-[#1f1f1f]">
+      <h1 className="max-w-[1120px] text-[44px] sm:text-[72px] lg:text-[94px] leading-[0.92] font-bold tracking-[-0.05em] text-[#1f1f1f]">
         Turn Complex Marketing Ideas
-        <br />
         Into Measurable Results
         <span className="text-orange">.</span>
       </h1>
