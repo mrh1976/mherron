@@ -1403,62 +1403,54 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "url(https://api.builder.io/api/v1/image/assets/TEMP/903284eb0b0fd2db5e5cb6a2795cd37d6e8819bd?width=5328)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
+      <footer className="bg-[#2f2f2f] text-white py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 lg:text-center">
-            <div className="text-sm lg:text-xs text-gray-400 lg:text-gray-600 leading-relaxed">
-              <p>
-                All trademarks, logos, and brand names displayed on this website
-                are the property of their respective owners. They are used here
-                strictly for identification and informational purposes to
-                represent companies I have worked for or partnered with
-                throughout my career. Their appearance does not imply any
-                endorsement, approval, sponsorship, or affiliation with this
-                website or with me personally. Any references to past work,
-                partnerships, or collaborations are historical in nature and are
-                presented solely to provide context regarding my professional
-                experience.
-              </p>
-            </div>
-          </div>
+    <div className="mb-12 lg:text-center">
+      <div className="text-sm lg:text-xs text-gray-400 leading-relaxed">
+        <p>
+          All trademarks, logos, and brand names displayed on this website
+          are the property of their respective owners. They are used here
+          strictly for identification and informational purposes to
+          represent companies I have worked for or partnered with
+          throughout my career. Their appearance does not imply any
+          endorsement, approval, sponsorship, or affiliation with this
+          website or with me personally. Any references to past work,
+          partnerships, or collaborations are historical in nature and are
+          presented solely to provide context regarding my professional
+          experience.
+        </p>
+      </div>
+    </div>
 
-          <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-12 gap-4 lg:gap-0">
-            <img
-              src="/mh-logo.png"
-              alt="Mike Herron"
-              className="h-16 w-auto"
-            />
+    <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-12 gap-4 lg:gap-0">
+      <img
+        src="/mh-logo.png"
+        alt="Mike Herron"
+        className="h-16 w-auto"
+      />
 
-            <p className="text-gray-400 text-sm font-medium">
-              ©2026 Michael Herron LLC
-            </p>
-          </div>
+      <p className="text-gray-400 text-sm font-medium">
+        ©2026 Michael Herron LLC
+      </p>
+    </div>
 
-          <div className="text-center pt-8 border-t border-gray-700">
-            <p className="text-xs text-gray-500">
-              Designed in partnership with{" "}
-              <a
-                href="https://nzmotiondesign.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-gray-400 hover:text-white transition-colors"
-              >
-                nzmotiondesign.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+    <div className="text-center pt-8 border-t border-white/20">
+      <p className="text-xs text-gray-400">
+        Designed in partnership with{" "}
+        <a
+          href="https://nzmotiondesign.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-gray-300 hover:text-white transition-colors"
+        >
+          nzmotiondesign.com
+        </a>
+      </p>
+    </div>
+
+  </div>
+</footer>
 
       {activeProject && (
         <div
