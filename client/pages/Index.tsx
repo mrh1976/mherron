@@ -556,55 +556,54 @@ export default function Index() {
   )}
 </header>
 
-      <section className="relative overflow-hidden bg-white">
-        <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-12 text-center sm:px-8 sm:pt-16 lg:px-10 lg:pt-20">
-          <h1 className="mx-auto max-w-[1120px] text-[46px] font-bold leading-[0.9] tracking-[-0.055em] text-[#1f1f1f] sm:text-[72px] lg:text-[92px]">
-            Turn Complex Marketing Ideas Into Measurable Results
-            <span className="text-orange">.</span>
-          </h1>
+     <section className="relative overflow-hidden bg-white">
+  <div className="mx-auto max-w-[1280px] px-5 pb-24 pt-20 text-center sm:px-8 sm:pb-24 sm:pt-16 lg:px-10 lg:pt-20">
+    <h1 className="mx-auto max-w-[1120px] text-[46px] font-bold leading-[0.9] tracking-[-0.055em] text-[#1f1f1f] sm:text-[72px] lg:text-[92px]">
+      Turn Complex Marketing Ideas Into Measurable Results
+      <span className="text-orange">.</span>
+    </h1>
 
-          <div className="relative z-10 -mt-16 flex justify-center">
-            <img
-              src="/MikeHerronHeadshot2026.png"
-              alt="Mike Herron"
-              className="w-full max-w-[520px] object-contain sm:max-w-[680px] lg:max-w-[820px]"
-            />
-          </div>
+    <div className="relative z-10 mt-6 flex justify-center sm:-mt-16 lg:-mt-16">
+      <img
+        src="/MikeHerronHeadshot2026.png"
+        alt="Mike Herron"
+        className="w-full max-w-[520px] object-contain sm:max-w-[680px] lg:max-w-[820px]"
+      />
+    </div>
 
-          <div className="relative z-20 mx-auto mt-4 max-w-[900px] sm:mt-6 lg:mt-8">
-            <p className="text-[20px] font-light leading-[1.22] tracking-[-0.02em] text-[#3d3d3d] sm:text-[27px] lg:text-[32px]">
-              I&apos;m a marketing executive with 20+ years of experience and a
-              decade as a CMO helping technology and fintech companies grow. I
-              work with founders and leadership teams to diagnose what&apos;s
-              holding marketing back and build the strategy and positioning
-              needed to create consistent growth.
-            </p>
-          </div>
+    <div className="relative z-20 mx-auto mt-8 max-w-[900px] sm:mt-4 lg:mt-8">
+      <p className="text-[20px] font-light leading-[1.22] tracking-[-0.02em] text-[#3d3d3d] sm:text-[27px] lg:text-[32px]">
+        I&apos;m a marketing executive with 20+ years of experience and a
+        decade as a CMO helping technology and fintech companies grow. I work
+        with founders and leadership teams to diagnose what&apos;s holding
+        marketing back and build the strategy and positioning needed to create
+        consistent growth.
+      </p>
+    </div>
 
-          <div className="mt-10">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 rounded-md bg-[#111111] px-6 py-4 text-[13px] font-medium tracking-[-0.01em] text-white shadow-sm transition-colors hover:bg-[#222222] sm:text-[15px]"
-            >
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.8}
-                  d="M8 7V3m8 4V3m-9 8h10m-11 10h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
-                />
-              </svg>
-              Schedule A Free Marketing Audit
-            </a>
-          </div>
-        </div>
-      </section>
-
+    <div className="mt-10 sm:mt-10 lg:mt-10">
+      <a
+        href="#contact"
+        className="inline-flex items-center gap-3 rounded-md bg-[#111111] px-6 py-4 text-[13px] font-medium tracking-[-0.01em] text-white shadow-sm transition-colors hover:bg-[#222222] sm:text-[15px]"
+      >
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.8}
+            d="M8 7V3m8 4V3m-9 8h10m-11 10h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"
+          />
+        </svg>
+        Schedule A Free Marketing Audit
+      </a>
+    </div>
+  </div>
+</section>
       <section className="bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-16 lg:px-8 lg:py-16">
           <div className="flex w-full flex-col items-start space-y-4 lg:ml-[50px] lg:w-auto">
