@@ -115,7 +115,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-5xl font-bold mb-16 text-center">Experience</h2>
           <div className="space-y-12">
-            {siteContent.experience.map((job, idx) => (
+           {siteContent.experience.map((job) => (
               <div key={job.id} className="relative pl-8 border-l-2 border-gray-200 hover:border-blue-500 transition-all duration-300 pb-8">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
                 <div className="mb-4">
@@ -189,7 +189,7 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="py-24 px-6 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">Let's Work Together</h2>
+          <h2 className="text-5xl font-bold mb-6">Let&apos;s Work Together</h2>
           <p className="text-xl mb-12 text-white/90 leading-relaxed">
             {siteContent.contact.description}
           </p>
