@@ -35,17 +35,17 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-8">
+      <section className="pt-32 pb-12 px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-[72px] md:text-8xl font-bold mb-12 leading-[0.9] tracking-[-0.035em]">
+          <h1 className="text-[56px] md:text-[64px] font-bold mb-6 leading-[0.95] tracking-[-0.035em]">
             Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
           </h1>
-          <div className="relative mx-auto mb-16 w-[450px] h-[600px]">
+          <div className="relative mx-auto mb-12 w-[400px] h-[500px]">
             <Image 
               src="/fullhead.png" 
               alt="Mike Herron" 
-              width={450} 
-              height={600}
+              width={400} 
+              height={500}
               className="w-full h-full object-contain object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-70% to-white pointer-events-none"></div>
