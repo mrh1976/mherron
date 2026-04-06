@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       <footer className="py-12 px-8 bg-[#3a3a3a] text-white text-center">
-        <Image src="/MH-logo.png" alt="MH" width={32} height={32} className="mx-auto mb-6 brightness-0 invert" />
+        <Image src="/MH-logo.png" alt="MH" width={40} height={40} />
         <p className="text-xs opacity-50 font-light">©{new Date().getFullYear()} Michael Herron LLC</p>
       </footer>
 
