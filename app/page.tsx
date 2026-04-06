@@ -113,7 +113,7 @@ export default function Home() {
       {/* Contact - Minimal */}
       <section id="contact" className="py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-8">Let's Work Together</h2>
+         <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-8">Let&apos;s Work Together</h2>
           <p className="text-lg text-gray-600 mb-12 font-light leading-relaxed">
             {siteContent.contact.description}
           </p>
