@@ -37,8 +37,8 @@ export default function Home() {
 
       <section className="pt-32 pb-20 px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-normal mb-12 leading-[1.1] tracking-tight">
-            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-600">.</span>
+          <h1 className="text-[72px] md:text-8xl font-bold mb-12 leading-[0.9] tracking-[-0.035em]">
+            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
           </h1>
           <div className="relative mx-auto mb-16 w-[450px] h-[600px]">
             <Image 
@@ -50,7 +50,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-70% to-white pointer-events-none"></div>
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed">
             I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="md:col-span-2">
               <p className="text-gray-500 italic text-sm leading-relaxed">I&apos;ve built my career by asking, &quot;Why are we doing this&quot; and &quot;What does success look like.&quot;</p>
             </div>
-            <div className="md:col-span-3 text-gray-700 leading-relaxed space-y-4">
+            <div className="md:col-span-3 text-[#6b6b6b] text-[17px] leading-relaxed space-y-4">
               {siteContent.about.text.split('\n\n').map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -85,7 +85,7 @@ export default function Home() {
       <section className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked for</h2>
-          <p className="text-gray-600 mb-20 max-w-xl">
+          <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-xl">
             I have partnered with world class teams to deliver high impact campaigns, product launches, and brand experiences across a wide range of industries.
           </p>
           <div className="space-y-20">
@@ -96,11 +96,11 @@ export default function Home() {
                     <span className="text-xs text-gray-400">LOGO</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl mb-1">{job.company}, {job.role.split(' | ')[0]}</h3>
+                    <h3 className="text-xl font-medium mb-1">{job.company}, {job.role.split(' | ')[0]}</h3>
                     <div className="text-sm text-gray-500 mb-4">{job.period}</div>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{job.description}</p>
+                    <p className="text-[#6b6b6b] text-[17px] mb-6 leading-relaxed">{job.description}</p>
                     <div className="text-xs uppercase tracking-widest text-gray-400 mb-3">Top Level Highlights</div>
-                    <ul className="space-y-2 text-sm text-gray-600">
+                    <ul className="space-y-2 text-sm text-[#6b6b6b]">
                       {job.achievements.map((achievement, i) => (
                         <li key={i} className="pl-4 relative">
                           • {achievement}
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked on</h2>
-          <p className="text-gray-600 mb-20 max-w-2xl">
+          <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-2xl">
             Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
@@ -151,7 +151,7 @@ export default function Home() {
 
       <section className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl mb-6">Let&apos;s work <span className="text-gray-300">together</span><span className="text-yellow-400">.</span></h2>
+          <h2 className="text-5xl font-medium mb-6">Let&apos;s work <span className="text-gray-300">together</span><span className="text-yellow-400">.</span></h2>
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-16">Audits | Consulting | Fractional | Full-Time | Board Member</p>
           <form className="max-w-lg mx-auto flex gap-4 mb-8">
             <input type="text" placeholder="Name" className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400" />
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="bg-white rounded p-12 max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setSelectedProject(null)} className="float-right text-3xl font-thin text-gray-400 hover:text-black">×</button>
             <h3 className="text-3xl mb-6">Project Details</h3>
-            <p className="text-gray-600">Content coming soon...</p>
+            <p className="text-[#6b6b6b]">Content coming soon...</p>
           </div>
         </div>
       )}
