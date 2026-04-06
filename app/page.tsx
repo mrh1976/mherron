@@ -37,18 +37,18 @@ export default function Home() {
 
       <section className="pt-32 pb-12 px-8">
   <div className="max-w-6xl mx-auto text-center">
-    <h1 className="text-[64px] md:text-[72px] font-bold mb-8 leading-[1.0] tracking-[-0.035em]">
+    <h1 className="text-[64px] md:text-[72px] font-bold mb-6 leading-[1.0] tracking-[-0.035em]">
       Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
     </h1>
-    <div className="relative mx-auto mb-10 w-[420px] h-[520px]">
+    <div className="relative mx-auto mb-10 w-[480px] h-[500px] overflow-hidden">
       <Image 
         src="/fullhead.png" 
         alt="Mike Herron" 
-        width={420} 
-        height={520}
-        className="w-full h-full object-contain object-top"
+        width={480} 
+        height={600}
+        className="w-full h-auto object-cover object-top"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-70% to-white pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-65% to-white pointer-events-none"></div>
     </div>
     <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed">
       I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
