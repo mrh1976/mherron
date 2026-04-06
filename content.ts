@@ -17,9 +17,8 @@ export const siteContent = {
     subtitle: "SaaS, FinTech & Enterprise Technology",
     tagline: "Turning complex marketing challenges into measurable growth for 25+ years",
     email: "mherron54@gmail.com",
-    phone: "630.800.0054",
     linkedin: "https://www.linkedin.com/in/mherron54",
-    location: "Elmhurst, IL",
+    location: "Chicago, IL",
   },
 
   // Hero Section
