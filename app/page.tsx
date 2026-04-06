@@ -38,7 +38,7 @@ export default function Home() {
       <section className="pt-32 pb-20 px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-normal mb-12 leading-[1.1] tracking-tight">
-            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
+            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-600">.</span>
           </h1>
           <div className="relative mx-auto mb-16 w-[450px] h-[600px]">
             <Image 
