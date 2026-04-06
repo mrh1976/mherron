@@ -1,30 +1,20 @@
-# Mike Herron - Personal Website
+# Mike Herron - Marketing Executive Website
 
-Modern, SEO-optimized marketing executive portfolio built with Next.js.
+Personal website for Mike Herron, Chief Marketing Officer with 25+ years of experience.
 
 ## Quick Start
-```bash
-npm install
-npm run build
-```
+
+1. Install dependencies: `npm install`
+2. Run development server: `npm run dev`
+3. Open http://localhost:3000
 
 ## Deploy to Netlify
 
-1. Connect this GitHub repo to Netlify
-2. Build command: `npm run build`
-3. Publish directory: `out`
-4. Deploy!
+1. Push code to GitHub
+2. Connect repository to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `.next`
 
 ## Update Content
 
-Edit `content.ts` - all site content is there. No coding required!
-
-## Structure
-
-- `/app` - Next.js pages and layouts
-- `/content.ts` - All site content (edit this!)
-- `/public` - Images and static assets
-
----
-
-© 2026 Mike Herron. All rights reserved.
+Edit `content.ts` to update all site content.
