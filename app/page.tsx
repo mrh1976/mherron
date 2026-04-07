@@ -42,7 +42,7 @@ export default function Home() {
     </h1>
     <div className="relative mx-auto mb-10 w-[480px] h-[500px] overflow-hidden">
       <Image 
-        src="/fullhead.png" 
+        src="/MikeHerronHeadshot2026.png"
         alt="Mike Herron" 
         width={480} 
         height={600}
