@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </nav>
 
-     <section className="pt-28 pb-8 px-8">
+    <section className="pt-28 pb-8 px-8">
   <div className="max-w-6xl mx-auto text-center">
     <h1 className="text-[64px] md:text-[72px] font-bold mb-0 leading-[1.0] tracking-[-0.035em]">
       Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
@@ -50,7 +50,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
     </div>
-    <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-20 leading-relaxed">
+    <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
       I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
     </p>
   </div>
