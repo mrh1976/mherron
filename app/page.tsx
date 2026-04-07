@@ -40,20 +40,16 @@ export default function Home() {
     <h1 className="text-[64px] md:text-[72px] font-bold mb-6 leading-[1.0] tracking-[-0.035em]">
       Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
     </h1>
-    <div className="relative mx-auto mb-10 w-[480px] h-[500px] overflow-hidden">
-      <Image 
-        src="/MikeHerronHeadshot2026.png"
-        alt="Mike Herron" 
-        width={550} 
-        height={700}
-        className="w-full h-auto object-cover object-top"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-65% to-white pointer-events-none"></div>
-    </div>
-    <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed">
-      I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
-    </p>
-  </div>
+    <div className="relative mx-auto mb-10 w-[600px] h-[600px] overflow-hidden">
+  <Image 
+    src="/MikeHerronHeadshot2026.png" 
+    alt="Mike Herron" 
+    width={600} 
+    height={800}
+    className="w-full h-auto object-cover object-top"
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-60% to-white pointer-events-none"></div>
+</div>
 </section>
 
       <section className="py-16 px-8 bg-black text-white">
