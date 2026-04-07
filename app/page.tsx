@@ -50,7 +50,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
     </div>
-    <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
+    <p className="relative z-10 text-[19px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
       I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
     </p>
   </div>
