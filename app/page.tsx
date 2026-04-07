@@ -44,8 +44,8 @@ export default function Home() {
       <Image 
         src="/MikeHerronHeadshot2026.png"
         alt="Mike Herron" 
-        width={480} 
-        height={600}
+        width={550} 
+        height={700}
         className="w-full h-auto object-cover object-top"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-65% to-white pointer-events-none"></div>
