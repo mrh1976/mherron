@@ -31,10 +31,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
           <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
           <div className="flex items-center gap-8">
-            <div className="hidden md:flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-white text-xs uppercase tracking-widest">Availability</span>
-              <span className="text-white/60 text-xs">Available for consulting</span>
+            <div className="hidden md:flex items-center gap-3">
+              <div className="relative">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping opacity-75"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white text-[10px] uppercase tracking-widest font-medium">Availability</span>
+                <span className="text-white/80 text-sm">Available for consulting</span>
+              </div>
             </div>
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -112,18 +117,20 @@ export default function Home() {
             I have partnered with world class teams to deliver high impact campaigns, product launches, and brand experiences across a wide range of industries.
           </p>
           <div className="space-y-20">
-            {siteContent.experience.slice(0, 6).map((job) => (
+            {siteContent.experience.map((job) => (
               <div key={job.id}>
                 <div className="flex items-start gap-12 mb-6">
-                  <div className="w-[160px] h-[54px] bg-white rounded flex items-center justify-center flex-shrink-0 p-3">
-                    <Image 
-                      src={`/images/${getLogoFilename(job.id)}`}
-                      alt={job.company}
-                      width={160}
-                      height={54}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
+                  {job.id !== 'earlier-career' && (
+                    <div className="w-[160px] h-[54px] bg-white rounded flex items-center justify-center flex-shrink-0 p-3">
+                      <Image 
+                        src={`/images/${getLogoFilename(job.id)}`}
+                        alt={job.company}
+                        width={160}
+                        height={54}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  )}
                   <div className="flex-1">
                     <h3 className="text-xl font-medium mb-1">{job.company}, {job.role.split(' | ')[0]}</h3>
                     <div className="text-sm text-gray-500 mb-4">{job.period}</div>
