@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const projects = [
     { id: "lukka", title: "Driven by Data", company: "Lukka" },
@@ -21,40 +22,58 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#3a3a3a]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
           <Image src="/MH-logo.png" alt="MH" width={40} height={40} />
           <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
               <span className="text-white text-xs uppercase tracking-widest">Availability</span>
               <span className="text-white/60 text-xs">Available for consulting</span>
             </div>
-            <button className="text-white text-2xl font-thin">☰</button>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white text-2xl font-thin"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? '✕' : '☰'}
+            </button>
           </div>
         </div>
+        
+        {mobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-[#2a2927] border-t border-white/10">
+            <div className="max-w-7xl mx-auto px-8 py-6">
+              <a href="#about" onClick={() => setMobileMenuOpen(false)} className="block text-white py-3 hover:text-yellow-400 transition">About Me</a>
+              <a href="#experience" onClick={() => setMobileMenuOpen(false)} className="block text-white py-3 hover:text-yellow-400 transition">Experience</a>
+              <a href="#work" onClick={() => setMobileMenuOpen(false)} className="block text-white py-3 hover:text-yellow-400 transition">Portfolio</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="block text-white py-3 hover:text-yellow-400 transition">Contact</a>
+            </div>
+          </div>
+        )}
       </nav>
 
-    <section className="pt-28 pb-8 px-8">
-  <div className="max-w-6xl mx-auto text-center">
-    <h1 className="text-[64px] md:text-[72px] font-bold mb-0 leading-[1.0] tracking-[-0.035em]">
-      Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
-    </h1>
-    <div className="relative mx-auto mb-0 w-[850px] h-[750px] overflow-hidden -mt-20">
-      <Image 
-        src="/MikeHerronHeadshot2026.png" 
-        alt="Mike Herron" 
-        width={850} 
-        height={1000}
-        className="w-full h-auto object-cover object-top"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
-    </div>
-    <p className="relative z-10 text-[19px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-32">
-      I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
-    </p>
-  </div>
-</section>
+      <section className="pt-28 pb-8 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-[64px] md:text-[72px] font-bold mb-0 leading-[1.0] tracking-[-0.035em]">
+            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
+          </h1>
+          <div className="relative mx-auto mb-0 w-[850px] h-[750px] overflow-hidden -mt-20">
+            <Image 
+              src="/MikeHerronHeadshot2026.png" 
+              alt="Mike Herron" 
+              width={850} 
+              height={1000}
+              className="w-full h-auto object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
+          </div>
+          <p className="relative z-10 text-[19px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
+            I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
           <div><div className="text-3xl mb-2">25+</div><div className="text-[10px] uppercase tracking-widest opacity-50">Years</div></div>
@@ -65,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8">
+      <section id="about" className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-12">About Me</h2>
           <div className="grid md:grid-cols-5 gap-16">
@@ -81,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8 bg-gray-50">
+      <section id="experience" className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked for</h2>
           <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-xl">
@@ -125,7 +144,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8 bg-gray-50">
+      <section id="work" className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked on</h2>
           <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-2xl">
@@ -148,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8">
+      <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-5xl font-medium mb-6">Let&apos;s work <span className="text-gray-300">together</span><span className="text-yellow-400">.</span></h2>
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-16">Audits | Consulting | Fractional | Full-Time | Board Member</p>
@@ -162,7 +181,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-12 px-8 bg-[#3a3a3a] text-white text-center">
+      <footer className="py-12 px-8 bg-[#2a2927] text-white text-center">
         <Image src="/MH-logo.png" alt="MH" width={32} height={32} className="mx-auto mb-6" />
         <p className="text-xs opacity-50">©{new Date().getFullYear()} Michael Herron LLC</p>
       </footer>
