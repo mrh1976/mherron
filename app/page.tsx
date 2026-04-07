@@ -24,7 +24,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-          <Image src="/MH-logo.png" alt="MH" width={50} height={50} />
+          <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
           <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
