@@ -20,11 +20,16 @@ export default function Home() {
     { id: "croatia", title: "Croatian Football Federation", company: "Kadena" },
   ];
 
+  const getLogoFilename = (jobId: string) => {
+    if (jobId === 'herron-llc') return 'MHlogo-h.png';
+    return `${jobId}.png`;
+  };
+
   return (
     <main className="min-h-screen bg-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-          <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
+          <Image src="/MH-logo.png" alt="MH" width={40} height={40} />
           <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -110,8 +115,14 @@ export default function Home() {
             {siteContent.experience.slice(0, 6).map((job) => (
               <div key={job.id}>
                 <div className="flex items-start gap-12 mb-6">
-                  <div className="w-16 h-16 bg-white rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-xs text-gray-400">LOGO</span>
+                  <div className="w-[160px] h-[54px] bg-white rounded flex items-center justify-center flex-shrink-0 p-3">
+                    <Image 
+                      src={`/images/${getLogoFilename(job.id)}`}
+                      alt={job.company}
+                      width={160}
+                      height={54}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-medium mb-1">{job.company}, {job.role.split(' | ')[0]}</h3>
