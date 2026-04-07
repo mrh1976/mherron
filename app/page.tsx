@@ -23,7 +23,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#3a3a3a]">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-          <Image src="/MH-logo.png" alt="MH" width={40} height={40} />
+          <Image src="/MH-logo.png" alt="MH" width={40} height={40} className="brightness-0 invert" />
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -36,21 +36,25 @@ export default function Home() {
       </nav>
 
       <section className="pt-32 pb-12 px-8">
-  <div className="max-w-6xl mx-auto text-center">
-    <h1 className="text-[64px] md:text-[72px] font-bold mb-6 leading-[1.0] tracking-[-0.035em]">
-      Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
-    </h1>
-    <div className="relative mx-auto mb-10 w-[600px] h-[600px] overflow-hidden">
-  <Image 
-    src="/MikeHerronHeadshot2026.png" 
-    alt="Mike Herron" 
-    width={600} 
-    height={800}
-    className="w-full h-auto object-cover object-top"
-  />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-60% to-white pointer-events-none"></div>
-</div>
-</section>
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-[64px] md:text-[72px] font-bold mb-6 leading-[1.0] tracking-[-0.035em]">
+            Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
+          </h1>
+          <div className="relative mx-auto mb-10 w-[600px] h-[600px] overflow-hidden">
+            <Image 
+              src="/MikeHerronHeadshot2026.png" 
+              alt="Mike Herron" 
+              width={600} 
+              height={800}
+              className="w-full h-auto object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-60% to-white pointer-events-none"></div>
+          </div>
+          <p className="text-[17px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed">
+            I&apos;m a marketing executive with 20+ years of experience and a decade as a CMO helping technology and fintech companies grow. I work with founders and leadership teams to diagnose what&apos;s holding marketing back and build the strategy and positioning needed to create consistent growth.
+          </p>
+        </div>
+      </section>
 
       <section className="py-16 px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
@@ -160,7 +164,7 @@ export default function Home() {
       </section>
 
       <footer className="py-12 px-8 bg-[#3a3a3a] text-white text-center">
-        <Image src="/MH-logo.png" alt="MH" width={32} height={32}  />
+        <Image src="/MH-logo.png" alt="MH" width={32} height={32} className="mx-auto mb-6 brightness-0 invert" />
         <p className="text-xs opacity-50">©{new Date().getFullYear()} Michael Herron LLC</p>
       </footer>
 
