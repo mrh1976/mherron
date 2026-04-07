@@ -58,7 +58,7 @@ export default function Home() {
         )}
       </nav>
 
-      <section className="pt-28 pb-8 px-8">
+      <section className="pt-40 pb-8 px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[64px] md:text-[72px] font-bold mb-0 leading-[1.0] tracking-[-0.035em]">
             Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
