@@ -40,7 +40,7 @@ export default function Home() {
     <h1 className="text-[64px] md:text-[72px] font-bold mb-0 leading-[1.0] tracking-[-0.035em]">
       Turn Complex Marketing<br />Ideas Into Measurable Results<span className="text-yellow-400">.</span>
     </h1>
-    <div className="relative mx-auto mb-0 w-[850px] h-[750px] overflow-hidden -mt-19">
+    <div className="relative mx-auto mb-0 w-[850px] h-[750px] overflow-hidden -mt-20">
       <Image 
         src="/MikeHerronHeadshot2026.png" 
         alt="Mike Herron" 
