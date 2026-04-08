@@ -79,9 +79,7 @@ export default function WorkedOnSection() {
               <div key={company}>
                 {/* Client Header */}
                 <div className="mb-8">
-                  {meta?.tier === 1 && (
-                                      </div>
-                  )}
+                  
                   <h3 className="text-2xl font-medium mb-2">{company}</h3>
                   <div className="text-sm text-gray-400 mb-6">{meta?.description}</div>
                 </div>
