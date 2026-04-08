@@ -221,28 +221,96 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="py-32 px-8 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked on</h2>
-          <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-2xl">
-            Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <div 
-                key={project.id}
-                onClick={() => setSelectedProject(project.id)}
-                className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded cursor-pointer hover:shadow-lg transition flex items-end p-6"
-              >
-                <div>
-                  <div className="text-base mb-1">{project.title}</div>
-                  <div className="text-xs text-gray-500">{project.company}</div>
-                </div>
+    import { projects } from "@/content/projectsData";
+
+// ... rest of your component code ...
+
+<section id="work" className="py-32 px-8">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked on</h2>
+    <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-3xl leading-relaxed">
+      Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results. This body of work has been recognized by organizations such as Adweek, Adweek Arc, Cannes Lions, the Hatch Awards, the Obies, the Shorty Awards, and the Webby Awards.
+    </p>
+
+    {/* Featured Projects - Full Case Studies */}
+    {projects.filter(p => p.featured).map((project, index) => (
+      <div key={project.id} className={`mb-32 ${index < projects.filter(p => p.featured).length - 1 ? 'pb-32 border-b border-gray-200' : ''}`}>
+        <h3 className="text-3xl font-medium mb-4">{project.title}</h3>
+        <div className="text-sm text-gray-500 mb-8">{project.company}</div>
+        <p className="text-[17px] text-[#6b6b6b] leading-relaxed mb-12 max-w-3xl">
+          {project.description}
+        </p>
+
+        {/* Images */}
+        {project.images.length > 0 && (
+          <div className={`grid ${project.images.length > 1 ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-6 mb-12`}>
+            {project.images.map((img, i) => (
+              <img 
+                key={i}
+                src={img}
+                alt={`${project.title} ${i + 1}`}
+                className="w-full h-auto rounded-lg"
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Videos */}
+        {project.videos.length > 0 && (
+          <div className="space-y-8">
+            {project.videos.map((videoId, i) => (
+              <div key={i} className="aspect-video">
+                <iframe
+                  className="w-full h-full rounded-lg"
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={`${project.title} video ${i + 1}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        )}
+      </div>
+    ))}
+
+    {/* Remaining Projects - Compact Grid */}
+    <div className="pt-20 border-t border-gray-200">
+      <h3 className="text-xl font-medium mb-12">More Projects</h3>
+      <div className="grid md:grid-cols-3 gap-8">
+        {projects.filter(p => !p.featured).map((project) => (
+          <div key={project.id} className="group cursor-pointer">
+            {/* Thumbnail */}
+            <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+              {project.images.length > 0 ? (
+                <img 
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              ) : project.videos.length > 0 ? (
+                <img 
+                  src={`https://img.youtube.com/vi/${project.videos[0]}/maxresdefault.jpg`}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200" />
+              )}
+            </div>
+            
+            {/* Info */}
+            <h4 className="text-base font-medium mb-1 group-hover:text-yellow-400 transition">{project.title}</h4>
+            <div className="text-xs text-gray-500 mb-2">{project.company}</div>
+            <p className="text-sm text-[#6b6b6b] line-clamp-2 leading-relaxed">
+              {project.description.substring(0, 120)}...
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
