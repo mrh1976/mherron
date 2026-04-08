@@ -302,94 +302,90 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="py-32 px-8">
-  <div className="max-w-4xl mx-auto">
+    <section id="work" className="py-32 px-8 bg-white">
+  <div className="max-w-5xl mx-auto">
     <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked on</h2>
-    <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-24">
+    <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-32 max-w-3xl">
       Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results. This body of work has been recognized by organizations such as Adweek, Adweek Arc, Cannes Lions, the Hatch Awards, the Obies, the Shorty Awards, and the Webby Awards.
     </p>
 
-    {/* Featured Projects - Compact Case Studies */}
-    <div className="space-y-24">
+    {/* Featured Projects with Structure */}
+    <div className="space-y-32">
       {projects.filter(p => p.featured).map((project) => (
-        <div key={project.id} className="border-b border-gray-100 pb-24 last:border-0">
-          <h3 className="text-2xl font-medium mb-2">{project.title}</h3>
-          <div className="text-sm text-gray-400 mb-6">{project.company}</div>
+        <div key={project.id}>
+          <h3 className="text-2xl font-medium mb-3">{project.title}</h3>
+          <div className="text-sm text-gray-400 mb-12">{project.company}</div>
           
-          <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-8">
-            {project.description}
-          </p>
+          {/* Challenge */}
+          <div className="mb-10">
+            <h4 className="text-xs uppercase tracking-widest text-gray-400 mb-3">Challenge</h4>
+            <p className="text-[15px] text-[#6b6b6b] leading-relaxed max-w-3xl">
+              {project.description.split('.')[0]}.
+            </p>
+          </div>
 
-          {/* Images - Single column, constrained */}
-          {project.images.length > 0 && (
-            <div className="space-y-6 mb-8">
-              {project.images.map((img, i) => (
+          {/* Approach */}
+          <div className="mb-10">
+            <h4 className="text-xs uppercase tracking-widest text-gray-400 mb-3">Approach</h4>
+            <p className="text-[15px] text-[#6b6b6b] leading-relaxed max-w-3xl">
+              {project.description.split('.').slice(1, -1).join('.')}
+            </p>
+          </div>
+
+          {/* Result */}
+          <div className="mb-12">
+            <h4 className="text-xs uppercase tracking-widest text-gray-400 mb-3">Result</h4>
+            <p className="text-[15px] text-[#6b6b6b] leading-relaxed max-w-3xl">
+              {project.description.split('.').slice(-1)[0]}
+            </p>
+          </div>
+
+          {/* Media Grid */}
+          {(project.images.length > 0 || project.videos.length > 0) && (
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+              {/* Images */}
+              {project.images.slice(0, 2).map((img, i) => (
                 <img 
                   key={i}
                   src={img}
                   alt={`${project.title} ${i + 1}`}
-                  className="w-full max-w-2xl h-auto rounded"
+                  className="w-full h-auto rounded"
                 />
               ))}
-            </div>
-          )}
-
-          {/* Videos - Constrained width, single column */}
-          {project.videos.length > 0 && (
-            <div className="space-y-6">
-              {project.videos.slice(0, 2).map((videoId, i) => (
-                <div key={i} className="w-full max-w-2xl">
-                  <div className="aspect-video">
+              
+              {/* First video only */}
+              {project.videos.length > 0 && (
+                <div className="md:col-span-2">
+                  <div className="aspect-video max-w-2xl">
                     <iframe
                       className="w-full h-full rounded"
-                      src={`https://www.youtube.com/embed/${videoId}`}
-                      title={`${project.title} video ${i + 1}`}
+                      src={`https://www.youtube.com/embed/${project.videos[0]}`}
+                      title={project.title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           )}
         </div>
       ))}
     </div>
 
-    {/* Remaining Projects - Compact Cards */}
-    <div className="mt-32 pt-12 border-t border-gray-200">
-      <h3 className="text-base font-medium text-gray-400 uppercase tracking-widest mb-12">More Projects</h3>
-      <div className="space-y-16">
+    {/* Other Projects - List Format */}
+    <div className="mt-32 pt-16 border-t border-gray-100">
+      <div className="space-y-20">
         {projects.filter(p => !p.featured).map((project) => (
-          <div key={project.id} className="group">
-            <h4 className="text-xl font-medium mb-2">{project.title}</h4>
-            <div className="text-sm text-gray-400 mb-4">{project.company}</div>
-            <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-6 max-w-2xl">
-              {project.description.length > 300 
-                ? `${project.description.substring(0, 300)}...` 
+          <div key={project.id} className="max-w-3xl">
+            <h3 className="text-xl font-medium mb-2">{project.title}</h3>
+            <div className="text-sm text-gray-400 mb-6">{project.company}</div>
+            
+            <p className="text-[15px] text-[#6b6b6b] leading-relaxed">
+              {project.description.length > 280 
+                ? `${project.description.substring(0, 280)}...` 
                 : project.description}
             </p>
-            
-            {/* Single thumbnail */}
-            {(project.images.length > 0 || project.videos.length > 0) && (
-              <div className="w-full max-w-md">
-                {project.images.length > 0 ? (
-                  <img 
-                    src={project.images[0]}
-                    alt={project.title}
-                    className="w-full h-auto rounded opacity-90"
-                  />
-                ) : project.videos.length > 0 ? (
-                  <div className="aspect-video bg-gray-100 rounded overflow-hidden">
-                    <img 
-                      src={`https://img.youtube.com/vi/${project.videos[0]}/maxresdefault.jpg`}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ) : null}
-              </div>
-            )}
           </div>
         ))}
       </div>
