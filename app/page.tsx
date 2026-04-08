@@ -1,8 +1,8 @@
 "use client";
-import { projects } from "@/content/projectsData";
 import { siteContent } from "@/content";
 import Image from "next/image";
 import { useState } from "react";
+import { projects } from "@/content/projectsData";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
