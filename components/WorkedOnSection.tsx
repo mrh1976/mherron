@@ -5,8 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from '@/content/projectsData';
 
+// Define company names type
+type CompanyName = 'Kadena' | 'Chain' | 'Lukka' | 'Fusion92' | 'U.S. Cellular';
+
 // Define company hierarchy and metadata
-const companyMeta = {
+const companyMeta: Record<CompanyName, { tier: number; description: string; order: number }> = {
   'Kadena': {
     tier: 1,
     description: 'Blockchain infrastructure & brand evolution',
@@ -48,7 +51,11 @@ export default function WorkedOnSection() {
 
   // Sort companies by hierarchy order
   const sortedCompanies = Object.keys(projectsByCompany).sort(
-    (a, b) => (companyMeta[a]?.order || 999) - (companyMeta[b]?.order || 999)
+    (a, b) => {
+      const orderA = companyMeta[a as CompanyName]?.order || 999;
+      const orderB = companyMeta[b as CompanyName]?.order || 999;
+      return orderA - orderB;
+    }
   );
 
   return (
@@ -64,7 +71,7 @@ export default function WorkedOnSection() {
       <div className="client-groups">
         {sortedCompanies.map((company, groupIndex) => {
           const companyProjects = projectsByCompany[company];
-          const meta = companyMeta[company];
+          const meta = companyMeta[company as CompanyName];
           
           return (
             <div key={company} className={`client-group tier-${meta?.tier || 5}`}>
