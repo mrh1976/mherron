@@ -1,4 +1,5 @@
 "use client";
+import { projects } from "@/content/projectsData";
 import { siteContent } from "@/content";
 import Image from "next/image";
 import { useState } from "react";
