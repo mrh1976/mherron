@@ -153,11 +153,69 @@ export default function Home() {
 
       <section className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-20">Worked with</h2>
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-12 opacity-40">
-            {["H&R Block", "Patriots", "State Street", "United", "Samsung", "Tiffany", "AT&T", "Disney", "Bloomberg", "Google"].map((brand) => (
-              <div key={brand} className="text-center text-sm">{brand}</div>
+          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">Worked with</h2>
+          <p className="text-[#6b6b6b] text-[17px] mb-16 max-w-3xl">
+            I have had the privilege of working with some of the biggest and most influential brands in the world. These partnerships brought me into conversations that shaped global sports, luxury, technology, and consumer culture, and gave me the opportunity to help launch products, tell powerful stories, and create marketing that delivers real business results.
+          </p>
+          
+          {/* Logo Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
+            {[
+              { name: "H&R Block", file: "hrb.png" },
+              { name: "Patriots", file: "Pats.png" },
+              { name: "State Street", file: "statestreet.png" },
+              { name: "United", file: "united.png" },
+              { name: "Samsung", file: "samsung.png" },
+              { name: "Tiffany & Co.", file: "tiffany.png" },
+              { name: "AT&T", file: "att.png" },
+              { name: "Disney", file: "disney.png" },
+              { name: "Bloomberg", file: "bloomberg.png" },
+              { name: "Google", file: "google.png" },
+            ].map((brand) => (
+              <div key={brand.name} className="flex items-center justify-center h-16">
+                <Image 
+                  src={`/images/${brand.file}`}
+                  alt={brand.name}
+                  width={120}
+                  height={60}
+                  className="w-auto h-auto max-w-full max-h-full object-contain opacity-40 hover:opacity-70 transition"
+                />
+              </div>
             ))}
+          </div>
+
+          {/* Other Notable Companies List */}
+          <div className="border-t border-gray-200 pt-12">
+            <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-8">Other Notable Companies</h3>
+            <div className="grid grid-cols-3 gap-x-12 gap-y-3 text-sm text-[#6b6b6b]">
+              <div>Formula 1</div>
+              <div>Zurich</div>
+              <div>SummerFest</div>
+              <div>Formula E</div>
+              <div>Nintendo</div>
+              <div>Facebook</div>
+              <div>State Street</div>
+              <div>Lucasfilms</div>
+              <div>Twitter</div>
+              <div>Blackrock</div>
+              <div>CAA</div>
+              <div>MasterCard</div>
+              <div>S&P</div>
+              <div>MLB</div>
+              <div>Yuga Labs</div>
+              <div>Choice Hotels</div>
+              <div>NBA</div>
+              <div>Uniswap</div>
+              <div>New England Patriots</div>
+              <div>NCAA</div>
+              <div>Garmin</div>
+              <div>Miami Heat</div>
+              <div>NFL</div>
+              <div></div>
+              <div>Chicago White Sox</div>
+              <div>DJI</div>
+              <div></div>
+            </div>
           </div>
         </div>
       </section>
