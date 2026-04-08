@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { siteContent } from "@/content";
-import { projects } from "@/content/projectsdata";
+import { projects } from "../content/projectsData";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
