@@ -80,9 +80,7 @@ export default function WorkedOnSection() {
                 {/* Client Header */}
                 <div className="mb-8">
                   {meta?.tier === 1 && (
-                    <div className="text-xs uppercase tracking-widest text-yellow-400 mb-3">
-                      Lead Client
-                    </div>
+                                      </div>
                   )}
                   <h3 className="text-2xl font-medium mb-2">{company}</h3>
                   <div className="text-sm text-gray-400 mb-6">{meta?.description}</div>
