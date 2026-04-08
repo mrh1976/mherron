@@ -121,7 +121,7 @@ export default function Home() {
               <div key={job.id}>
                 <div className="flex items-start gap-12 mb-6">
                   {job.id !== 'earlier-career' && (
-                    <div className="w-[160px] h-[54px] bg-white rounded flex items-center justify-center flex-shrink-0 p-3">
+                    <div className="w-[160px] h-[54px] rounded flex items-center justify-center flex-shrink-0 p-3">
                       <Image 
                         src={`/images/${getLogoFilename(job.id)}`}
                         alt={job.company}
