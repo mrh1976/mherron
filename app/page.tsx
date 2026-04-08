@@ -4,21 +4,27 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">
+      <section className="max-w-[1400px] mx-auto px-8 py-32 min-h-[85vh] flex items-center md:px-4 md:py-24">
+        <div className="max-w-[900px]">
+          <h1 className="font-inter text-[3.5rem] font-bold leading-[1.1] text-gray-900 tracking-tight mb-8 md:text-[2.5rem]">
             Building products and campaigns at the intersection of technology and culture
           </h1>
-          <p className="hero-description">
+          <p className="font-inter text-xl font-normal leading-relaxed text-gray-600 mb-12 max-w-[700px] md:text-lg">
             Marketing leader and builder with experience launching digital products, 
             brand platforms, and integrated campaigns across Web3, sports, fintech, 
             and consumer technology.
           </p>
-          <div className="hero-cta">
-            <a href="#worked-on" className="cta-button">
+          <div className="flex gap-8 items-center md:flex-col md:items-start md:gap-4">
+            <a 
+              href="#worked-on" 
+              className="inline-block px-8 py-4 bg-[#FFA600] text-white font-inter text-base font-semibold rounded-lg transition-all duration-200 hover:bg-[#e69500] hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(255,166,0,0.2)]"
+            >
               View Work
             </a>
-            <a href="/about" className="cta-link">
+            <a 
+              href="/about" 
+              className="font-inter text-base font-medium text-gray-900 transition-colors duration-200 hover:text-[#FFA600]"
+            >
               About Me →
             </a>
           </div>
@@ -29,102 +35,6 @@ export default function Home() {
       <div id="worked-on">
         <WorkedOnSection />
       </div>
-
-      <style jsx>{`
-        /* Hero Section */
-        .hero-section {
-          max-width: 1400px;
-          margin: 0 auto;
-          padding: 8rem 2rem 6rem;
-          min-height: 85vh;
-          display: flex;
-          align-items: center;
-        }
-        
-        .hero-content {
-          max-width: 900px;
-        }
-        
-        .hero-title {
-          font-family: 'Inter', sans-serif;
-          font-size: 3.5rem;
-          font-weight: 700;
-          line-height: 1.1;
-          color: #111827;
-          letter-spacing: -0.02em;
-          margin-bottom: 2rem;
-        }
-        
-        .hero-description {
-          font-family: 'Inter', sans-serif;
-          font-size: 1.25rem;
-          font-weight: 400;
-          line-height: 1.7;
-          color: #6b7280;
-          margin-bottom: 3rem;
-          max-width: 700px;
-        }
-        
-        .hero-cta {
-          display: flex;
-          gap: 2rem;
-          align-items: center;
-        }
-        
-        .cta-button {
-          display: inline-block;
-          padding: 1rem 2rem;
-          background: #FFA600;
-          color: white;
-          font-family: 'Inter', sans-serif;
-          font-size: 1rem;
-          font-weight: 600;
-          text-decoration: none;
-          border-radius: 0.5rem;
-          transition: all 0.2s ease;
-        }
-        
-        .cta-button:hover {
-          background: #e69500;
-          transform: translateY(-2px);
-          box-shadow: 0 10px 20px rgba(255, 166, 0, 0.2);
-        }
-        
-        .cta-link {
-          font-family: 'Inter', sans-serif;
-          font-size: 1rem;
-          font-weight: 500;
-          color: #111827;
-          text-decoration: none;
-          transition: color 0.2s ease;
-        }
-        
-        .cta-link:hover {
-          color: #FFA600;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-          .hero-section {
-            padding: 6rem 1.5rem 4rem;
-            min-height: auto;
-          }
-          
-          .hero-title {
-            font-size: 2.5rem;
-          }
-          
-          .hero-description {
-            font-size: 1.125rem;
-          }
-          
-          .hero-cta {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-          }
-        }
-      `}</style>
     </main>
   );
 }
