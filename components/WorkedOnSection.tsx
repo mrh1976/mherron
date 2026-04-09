@@ -59,18 +59,18 @@ export default function WorkedOnSection() {
   );
 
   return (
-    <section id="work" className="py-32 px-8">
+    <section id="work" className="py-24 md:py-32 px-8">
       <div className="max-w-5xl mx-auto">
-        {/* Section Header */}
-        <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+        {/* Section Header - RESPONSIVE: Adjusted title size */}
+        <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
           Worked on<span className="text-yellow-400">.</span>
         </h2>
-        <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-20 max-w-3xl">
+        <p className="text-[15px] md:text-[17px] text-[#6b6b6b] leading-relaxed mb-16 md:mb-20 max-w-3xl">
           Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results.
         </p>
 
         {/* Client Groups */}
-        <div className="space-y-20">
+        <div className="space-y-16 md:space-y-20">
           {sortedCompanies.map((company, groupIndex) => {
             const companyProjects = projectsByCompany[company];
             const meta = companyMeta[company as CompanyName];
@@ -79,12 +79,17 @@ export default function WorkedOnSection() {
               <div key={company}>
                 {/* Client Header */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-medium mb-2">{company}</h3>
+                  <h3 className="text-xl md:text-2xl font-medium mb-2">{company}</h3>
                   <div className="text-sm text-gray-400 mb-6">{meta?.description}</div>
                 </div>
                 
-                {/* Projects Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
+                {/* RESPONSIVE FIX: Grid columns - 1/2/3/4 instead of 5 */}
+                <div className={`grid gap-4 md:gap-6 mb-12 md:mb-16 ${
+                  companyProjects.length === 1 ? 'grid-cols-1 max-w-md' :
+                  companyProjects.length === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+                  companyProjects.length === 3 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' :
+                  'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+                }`}>
                   {companyProjects.map((project, projectIndex) => {
                     // Get first image or video thumbnail
                     const imageUrl = project.images[0] || 
@@ -107,7 +112,7 @@ export default function WorkedOnSection() {
                               alt={project.title}
                               fill
                               className="object-cover transition-transform duration-300 group-hover:scale-105"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                               quality={95}
                             />
                           ) : (
@@ -118,11 +123,11 @@ export default function WorkedOnSection() {
                             </div>
                           )}
                         </div>
-                        <div className="p-6">
+                        <div className="p-4 md:p-6">
                           <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
                             {getCategoryFromId(project.id)}
                           </div>
-                          <h4 className="text-lg font-medium text-gray-900 group-hover:text-yellow-400 transition-colors">
+                          <h4 className="text-base md:text-lg font-medium text-gray-900 group-hover:text-gray-600 transition-colors">
                             {project.title}
                           </h4>
                         </div>
