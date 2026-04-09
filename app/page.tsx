@@ -51,6 +51,62 @@ function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll for nav background
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      
+      // Close mobile menu on scroll
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileMenuOpen]);
+
+  // Track active section
+  useEffect(() => {
+    const sections = ['about', 'experience', 'work', 'contact'];
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0px -80% 0px', // Trigger when section is 20% from top
+        threshold: 0
+      }
+    );
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 100; // Account for fixed nav
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Count-up hooks for each stat with staggered delays (slower)
   const stat1 = useCountUp(20, 2200, 0);
@@ -124,10 +180,54 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-[#2a2927] shadow-lg' : 'bg-[#2a2927]'
+      }`}>
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-          <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
+          <button 
+            onClick={() => scrollToSection('home')}
+            className="cursor-pointer"
+            aria-label="Scroll to top"
+          >
+            <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
+          </button>
           <div className="flex items-center gap-8">
+            {/* Desktop Nav Links */}
+            <div className="hidden lg:flex items-center gap-8">
+              <button
+                onClick={() => scrollToSection('about')}
+                className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                  activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                  activeSection === 'experience' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => scrollToSection('work')}
+                className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                  activeSection === 'work' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                Work
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                  activeSection === 'contact' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                Contact
+              </button>
+            </div>
+
             <div className="hidden md:flex items-center gap-3">
               <div className="relative">
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -145,7 +245,7 @@ export default function Home() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white text-2xl font-thin"
+              className="lg:hidden text-white text-2xl font-thin transition-transform"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? "✕" : "☰"}
@@ -153,44 +253,49 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-[#2a2927] border-t border-white/10">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-[#2a2927] border-t border-white/10 animate-in slide-in-from-top duration-300">
             <div className="max-w-7xl mx-auto px-8 py-6">
-              <a
-                href="#about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-white py-3 hover:text-yellow-400 transition"
+              <button
+                onClick={() => scrollToSection('about')}
+                className={`block w-full text-left text-white py-3 transition-colors ${
+                  activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
               >
                 About Me
-              </a>
-              <a
-                href="#experience"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-white py-3 hover:text-yellow-400 transition"
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className={`block w-full text-left text-white py-3 transition-colors ${
+                  activeSection === 'experience' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
               >
                 Experience
-              </a>
-              <a
-                href="#work"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-white py-3 hover:text-yellow-400 transition"
+              </button>
+              <button
+                onClick={() => scrollToSection('work')}
+                className={`block w-full text-left text-white py-3 transition-colors ${
+                  activeSection === 'work' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
               >
                 Portfolio
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-white py-3 hover:text-yellow-400 transition"
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`block w-full text-left text-white py-3 transition-colors ${
+                  activeSection === 'contact' ? 'text-yellow-400' : 'hover:text-yellow-400'
+                }`}
               >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         )}
       </nav>
 
       {/* RESPONSIVE FIX: Hero text and image sizing */}
-      <section className="pt-40 pb-8 px-8">
+      <section id="home" className="pt-40 pb-8 px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[42px] md:text-[68px] lg:text-[80px] font-[800] mb-0 leading-[1.1] md:leading-[1.05] tracking-[-4.16px]">
             Turn Complex Marketing Ideas
