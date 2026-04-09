@@ -250,9 +250,10 @@ export default function Home() {
                     )}
 
                     <div className="flex-1">
-                      <h3 className="text-xl font-medium mb-4">
-                        {job.role.split(" | ")[0]} | {job.period}
+                      <h3 className="text-xl font-medium mb-1">
+                        {job.company}, {job.role.split(" | ")[0]}
                       </h3>
+                      <div className="text-sm text-gray-500 mb-4">{job.period}</div>
                     </div>
                   </div>
 
