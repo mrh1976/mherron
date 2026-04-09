@@ -62,8 +62,8 @@ export default function WorkedOnSection() {
     <section id="work" className="py-32 px-8">
       <div className="max-w-5xl mx-auto">
         {/* Section Header - matching original styling */}
-        <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">
-          Worked on
+        <h2 className="text-5xl font-medium mb-6">
+          Worked on<span className="text-yellow-400">.</span>
         </h2>
         <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-20 max-w-3xl">
           Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results.
