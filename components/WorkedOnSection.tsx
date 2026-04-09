@@ -111,8 +111,7 @@ export default function WorkedOnSection() {
                         onMouseLeave={() => setHoveredCard(null)}
                       >
                         <div className="relative w-full overflow-hidden bg-gray-50" style={{
-                          aspectRatio: isLargeCard && companyProjects.length === 4 ? '1/1' : 
-                                      isLargeCard && companyProjects.length === 3 ? '16/9' : '16/10'
+                          aspectRatio: '1/1'
                         }}>
                           {imageUrl ? (
                             <Image
