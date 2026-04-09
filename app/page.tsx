@@ -312,7 +312,7 @@ export default function Home() {
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Let&apos;s work <span className="text-gray-300">together</span>
+            Let&apos;s work <span className="text-gray-500">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
           <p className="text-base mb-16 flex items-center justify-center gap-3">
