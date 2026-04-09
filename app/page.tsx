@@ -178,7 +178,7 @@ export default function Home() {
 
           {/* 4 Perspectives Footer */}
           <div className="pt-12 border-t border-white/10 text-center">
-            <div className="text-[11px] uppercase tracking-widest text-white/50 mb-3">
+            <div className="text-[16px] uppercase tracking-widest text-white/50 mb-3">
               Experience
             </div>
             <div className="text-sm md:text-base text-white/80 flex items-center justify-center gap-3 flex-wrap">
