@@ -122,36 +122,57 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-          <div>
-            <div className="text-3xl mb-2">25+</div>
-            <div className="text-[10px] uppercase tracking-widest opacity-50">
-              Years
+      <section className="py-20 px-8 bg-black text-white">
+        <div className="max-w-6xl mx-auto">
+          {/* Top Row - Hero Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
+            <div className="text-center md:text-left">
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">20<span className="text-yellow-400">+</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Years Experience
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">6<span className="text-yellow-400">x</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                First Marketing Hire
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">$300M<span className="text-yellow-400">+</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Funds Raised
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">Fortune <span className="text-yellow-400">500</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Clients Served
+              </div>
             </div>
           </div>
-          <div>
-            <div className="text-3xl mb-2">$1B+</div>
-            <div className="text-[10px] uppercase tracking-widest opacity-50">
-              Raised
+
+          {/* Bottom Row - Impact Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="text-center md:text-left">
+              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">
+                $12M<span className="text-yellow-400">→</span>$1.35B
+              </div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Unicorn Built
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="text-3xl mb-2">Unicorn</div>
-            <div className="text-[10px] uppercase tracking-widest opacity-50">
-              Valuation
+            <div className="text-center md:text-left">
+              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">100<span className="text-yellow-400">+</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Team Members Hired
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="text-3xl mb-2">Fortune 500</div>
-            <div className="text-[10px] uppercase tracking-widest opacity-50">
-              Clients
-            </div>
-          </div>
-          <div>
-            <div className="text-3xl mb-2">50M+</div>
-            <div className="text-[10px] uppercase tracking-widest opacity-50">
-              Reach
+            <div className="text-center md:text-left">
+              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">30<span className="text-yellow-400">+</span></div>
+              <div className="text-[11px] uppercase tracking-widest text-white/50">
+                Product Launches
+              </div>
             </div>
           </div>
         </div>
@@ -312,7 +333,7 @@ export default function Home() {
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Let&apos;s work <span className="text-gray-500">together</span>
+            Let&apos;s work <span className="text-gray-300">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
           <p className="text-base mb-16 flex items-center justify-center gap-3">
