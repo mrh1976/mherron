@@ -607,16 +607,23 @@ export default function Home() {
             <span>Board Member</span>
           </p>
           {/* RESPONSIVE: Stack inputs on mobile, side-by-side on tablet+ */}
-          <form className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 mb-8">
-            <input
-              type="text"
-              placeholder="Name"
-              className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
+          <form className="max-w-3xl mx-auto space-y-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
+              />
+            </div>
+            <textarea
+              placeholder="Message (optional)"
+              rows={4}
+              className="w-full px-6 py-4 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-gray-400 resize-none"
             />
           </form>
           <button className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition">
