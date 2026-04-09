@@ -189,16 +189,17 @@ export default function Home() {
         )}
       </nav>
 
+      {/* RESPONSIVE FIX: Hero text and image sizing */}
       <section className="pt-40 pb-8 px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-[68px] md:text-[80px] font-[800] mb-0 leading-[1.05] tracking-[-4.16px]">
+          <h1 className="text-[42px] md:text-[68px] lg:text-[80px] font-[800] mb-0 leading-[1.1] md:leading-[1.05] tracking-[-4.16px]">
             Turn Complex Marketing Ideas
             <br />
             Into Measurable Results
             <span className="text-yellow-400">.</span>
           </h1>
 
-          <div className="relative mx-auto mb-0 w-[850px] h-[750px] overflow-hidden -mt-20">
+          <div className="relative mx-auto mb-0 w-full max-w-[850px] h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden -mt-12 md:-mt-20">
             <Image
               src="/MikeHerronHeadshot2026.png"
               alt="Mike Herron"
@@ -210,7 +211,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
           </div>
 
-          <p className="relative z-10 text-[21px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
+          <p className="relative z-10 text-[19px] md:text-[21px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-16 md:-mt-24">
             I&apos;m a marketing executive with 20+ years of experience and a
             decade as a CMO helping technology and fintech companies grow. I
             work with founders and leadership teams to diagnose what&apos;s holding
@@ -231,30 +232,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-8 bg-black text-white">
+      {/* RESPONSIVE FIX: Stats section grid and font sizes */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto">
-          {/* Top Row - 4 Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
+          {/* Top Row - 4 Stats - RESPONSIVE: 1 col mobile, 2 cols small, 4 cols desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
             <div className="text-center" ref={stat1.ref}>
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat1.count}<span className="text-yellow-400">+</span></div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat1.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Years Experience
               </div>
             </div>
             <div className="text-center" ref={stat2.ref}>
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat2.count}<span className="text-yellow-400">x</span></div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat2.count}<span className="text-yellow-400">x</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 First Marketing Hire
               </div>
             </div>
             <div className="text-center" ref={stat3.ref}>
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">${stat3.count}M<span className="text-yellow-400">+</span></div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">${stat3.count}M<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Funds Raised
               </div>
             </div>
             <div className="text-center" ref={stat4.ref}>
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat4.count}<span className="text-yellow-400">+</span></div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat4.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Global Brands
               </div>
@@ -262,9 +264,10 @@ export default function Home() {
           </div>
 
           {/* Bottom Row - 3 Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
+            {/* RESPONSIVE FIX: Unicorn stat - smaller text on mobile, wraps better */}
             <div className="text-center" ref={unicornRef}>
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
                 ${unicornStart}M
                 <span className={`text-yellow-400 transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>→</span>
                 <span className={`transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
@@ -276,13 +279,13 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center" ref={stat5.ref}>
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat5.count}<span className="text-yellow-400">+</span></div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat5.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Team Members Hired
               </div>
             </div>
             <div className="text-center" ref={stat6.ref}>
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat6.count}<span className="text-yellow-400">+</span></div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat6.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Product Launches
               </div>
@@ -290,11 +293,11 @@ export default function Home() {
           </div>
 
           {/* 4 Perspectives Footer */}
-          <div className="pt-12 border-t border-white/10 text-center">
+          <div className="pt-8 md:pt-12 border-t border-white/10 text-center">
             <div className="text-[11px] uppercase tracking-widest text-white/50 mb-3">
               Experience
             </div>
-            <div className="text-sm md:text-base text-white/80 flex items-center justify-center gap-3 flex-wrap">
+            <div className="text-sm md:text-lg text-white/80 flex items-center justify-center gap-2 md:gap-3 flex-wrap">
               <span>Client Side</span>
               <span className="text-yellow-400">|</span>
               <span>Agency Side</span>
@@ -307,19 +310,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-32 px-8">
+      {/* RESPONSIVE FIX: Section title sizing */}
+      <section id="about" className="py-24 md:py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[48px] md:text-[56px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-8 md:mb-12 leading-[1.05] tracking-[-2.5px]">
             About Me<span className="text-yellow-400">.</span>
           </h2>
-          <div className="grid md:grid-cols-5 gap-16">
+          <div className="grid md:grid-cols-5 gap-12 md:gap-16">
             <div className="md:col-span-2">
               <p className="text-gray-500 italic text-sm leading-relaxed">
                 I&apos;ve built my career by asking, &quot;Why are we doing this&quot;
                 and &quot;What does success look like.&quot;
               </p>
             </div>
-            <div className="md:col-span-3 text-[#6b6b6b] text-[17px] leading-relaxed space-y-4">
+            <div className="md:col-span-3 text-[#6b6b6b] text-[15px] md:text-[17px] leading-relaxed space-y-4">
               {siteContent.about.text.split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -328,15 +332,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="py-32 px-8 bg-gray-50">
+      {/* RESPONSIVE FIX: Sticky only on desktop (lg:), not on mobile/tablet */}
+      <section id="experience" className="py-24 md:py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-16">
-            {/* Left Column - Title & Description */}
-            <div className="md:col-span-2">
-              <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* Left Column - Sticky only on large screens */}
+            <div className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start">
+              <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
                 Worked for<span className="text-yellow-400">.</span>
               </h2>
-              <p className="text-[#6b6b6b] text-[17px] leading-relaxed">
+              <p className="text-[#6b6b6b] text-[15px] md:text-[17px] leading-relaxed">
                 I have partnered with world class teams to deliver high impact
                 campaigns, product launches, and brand experiences across a wide
                 range of industries.
@@ -344,7 +349,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Job Entries */}
-            <div className="md:col-span-3 space-y-20">
+            <div className="lg:col-span-3 space-y-16 md:space-y-20">
               {siteContent.experience.map((job) => (
                 <div key={job.id}>
                   <div className="mb-6">
@@ -365,14 +370,14 @@ export default function Home() {
 
                     {/* Company, Role, Date */}
                     <div>
-                      <h3 className="text-xl font-medium mb-1">
+                      <h3 className="text-lg md:text-xl font-medium mb-1">
                         {job.company}, {job.role.split(" | ")[0]}
                       </h3>
                       <div className="text-sm text-gray-500 mb-4">{job.period}</div>
                     </div>
                   </div>
 
-                  <p className="text-[#6b6b6b] text-[17px] mb-6 leading-relaxed">
+                  <p className="text-[#6b6b6b] text-[15px] md:text-[17px] mb-6 leading-relaxed">
                     {job.description}
                   </p>
 
@@ -393,15 +398,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 px-8">
+      {/* RESPONSIVE FIX: Sticky only on desktop */}
+      <section className="py-24 md:py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-16">
-            {/* Left Column - Sticky */}
-            <div className="md:col-span-2 md:sticky md:top-32 md:self-start">
-              <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* Left Column - Sticky only on large screens */}
+            <div className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start">
+              <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
                 Worked with<span className="text-yellow-400">.</span>
               </h2>
-              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6">
+              <p className="text-[#6b6b6b] text-[15px] md:text-[17px] leading-relaxed mb-6">
                 I have had the privilege of working with some of the biggest and
                 most influential brands in the world. These partnerships brought me
                 into conversations that shaped global sports, luxury, technology,
@@ -443,8 +449,8 @@ export default function Home() {
             </div>
 
             {/* Right Column - Scrollable */}
-            <div className="md:col-span-3">
-              <div className="grid grid-cols-2 md:grid-cols-2 gap-12 mb-16">
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-2 gap-8 md:gap-12 mb-16">
                 {[
                   { name: "H&R Block", file: "hrb.png" },
                   { name: "Patriots", file: "Pats.png" },
@@ -457,7 +463,7 @@ export default function Home() {
                   { name: "Bloomberg", file: "bloomberg.png" },
                   { name: "Google", file: "google.png" },
                 ].map((brand) => (
-                  <div key={brand.name} className="flex items-center justify-center h-16">
+                  <div key={brand.name} className="flex items-center justify-center h-12 md:h-16">
                     <Image
                       src={`/images/${brand.file}`}
                       alt={brand.name}
@@ -475,13 +481,14 @@ export default function Home() {
 
       <WorkedOnSection />
 
-      <section id="contact" className="py-32 px-8">
+      {/* RESPONSIVE FIX: Contact form stacks on mobile */}
+      <section id="contact" className="py-24 md:py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Let&apos;s work <span className="text-gray-300">together</span>
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+            Let&apos;s work <span className="text-[#9ca3af]">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
-          <p className="text-base mb-16 flex items-center justify-center gap-3">
+          <p className="text-base mb-12 md:mb-16 flex items-center justify-center gap-2 md:gap-3 flex-wrap">
             <span>Audits</span>
             <span className="text-yellow-400">|</span>
             <span>Consulting</span>
@@ -492,7 +499,8 @@ export default function Home() {
             <span className="text-yellow-400">|</span>
             <span>Board Member</span>
           </p>
-          <form className="max-w-3xl mx-auto flex gap-4 mb-8">
+          {/* RESPONSIVE: Stack inputs on mobile, side-by-side on tablet+ */}
+          <form className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 mb-8">
             <input
               type="text"
               placeholder="Name"
@@ -510,6 +518,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* RESPONSIVE FIX: Footer text size */}
       <footer className="py-12 px-8 bg-[#2a2927]">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-start mb-12">
@@ -520,10 +529,10 @@ export default function Home() {
               height={32}
             />
           </div>
-          <div className="text-xs text-white/60 leading-relaxed mb-8">
+          <div className="text-xs md:text-sm text-white/60 leading-relaxed mb-8">
             All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
           </div>
-          <div className="flex justify-between items-center pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 border-t border-white/10">
             <p className="text-xs text-white/50">
               ©{new Date().getFullYear()} Michael Herron LLC
             </p>
