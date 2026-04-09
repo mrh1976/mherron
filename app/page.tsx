@@ -315,10 +315,18 @@ export default function Home() {
             Let&apos;s work <span className="text-gray-300">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
-          <p className="text-sm uppercase tracking-widest text-gray-400 mb-16">
-            Audits | Consulting | Fractional | Full-Time | Board Member
+          <p className="text-base mb-16 flex items-center justify-center gap-3">
+            <span>Audits</span>
+            <span className="text-yellow-400">|</span>
+            <span>Consulting</span>
+            <span className="text-yellow-400">|</span>
+            <span>Fractional</span>
+            <span className="text-yellow-400">|</span>
+            <span>Full-Time</span>
+            <span className="text-yellow-400">|</span>
+            <span>Board Member</span>
           </p>
-          <form className="max-w-lg mx-auto flex gap-4 mb-8">
+          <form className="max-w-3xl mx-auto flex gap-4 mb-8">
             <input
               type="text"
               placeholder="Name"
