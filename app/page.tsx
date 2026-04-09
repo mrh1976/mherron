@@ -1,12 +1,64 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { siteContent } from "@/content";
 import WorkedOnSection from "@/components/WorkedOnSection";
 
+// Count-up animation hook
+function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setTimeout(() => {
+            const startTime = Date.now();
+            const animate = () => {
+              const elapsed = Date.now() - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              // Easing function for smooth animation
+              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+              
+              setCount(Math.floor(easeOutQuart * end));
+              
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              } else {
+                setHasAnimated(true);
+              }
+            };
+            animate();
+          }, delay);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration, delay, hasAnimated]);
+
+  return { count, ref };
+}
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Count-up hooks for each stat with staggered delays
+  const stat1 = useCountUp(20, 1500, 0);
+  const stat2 = useCountUp(6, 1500, 100);
+  const stat3 = useCountUp(300, 2000, 200);
+  const stat4 = useCountUp(50, 1500, 300);
+  const stat5 = useCountUp(100, 1800, 400);
+  const stat6 = useCountUp(30, 1500, 500);
 
   const getLogoFilename = (jobId: string) => {
     if (jobId === "herron-llc") return "MHlogo-h.png";
@@ -126,26 +178,26 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Top Row - 4 Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">20<span className="text-yellow-400">+</span></div>
+            <div className="text-center" ref={stat1.ref}>
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat1.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Years Experience
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">6<span className="text-yellow-400">x</span></div>
+            <div className="text-center" ref={stat2.ref}>
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat2.count}<span className="text-yellow-400">x</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 First Marketing Hire
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">$300M<span className="text-yellow-400">+</span></div>
+            <div className="text-center" ref={stat3.ref}>
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">${stat3.count}M<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Funds Raised
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">50<span className="text-yellow-400">+</span></div>
+            <div className="text-center" ref={stat4.ref}>
+              <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat4.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Global Brands
               </div>
@@ -162,14 +214,14 @@ export default function Home() {
                 Unicorn Built
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">100<span className="text-yellow-400">+</span></div>
+            <div className="text-center" ref={stat5.ref}>
+              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat5.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Team Members Hired
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">30<span className="text-yellow-400">+</span></div>
+            <div className="text-center" ref={stat6.ref}>
+              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat6.count}<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Product Launches
               </div>
@@ -365,7 +417,7 @@ export default function Home() {
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Let&apos;s work <span className="text-gray-600">together</span>
+            Let&apos;s work <span className="text-gray-300">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
           <p className="text-base mb-16 flex items-center justify-center gap-3">
