@@ -61,20 +61,16 @@ export default function WorkedOnSection() {
   return (
     <section id="work" className="py-32 px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-16">
-          {/* Left Column - Sticky */}
-          <div className="md:col-span-2 md:sticky md:top-32 md:self-start">
-            <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-              Worked on<span className="text-yellow-400">.</span>
-            </h2>
-            <p className="text-[15px] text-[#6b6b6b] leading-relaxed">
-              Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results.
-            </p>
-          </div>
+        {/* Section Header */}
+        <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+          Worked on<span className="text-yellow-400">.</span>
+        </h2>
+        <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-20 max-w-3xl">
+          Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create. These projects brought together cross functional teams, creative talent, enterprise partners, and global audiences, and reflect the kind of marketing that moves people and drives results.
+        </p>
 
-          {/* Right Column - Scrollable */}
-          <div className="md:col-span-3">
-            <div className="space-y-20">
+        {/* Client Groups */}
+        <div className="space-y-20">
           {sortedCompanies.map((company, groupIndex) => {
             const companyProjects = projectsByCompany[company];
             const meta = companyMeta[company as CompanyName];
@@ -137,8 +133,6 @@ export default function WorkedOnSection() {
               </div>
             );
           })}
-        </div>
-          </div>
         </div>
       </div>
     </section>
