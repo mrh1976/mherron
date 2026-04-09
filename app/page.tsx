@@ -81,11 +81,9 @@ export default function Home() {
       </nav>
 
       <section className="pt-40 pb-8 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-[104px] font-[800] mb-0 leading-[104px] tracking-[-4.16px]">
-            Turn Complex Marketing
-            <br />
-            Ideas Into Measurable Results
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-[68px] md:text-[80px] font-[800] mb-0 leading-[1.1] tracking-[-4.16px] max-w-5xl">
+            Turn Complex Marketing Ideas Into Measurable Results
             <span className="text-yellow-400">.</span>
           </h1>
 
@@ -101,7 +99,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
           </div>
 
-          <p className="relative z-10 text-[21px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
+          <p className="relative z-10 text-[21px] text-[#6b6b6b] max-w-2xl mb-10 leading-relaxed -mt-24">
             I&apos;m a marketing executive with 20+ years of experience and a
             decade as a CMO helping technology and fintech companies grow. I
             work with founders and leadership teams to diagnose what&apos;s holding
