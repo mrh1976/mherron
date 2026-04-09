@@ -159,7 +159,7 @@ export default function Home() {
 
       <section id="about" className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-medium mb-12">
+          <h2 className="text-[48px] md:text-[56px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
             About Me<span className="text-yellow-400">.</span>
           </h2>
           <div className="grid md:grid-cols-5 gap-16">
@@ -180,7 +180,7 @@ export default function Home() {
 
       <section id="experience" className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-medium mb-6">
+          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
             Worked for<span className="text-yellow-400">.</span>
           </h2>
           <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-xl">
@@ -233,7 +233,7 @@ export default function Home() {
 
       <section className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-medium mb-6">
+          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
             Worked with<span className="text-yellow-400">.</span>
           </h2>
           <p className="text-[#6b6b6b] text-[17px] mb-16 max-w-3xl">
@@ -311,7 +311,7 @@ export default function Home() {
 
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl font-medium mb-6">
+          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
             Let&apos;s work <span className="text-gray-300">together</span>
             <span className="text-yellow-400">.</span>
           </h2>
