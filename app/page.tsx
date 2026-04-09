@@ -52,13 +52,23 @@ function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Count-up hooks for each stat with staggered delays
-  const stat1 = useCountUp(20, 1500, 0);
-  const stat2 = useCountUp(6, 1500, 100);
-  const stat3 = useCountUp(300, 2000, 200);
-  const stat4 = useCountUp(50, 1500, 300);
-  const stat5 = useCountUp(100, 1800, 400);
-  const stat6 = useCountUp(30, 1500, 500);
+  // Count-up hooks for each stat with staggered delays (slower)
+  const stat1 = useCountUp(20, 2200, 0);
+  const stat2 = useCountUp(6, 2200, 150);
+  const stat3 = useCountUp(300, 2500, 300);
+  const stat4 = useCountUp(50, 2200, 450);
+  const stat5 = useCountUp(100, 2400, 600);
+  const stat6 = useCountUp(30, 2200, 750);
+  
+  // Special animation for unicorn stat - counts in sequence
+  const unicornStart = useCountUp(12, 1500, 0);
+  const [showArrow, setShowArrow] = useState(false);
+  const unicornEnd = useCountUp(1.35, 1500, 1700);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setShowArrow(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const getLogoFilename = (jobId: string) => {
     if (jobId === "herron-llc") return "MHlogo-h.png";
@@ -206,12 +216,16 @@ export default function Home() {
 
           {/* Bottom Row - 3 Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
-            <div className="text-center">
+            <div className="text-center" ref={unicornStart.ref}>
               <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
-                $12M<span className="text-yellow-400">→</span>$1.35B
+                ${unicornStart.count}M
+                <span className={`text-yellow-400 transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>→</span>
+                <span className={`transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
+                  ${unicornEnd.count}B
+                </span>
               </div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
-                Unicorn Built
+                Unicorn Valuation
               </div>
             </div>
             <div className="text-center" ref={stat5.ref}>
