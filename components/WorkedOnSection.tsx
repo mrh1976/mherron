@@ -148,27 +148,7 @@ export default function WorkedOnSection() {
           })}
         </div>
 
-        {/* Summary Stats - matching original design */}
-        <div className="mt-32 pt-16 border-t border-gray-200">
-          <div className="grid grid-cols-3 gap-12 text-center">
-            <div>
-              <div className="text-4xl font-medium mb-2 text-yellow-400">{projects.length}</div>
-              <div className="text-xs uppercase tracking-widest text-gray-400">Projects</div>
-            </div>
-            <div>
-              <div className="text-4xl font-medium mb-2 text-yellow-400">{sortedCompanies.length}</div>
-              <div className="text-xs uppercase tracking-widest text-gray-400">Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl font-medium mb-2 text-yellow-400">3</div>
-              <div className="text-xs uppercase tracking-widest text-gray-400">Industries</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+      
 
 // Helper function to derive category from project metadata
 function getCategoryFromId(id: string): string {
