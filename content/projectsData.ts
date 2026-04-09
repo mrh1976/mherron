@@ -99,7 +99,7 @@ export const projects: Project[] = [
     title: "Brand Activations",
     company: "U.S. Cellular",
     description: "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences. The programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
-    images: ["/images/uscc-tmb.webp"],
+    images: ["/images/fog-tmb.webp"],
     videos: [
       "gTAk6zBPOVc",
       "bjc7Gp3YLhQ",
