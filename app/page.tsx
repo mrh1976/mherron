@@ -229,7 +229,7 @@ export default function Home() {
           <div className="space-y-20">
             {siteContent.experience.map((job) => (
               <div key={job.id}>
-                <div className="flex items-start gap-12 mb-6">
+                <div className="flex items-start gap-16 mb-6">
                   {job.id !== "earlier-career" ? (
                     <div className="w-[160px] h-[54px] rounded flex items-center justify-center flex-shrink-0 p-3">
                       <Image
