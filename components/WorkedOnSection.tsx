@@ -84,29 +84,17 @@ export default function WorkedOnSection() {
                 </div>
                 
                 {/* Projects Grid */}
-                <div className={`grid gap-6 mb-16 ${
-                  companyProjects.length === 1 ? 'md:grid-cols-1 max-w-2xl' :
-                  companyProjects.length === 2 ? 'md:grid-cols-2' :
-                  companyProjects.length === 3 ? 'md:grid-cols-3' :
-                  'md:grid-cols-2 lg:grid-cols-4'
-                }`}>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
                   {companyProjects.map((project, projectIndex) => {
                     // Get first image or video thumbnail
                     const imageUrl = project.images[0] || 
                       (project.videos[0] ? `https://img.youtube.com/vi/${project.videos[0]}/maxresdefault.jpg` : null);
                     
-                    const isLargeCard = (companyProjects.length === 4 && projectIndex === 1) || 
-                                       (companyProjects.length === 3 && projectIndex === 0);
-                    
                     return (
                       <Link 
                         key={project.id} 
                         href={`/work/${project.id}`}
-                        className={`group block bg-white border border-gray-100 rounded overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-yellow-400 hover:-translate-y-1 ${
-                          isLargeCard && companyProjects.length === 4 ? 'md:col-span-2 md:row-span-2' : ''
-                        } ${
-                          isLargeCard && companyProjects.length === 3 ? 'md:col-span-2' : ''
-                        }`}
+                        className="group block bg-white border border-gray-100 rounded overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-yellow-400 hover:-translate-y-1"
                         onMouseEnter={() => setHoveredCard(`${groupIndex}-${projectIndex}`)}
                         onMouseLeave={() => setHoveredCard(null)}
                       >
