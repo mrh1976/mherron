@@ -79,7 +79,6 @@ export default function WorkedOnSection() {
               <div key={company}>
                 {/* Client Header */}
                 <div className="mb-8">
-                  
                   <h3 className="text-2xl font-medium mb-2">{company}</h3>
                   <div className="text-sm text-gray-400 mb-6">{meta?.description}</div>
                 </div>
@@ -147,8 +146,10 @@ export default function WorkedOnSection() {
             );
           })}
         </div>
-
-      
+      </div>
+    </section>
+  );
+}
 
 // Helper function to derive category from project metadata
 function getCategoryFromId(id: string): string {
