@@ -101,13 +101,24 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
           </div>
 
-          <p className="relative z-10 text-[19px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
+          <p className="relative z-10 text-[21px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-24">
             I&apos;m a marketing executive with 20+ years of experience and a
             decade as a CMO helping technology and fintech companies grow. I
             work with founders and leadership teams to diagnose what&apos;s holding
             marketing back and build the strategy and positioning needed to
             create consistent growth.
           </p>
+
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white text-sm rounded-md hover:bg-gray-800 transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="opacity-80">
+              <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M2 5L8 9L14 5" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+            Schedule A Free Marketing Audit
+          </a>
         </div>
       </section>
 
@@ -148,8 +159,8 @@ export default function Home() {
 
       <section id="about" className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-12">
-            About Me
+          <h2 className="text-5xl font-medium mb-12">
+            About Me<span className="text-yellow-400">.</span>
           </h2>
           <div className="grid md:grid-cols-5 gap-16">
             <div className="md:col-span-2">
@@ -169,8 +180,8 @@ export default function Home() {
 
       <section id="experience" className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">
-            Worked for
+          <h2 className="text-5xl font-medium mb-6">
+            Worked for<span className="text-yellow-400">.</span>
           </h2>
           <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-xl">
             I have partnered with world class teams to deliver high impact
@@ -222,8 +233,8 @@ export default function Home() {
 
       <section className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-gray-400 mb-6">
-            Worked with
+          <h2 className="text-5xl font-medium mb-6">
+            Worked with<span className="text-yellow-400">.</span>
           </h2>
           <p className="text-[#6b6b6b] text-[17px] mb-16 max-w-3xl">
             I have had the privilege of working with some of the biggest and
@@ -296,10 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: WorkedOnSection Component - Replaces old "Worked on" section */}
-      <div id="work">
-        <WorkedOnSection />
-      </div>
+      <WorkedOnSection />
 
       <section id="contact" className="py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
@@ -322,23 +330,34 @@ export default function Home() {
               className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
             />
           </form>
-          <button className="px-12 py-4 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition">
+          <button className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition">
             Submit
           </button>
         </div>
       </section>
 
-      <footer className="py-12 px-8 bg-[#2a2927] text-white text-center">
-        <Image
-          src="/MH-logo.png"
-          alt="MH"
-          width={32}
-          height={32}
-          className="mx-auto mb-6"
-        />
-        <p className="text-xs opacity-50">
-          ©{new Date().getFullYear()} Michael Herron LLC
-        </p>
+      <footer className="py-12 px-8 bg-[#2a2927]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-start mb-12">
+            <Image
+              src="/MH-logo.png"
+              alt="MH"
+              width={32}
+              height={32}
+            />
+          </div>
+          <div className="text-xs text-white/60 leading-relaxed mb-8">
+            All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
+          </div>
+          <div className="flex justify-between items-center pt-8 border-t border-white/10">
+            <p className="text-xs text-white/50">
+              ©{new Date().getFullYear()} Michael Herron LLC
+            </p>
+            <p className="text-xs text-white/50">
+              Designed in partnership with <span className="text-white">nzmotiondesign.com</span>
+            </p>
+          </div>
+        </div>
       </footer>
     </main>
   );
