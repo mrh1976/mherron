@@ -124,27 +124,27 @@ export default function Home() {
 
       <section className="py-20 px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto">
-          {/* Top Row - Power Stats */}
+          {/* Top Row - 4 Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">20<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Years Experience
               </div>
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">6<span className="text-yellow-400">x</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 First Marketing Hire
               </div>
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">$300M<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Funds Raised
               </div>
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-4xl md:text-5xl font-[800] mb-3 tracking-tight">50<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Global Brands
@@ -152,9 +152,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Row - Impact Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <div className="text-center md:text-left">
+          {/* Bottom Row - 3 Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="text-center">
               <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
                 $12M<span className="text-yellow-400">→</span>$1.35B
               </div>
@@ -162,23 +162,16 @@ export default function Home() {
                 Unicorn Built
               </div>
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">100<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Team Members Hired
               </div>
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">30<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Product Launches
-              </div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight">4</div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50 leading-relaxed">
-                Perspectives<br/>
-                <span className="text-yellow-400 normal-case tracking-normal text-[10px]">Client • Agency • Startup • Consultant</span>
               </div>
             </div>
           </div>
