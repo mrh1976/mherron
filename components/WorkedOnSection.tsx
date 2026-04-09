@@ -122,7 +122,7 @@ export default function WorkedOnSection() {
                           <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
                             {getCategoryFromId(project.id)}
                           </div>
-                          <h4 className="text-lg font-medium text-gray-900 group-hover:text-yellow-400 transition-colors">
+                          <h4 className="text-lg font-medium text-gray-900 group-hover:text-gray-400 transition-colors">
                             {project.title}
                           </h4>
                         </div>
