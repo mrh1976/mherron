@@ -181,7 +181,7 @@ export default function Home() {
             <div className="text-[11px] uppercase tracking-widest text-white/50 mb-3">
               Experience
             </div>
-            <div className="text-lg md:text-base text-white/80 flex items-center justify-center gap-3 flex-wrap">
+            <div className="text-sm md:text-base text-white/80 flex items-center justify-center gap-3 flex-wrap">
               <span>Client Side</span>
               <span className="text-yellow-400">|</span>
               <span>Agency Side</span>
@@ -230,7 +230,7 @@ export default function Home() {
             {siteContent.experience.map((job) => (
               <div key={job.id}>
                 <div className="flex items-start gap-12 mb-6">
-                  {job.id !== "earlier-career" && (
+                  {job.id !== "earlier-career" ? (
                     <div className="w-[160px] h-[54px] rounded flex items-center justify-center flex-shrink-0 p-3">
                       <Image
                         src={`/images/${getLogoFilename(job.id)}`}
@@ -240,6 +240,8 @@ export default function Home() {
                         className="w-full h-full object-contain"
                       />
                     </div>
+                  ) : (
+                    <div className="w-[160px] h-[54px] flex-shrink-0"></div>
                   )}
 
                   <div className="flex-1">
