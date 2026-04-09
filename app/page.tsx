@@ -191,43 +191,44 @@ export default function Home() {
           >
             <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
           </button>
-          <div className="flex items-center gap-8">
-            {/* Desktop Nav Links */}
-            <div className="hidden lg:flex items-center gap-8">
-              <button
-                onClick={() => scrollToSection('about')}
-                className={`text-white text-sm uppercase tracking-widest transition-colors ${
-                  activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'
-                }`}
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('experience')}
-                className={`text-white text-sm uppercase tracking-widest transition-colors ${
-                  activeSection === 'experience' ? 'text-yellow-400' : 'hover:text-yellow-400'
-                }`}
-              >
-                Experience
-              </button>
-              <button
-                onClick={() => scrollToSection('work')}
-                className={`text-white text-sm uppercase tracking-widest transition-colors ${
-                  activeSection === 'work' ? 'text-yellow-400' : 'hover:text-yellow-400'
-                }`}
-              >
-                Work
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className={`text-white text-sm uppercase tracking-widest transition-colors ${
-                  activeSection === 'contact' ? 'text-yellow-400' : 'hover:text-yellow-400'
-                }`}
-              >
-                Contact
-              </button>
-            </div>
 
+          {/* Centered Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <button
+              onClick={() => scrollToSection('about')}
+              className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'
+              }`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection('experience')}
+              className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                activeSection === 'experience' ? 'text-yellow-400' : 'hover:text-yellow-400'
+              }`}
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection('work')}
+              className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                activeSection === 'work' ? 'text-yellow-400' : 'hover:text-yellow-400'
+              }`}
+            >
+              Work
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className={`text-white text-sm uppercase tracking-widest transition-colors ${
+                activeSection === 'contact' ? 'text-yellow-400' : 'hover:text-yellow-400'
+              }`}
+            >
+              Contact
+            </button>
+          </div>
+
+          <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-3">
               <div className="relative">
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -243,6 +244,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Hamburger - Hidden on Desktop */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden text-white text-2xl font-thin transition-transform"
