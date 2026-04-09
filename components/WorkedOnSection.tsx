@@ -62,7 +62,7 @@ export default function WorkedOnSection() {
     <section id="work" className="py-32 px-8">
       <div className="max-w-5xl mx-auto">
         {/* Section Header - matching original styling */}
-        <h2 className="text-5xl font-medium mb-6">
+        <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
           Worked on<span className="text-yellow-400">.</span>
         </h2>
         <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-20 max-w-3xl">
