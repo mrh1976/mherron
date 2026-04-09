@@ -63,7 +63,7 @@ export default function Home() {
   // Special animation for unicorn stat - counts in sequence
   const unicornStart = useCountUp(12, 1500, 0);
   const [showArrow, setShowArrow] = useState(false);
-  const unicornEnd = useCountUp(1.35, 1500, 1700);
+  const unicornEndRaw = useCountUp(135, 1500, 1700); // Count to 135 (for 1.35B)
   
   useEffect(() => {
     const timer = setTimeout(() => setShowArrow(true), 1500);
@@ -221,7 +221,7 @@ export default function Home() {
                 ${unicornStart.count}M
                 <span className={`text-yellow-400 transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>→</span>
                 <span className={`transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
-                  ${unicornEnd.count}B
+                  ${(unicornEndRaw.count / 100).toFixed(2)}B
                 </span>
               </div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
