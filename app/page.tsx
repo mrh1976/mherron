@@ -61,14 +61,61 @@ export default function Home() {
   const stat6 = useCountUp(30, 2200, 750);
   
   // Special animation for unicorn stat - counts in sequence
-  const unicornStart = useCountUp(12, 1500, 0);
+  const [unicornVisible, setUnicornVisible] = useState(false);
+  const unicornRef = useRef<HTMLDivElement>(null);
+  const [unicornStart, setUnicornStart] = useState(0);
+  const [unicornEnd, setUnicornEnd] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
-  const unicornEndRaw = useCountUp(135, 1500, 1700); // Count to 135 (for 1.35B)
   
   useEffect(() => {
-    const timer = setTimeout(() => setShowArrow(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !unicornVisible) {
+          setUnicornVisible(true);
+          
+          // Animate first number ($12M)
+          const startTime1 = Date.now();
+          const animate1 = () => {
+            const elapsed = Date.now() - startTime1;
+            const progress = Math.min(elapsed / 1500, 1);
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            setUnicornStart(Math.floor(easeOutQuart * 12));
+            
+            if (progress < 1) {
+              requestAnimationFrame(animate1);
+            } else {
+              // Show arrow and start second animation
+              setTimeout(() => {
+                setShowArrow(true);
+                
+                // Animate second number ($1.35B)
+                const startTime2 = Date.now();
+                const animate2 = () => {
+                  const elapsed = Date.now() - startTime2;
+                  const progress = Math.min(elapsed / 1500, 1);
+                  const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                  setUnicornEnd(Math.floor(easeOutQuart * 135));
+                  
+                  if (progress < 1) {
+                    requestAnimationFrame(animate2);
+                  }
+                };
+                animate2();
+              }, 200);
+            }
+          };
+          animate1();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (unicornRef.current) {
+      observer.observe(unicornRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [unicornVisible]);
 
   const getLogoFilename = (jobId: string) => {
     if (jobId === "herron-llc") return "MHlogo-h.png";
@@ -216,12 +263,12 @@ export default function Home() {
 
           {/* Bottom Row - 3 Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
-            <div className="text-center" ref={unicornStart.ref}>
+            <div className="text-center" ref={unicornRef}>
               <div className="text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
-                ${unicornStart.count}M
+                ${unicornStart}M
                 <span className={`text-yellow-400 transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>→</span>
                 <span className={`transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
-                  ${(unicornEndRaw.count / 100).toFixed(2)}B
+                  ${(unicornEnd / 100).toFixed(2)}B
                 </span>
               </div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
