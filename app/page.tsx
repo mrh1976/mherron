@@ -217,130 +217,142 @@ export default function Home() {
 
       <section id="experience" className="py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Worked for<span className="text-yellow-400">.</span>
-          </h2>
-          <p className="text-[#6b6b6b] text-[17px] mb-20 max-w-xl">
-            I have partnered with world class teams to deliver high impact
-            campaigns, product launches, and brand experiences across a wide
-            range of industries.
-          </p>
+          <div className="grid md:grid-cols-5 gap-16">
+            {/* Left Column - Title & Description */}
+            <div className="md:col-span-2">
+              <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+                Worked for<span className="text-yellow-400">.</span>
+              </h2>
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed">
+                I have partnered with world class teams to deliver high impact
+                campaigns, product launches, and brand experiences across a wide
+                range of industries.
+              </p>
+            </div>
 
-          <div className="space-y-20">
-            {siteContent.experience.map((job) => (
-              <div key={job.id}>
-                <div className="flex items-start gap-16 mb-6">
-                  {job.id !== "earlier-career" ? (
-                    <div className="w-[160px] h-[54px] rounded flex items-center justify-center flex-shrink-0 p-3">
-                      <Image
-                        src={`/images/${getLogoFilename(job.id)}`}
-                        alt={job.company}
-                        width={160}
-                        height={54}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-[160px] h-[54px] flex-shrink-0"></div>
-                  )}
+            {/* Right Column - Job Entries */}
+            <div className="md:col-span-3 space-y-20">
+              {siteContent.experience.map((job) => (
+                <div key={job.id}>
+                  <div className="flex items-start gap-6 mb-6">
+                    {job.id !== "earlier-career" ? (
+                      <div className="w-[120px] h-[40px] rounded flex items-center justify-center flex-shrink-0">
+                        <Image
+                          src={`/images/${getLogoFilename(job.id)}`}
+                          alt={job.company}
+                          width={120}
+                          height={40}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-[120px] h-[40px] flex-shrink-0"></div>
+                    )}
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-medium mb-1">
-                      {job.company}, {job.role.split(" | ")[0]}
-                    </h3>
-                    <div className="text-sm text-gray-500 mb-4">{job.period}</div>
-                    <p className="text-[#6b6b6b] text-[17px] mb-6 leading-relaxed">
-                      {job.description}
-                    </p>
-                    <div className="text-xs uppercase tracking-widest text-gray-400 mb-3">
-                      Top Level Highlights
+                    <div className="flex-1">
+                      <h3 className="text-xl font-medium mb-1">
+                        {job.company}, {job.role.split(" | ")[0]}
+                      </h3>
+                      <div className="text-sm text-gray-500 mb-4">{job.period}</div>
                     </div>
-                    <ul className="space-y-2 text-sm text-[#6b6b6b]">
-                      {job.achievements.map((achievement, i) => (
-                        <li key={i} className="pl-4 relative">
-                          • {achievement}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
+
+                  <p className="text-[#6b6b6b] text-[17px] mb-6 leading-relaxed">
+                    {job.description}
+                  </p>
+
+                  <div className="text-xs uppercase tracking-widest text-gray-400 mb-3">
+                    Top Level Highlights
+                  </div>
+                  <ul className="space-y-2 text-sm text-[#6b6b6b]">
+                    {job.achievements.map((achievement, i) => (
+                      <li key={i} className="pl-4 relative">
+                        • {achievement}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-32 px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Worked with<span className="text-yellow-400">.</span>
-          </h2>
-          <p className="text-[#6b6b6b] text-[17px] mb-16 max-w-3xl">
-            I have had the privilege of working with some of the biggest and
-            most influential brands in the world. These partnerships brought me
-            into conversations that shaped global sports, luxury, technology,
-            and consumer culture, and gave me the opportunity to help launch
-            products, tell powerful stories, and create marketing that delivers
-            real business results.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
-            {[
-              { name: "H&R Block", file: "hrb.png" },
-              { name: "Patriots", file: "Pats.png" },
-              { name: "State Street", file: "statestreet.png" },
-              { name: "United", file: "united.png" },
-              { name: "Samsung", file: "samsung.png" },
-              { name: "Tiffany & Co.", file: "tiffany.png" },
-              { name: "AT&T", file: "att.png" },
-              { name: "Disney", file: "disney.png" },
-              { name: "Bloomberg", file: "bloomberg.png" },
-              { name: "Google", file: "google.png" },
-            ].map((brand) => (
-              <div key={brand.name} className="flex items-center justify-center h-16">
-                <Image
-                  src={`/images/${brand.file}`}
-                  alt={brand.name}
-                  width={120}
-                  height={60}
-                  className="w-auto h-auto max-w-full max-h-full object-contain opacity-40 hover:opacity-70 transition"
-                />
+          <div className="grid md:grid-cols-5 gap-16">
+            {/* Left Column - Sticky */}
+            <div className="md:col-span-2 md:sticky md:top-32 md:self-start">
+              <h2 className="text-[48px] md:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
+                Worked with<span className="text-yellow-400">.</span>
+              </h2>
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6">
+                I have had the privilege of working with some of the biggest and
+                most influential brands in the world. These partnerships brought me
+                into conversations that shaped global sports, luxury, technology,
+                and consumer culture, and gave me the opportunity to help launch
+                products, tell powerful stories, and create marketing that delivers
+                real business results.
+              </p>
+              
+              <div className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+                Other Notable Companies
               </div>
-            ))}
-          </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-[#6b6b6b]">
+                <div>Formula 1</div>
+                <div>Zurich</div>
+                <div>Formula E</div>
+                <div>Nintendo</div>
+                <div>State Street</div>
+                <div>Lucasfilms</div>
+                <div>Blackrock</div>
+                <div>CAA</div>
+                <div>S&amp;P</div>
+                <div>MLB</div>
+                <div>Choice Hotels</div>
+                <div>NBA</div>
+                <div>New England Patriots</div>
+                <div>NCAA</div>
+                <div>Miami Heat</div>
+                <div>NFL</div>
+                <div>Chicago White Sox</div>
+                <div>DJI</div>
+                <div>SummerFest</div>
+                <div>Facebook</div>
+                <div>Twitter</div>
+                <div>MasterCard</div>
+                <div>Yuga Labs</div>
+                <div>Uniswap</div>
+                <div>Garmin</div>
+              </div>
+            </div>
 
-          <div className="border-t border-gray-200 pt-12">
-            <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-8">
-              Other Notable Companies
-            </h3>
-            <div className="grid grid-cols-3 gap-x-12 gap-y-3 text-sm text-[#6b6b6b]">
-              <div>Formula 1</div>
-              <div>Zurich</div>
-              <div>SummerFest</div>
-              <div>Formula E</div>
-              <div>Nintendo</div>
-              <div>Facebook</div>
-              <div>State Street</div>
-              <div>Lucasfilms</div>
-              <div>Twitter</div>
-              <div>Blackrock</div>
-              <div>CAA</div>
-              <div>MasterCard</div>
-              <div>S&amp;P</div>
-              <div>MLB</div>
-              <div>Yuga Labs</div>
-              <div>Choice Hotels</div>
-              <div>NBA</div>
-              <div>Uniswap</div>
-              <div>New England Patriots</div>
-              <div>NCAA</div>
-              <div>Garmin</div>
-              <div>Miami Heat</div>
-              <div>NFL</div>
-              <div></div>
-              <div>Chicago White Sox</div>
-              <div>DJI</div>
-              <div></div>
+            {/* Right Column - Scrollable */}
+            <div className="md:col-span-3">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-12 mb-16">
+                {[
+                  { name: "H&R Block", file: "hrb.png" },
+                  { name: "Patriots", file: "Pats.png" },
+                  { name: "State Street", file: "statestreet.png" },
+                  { name: "United", file: "united.png" },
+                  { name: "Samsung", file: "samsung.png" },
+                  { name: "Tiffany & Co.", file: "tiffany.png" },
+                  { name: "AT&T", file: "att.png" },
+                  { name: "Disney", file: "disney.png" },
+                  { name: "Bloomberg", file: "bloomberg.png" },
+                  { name: "Google", file: "google.png" },
+                ].map((brand) => (
+                  <div key={brand.name} className="flex items-center justify-center h-16">
+                    <Image
+                      src={`/images/${brand.file}`}
+                      alt={brand.name}
+                      width={120}
+                      height={60}
+                      className="w-auto h-auto max-w-full max-h-full object-contain opacity-40 hover:opacity-70 transition"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
