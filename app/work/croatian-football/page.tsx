@@ -15,9 +15,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ 
   params 
 }: { 
-  params: { slug: string } 
+  params: Promise<{ slug: string }> 
 }): Promise<Metadata> {
-  const project = projects.find((p) => p.id === params.slug);
+  const { slug } = await params;
+  const project = projects.find((p) => p.id === slug);
 
   if (!project) {
     return {
@@ -49,19 +50,20 @@ export async function generateMetadata({
   };
 }
 
-export default function CaseStudyPage({ 
+export default async function CaseStudyPage({ 
   params 
 }: { 
-  params: { slug: string } 
+  params: Promise<{ slug: string }> 
 }) {
-  const project = projects.find((p) => p.id === params.slug);
+  const { slug } = await params;
+  const project = projects.find((p) => p.id === slug);
 
   if (!project) {
     notFound();
   }
 
   // Find next/previous projects
-  const currentIndex = projects.findIndex((p) => p.id === params.slug);
+  const currentIndex = projects.findIndex((p) => p.id === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
 
