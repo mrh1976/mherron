@@ -82,7 +82,7 @@ export default function Home() {
 
       <section className="pt-40 pb-8 px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-[68px] md:text-[80px] font-[800] mb-0 leading-[1.2] tracking-[-4.16px]">
+          <h1 className="text-[68px] md:text-[80px] font-[800] mb-0 leading-[1.05] tracking-[-4.16px]">
             Turn Complex Marketing Ideas
             <br />
             Into Measurable Results
