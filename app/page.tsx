@@ -234,22 +234,24 @@ export default function Home() {
             <div className="md:col-span-3 space-y-20">
               {siteContent.experience.map((job) => (
                 <div key={job.id}>
-                  <div className="flex items-start gap-6 mb-6">
+                  <div className="mb-6">
+                    {/* Logo on its own line */}
                     {job.id !== "earlier-career" ? (
-                      <div className="w-[120px] h-[40px] rounded flex items-center justify-center flex-shrink-0">
+                      <div className="mb-4">
                         <Image
                           src={`/images/${getLogoFilename(job.id)}`}
                           alt={job.company}
                           width={120}
                           height={40}
-                          className="w-full h-full object-contain"
+                          className="object-contain"
                         />
                       </div>
                     ) : (
-                      <div className="w-[120px] h-[40px] flex-shrink-0"></div>
+                      <div className="mb-4 h-[40px]"></div>
                     )}
 
-                    <div className="flex-1">
+                    {/* Company, Role, Date */}
+                    <div>
                       <h3 className="text-xl font-medium mb-1">
                         {job.company}, {job.role.split(" | ")[0]}
                       </h3>
