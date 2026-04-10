@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
 const project = projects.find((p) => p.id === 'miami-heat')!;
-const prevProject = projects.find((p) => p.id === 'chain-wallet');
-const nextProject = null; // No next project in the current dataset
+const prevProject = projects.find((p) => p.id === 'chain-wallet')!;
 
 export const metadata: Metadata = {
   title: `${project.title} | ${project.company} - Michael Herron`,
@@ -18,7 +17,6 @@ export default function MiamiHeatPage() {
   return (
     <>
       <main className="min-h-screen bg-white">
-        {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
             <Link href="/" className="cursor-pointer">
@@ -38,7 +36,6 @@ export default function MiamiHeatPage() {
           </div>
         </nav>
 
-        {/* Header */}
         <section className="pt-32 pb-12 px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-sm text-gray-400 mb-6">
@@ -66,7 +63,6 @@ export default function MiamiHeatPage() {
           </div>
         </section>
 
-        {/* Hero Image */}
         {project.images[0] && (
           <section className="pb-16 px-8">
             <div className="max-w-5xl mx-auto">
@@ -84,7 +80,6 @@ export default function MiamiHeatPage() {
           </section>
         )}
 
-        {/* Overview */}
         <section className="py-16 px-8 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-[32px] md:text-[40px] font-[800] mb-8 leading-[1.05] tracking-[-2.5px]">
@@ -98,7 +93,6 @@ export default function MiamiHeatPage() {
           </div>
         </section>
 
-        {/* Video Section */}
         {project.videos.length > 0 && (
           <section className="py-16 px-8">
             <div className="max-w-5xl mx-auto">
@@ -126,7 +120,6 @@ export default function MiamiHeatPage() {
           </section>
         )}
 
-        {/* Gallery */}
         {project.images.length > 1 && (
           <section className="py-16 px-8 bg-gray-50">
             <div className="max-w-5xl mx-auto">
@@ -154,48 +147,27 @@ export default function MiamiHeatPage() {
           </section>
         )}
 
-        {/* Previous / Next Navigation */}
         <section className="py-16 px-8 border-t border-gray-200">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {prevProject && (
-                <Link
-                  href={`/work/${prevProject.id}`}
-                  className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
-                >
-                  <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
-                    ← Previous Project
-                  </div>
-                  <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors">
-                    {prevProject.title}
-                  </h3>
-                  <div className="text-sm text-gray-500 mt-2">
-                    {prevProject.company}
-                  </div>
-                </Link>
-              )}
-
-              {nextProject && (
-                <Link
-                  href={`/work/${nextProject.id}`}
-                  className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
-                >
-                  <div className="text-xs uppercase tracking-widest text-gray-400 mb-2 text-right">
-                    Next Project →
-                  </div>
-                  <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors text-right">
-                    {nextProject.title}
-                  </h3>
-                  <div className="text-sm text-gray-500 mt-2 text-right">
-                    {nextProject.company}
-                  </div>
-                </Link>
-              )}
+            <div className="grid grid-cols-1">
+              <Link
+                href={`/work/${prevProject.id}`}
+                className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
+              >
+                <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+                  ← Previous Project
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors">
+                  {prevProject.title}
+                </h3>
+                <div className="text-sm text-gray-500 mt-2">
+                  {prevProject.company}
+                </div>
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* CTA */}
         <section className="py-24 px-8 bg-black text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-[36px] md:text-[48px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
@@ -213,7 +185,6 @@ export default function MiamiHeatPage() {
           </div>
         </section>
 
-        {/* Footer */}
         <footer className="py-12 px-8 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-start mb-12">
