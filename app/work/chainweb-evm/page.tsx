@@ -192,15 +192,15 @@ export default function ChainwebEVMPage() {
           </div>
         </section>
 
-<footer className="py-12 px-8 bg-[#2a2927]">
-  <div className="max-w-7xl mx-auto">
+<footer className="py-12 bg-[#2a2927]">
+  <div className="max-w-7xl mx-auto px-8">
     <div className="mb-12">
       <Image src="/MH-logo.png" alt="MH" width={32} height={32} />
     </div>
   </div>
   
   <div className="px-8 mb-8">
-    <p className="text-xs text-white/60 leading-relaxed max-w-none">
+    <p className="text-xs text-white/60 leading-relaxed">
       All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
     </p>
   </div>
