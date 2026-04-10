@@ -5,46 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import { siteContent } from "@/content";
 import WorkedOnSection from "@/components/WorkedOnSection";
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Michael Herron",
-      "jobTitle": "Chief Marketing Officer",
-      "url": "https://mherron.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/mherron54", 
-        // Add other social profiles
-      ],
-      "alumniOf": [
-        {
-          "@type": "Organization",
-          "name": "Kadena"
-        },
-        {
-          "@type": "Organization",
-          "name": "Chain"
-        },
-        {
-          "@type": "Organization",
-          "name": "Lukka"
-        }
-      ],
-      "knowsAbout": [
-        "Strategic Marketing",
-        "Brand Strategy",
-        "Product Launch",
-        "Chief Marketing Officer",
-        "Web3 Marketing",
-        "Blockchain Marketing",
-        "Enterprise Marketing"
-      ]
-    })
-  }}
-/>
-
 // Count-up animation hook
 function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
   const [count, setCount] = useState(0);
@@ -268,6 +228,36 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Michael Herron",
+            "jobTitle": "Chief Marketing Officer",
+            "url": "https://mherron.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/mherron54"
+            ],
+            "alumniOf": [
+              { "@type": "Organization", "name": "Kadena" },
+              { "@type": "Organization", "name": "Chain" },
+              { "@type": "Organization", "name": "Lukka" }
+            ],
+            "knowsAbout": [
+              "Strategic Marketing",
+              "Brand Strategy",
+              "Product Launch",
+              "Chief Marketing Officer",
+              "Web3 Marketing",
+              "Blockchain Marketing",
+              "Enterprise Marketing"
+            ]
+          })
+        }}
+      />
+
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-[#2a2927] shadow-lg' : 'bg-[#2a2927]'
       }`}>
@@ -696,57 +686,56 @@ export default function Home() {
           </p>
           {/* RESPONSIVE: Stack inputs on mobile, side-by-side on tablet+ */}
           <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-4 mb-8">
-  <div className="flex flex-col sm:flex-row gap-4">
-    <input
-      type="text"
-      name="name"
-      placeholder="Name"
-      value={formData.name}
-      onChange={handleInputChange}
-      required
-      disabled={formStatus === 'loading'}
-      className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      value={formData.email}
-      onChange={handleInputChange}
-      required
-      disabled={formStatus === 'loading'}
-      className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
-    />
-  </div>
-  <textarea
-    name="message"
-    placeholder="Message (optional)"
-    rows={4}
-    value={formData.message}
-    onChange={handleInputChange}
-    disabled={formStatus === 'loading'}
-    className="w-full px-6 py-4 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-gray-400 resize-none disabled:opacity-50"
-  />
-  
-  {formMessage && (
-    <div className={`p-4 rounded-lg text-sm ${
-      formStatus === 'success' 
-        ? 'bg-green-50 text-green-800 border border-green-200' 
-        : 'bg-red-50 text-red-800 border border-red-200'
-    }`}>
-      {formMessage}
-    </div>
-  )}
-  
-  <button 
-    type="submit"
-    disabled={formStatus === 'loading'}
-    className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition disabled:opacity-50"
-  >
-    {formStatus === 'loading' ? 'Sending...' : 'Submit'}
-  </button>
-</form>
-        
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+                disabled={formStatus === 'loading'}
+                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                disabled={formStatus === 'loading'}
+                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Message (optional)"
+              rows={4}
+              value={formData.message}
+              onChange={handleInputChange}
+              disabled={formStatus === 'loading'}
+              className="w-full px-6 py-4 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-gray-400 resize-none disabled:opacity-50"
+            />
+            
+            {formMessage && (
+              <div className={`p-4 rounded-lg text-sm ${
+                formStatus === 'success' 
+                  ? 'bg-green-50 text-green-800 border border-green-200' 
+                  : 'bg-red-50 text-red-800 border border-red-200'
+              }`}>
+                {formMessage}
+              </div>
+            )}
+            
+            <button 
+              type="submit"
+              disabled={formStatus === 'loading'}
+              className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition disabled:opacity-50"
+            >
+              {formStatus === 'loading' ? 'Sending...' : 'Submit'}
+            </button>
+          </form>
         </div>
       </section>
 
