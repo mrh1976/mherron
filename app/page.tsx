@@ -655,25 +655,57 @@ export default function Home() {
             <span>Board Member</span>
           </p>
           {/* RESPONSIVE: Stack inputs on mobile, side-by-side on tablet+ */}
-          <form className="max-w-3xl mx-auto space-y-4 mb-8">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="text"
-                placeholder="Name"
-                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400"
-              />
-            </div>
-            <textarea
-              placeholder="Message (optional)"
-              rows={4}
-              className="w-full px-6 py-4 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-gray-400 resize-none"
-            />
-          </form>
+          <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-4 mb-8">
+  <div className="flex flex-col sm:flex-row gap-4">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      value={formData.name}
+      onChange={handleInputChange}
+      required
+      disabled={formStatus === 'loading'}
+      className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      value={formData.email}
+      onChange={handleInputChange}
+      required
+      disabled={formStatus === 'loading'}
+      className="flex-1 px-6 py-4 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-gray-400 disabled:opacity-50"
+    />
+  </div>
+  <textarea
+    name="message"
+    placeholder="Message (optional)"
+    rows={4}
+    value={formData.message}
+    onChange={handleInputChange}
+    disabled={formStatus === 'loading'}
+    className="w-full px-6 py-4 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-gray-400 resize-none disabled:opacity-50"
+  />
+  
+  {formMessage && (
+    <div className={`p-4 rounded-lg text-sm ${
+      formStatus === 'success' 
+        ? 'bg-green-50 text-green-800 border border-green-200' 
+        : 'bg-red-50 text-red-800 border border-red-200'
+    }`}>
+      {formMessage}
+    </div>
+  )}
+  
+  <button 
+    type="submit"
+    disabled={formStatus === 'loading'}
+    className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition disabled:opacity-50"
+  >
+    {formStatus === 'loading' ? 'Sending...' : 'Submit'}
+  </button>
+</form>
           <button className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition">
             Submit
           </button>
