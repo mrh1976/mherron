@@ -3,8 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
-const project = projects.find((p) => p.id === 'miami-heat')!;
-const prevProject = projects.find((p) => p.id === 'chain-wallet')!;
+const project = projects.find((p) => p.id === 'chain-wallet')!;
+
+// DYNAMIC CALCULATION - respects order in projectsData.ts
+const currentIndex = projects.findIndex((p) => p.id === 'chain-wallet');
+const nextProject = projects[(currentIndex + 1) % projects.length];
+const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
 
 export const metadata: Metadata = {
   title: `${project.title} | ${project.company} - Michael Herron`,
