@@ -1,104 +1,22 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.id,
-  }));
-}
+const project = projects.find((p) => p.id === 'chain-wallet')!;
+const nextProject = projects.find((p) => p.id === 'miami-heat')!;
+const prevProject = projects.find((p) => p.id === 'new-england-patriots')!;
 
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { slug: string }
-}): Promise<Metadata> {
-  const { slug } = params;
-  const project = projects.find((p) => p.id === slug);
+export const metadata: Metadata = {
+  title: `${project.title} | ${project.company} - Michael Herron`,
+  description: project.description.substring(0, 160) + '...',
+};
 
-  if (!project) {
-    return {
-      title: 'Project Not Found',
-    };
-  }
-
-  const metaDescription = project.description.substring(0, 160) + '...';
-  const title = `${project.title} | ${project.company} - Michael Herron`;
-
-  return {
-    title,
-    description: metaDescription,
-    openGraph: {
-      title,
-      description: metaDescription,
-      images: project.images[0] ? [project.images[0]] : [],
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description: metaDescription,
-      images: project.images[0] ? [project.images[0]] : [],
-    },
-  };
-}
-
-export default function CaseStudyPage({ 
-  params 
-}: { 
-  params: { slug: string }
-}) {
-  const { slug } = params;
-  const project = projects.find((p) => p.id === slug);
-
-  if (!project) {
-    notFound();
-  }
-
-  const currentIndex = projects.findIndex((p) => p.id === slug);
-  const nextProject = projects[(currentIndex + 1) % projects.length];
-  const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
-
-  const getProjectType = (desc: string): string => {
-    if (desc.includes('rebrand') || desc.includes('visual identity')) return 'Brand & Identity';
-    if (desc.includes('partnership') && desc.includes('sports')) return 'Sports Partnership';
-    if (desc.includes('launch')) return 'Product Launch';
-    if (desc.includes('campaign')) return 'Marketing Campaign';
-    if (desc.includes('wallet') || desc.includes('app')) return 'Product Development';
-    return 'Case Study';
-  };
-
-  const projectType = getProjectType(project.description);
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": project.title,
-    "description": project.description,
-    "creator": {
-      "@type": "Person",
-      "name": "Michael Herron",
-      "jobTitle": "Chief Marketing Officer",
-      "url": "https://mherron.com"
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": project.company
-    },
-    "about": projectType,
-    "image": project.images[0] || "",
-    "video": project.videos.map(id => `https://www.youtube.com/watch?v=${id}`)
-  };
+export default function ChainWalletPage() {
+  const projectType = 'Product Development';
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
       <main className="min-h-screen bg-white">
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
