@@ -124,7 +124,6 @@ export default function MiamiHeatPage() {
           </section>
         )}
 
-        {project.images.length > 1 && (
         <section className="py-16 px-8 border-t border-gray-200">
   <div className="max-w-5xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
