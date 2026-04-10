@@ -144,23 +144,36 @@ export default function TiffanyNFTiffPage() {
         )}
 
         <section className="py-16 px-8 border-t border-gray-200">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1">
-              <Link
-                href={`/work/${nextProject.id}`}
-                className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
-              >
-                <div className="text-xs uppercase tracking-widest text-gray-400 mb-2 text-right">
-                  Next Project →
-                </div>
-                <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors text-right">
-                  {nextProject.title}
-                </h3>
-                <div className="text-sm text-gray-500 mt-2 text-right">{nextProject.company}</div>
-              </Link>
-            </div>
-          </div>
-        </section>
+  <div className="max-w-5xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Link
+        href={`/work/${prevProject.id}`}
+        className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
+      >
+        <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+          ← Previous Project
+        </div>
+        <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors">
+          {prevProject.title}
+        </h3>
+        <div className="text-sm text-gray-500 mt-2">{prevProject.company}</div>
+      </Link>
+
+      <Link
+        href={`/work/${nextProject.id}`}
+        className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
+      >
+        <div className="text-xs uppercase tracking-widest text-gray-400 mb-2 text-right">
+          Next Project →
+        </div>
+        <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors text-right">
+          {nextProject.title}
+        </h3>
+        <div className="text-sm text-gray-500 mt-2 text-right">{nextProject.company}</div>
+      </Link>
+    </div>
+  </div>
+</section>
 
         <section className="py-24 px-8 bg-black text-white">
           <div className="max-w-3xl mx-auto text-center">
