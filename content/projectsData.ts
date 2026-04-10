@@ -3,30 +3,14 @@ export interface Project {
   title: string;
   company: string;
   description: string;
-  thumbnail: string;  // NEW - for homepage grid
-  images: string[];   // First image = hero for case study page
+  thumbnail: string;
+  images: string[];
   videos: string[];
   featured?: boolean;
 }
 
 export const projects: Project[] = [
-  {
-    id: "tiffany-nftiff",
-    title: "Tiffany & Co. NFTiff",
-    company: "Chain",
-    description: "At Chain, I helped lead the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch. The project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.",
-    thumbnail: "/images/nftiff-tmb.webp",
-    images: [
-      "/images/tiffanynftiff-hero.png"
-    ],
-    videos: [
-      "MbxJGAtORiU",
-      "vCtd5un9yOA",
-      "u6ly9v7khno",
-      "pySe3U-uI7c"
-    ],
-    featured: true
-  },
+  // KADENA - 3 projects
   {
     id: "newkadena",
     title: "#NewKadena",
@@ -63,98 +47,6 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "lukka-driven-by-data",
-    title: "Driven by Data",
-    company: "Lukka",
-    description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
-    thumbnail: "/images/lukka2-tmb.webp",
-    images: [
-      "/images/lukkadrivenbydata-hero.png",
-      "/images/lukka-driven-1.webp",
-      "/images/lukka-driven-2.webp"
-    ],
-    videos: [
-      "9Q2ySJDRUF8",
-      "G8-FdfGhK3s"
-    ]
-  },
-  {
-    id: "hrblock",
-    title: "H&R Block Retail Tax Software",
-    company: "Fusion92",
-    description: "At Fusion92, I led the strategic partnership with H&R Block to reinvent how consumers experience tax preparation. We built a direct-to-consumer sales channel that delivered software to people's homes, introduced patented authentication technology, and elevated in-store and online customer experiences. The partnership endured for 19 tax seasons, resulting in more than 45 million software products designed, produced, and distributed, and hundreds of millions of dollars in revenue. The work also served as a trusted strategic resource across product innovation, digital acquisition, and customer experience for H&R Block.",
-    thumbnail: "/images/hrb-tmb.webp",
-    images: [
-      "/images/hrblock-hero.png",
-      "/images/hrb1.webp",
-      "/images/hrb2.webp",
-      "/images/hrb3.webp"
-    ],
-    videos: []
-  },
-  {
-    id: "uscellular-psa",
-    title: "Distracted Driving PSA",
-    company: "U.S. Cellular",
-    description: "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
-    thumbnail: "/images/uscc-tmb.webp",
-    images: [
-      "/images/uscellularpsa-hero.png"
-    ],
-    videos: [
-      "L-ddhlBMFz0"
-    ]
-  },
-  {
-    id: "uscellular-activations",
-    title: "Brand Activations",
-    company: "U.S. Cellular",
-    description: "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences. The programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
-    thumbnail: "/images/fog-tmb.webp",
-    images: [
-      "/images/uscellularbrand-hero.png"
-    ],
-    videos: [
-      "gTAk6zBPOVc",
-      "bjc7Gp3YLhQ",
-      "CEiiL7CPiAU",
-      "Eqx1aUx9RPE",
-      "34peid89W18",
-      "wGixKvEWXKw"
-    ]
-  },
-  {
-    id: "lukka-unicorn",
-    title: "Unicorn Valuation",
-    company: "Lukka",
-    description: "When I joined Lukka, the company had just undergone a CEO transition and was preparing for its next phase of growth and funding. Working closely with the CEO, I led the marketing and positioning efforts that supported more than 200 million in capital raised and helped establish Lukka as a unicorn with a 1.35 billion valuation. The effort brought together institutional partners, including Marshall Wace, S&P, CPA.com, State Street, Liberty City Ventures, and Soros, reinforcing Lukka's credibility as the institutional standard for crypto data.",
-    thumbnail: "/images/lukka-tmb.webp",
-    images: [
-      "/images/lukkaunicorn-hero.png"
-    ],
-    videos: [
-      "_jKHNlL6Kq4"
-    ]
-  },
-  {
-    id: "new-england-patriots",
-    title: "New England Patriots",
-    company: "Chain",
-    description: "At Chain, I helped build and activate the company's partnership with the New England Patriots, creating branded content, stadium presence, and fan-facing campaign moments designed to connect blockchain technology to one of the most recognizable franchises in professional sports. The work combined premium brand storytelling, team partnership activation, and audience engagement across digital and live environments.",
-    thumbnail: "/images/pats-tmb.webp",
-    images: [
-      "/images/newenglandpatriots-hero.png",
-      "/images/chain1.gif",
-      "/images/chain2.webp",
-      "/images/chain3.webp"
-    ],
-    videos: [
-      "n_HkTymf7_4",
-      "-CNOy4SPTtA",
-      "9HU4hcpz_Mo"
-    ]
-  },
-  {
     id: "chainweb-evm",
     title: "Chainweb EVM",
     company: "Kadena",
@@ -172,6 +64,43 @@ export const projects: Project[] = [
       "E-Hd6-V5ick",
       "GUHUpt1fsR4",
       "tEvjvZLfGV8"
+    ]
+  },
+
+  // CHAIN - 4 projects
+  {
+    id: "tiffany-nftiff",
+    title: "Tiffany & Co. NFTiff",
+    company: "Chain",
+    description: "At Chain, I helped lead the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch. The project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.",
+    thumbnail: "/images/nftiff-tmb.webp",
+    images: [
+      "/images/tiffanynftiff-hero.png"
+    ],
+    videos: [
+      "MbxJGAtORiU",
+      "vCtd5un9yOA",
+      "u6ly9v7khno",
+      "pySe3U-uI7c"
+    ],
+    featured: true
+  },
+  {
+    id: "new-england-patriots",
+    title: "New England Patriots",
+    company: "Chain",
+    description: "At Chain, I helped build and activate the company's partnership with the New England Patriots, creating branded content, stadium presence, and fan-facing campaign moments designed to connect blockchain technology to one of the most recognizable franchises in professional sports. The work combined premium brand storytelling, team partnership activation, and audience engagement across digital and live environments.",
+    thumbnail: "/images/pats-tmb.webp",
+    images: [
+      "/images/newenglandpatriots-hero.png",
+      "/images/chain1.gif",
+      "/images/chain2.webp",
+      "/images/chain3.webp"
+    ],
+    videos: [
+      "n_HkTymf7_4",
+      "-CNOy4SPTtA",
+      "9HU4hcpz_Mo"
     ]
   },
   {
@@ -204,6 +133,86 @@ export const projects: Project[] = [
       "Ao_nKj_CYQY",
       "jscocvv5oeg",
       "7xnRCndGu3M"
+    ]
+  },
+
+  // LUKKA - 2 projects
+  {
+    id: "lukka-driven-by-data",
+    title: "Driven by Data",
+    company: "Lukka",
+    description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
+    thumbnail: "/images/lukka-tmb.webp",
+    images: [
+      "/images/lukkadrivenbydata-hero.png",
+      "/images/lukka-driven-1.webp",
+      "/images/lukka-driven-2.webp"
+    ],
+    videos: [
+      "9Q2ySJDRUF8",
+      "G8-FdfGhK3s"
+    ]
+  },
+  {
+    id: "lukka-unicorn",
+    title: "Unicorn Valuation",
+    company: "Lukka",
+    description: "When I joined Lukka, the company had just undergone a CEO transition and was preparing for its next phase of growth and funding. Working closely with the CEO, I led the marketing and positioning efforts that supported more than 200 million in capital raised and helped establish Lukka as a unicorn with a 1.35 billion valuation. The effort brought together institutional partners, including Marshall Wace, S&P, CPA.com, State Street, Liberty City Ventures, and Soros, reinforcing Lukka's credibility as the institutional standard for crypto data.",
+    thumbnail: "/images/lukka2-tmb.webp",
+    images: [
+      "/images/lukkaunicorn-hero.png"
+    ],
+    videos: [
+      "_jKHNlL6Kq4"
+    ]
+  },
+
+  // FUSION92 - 1 project
+  {
+    id: "hrblock",
+    title: "H&R Block Retail Tax Software",
+    company: "Fusion92",
+    description: "At Fusion92, I led the strategic partnership with H&R Block to reinvent how consumers experience tax preparation. We built a direct-to-consumer sales channel that delivered software to people's homes, introduced patented authentication technology, and elevated in-store and online customer experiences. The partnership endured for 19 tax seasons, resulting in more than 45 million software products designed, produced, and distributed, and hundreds of millions of dollars in revenue. The work also served as a trusted strategic resource across product innovation, digital acquisition, and customer experience for H&R Block.",
+    thumbnail: "/images/hrb-tmb.webp",
+    images: [
+      "/images/hrblock-hero.png",
+      "/images/hrb1.webp",
+      "/images/hrb2.webp",
+      "/images/hrb3.webp"
+    ],
+    videos: []
+  },
+
+  // U.S. CELLULAR - 2 projects
+  {
+    id: "uscellular-psa",
+    title: "Distracted Driving PSA",
+    company: "U.S. Cellular",
+    description: "An NHTSA statistic showing drivers are seven times more likely to crash while texting than while driving under the influence became the creative spark for this distracted driving PSA. Developed when I was at U.S. Cellular, with our partners at MullenLowe, the campaign sparked national conversation, was shortlisted for a Cannes Lions award, and was ultimately donated to the Roadside Safety Alliance for broader public impact.",
+    thumbnail: "/images/uscc-tmb.webp",
+    images: [
+      "/images/uscellularpsa-hero.png"
+    ],
+    videos: [
+      "L-ddhlBMFz0"
+    ]
+  },
+  {
+    id: "uscellular-activations",
+    title: "Brand Activations",
+    company: "U.S. Cellular",
+    description: "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences. The programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
+    thumbnail: "/images/fog-tmb.webp",
+    images: [
+      "/images/uscellularbrand-hero.png"
+    ],
+    videos: [
+      "gTAk6zBPOVc",
+      "bjc7Gp3YLhQ",
+      "CEiiL7CPiAU",
+      "Eqx1aUx9RPE",
+      "34peid89W18",
+      "wGixKvEWXKw"
     ]
   }
 ];
