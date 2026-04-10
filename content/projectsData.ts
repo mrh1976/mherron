@@ -142,7 +142,7 @@ export const projects: Project[] = [
     title: "Driven by Data",
     company: "Lukka",
     description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
-    thumbnail: "/images/lukka-tmb.webp",
+    thumbnail: "/images/lukka2-tmb.webp",
     images: [
       "/images/lukkadrivenbydata-hero.png",
       "/images/lukka-driven-1.webp",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     title: "Unicorn Valuation",
     company: "Lukka",
     description: "When I joined Lukka, the company had just undergone a CEO transition and was preparing for its next phase of growth and funding. Working closely with the CEO, I led the marketing and positioning efforts that supported more than 200 million in capital raised and helped establish Lukka as a unicorn with a 1.35 billion valuation. The effort brought together institutional partners, including Marshall Wace, S&P, CPA.com, State Street, Liberty City Ventures, and Soros, reinforcing Lukka's credibility as the institutional standard for crypto data.",
-    thumbnail: "/images/lukka2-tmb.webp",
+    thumbnail: "/images/lukka-tmb.webp",
     images: [
       "/images/lukkaunicorn-hero.png"
     ],
