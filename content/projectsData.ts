@@ -35,8 +35,8 @@ export const projects: Project[] = [
     thumbnail: "/images/newkadena-tmb.webp",
     images: [
       "/images/newkadena-hero.png",
-      "/images/work/newkadena1.gif",
-      "/images/work/newkadena2.gif"
+      "/images/newkadena1.gif",
+      "/images/newkadena2.gif"
     ],
     videos: [
       "T4Dmpk3Q_mE",
@@ -52,8 +52,8 @@ export const projects: Project[] = [
     thumbnail: "/images/croatia-tmb.webp",
     images: [
       "/images/croatianfootball-hero.png",
-      "/images/work/croatia1.gif",
-      "/images/work/croatia2.webp"
+      "/images/croatia1.gif",
+      "/images/croatia2.webp"
     ],
     videos: [
       "hFFI4Ke2xrY",
@@ -70,8 +70,8 @@ export const projects: Project[] = [
     thumbnail: "/images/lukka2-tmb.webp",
     images: [
       "/images/lukkadrivenbydata-hero.png",
-      "/images/work/lukka-driven-1.webp",
-      "/images/work/lukka-driven-2.webp"
+      "/images/lukka-driven-1.webp",
+      "/images/lukka-driven-2.webp"
     ],
     videos: [
       "9Q2ySJDRUF8",
@@ -86,9 +86,9 @@ export const projects: Project[] = [
     thumbnail: "/images/hrb-tmb.webp",
     images: [
       "/images/hrblock-hero.png",
-      "/images/work/hrb1.webp",
-      "/images/work/hrb2.webp",
-      "/images/work/hrb3.webp"
+      "/images/hrb1.webp",
+      "/images/hrb2.webp",
+      "/images/hrb3.webp"
     ],
     videos: []
   },
@@ -144,9 +144,9 @@ export const projects: Project[] = [
     thumbnail: "/images/pats-tmb.webp",
     images: [
       "/images/newenglandpatriots-hero.png",
-      "/images/work/chain1.gif",
-      "/images/work/chain2.webp",
-      "/images/work/chain3.webp"
+      "/images/chain1.gif",
+      "/images/chain2.webp",
+      "/images/chain3.webp"
     ],
     videos: [
       "n_HkTymf7_4",
@@ -182,7 +182,7 @@ export const projects: Project[] = [
     thumbnail: "/images/chain-tmb.webp",
     images: [
       "/images/chainwallet-hero.png",
-      "/images/work/chainwallet1.webp"
+      "/images/chainwallet1.webp"
     ],
     videos: [
       "-vWANkv-ZyE"
@@ -196,9 +196,9 @@ export const projects: Project[] = [
     thumbnail: "/images/heat-tmb.webp",
     images: [
       "/images/miamiheat-hero.png",
-      "/images/work/chainheat1.gif",
-      "/images/work/chainheat2.webp",
-      "/images/work/chainheat3.webp"
+      "/images/chainheat1.gif",
+      "/images/chainheat2.webp",
+      "/images/chainheat3.webp"
     ],
     videos: [
       "Ao_nKj_CYQY",
