@@ -5,6 +5,46 @@ import { useState, useEffect, useRef } from "react";
 import { siteContent } from "@/content";
 import WorkedOnSection from "@/components/WorkedOnSection";
 
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michael Herron",
+      "jobTitle": "Chief Marketing Officer",
+      "url": "https://mherron.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/mherron54", 
+        // Add other social profiles
+      ],
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Kadena"
+        },
+        {
+          "@type": "Organization",
+          "name": "Chain"
+        },
+        {
+          "@type": "Organization",
+          "name": "Lukka"
+        }
+      ],
+      "knowsAbout": [
+        "Strategic Marketing",
+        "Brand Strategy",
+        "Product Launch",
+        "Chief Marketing Officer",
+        "Web3 Marketing",
+        "Blockchain Marketing",
+        "Enterprise Marketing"
+      ]
+    })
+  }}
+/>
+
 // Count-up animation hook
 function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
   const [count, setCount] = useState(0);
