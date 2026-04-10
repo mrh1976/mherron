@@ -4,14 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
-// Generate static params for all case studies
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.id,
   }));
 }
 
-// SEO: Generate metadata for each case study
 export async function generateMetadata({ 
   params 
 }: { 
