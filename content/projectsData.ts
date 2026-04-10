@@ -159,8 +159,8 @@ export const projects: Project[] = [
     company: "Chain",
     description: "At Chain, I led the end-to-end development and launch of Chain Wallet, a non-custodial wallet designed to give users full control over their digital assets through a secure and intuitive experience. My scope included product positioning, UX and UI direction, brand and visual design, user education, production, and go-to-market execution. The result was a self-custody product built around clarity, trust, and usability, helping bridge the gap between crypto native users and a broader audience entering Web3.",
     images: [
-      "/images/chain-tmb.webp",
-      "/images/work/chainwallet1.webp"
+      "/images/chainwallet.png",
+      "/images/work/chain-wallet-screens.png"
     ],
     videos: [
       "-vWANkv-ZyE"
