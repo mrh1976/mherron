@@ -4,20 +4,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
-// Generate static params for all case studies
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.id,
   }));
 }
 
-// SEO: Generate metadata for each case study
 export async function generateMetadata({ 
   params 
 }: { 
-  params: Promise<{ slug: string }> 
+  params: { slug: string }
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   const project = projects.find((p) => p.id === slug);
 
   if (!project) {
@@ -26,10 +24,7 @@ export async function generateMetadata({
     };
   }
 
-  // Extract key metrics from description for meta description
   const metaDescription = project.description.substring(0, 160) + '...';
-  
-  // SEO-optimized title format: "Project Name | Client - Michael Herron"
   const title = `${project.title} | ${project.company} - Michael Herron`;
 
   return {
@@ -50,24 +45,22 @@ export async function generateMetadata({
   };
 }
 
-export default async function CaseStudyPage({ 
+export default function CaseStudyPage({ 
   params 
 }: { 
-  params: Promise<{ slug: string }> 
+  params: { slug: string }
 }) {
-  const { slug } = await params;
+  const { slug } = params;
   const project = projects.find((p) => p.id === slug);
 
   if (!project) {
     notFound();
   }
 
-  // Find next/previous projects
   const currentIndex = projects.findIndex((p) => p.id === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
 
-  // Extract category/type from description
   const getProjectType = (desc: string): string => {
     if (desc.includes('rebrand') || desc.includes('visual identity')) return 'Brand & Identity';
     if (desc.includes('partnership') && desc.includes('sports')) return 'Sports Partnership';
@@ -79,7 +72,6 @@ export default async function CaseStudyPage({
 
   const projectType = getProjectType(project.description);
 
-  // GEO/AEO: Structured data for search engines and AI
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -102,14 +94,12 @@ export default async function CaseStudyPage({
 
   return (
     <>
-      {/* SEO: Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       <main className="min-h-screen bg-white">
-        {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
             <Link href="/" className="cursor-pointer">
@@ -124,10 +114,8 @@ export default async function CaseStudyPage({
           </div>
         </nav>
 
-        {/* Hero Section */}
         <section className="pt-32 pb-12 px-8">
           <div className="max-w-5xl mx-auto">
-            {/* Breadcrumb for SEO */}
             <div className="text-sm text-gray-400 mb-6">
               <Link href="/" className="hover:text-gray-600">Home</Link>
               {' / '}
@@ -136,7 +124,6 @@ export default async function CaseStudyPage({
               <span className="text-gray-600">{project.title}</span>
             </div>
 
-            {/* Project Type & Company */}
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xs uppercase tracking-widest text-gray-400">
                 {projectType}
@@ -145,14 +132,12 @@ export default async function CaseStudyPage({
               <span className="text-sm text-gray-600">{project.company}</span>
             </div>
 
-            {/* H1: Project Title */}
             <h1 className="text-[48px] md:text-[64px] font-[800] mb-8 leading-[1.05] tracking-[-2.5px]">
               {project.title}<span className="text-yellow-400">.</span>
             </h1>
           </div>
         </section>
 
-        {/* Hero Image/Video */}
         {project.images[0] && (
           <section className="pb-16 px-8">
             <div className="max-w-5xl mx-auto">
@@ -170,7 +155,6 @@ export default async function CaseStudyPage({
           </section>
         )}
 
-        {/* Project Overview */}
         <section className="py-16 px-8 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-[32px] md:text-[40px] font-[800] mb-8 leading-[1.05] tracking-[-2.5px]">
@@ -184,7 +168,6 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* Video Gallery */}
         {project.videos.length > 0 && (
           <section className="py-16 px-8">
             <div className="max-w-5xl mx-auto">
@@ -208,7 +191,6 @@ export default async function CaseStudyPage({
           </section>
         )}
 
-        {/* Image Gallery */}
         {project.images.length > 1 && (
           <section className="py-16 px-8 bg-gray-50">
             <div className="max-w-5xl mx-auto">
@@ -232,11 +214,9 @@ export default async function CaseStudyPage({
           </section>
         )}
 
-        {/* Next/Previous Navigation */}
         <section className="py-16 px-8 border-t border-gray-200">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Previous Project */}
               <Link 
                 href={`/work/${prevProject.id}`}
                 className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
@@ -250,7 +230,6 @@ export default async function CaseStudyPage({
                 <div className="text-sm text-gray-500 mt-2">{prevProject.company}</div>
               </Link>
 
-              {/* Next Project */}
               <Link 
                 href={`/work/${nextProject.id}`}
                 className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
@@ -267,7 +246,6 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-24 px-8 bg-black text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-[36px] md:text-[48px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
@@ -285,7 +263,6 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* Footer */}
         <footer className="py-12 px-8 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-start mb-12">
