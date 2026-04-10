@@ -125,30 +125,37 @@ export default function MiamiHeatPage() {
         )}
 
         {project.images.length > 1 && (
-          <section className="py-16 px-8 bg-gray-50">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
-                Gallery<span className="text-yellow-400">.</span>
-              </h2>
+        <section className="py-16 px-8 border-t border-gray-200">
+  <div className="max-w-5xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Link
+        href={`/work/${prevProject.id}`}
+        className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
+      >
+        <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+          ← Previous Project
+        </div>
+        <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors">
+          {prevProject.title}
+        </h3>
+        <div className="text-sm text-gray-500 mt-2">{prevProject.company}</div>
+      </Link>
 
-              <div className="space-y-8">
-                {project.images.slice(1).map((image, index) => (
-                  <div
-                    key={index}
-                    className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-white"
-                  >
-                    <Image
-                      src={image}
-                      alt={`${project.title} image ${index + 2}`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 1280px) 100vw, 1280px"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+      <Link
+        href={`/work/${nextProject.id}`}
+        className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
+      >
+        <div className="text-xs uppercase tracking-widest text-gray-400 mb-2 text-right">
+          Next Project →
+        </div>
+        <h3 className="text-xl font-medium text-gray-900 group-hover:text-gray-600 transition-colors text-right">
+          {nextProject.title}
+        </h3>
+        <div className="text-sm text-gray-500 mt-2 text-right">{nextProject.company}</div>
+      </Link>
+    </div>
+  </div>
+</section>
         )}
 
         <section className="py-16 px-8 border-t border-gray-200">
