@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/work/:slug"
-  to = "/work/:slug"
-  status = 200
