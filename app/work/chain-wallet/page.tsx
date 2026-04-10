@@ -1,3 +1,9 @@
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+// ... rest of imports
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
