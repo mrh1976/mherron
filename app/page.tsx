@@ -706,9 +706,7 @@ export default function Home() {
     {formStatus === 'loading' ? 'Sending...' : 'Submit'}
   </button>
 </form>
-          <button className="px-12 py-4 bg-[#2a2927] text-white rounded-full text-sm hover:bg-gray-800 transition">
-            Submit
-          </button>
+        
         </div>
       </section>
 
