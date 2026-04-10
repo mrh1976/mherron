@@ -292,4 +292,19 @@ export default async function CaseStudyPage({
         <footer className="py-12 px-8 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-start mb-12">
-              <Image src="/MH-logo.png" alt="MH" wi
+              <Image src="/MH-logo.png" alt="MH" width={32} height={32} />
+            </div>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 border-t border-white/10">
+              <p className="text-xs text-white/50">
+                ©{new Date().getFullYear()} Michael Herron LLC
+              </p>
+              <p className="text-xs text-white/50">
+                Designed in partnership with <span className="text-white">nzmotiondesign.com</span>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </>
+  );
+}
