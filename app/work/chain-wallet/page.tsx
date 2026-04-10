@@ -92,22 +92,32 @@ export default function ChainWalletPage() {
               <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
                 Video<span className="text-yellow-400">.</span>
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.videos.map((videoId, index) => (
-                 <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden">
-  <iframe
-    src={`https://www.youtube.com/embed/${videoId}`}
-    title={`${project.title} video ${index + 1}`}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    className="absolute inset-0 w-full h-full"
-  />
-</div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+              {project.videos.length > 0 && (
+  <section className="py-16 px-8">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
+        Video<span className="text-yellow-400">.</span>
+      </h2>
+
+      <div className="space-y-6">
+        {project.videos.map((videoId, index) => (
+          <div
+            key={videoId}
+            className="relative w-full aspect-video rounded-lg overflow-hidden"
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title={`${project.title} video ${index + 1}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
 
         {project.images.length > 1 && (
           <section className="py-16 px-8 bg-gray-50">
