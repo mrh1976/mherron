@@ -94,15 +94,15 @@ export default function ChainWalletPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.videos.map((videoId, index) => (
-                  <div key={videoId} className="relative w-full aspect-video rounded-lg overflow-hidden">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${videoId}`}
-                      title={`${project.title} video ${index + 1}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
+                 <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden">
+  <iframe
+    src={`https://www.youtube.com/embed/${videoId}`}
+    title={`${project.title} video ${index + 1}`}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    className="absolute inset-0 w-full h-full"
+  />
+</div>
                 ))}
               </div>
             </div>
