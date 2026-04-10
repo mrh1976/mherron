@@ -92,7 +92,7 @@ export default function WorkedOnSection() {
                 }`}>
                   {companyProjects.map((project, projectIndex) => {
                     // Get first image or video thumbnail
-                    const imageUrl = project.images[0] || 
+                    const imageUrl = project.thumbnail || 
                       (project.videos[0] ? `https://img.youtube.com/vi/${project.videos[0]}/maxresdefault.jpg` : null);
                     
                     return (
