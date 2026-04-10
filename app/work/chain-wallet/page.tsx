@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/content/projectsData';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
 
 // Generate static params for all case studies
 export async function generateStaticParams() {
