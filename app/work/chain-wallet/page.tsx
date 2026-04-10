@@ -23,7 +23,7 @@ export default function ChainWalletPage() {
             <Link href="/" className="cursor-pointer">
               <Image src="/MH-logo.png" alt="Michael Herron" width={75} height={75} />
             </Link>
-            <Link 
+            <Link
               href="/#work"
               className="text-white text-sm uppercase tracking-widest hover:text-yellow-400 transition-colors"
             >
@@ -92,32 +92,26 @@ export default function ChainWalletPage() {
               <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
                 Video<span className="text-yellow-400">.</span>
               </h2>
-              {project.videos.length > 0 && (
-  <section className="py-16 px-8">
-    <div className="max-w-5xl mx-auto">
-      <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
-        Video<span className="text-yellow-400">.</span>
-      </h2>
 
-      <div className="space-y-6">
-        {project.videos.map((videoId, index) => (
-          <div
-            key={videoId}
-            className="relative w-full aspect-video rounded-lg overflow-hidden"
-          >
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title={`${project.title} video ${index + 1}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
+              <div className="space-y-6">
+                {project.videos.map((videoId, index) => (
+                  <div
+                    key={videoId}
+                    className="relative w-full aspect-video rounded-lg overflow-hidden"
+                  >
+                    <iframe
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      title={`${project.title} video ${index + 1}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {project.images.length > 1 && (
           <section className="py-16 px-8 bg-gray-50">
@@ -125,15 +119,19 @@ export default function ChainWalletPage() {
               <h2 className="text-[32px] md:text-[40px] font-[800] mb-12 leading-[1.05] tracking-[-2.5px]">
                 Gallery<span className="text-yellow-400">.</span>
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <div className="space-y-8">
                 {project.images.slice(1).map((image, index) => (
-                  <div key={index} className="relative w-full aspect-video overflow-hidden rounded-lg">
+                  <div
+                    key={index}
+                    className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-white"
+                  >
                     <Image
                       src={image}
                       alt={`${project.title} image ${index + 2}`}
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-contain"
+                      sizes="(max-width: 1280px) 100vw, 1280px"
                     />
                   </div>
                 ))}
@@ -145,7 +143,7 @@ export default function ChainWalletPage() {
         <section className="py-16 px-8 border-t border-gray-200">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Link 
+              <Link
                 href={`/work/${prevProject.id}`}
                 className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
               >
@@ -158,7 +156,7 @@ export default function ChainWalletPage() {
                 <div className="text-sm text-gray-500 mt-2">{prevProject.company}</div>
               </Link>
 
-              <Link 
+              <Link
                 href={`/work/${nextProject.id}`}
                 className="group p-8 border border-gray-200 rounded-lg hover:border-yellow-400 transition-all hover:-translate-y-1"
               >
@@ -182,7 +180,7 @@ export default function ChainWalletPage() {
             <p className="text-lg text-white/80 mb-8">
               Interested in partnering on strategic marketing, brand building, or product launches?
             </p>
-            <Link 
+            <Link
               href="/#contact"
               className="inline-block px-12 py-4 bg-yellow-400 text-black rounded-full text-sm font-medium hover:bg-yellow-300 transition"
             >
