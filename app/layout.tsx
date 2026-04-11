@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   keywords: "Mike Herron, Chief Marketing Officer, CMO, Marketing Executive, SaaS Marketing, FinTech Marketing, Enterprise Technology, Brand Strategy, Growth Marketing, Chicago CMO, Marketing Consultant",
   authors: [{ name: "Michael Herron", url: "https://mherron.com" }],
   creator: "Michael Herron",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -23,9 +32,9 @@ export const metadata: Metadata = {
     description: "25+ years driving measurable marketing results for technology and fintech companies. Former CMO at Kadena, Chain, and Lukka. Based in Chicago.",
     siteName: "Mike Herron",
     images: [{
-      url: "/fullhead.png",
-      width: 500,
-      height: 500,
+      url: "/og-image-2026.jpg",
+      width: 1200,
+      height: 630,
       alt: "Mike Herron - Chief Marketing Officer",
     }],
   },
@@ -33,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mike Herron | Chief Marketing Officer",
     description: "Marketing executive with 25+ years experience. $1B+ capital raised. Fortune 500 clients. Chicago-based.",
-    images: ["/fullhead.png"],
+    images: ["/og-image-2026.jpg"],
   },
   robots: {
     index: true,
@@ -87,6 +96,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { "@type": "Organization", name: "Kadena" },
                 { "@type": "Organization", name: "Chain Global" },
                 { "@type": "Organization", name: "Lukka" },
+                { "@type": "Organization", name: "Solo Cup Company" },
+                { "@type": "Organization", name: "Fusion 92" },
+        
                 { "@type": "Organization", name: "U.S. Cellular" }
               ]
             })
