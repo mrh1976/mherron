@@ -32,7 +32,7 @@ export const projects: Project[] = [
     id: "croatian-football",
     title: "Croatian Men's National Football Club",
     company: "Kadena",
-    description: "As Chief Marketing Officer at Kadena, I helped establish the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.",
+    description: "As Chief Marketing Officer at Kadena, I established the company as an official partner of the Croatian Men's National Football Team. The partnership brought blockchain technology into global football through jersey placement, World Cup visibility, and digital fan engagement. The work included mobile-first campaigns to drive app downloads as well as announcement and launch assets designed to introduce the partnership to a global audience.",
     thumbnail: "/images/croatia-tmb.webp",
     images: [
       "/images/croatianfootball-hero.png",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     id: "tiffany-nftiff",
     title: "Tiffany & Co. NFTiff",
     company: "Chain",
-    description: "At Chain, I helped lead the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch. The project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.",
+    description: "At Chain, I led the launch of NFTiff, Tiffany & Co's first Web3 initiative in collaboration with Yuga Labs and the CryptoPunks community. NFTiff offered 250 limited-edition digital passes that allowed CryptoPunk holders to convert their NFTs into custom luxury pendants, selling out in minutes and generating more than $12.5 million in revenue at launch. The project received extensive global press coverage across luxury, technology, and financial media, including Forbes, Bloomberg, The Wall Street Journal, WWD, Vogue Business, CoinDesk, and The New York Times, and quickly became a reference point for how legacy luxury brands can thoughtfully enter Web3 while preserving craftsmanship and brand equity.",
     thumbnail: "/images/nftiff-tmb.webp",
     images: [
       "/images/tiffanynftiff-hero.png"
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     id: "new-england-patriots",
     title: "New England Patriots",
     company: "Chain",
-    description: "At Chain, I helped build and activate the company's partnership with the New England Patriots, creating branded content, stadium presence, and fan-facing campaign moments designed to connect blockchain technology to one of the most recognizable franchises in professional sports. The work combined premium brand storytelling, team partnership activation, and audience engagement across digital and live environments.",
+    description: "At Chain, I built and activated the company's partnership with the New England Patriots, creating branded content, stadium presence, and fan-facing campaign moments designed to connect blockchain technology to one of the most recognizable franchises in professional sports. The work combined premium brand storytelling, team partnership activation, and audience engagement across digital and live environments.",
     thumbnail: "/images/pats-tmb.webp",
     images: [
       "/images/newenglandpatriots-hero.png",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     id: "lukka-driven-by-data",
     title: "Driven by Data",
     company: "Lukka",
-    description: "At Lukka, I helped create and launch Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
+    description: "At Lukka, I created and launched Driven by Data, a global partnership with Rokit Venturi Racing in Formula E. The campaign used motorsport as a lens to show how teams analyze data, run models, and use simulation to improve vehicle performance, mirroring how institutions rely on complex crypto data feeds. By simplifying a highly technical story, the campaign drove qualified business development leads and generated revenue that exceeded the cost of the partnership, becoming profitable within its first season.",
     thumbnail: "/images/lukka2-tmb.webp",
     images: [
       "/images/lukkadrivenbydata-hero.png",
@@ -201,7 +201,7 @@ export const projects: Project[] = [
     id: "uscellular-activations",
     title: "Brand Activations",
     company: "U.S. Cellular",
-    description: "At U.S. Cellular, I oversaw brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences. The programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
+    description: "At U.S. Cellular, I led brand content across digital and social channels, producing large-scale activation campaigns designed to engage consumers, build brand awareness, and support new lines of service. The work spanned always-on content, seasonal storytelling, and emerging formats, including playlists such as 30 Days of Good, The Future of Good, A Season of Traditions, and immersive 360-degree video experiences. The programs were built in partnership with brands and organizations including DJI, Nintendo, Disney, the NBA, the Oklahoma City Thunder, Summerfest, CES, national media outlets, schools, shelters, and charitable organizations. Together, the content helped position U.S. Cellular as a brand rooted in community, innovation, and meaningful connection.",
     thumbnail: "/images/fog-tmb.webp",
     images: [
       "/images/uscellularbrand-hero.png"
