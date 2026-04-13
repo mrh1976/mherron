@@ -1,53 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { siteContent } from "@/content";
 import WorkedOnSection from "@/components/WorkedOnSection";
-
-// Count-up animation hook
-function useCountUp(end: number, duration: number = 2000, delay: number = 0) {
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          setTimeout(() => {
-            const startTime = Date.now();
-            const animate = () => {
-              const elapsed = Date.now() - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              
-              // Easing function for smooth animation
-              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-              
-              setCount(Math.floor(easeOutQuart * end));
-              
-              if (progress < 1) {
-                requestAnimationFrame(animate);
-              } else {
-                setHasAnimated(true);
-              }
-            };
-            animate();
-          }, delay);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [end, duration, delay, hasAnimated]);
-
-  return { count, ref };
-}
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -155,71 +111,6 @@ export default function Home() {
       });
     }
   };
-
-  // Count-up hooks for each stat with staggered delays (slower)
-  const stat1 = useCountUp(20, 2200, 0);
-  const stat2 = useCountUp(6, 2200, 150);
-  const stat3 = useCountUp(300, 2500, 300);
-  const stat4 = useCountUp(50, 2200, 450);
-  const stat5 = useCountUp(100, 2400, 600);
-  const stat6 = useCountUp(30, 2200, 750);
-  
-  // Special animation for unicorn stat - counts in sequence
-  const [unicornVisible, setUnicornVisible] = useState(false);
-  const unicornRef = useRef<HTMLDivElement>(null);
-  const [unicornStart, setUnicornStart] = useState(0);
-  const [unicornEnd, setUnicornEnd] = useState(0);
-  const [showArrow, setShowArrow] = useState(false);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !unicornVisible) {
-          setUnicornVisible(true);
-          
-          // Animate first number ($12M)
-          const startTime1 = Date.now();
-          const animate1 = () => {
-            const elapsed = Date.now() - startTime1;
-            const progress = Math.min(elapsed / 1500, 1);
-            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-            setUnicornStart(Math.floor(easeOutQuart * 12));
-            
-            if (progress < 1) {
-              requestAnimationFrame(animate1);
-            } else {
-              // Show arrow and start second animation
-              setTimeout(() => {
-                setShowArrow(true);
-                
-                // Animate second number ($1.35B)
-                const startTime2 = Date.now();
-                const animate2 = () => {
-                  const elapsed = Date.now() - startTime2;
-                  const progress = Math.min(elapsed / 1500, 1);
-                  const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                  setUnicornEnd(Math.floor(easeOutQuart * 135));
-                  
-                  if (progress < 1) {
-                    requestAnimationFrame(animate2);
-                  }
-                };
-                animate2();
-              }, 200);
-            }
-          };
-          animate1();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (unicornRef.current) {
-      observer.observe(unicornRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [unicornVisible]);
 
   const getLogoFilename = (jobId: string) => {
     if (jobId === "herron-llc") return "MHlogo-h.png";
@@ -422,26 +313,26 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Top Row - 4 Stats - RESPONSIVE: 1 col mobile, 2 cols small, 4 cols desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
-            <div className="text-center" ref={stat1.ref}>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat1.count}<span className="text-yellow-400">+</span></div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">20<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Years Experience
               </div>
             </div>
-            <div className="text-center" ref={stat2.ref}>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat2.count}<span className="text-yellow-400">x</span></div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">6<span className="text-yellow-400">x</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 First Marketing Hire
               </div>
             </div>
-            <div className="text-center" ref={stat3.ref}>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">${stat3.count}M<span className="text-yellow-400">+</span></div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">$300M<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Funds Raised
               </div>
             </div>
-            <div className="text-center" ref={stat4.ref}>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">{stat4.count}<span className="text-yellow-400">+</span></div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">50<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Global Brands
               </div>
@@ -450,27 +341,23 @@ export default function Home() {
 
           {/* Bottom Row - 3 Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
-            {/* RESPONSIVE FIX: Unicorn stat - smaller text on mobile, wraps better */}
-            <div className="text-center" ref={unicornRef}>
+            {/* Unicorn stat - static */}
+            <div className="text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
-                ${unicornStart}M
-                <span className={`text-yellow-400 transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>→</span>
-                <span className={`transition-opacity duration-500 ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
-                  ${(unicornEnd / 100).toFixed(2)}B
-                </span>
+                $12M<span className="text-yellow-400">→</span>$1.35B
               </div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Unicorn Valuation
               </div>
             </div>
-            <div className="text-center" ref={stat5.ref}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat5.count}<span className="text-yellow-400">+</span></div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">100<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Team Members Hired
               </div>
             </div>
-            <div className="text-center" ref={stat6.ref}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">{stat6.count}<span className="text-yellow-400">+</span></div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">30<span className="text-yellow-400">+</span></div>
               <div className="text-[11px] uppercase tracking-widest text-white/50">
                 Product Launches
               </div>
