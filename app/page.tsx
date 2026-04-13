@@ -475,34 +475,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 px-8">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-12 md:mb-16 leading-[1.05] tracking-[-2.5px] text-center">
-            What People Say<span className="text-yellow-400">.</span>
-          </h2>
+     <section className="py-24 md:py-32 px-8">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-12 md:mb-16 leading-[1.05] tracking-[-2.5px] text-center">
+      What People Say<span className="text-yellow-400">.</span>
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;[Mike is second to none as a marketing leader. He keeps teams aligned, stakeholders informed, and stays focused on outcomes that matter. His command of the CMO role is universally impressive, and his honesty, transparency, and execution consistently show in the results.]&quot;
-              </p>
-              <div className="text-sm">
-                <div className="font-[600]">[Name]</div>
-                <div className="text-gray-500">[Title, Company]</div>
-              </div>
-            </div>
+    <div className="grid md:grid-cols-2 gap-8">
+      <div className="bg-gray-50 p-8 rounded-lg">
+        <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+          &quot;Mike is second to none as a marketing leader. He keeps teams aligned, stakeholders informed, and stays focused on outcomes that matter. His command of the CMO role is universally impressive, and his honesty, transparency, and execution consistently show in the results.&quot;
+        </p>
+        <div className="text-sm">
+          <div className="font-[600]">[Name]</div>
+          <div className="text-gray-500">[Title, Company]</div>
+        </div>
+      </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;[Add your second testimonial here]&quot;
-              </p>
-              <div className="text-sm">
-                <div className="font-[600]">[Name]</div>
-                <div className="text-gray-500">[Title, Company]</div>
-              </div>
-            </div>
-          </div>
-      </section>
+      <div className="bg-gray-50 p-8 rounded-lg">
+        <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+          &quot;[Add your second testimonial here]&quot;
+        </p>
+        <div className="text-sm">
+          <div className="font-[600]">[Name]</div>
+          <div className="text-gray-500">[Title, Company]</div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
 
       <section id="experience" className="py-24 md:py-32 px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
