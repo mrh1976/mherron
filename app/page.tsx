@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { siteContent } from "@/content";
 import WorkedOnSection from "@/components/WorkedOnSection";
 
 export default function Home() {
