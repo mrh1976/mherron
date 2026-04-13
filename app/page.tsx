@@ -502,9 +502,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <p className="text-center text-gray-400 text-sm mt-8">Testimonials coming soon</p>
-        </div>
       </section>
 
       <section id="experience" className="py-24 md:py-32 px-8 bg-gray-50">
