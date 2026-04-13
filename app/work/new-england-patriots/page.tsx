@@ -15,16 +15,14 @@ export const metadata: Metadata = {
   description: project.description.substring(0, 160) + '...',
 };
 
-export default function NewEnglandPatriotsPage() {
-  const projectType = 'Partnership Marketing';
-
+export default function ProjectPage() {
   return (
     <>
       <main className="min-h-screen bg-white">
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2a2927]">
           <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
             <Link href="/" className="cursor-pointer">
-              <Image src="/MH-logo.png" alt="Michael Herron" width={75} height={75} />
+              <Image src="/MH-logo.png" alt="Michael Herron Logo" width={75} height={75} />
             </Link>
             <Link
               href="/#work"
@@ -43,14 +41,6 @@ export default function NewEnglandPatriotsPage() {
               <Link href="/#work" className="hover:text-gray-600">Work</Link>
               {' / '}
               <span className="text-gray-600">{project.title}</span>
-            </div>
-
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs uppercase tracking-widest text-gray-400">
-                {projectType}
-              </span>
-              <span className="text-yellow-400">•</span>
-              <span className="text-sm text-gray-600">{project.company}</span>
             </div>
 
             <h1 className="text-[48px] md:text-[64px] font-[800] mb-8 leading-[1.05] tracking-[-2.5px]">
@@ -131,7 +121,7 @@ export default function NewEnglandPatriotsPage() {
                   >
                     <Image
                       src={image}
-                      alt={`${project.title} image ${index + 2}`}
+                      alt={`${project.title} campaign creative for ${project.company} by Michael Herron`}
                       fill
                       className="object-contain"
                       sizes="(max-width: 1280px) 100vw, 1280px"
@@ -192,26 +182,26 @@ export default function NewEnglandPatriotsPage() {
           </div>
         </section>
 
- <footer className="py-12 bg-[#2a2927]">
-  <div className="max-w-7xl mx-auto px-8">
-    <div className="mb-12">
-      <Image src="/MH-logo.png" alt="MH" width={32} height={32} />
-    </div>
-    
-    <p className="text-xs text-white/60 leading-relaxed mb-8">
-      All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
-    </p>
-    
-    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 border-t border-white/10">
-      <p className="text-xs text-white/50">
-        ©{new Date().getFullYear()} Michael Herron LLC
-      </p>
-      <p className="text-xs text-white/50">
-        Designed in partnership with <span className="text-white">nzmotiondesign.com</span>
-      </p>
-    </div>
-  </div>
-</footer>
+        <footer className="py-12 bg-[#2a2927]">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="mb-12">
+              <Image src="/MH-logo.png" alt="Michael Herron Logo" width={32} height={32} />
+            </div>
+            
+            <p className="text-xs text-white/60 leading-relaxed mb-8">
+              All trademarks, logos, and brand names displayed on this website are the property of their respective owners. They are used here strictly for identification and informational purposes to represent companies I have worked for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 border-t border-white/10">
+              <p className="text-xs text-white/50">
+                ©{new Date().getFullYear()} Michael Herron LLC
+              </p>
+              <p className="text-xs text-white/50">
+                Designed in partnership with <span className="text-white">nzmotiondesign.com</span>
+              </p>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
