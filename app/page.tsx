@@ -396,11 +396,140 @@ export default function Home() {
               </p>
             </div>
             <div className="md:col-span-3 text-[#6b6b6b] text-[15px] md:text-[17px] leading-relaxed space-y-4">
-              {siteContent.about.text.split("\n\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+              <p>
+                I&apos;ve spent 25 years helping technology and fintech companies solve their toughest marketing challenges—from launching products that drove $15M+ in revenue to scaling communities by 200%+ to positioning companies for unicorn valuations.
+              </p>
+              <p>
+                I&apos;ve built marketing organizations from the ground up for companies ranging from early-stage startups to billion-dollar enterprises across SaaS, FinTech, blockchain, and telecommunications. Whether it&apos;s launching new products, negotiating major partnerships, or scaling high-performing teams, I focus on creating marketing systems that deliver measurable, sustainable growth.
+              </p>
+              <p>
+                I&apos;m currently available for consulting engagements, fractional CMO work, and strategic advisory projects. I work fast, I focus on results, and I can start immediately.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* How I Can Help Section - NEW */}
+      <section className="py-24 md:py-32 px-8 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-8 md:mb-12 leading-[1.05] tracking-[-2.5px]">
+            How I Can Help<span className="text-yellow-400">.</span>
+          </h2>
+          <p className="text-[#6b6b6b] text-[17px] md:text-[19px] leading-relaxed mb-12 max-w-3xl">
+            I&apos;m available now for consulting engagements, fractional CMO roles, and strategic advisory work. Here&apos;s how I can help:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Service 1 */}
+            <div className="bg-white p-8 rounded-lg">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                Fractional CMO & Marketing Leadership
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                Part-time executive marketing leadership for companies that need strategic direction without a full-time hire. I build systems, lead teams, and drive measurable growth.
+              </p>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-white p-8 rounded-lg">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                Go-to-Market Strategy
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                Product launch planning, market positioning, messaging frameworks, and competitive strategy. From concept to execution, I help you enter markets with clarity and momentum.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white p-8 rounded-lg">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                Brand Strategy & Repositioning
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                Complete brand development or strategic repositioning for growth. I&apos;ve led rebrands for blockchain companies, enterprise SaaS, and consumer brands—always with measurable business outcomes.
+              </p>
+            </div>
+
+            {/* Service 4 */}
+            <div className="bg-white p-8 rounded-lg">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                Marketing Team Building
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                Building your first marketing function or scaling an existing team. I hire, structure, and operationalize marketing organizations that deliver consistent results.
+              </p>
+            </div>
+
+            {/* Service 5 */}
+            <div className="bg-white p-8 rounded-lg md:col-span-2">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                Partnership Strategy & Negotiation
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                From Fortune 500 partnerships to professional sports sponsorships, I identify opportunities, negotiate terms, and activate partnerships that drive revenue and visibility.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="bg-black text-white p-12 rounded-lg text-center">
+            <h3 className="text-[28px] md:text-[32px] font-[800] mb-4 tracking-tight">
+              Start With A Free Marketing Audit
+            </h3>
+            <p className="text-white/80 text-[17px] leading-relaxed mb-8 max-w-2xl mx-auto">
+              30-minute strategy call + written recommendations. We&apos;ll identify what&apos;s holding your marketing back and create a clear action plan—no commitment required.
+            </p>
+            <a
+              href="https://calendly.com/mherron54/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-400 text-black text-sm font-[600] rounded-md hover:bg-yellow-300 transition-colors"
+            >
+              Book Your Free Audit
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="opacity-80">
+                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section - NEW */}
+      <section className="py-24 md:py-32 px-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-12 md:mb-16 leading-[1.05] tracking-[-2.5px] text-center">
+            What People Say<span className="text-yellow-400">.</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Testimonial 1 - REPLACE WITH REAL TESTIMONIAL */}
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;[Add your first testimonial here - reach out to CEOs/founders you&apos;ve worked with]&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">[Name]</div>
+                <div className="text-gray-500">[Title, Company]</div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 - REPLACE WITH REAL TESTIMONIAL */}
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;[Add your second testimonial here]&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">[Name]</div>
+                <div className="text-gray-500">[Title, Company]</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Note to self - remove this comment before final deploy */}
+          <p className="text-center text-gray-400 text-sm mt-8">
+            Testimonials coming soon - gathering quotes from past clients
+          </p>
         </div>
       </section>
 
@@ -556,19 +685,12 @@ export default function Home() {
       {/* RESPONSIVE FIX: Contact form stacks on mobile */}
       <section id="contact" className="py-24 md:py-32 px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Let&apos;s work <span className="text-[#9ca3af]">together</span>
-            <span className="text-yellow-400">.</span>
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-4 leading-[1.05] tracking-[-2.5px]">
+            Start With A Free Marketing Audit<span className="text-yellow-400">.</span>
           </h2>
-          <p className="text-base mb-12 md:mb-16 flex items-center justify-center gap-2 md:gap-3 flex-wrap">
-            <span>Audits</span>
-            <span className="text-yellow-400">|</span>
-            <span>Consulting</span>
-            <span className="text-yellow-400">|</span>
-            <span>Fractional</span>
-            <span className="text-yellow-400">|</span>
-            <span>Full-Time</span>
-            <span className="text-yellow-400">|</span>
+          <p className="text-[#6b6b6b] text-[17px] md:text-[19px] leading-relaxed mb-12 max-w-2xl mx-auto">
+            30-minute strategy call + written recommendations. No commitment required.
+          </p>
             <span>Board Member</span>
           </p>
           {/* RESPONSIVE: Stack inputs on mobile, side-by-side on tablet+ */}
