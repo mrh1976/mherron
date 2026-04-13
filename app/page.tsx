@@ -267,7 +267,7 @@ export default function Home() {
             className="cursor-pointer"
             aria-label="Scroll to top"
           >
-            <Image src="/MH-logo.png" alt="MH" width={75} height={75} />
+            <Image src="/MH-logo.png" alt="Michael Herron Logo" width={75} height={75} />
           </button>
 
           {/* Centered Desktop Nav Links */}
@@ -651,7 +651,7 @@ export default function Home() {
                   <div key={brand.name} className="flex items-center justify-center h-12 md:h-16">
                     <Image
                       src={`/images/${brand.file}`}
-                      alt={brand.name}
+                      alt={`${brand.name} logo - client of Michael Herron`}
                       width={120}
                       height={60}
                       className="w-auto h-auto max-w-full max-h-full object-contain opacity-40 hover:opacity-70 transition"
@@ -745,7 +745,7 @@ export default function Home() {
           <div className="flex justify-between items-start mb-12">
             <Image
               src="/MH-logo.png"
-              alt="MH"
+              alt="Michael Herron Logo"
               width={32}
               height={32}
             />
