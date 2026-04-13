@@ -96,12 +96,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { "@type": "Organization", name: "Kadena" },
                 { "@type": "Organization", name: "Chain Global" },
                 { "@type": "Organization", name: "Lukka" },
-                { "@type": "Organization", name: "Solo Cup Company" },
-                { "@type": "Organization", name: "Fusion 92" },
-        
                 { "@type": "Organization", name: "U.S. Cellular" }
               ]
             })
+          }}
+        />
+        
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1HLYS59QVZ"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1HLYS59QVZ');
+            `,
           }}
         />
       </head>
