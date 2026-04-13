@@ -487,8 +487,8 @@ export default function Home() {
           &quot;Mike is second to none as a marketing leader. He keeps teams aligned, stakeholders informed, and stays focused on outcomes that matter. His command of the CMO role is universally impressive, and his honesty, transparency, and execution consistently show in the results.&quot;
         </p>
         <div className="text-sm">
-          <div className="font-[600]">[Name]</div>
-          <div className="text-gray-500">[Title, Company]</div>
+          <div className="font-[600]">[CEO & Co-Founder]</div>
+          <div className="text-gray-500">[Web3 Infrastructure Company]</div>
         </div>
       </div>
 
