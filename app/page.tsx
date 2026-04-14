@@ -487,18 +487,18 @@ export default function Home() {
           &quot;Mike is second to none as a marketing leader. He keeps teams aligned, stakeholders informed, and stays focused on outcomes that matter. His command of the CMO role is universally impressive, and his honesty, transparency, and execution consistently show in the results.&quot;
         </p>
         <div className="text-sm">
-          <div className="font-[600]">[CEO & Co-Founder]</div>
-          <div className="text-gray-500">[Web3 Infrastructure Company]</div>
+          <div className="font-[600]">CEO & Co-Founder</div>
+          <div className="text-gray-500">Web3 Infrastructure Company</div>
         </div>
       </div>
 
       <div className="bg-gray-50 p-8 rounded-lg">
         <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-          &quot;[Add your second testimonial here]&quot;
+          &quot;Mike completely transformed how we think about our brand and positioning. His work went far beyond a typical rebrand. He defined our ideal customer profile, clarified our messaging, and created a strategic foundation that guided every aspect of our new identity. The result was a successful rebrand that truly reflects who we are and how we serve our clients. I was blown away by the depth and quality of his work. &quot;
         </p>
         <div className="text-sm">
-          <div className="font-[600]">[Name]</div>
-          <div className="text-gray-500">[Title, Company]</div>
+          <div className="font-[600]">Founder</div>
+          <div className="text-gray-500">Technical Recruitment Firm</div>
         </div>
       </div>
     </div>
