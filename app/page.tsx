@@ -249,7 +249,10 @@ export default function Home() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-[42px] md:text-[68px] lg:text-[80px] font-[800] mb-0 leading-[1.1] md:leading-[1.05] tracking-[-4.16px]">
-            Turn Complex Marketing Ideas Into Measurable Results<span className="text-yellow-400">.</span>
+            Turn Complex Marketing Ideas
+            <br />
+            Into Measurable Results
+            <span className="text-yellow-400">.</span>
           </h1>
 
           <div className="relative mx-auto mb-0 w-full max-w-[850px] h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden -mt-12 md:-mt-20">
