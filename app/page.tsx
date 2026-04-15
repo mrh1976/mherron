@@ -363,7 +363,7 @@ export default function Home() {
                 Fractional CMO & Marketing Leadership
               </h3>
               <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
-                Part-time executive marketing leadership for companies that need strategic direction without a full-time hire. I build systems, lead teams, and drive measurable growth.
+                Part-time executive marketing leadership for companies that need strategic direction without a full-time hire. I build marketing systems, lead cross-functional teams, and drive measurable growth. Typically for Series A-C companies, enterprise technology firms, or organizations undergoing major market transitions. You get decades of CMO experience at a fraction of the cost.
               </p>
             </div>
 
@@ -372,7 +372,7 @@ export default function Home() {
                 Go-to-Market Strategy
               </h3>
               <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
-                Product launch planning, market positioning, messaging frameworks, and competitive strategy. From concept to execution, I help you enter markets with clarity and momentum.
+                End-to-end product launch planning from positioning and messaging to channel strategy and sales enablement. I've launched 30+ products across SaaS, fintech, and blockchain. From seed-stage MVPs to enterprise platforms generating $15M+ in first-year revenue. Whether you're entering a new market or launching your next product, I help you do it with clarity and momentum.
               </p>
             </div>
 
@@ -381,7 +381,16 @@ export default function Home() {
                 Brand Strategy & Repositioning
               </h3>
               <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
-                Complete brand development or strategic repositioning for growth. I&apos;ve led rebrands for blockchain companies, enterprise SaaS, and consumer brands—always with measurable business outcomes.
+                Complete brand development or strategic repositioning for growth. I've led rebrands for blockchain companies, enterprise SaaS platforms, and consumer brands. Always with measurable business outcomes. From brand architecture and messaging frameworks to visual identity and go-to-market rollout, I help companies clarify who they are and how they compete.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg">
+              <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
+                AI & Marketing Technology Strategy
+              </h3>
+              <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
+                Help companies identify, evaluate, and implement AI tools for content creation, analytics, and customer engagement. From ChatGPT workflows and generative AI for campaigns to predictive analytics and marketing automation, I translate AI hype into practical marketing systems that deliver ROI. Perfect for companies looking to leverage AI without the missteps.
               </p>
             </div>
 
@@ -390,16 +399,16 @@ export default function Home() {
                 Marketing Team Building
               </h3>
               <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
-                Building your first marketing function or scaling an existing team. I hire, structure, and operationalize marketing organizations that deliver consistent results.
+                Building your first marketing function or scaling an existing team. I hire, structure, and operationalize marketing organizations that deliver consistent results. I've built teams from 0 to 16+ across agencies, startups, and enterprise companies. This includes defining roles, creating processes, onboarding agency partners, and establishing KPIs that matter.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg md:col-span-2">
+            <div className="bg-white p-8 rounded-lg">
               <h3 className="text-[22px] font-[800] mb-3 tracking-tight">
                 Partnership Strategy & Negotiation
               </h3>
               <p className="text-[#6b6b6b] text-[15px] leading-relaxed">
-                From Fortune 500 partnerships to professional sports sponsorships, I identify opportunities, negotiate terms, and activate partnerships that drive revenue and visibility.
+                Major partnership identification, negotiation, and activation. From Fortune 500 partnerships to professional sports sponsorships (Patriots, Heat, Croatian National Football Team), I identify opportunities, negotiate terms, and activate partnerships that drive revenue and brand visibility. I've closed deals ranging from six-figure sponsorships to multi-million dollar strategic alliances.
               </p>
             </div>
           </div>
