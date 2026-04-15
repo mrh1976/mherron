@@ -3,12 +3,64 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import WorkedOnSection from "@/components/WorkedOnSection";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [scrolled, setScrolled] = useState(false);
+
+  // Contact form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    challenge: '',
+    budget: ''
+  });
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [formMessage, setFormMessage] = useState('');
+
+  // Handle form input changes
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('loading');
+    setFormMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          message: `Marketing Challenge: ${formData.challenge}\n\nBudget: ${formData.budget}\n\nCompany: ${formData.company}`
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormMessage('Thanks for your request! I\'ll review it and send you a calendar link within 24 hours if I think I can help.');
+        setFormData({ name: '', email: '', company: '', challenge: '', budget: '' });
+      } else {
+        setFormStatus('error');
+        setFormMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setFormMessage('Failed to send request. Please try again.');
+    }
+  };
 
   // Track scroll for nav background
   useEffect(() => {
@@ -27,7 +79,7 @@ export default function Home() {
 
   // Track active section
   useEffect(() => {
-    const sections = ['services', 'work', 'about'];
+    const sections = ['services', 'work', 'about', 'contact'];
     
     const observer = new IntersectionObserver(
       (entries) => {
@@ -135,24 +187,13 @@ export default function Home() {
               >
                 About
               </button>
-              <a
-                href="https://calendly.com/mherron54/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="px-6 py-2 bg-yellow-400 text-black text-sm font-[600] rounded-md hover:bg-yellow-300 transition-colors"
               >
-                Book Free Audit
-              </a>
+                Request Free Audit
+              </button>
             </nav>
-
-            {/* Availability Badge (Desktop only) */}
-            <div className="hidden xl:flex items-center gap-2 text-xs">
-              <span className="uppercase tracking-widest text-white/50">Availability</span>
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                Available for consulting
-              </span>
-            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -192,14 +233,12 @@ export default function Home() {
                 >
                   About
                 </button>
-                <a
-                  href="https://calendly.com/mherron54/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 bg-yellow-400 text-black text-sm font-[600] rounded-md hover:bg-yellow-300 transition-colors text-center"
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="px-6 py-2 bg-yellow-400 text-black text-sm font-[600] rounded-md hover:bg-yellow-300 transition-colors text-center"
                 >
-                  Book Free Audit
-                </a>
+                  Request Free Audit
+                </button>
               </nav>
             </div>
           )}
@@ -228,26 +267,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-white pointer-events-none"></div>
           </div>
 
-          <p className="relative z-10 text-[19px] md:text-[21px] text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed -mt-16 md:-mt-24">
+          <p className="relative z-10 text-[19px] md:text-[21px] text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed -mt-16 md:-mt-24">
             I&apos;m a marketing executive with 20+ years of experience and a
             decade as a CMO helping technology and fintech companies grow. I
             work with founders and leadership teams to diagnose what&apos;s holding
             marketing back and build the strategy and positioning needed to
             create consistent growth.
           </p>
-
-          <a
-            href="https://calendly.com/mherron54/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white text-sm rounded-md hover:bg-gray-800 transition-colors"
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="opacity-80">
-              <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M2 5L8 9L14 5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-            Schedule A Free Marketing Audit
-          </a>
         </div>
       </section>
 
@@ -384,19 +410,17 @@ export default function Home() {
               Start With A Free Marketing Audit
             </h3>
             <p className="text-white/80 text-[17px] leading-relaxed mb-8 max-w-2xl mx-auto">
-              30-minute strategy call + written recommendations. We&apos;ll identify what&apos;s holding your marketing back and create a clear action plan—no commitment required.
+              Fill out the form below and I&apos;ll review your request. If I think I can help, I&apos;ll send you a calendar link within 24 hours.
             </p>
-            <a
-              href="https://calendly.com/mherron54/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('contact')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-400 text-black text-sm font-[600] rounded-md hover:bg-yellow-300 transition-colors"
             >
-              Book Your Free Audit
+              Request Your Free Audit
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="opacity-80">
                 <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -432,8 +456,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WORKED ON (PORTFOLIO) */}
-      <WorkedOnSection />
+      {/* WORKED ON (PORTFOLIO) - Compact Version */}
+      <section id="work" className="py-24 md:py-32 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-8 md:mb-12 leading-[1.05] tracking-[-2.5px] text-center">
+            Worked On<span className="text-yellow-400">.</span>
+          </h2>
+          <p className="text-[#6b6b6b] text-[17px] md:text-[19px] leading-relaxed mb-16 max-w-3xl mx-auto text-center">
+            Here are a few examples of the campaigns, partnerships, launches, and brand moments I helped create.
+          </p>
+
+          {/* Portfolio Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { img: "nftiff-tmb.webp", title: "Tiffany & Co. NFTiff", tag: "Luxury & Web3", url: "/work/tiffany-nftiff" },
+              { img: "newkadena-tmb.webp", title: "#NewKadena", tag: "Brand & Identity", url: "/work/newkadena" },
+              { img: "croatia-tmb.webp", title: "Croatian Football", tag: "Sports Partnership", url: "/work/croatian-football" },
+              { img: "chainweb-tmb.webp", title: "Chainweb EVM", tag: "Technical Launch", url: "/work/chainweb-evm" },
+              { img: "pats-tmb.webp", title: "New England Patriots", tag: "Sports Partnership", url: "/work/new-england-patriots" },
+              { img: "chain-tmb.webp", title: "Chain Wallet App", tag: "Product Launch", url: "/work/chain-wallet" },
+              { img: "heat-tmb.webp", title: "Miami Heat", tag: "Sports Partnership", url: "/work/miami-heat" },
+              { img: "lukka2-tmb.webp", title: "Driven by Data", tag: "Brand Campaign", url: "/work/lukka-driven-by-data" },
+              { img: "lukka-tmb.webp", title: "Unicorn Valuation", tag: "Series B", url: "/work/lukka-unicorn" },
+              { img: "hrb-tmb.webp", title: "H&R Block", tag: "Consumer Finance", url: "/work/hrblock" },
+              { img: "uscc-tmb.webp", title: "Distracted Driving PSA", tag: "Public Safety", url: "/work/uscellular-psa" },
+              { img: "fog-tmb.webp", title: "Brand Activations", tag: "Consumer Campaign", url: "/work/uscellular-activations" },
+            ].map((project) => (
+              <Link
+                key={project.url}
+                href={project.url}
+                className="group relative overflow-hidden rounded-lg aspect-[4/3] block"
+              >
+                <Image
+                  src={`/images/${project.img}`}
+                  alt={`${project.title} - marketing campaign by Michael Herron`}
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                  <div className="text-xs uppercase tracking-widest text-yellow-400 mb-2">{project.tag}</div>
+                  <h3 className="text-white text-lg md:text-xl font-[700]">{project.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT SECTION - MOVED DOWN & SHORTENED */}
       <section id="about" className="py-24 md:py-32 px-8 bg-gray-50">
@@ -550,29 +619,137 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA - REPLACES CONTACT FORM */}
-      <section className="py-24 md:py-32 px-8 bg-black text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px]">
-            Ready To Get Started<span className="text-yellow-400">?</span>
+      {/* CONTACT FORM SECTION */}
+      <section id="contact" className="py-24 md:py-32 px-8 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-6 leading-[1.05] tracking-[-2.5px] text-center">
+            Request Your Free Marketing Audit<span className="text-yellow-400">.</span>
           </h2>
-          <p className="text-white/80 text-[17px] md:text-[19px] leading-relaxed mb-12 max-w-2xl mx-auto">
-            Book a free 30-minute marketing audit and let's identify what's holding your marketing back.
+          <p className="text-[#6b6b6b] text-[17px] md:text-[19px] leading-relaxed mb-12 max-w-2xl mx-auto text-center">
+            Let's make sure we're a good fit. Fill out the form below and I'll review your request. If I think I can help, I'll send you a calendar link within 24 hours.
           </p>
-          <a
-            href="https://calendly.com/mherron54/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-yellow-400 text-black text-base font-[600] rounded-md hover:bg-yellow-300 transition-colors"
-          >
-            Book Your Free Audit
-            <svg width="20" height="20" viewBox="0 0 16 16" fill="none" className="opacity-80">
-              <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <p className="mt-8 text-sm text-white/60">
+
+          <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-lg shadow-sm">
+            <div className="space-y-6">
+              {/* Name */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-[600] text-gray-700 mb-2">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-[600] text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              {/* Company */}
+              <div>
+                <label htmlFor="company" className="block text-sm font-[600] text-gray-700 mb-2">
+                  Company *
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              {/* Marketing Challenge */}
+              <div>
+                <label htmlFor="challenge" className="block text-sm font-[600] text-gray-700 mb-2">
+                  What marketing challenge are you facing? *
+                </label>
+                <textarea
+                  id="challenge"
+                  name="challenge"
+                  value={formData.challenge}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50 resize-none"
+                  placeholder="Briefly describe your marketing challenge or what you're looking to accomplish..."
+                />
+              </div>
+
+              {/* Budget */}
+              <div>
+                <label htmlFor="budget" className="block text-sm font-[600] text-gray-700 mb-2">
+                  Approximate monthly marketing budget *
+                </label>
+                <select
+                  id="budget"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
+                >
+                  <option value="">Select a range</option>
+                  <option value="Under $5K">Under $5K</option>
+                  <option value="$5K - $15K">$5K - $15K</option>
+                  <option value="$15K - $50K">$15K - $50K</option>
+                  <option value="$50K+">$50K+</option>
+                </select>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={formStatus === 'loading'}
+                className="w-full px-8 py-4 bg-black text-white text-sm font-[600] rounded-md hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {formStatus === 'loading' ? 'Sending...' : 'Submit Request'}
+              </button>
+
+              {/* Status Messages */}
+              {formMessage && (
+                <div className={`p-4 rounded-md text-sm ${
+                  formStatus === 'success' 
+                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {formMessage}
+                </div>
+              )}
+            </div>
+          </form>
+
+          <p className="mt-8 text-center text-sm text-gray-500">
             Questions? Email{" "}
-            <a href="mailto:mike@mherron.com" className="text-yellow-400 hover:text-yellow-300">
+            <a href="mailto:mike@mherron.com" className="text-black font-[600] hover:text-yellow-600">
               mike@mherron.com
             </a>
           </p>
