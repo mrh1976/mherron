@@ -118,34 +118,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Michael Herron",
-            "jobTitle": "Chief Marketing Officer",
-            "url": "https://mherron.com",
-            "sameAs": [
-              "https://www.linkedin.com/in/mherron54"
-            ],
-            "alumniOf": [
-              { "@type": "Organization", "name": "Kadena" },
-              { "@type": "Organization", "name": "Chain" },
-              { "@type": "Organization", "name": "Lukka" }
-            ],
-            "knowsAbout": [
-              "Strategic Marketing",
-              "Brand Strategy",
-              "Go-to-Market Planning",
-              "Product Marketing",
-              "Growth Marketing"
-            ]
-          })
-        }}
-      />
-
       {/* NAVIGATION */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrolled ? 'bg-[#2a2927]' : 'bg-[#2a2927]'} text-white`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -755,6 +727,10 @@ export default function Home() {
               )}
             </div>
           </form>
+
+          <p className="mt-8 text-center text-sm text-gray-500">
+            Have questions? Use the form above to get in touch.
+          </p>
         </div>
       </section>
 
