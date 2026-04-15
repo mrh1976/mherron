@@ -249,7 +249,7 @@ export default function Home() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-[42px] md:text-[68px] lg:text-[80px] font-[800] mb-0 leading-[1.1] md:leading-[1.05] tracking-[-4.16px]">
-            Turn Complex Marketing Ideas
+            <span className="whitespace-nowrap">Turn Complex Marketing Ideas</span>
             <br />
             Into Measurable Results
             <span className="text-yellow-400">.</span>
