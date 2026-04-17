@@ -824,7 +824,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-[#2a2927] py-16 px-8 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-10">
             <Image
               src="/MH-logo.png"
