@@ -499,7 +499,7 @@ What really stands out is how he connects leadership to results. He is not afrai
               </p>
               <div className="text-sm">
                 <div className="font-[600]">Founder and Chief Executive Officer</div>
-                <div className="text-gray-500">Geletla+</div>
+                <div className="text-gray-500">Geletka+</div>
               </div>
             </div>
 
