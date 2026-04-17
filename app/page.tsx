@@ -498,7 +498,35 @@ A lot of that comes from how he operates himself. Mike is always pushing to stay
 What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
               </p>
               <div className="text-sm">
-                <div className="font-[600]">Founder and Chief Executive Officer</div>
+                <div className="font-[600]">John Geletka | Founder</div>
+                <div className="text-gray-500">Geletka+</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;Working with Mike means being part of something that actually feels like a team. More than that, it feels like a movement toward something great. He has a natural ability to bring people together, align them, and push them to become more than what they were when they started.
+
+A lot of that comes from how he operates himself. Mike is always pushing to stay ahead, whether that’s through learning, experimenting, challenging the status quo, or simply building something on his own time. That mindset carries through to everyone around him.
+
+What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">John Geletka | Founder</div>
+                <div className="text-gray-500">Geletka+</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;Working with Mike means being part of something that actually feels like a team. More than that, it feels like a movement toward something great. He has a natural ability to bring people together, align them, and push them to become more than what they were when they started.
+
+A lot of that comes from how he operates himself. Mike is always pushing to stay ahead, whether that’s through learning, experimenting, challenging the status quo, or simply building something on his own time. That mindset carries through to everyone around him.
+
+What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">John Geletka | Founder</div>
                 <div className="text-gray-500">Geletka+</div>
               </div>
             </div>
