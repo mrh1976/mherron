@@ -1,4 +1,4 @@
-# Mike Herron - Marketing Executive Website
+# Mike Herron - Marketing Executive Website.
 
 Personal website for Mike Herron, Chief Marketing Officer with 25+ years of experience.
 
