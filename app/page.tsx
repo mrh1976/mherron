@@ -90,7 +90,7 @@ export default function Home() {
         });
       },
       {
-        rootMargin: '-100px 0px -60% 0px',
+        rootMargin: '-20% 0px -80% 0px',
         threshold: 0
       }
     );
@@ -151,15 +151,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <div className="flex items-center">
               <Image
                 src="/MH-logo.png"
                 alt="Michael Herron Logo"
-                width={60}
-                height={60}
-                className="w-16 h-auto hover:opacity-80 transition"
+                width={40}
+                height={40}
+                className="w-10 h-auto"
               />
-            </Link>
+            </div>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -699,26 +699,17 @@ export default function Home() {
                 <label htmlFor="challenge" className="block text-sm font-[600] text-gray-700 mb-2">
                   What marketing challenge are you facing? *
                 </label>
-                <select
+                <textarea
                   id="challenge"
                   name="challenge"
                   value={formData.challenge}
                   onChange={handleInputChange}
                   required
                   disabled={formStatus === 'loading'}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
-                >
-                  <option value="">Select your primary challenge</option>
-                  <option value="Brand Strategy & Positioning">Brand Strategy & Positioning</option>
-                  <option value="Product Launch & Go-to-Market">Product Launch & Go-to-Market</option>
-                  <option value="Lead Generation & Demand Gen">Lead Generation & Demand Gen</option>
-                  <option value="Content & Messaging Strategy">Content & Messaging Strategy</option>
-                  <option value="Marketing Team Building">Marketing Team Building</option>
-                  <option value="Partnership & Sponsorship Strategy">Partnership & Sponsorship Strategy</option>
-                  <option value="Digital Marketing & Paid Media">Digital Marketing & Paid Media</option>
-                  <option value="Marketing Operations & Process">Marketing Operations & Process</option>
-                  <option value="Other / Multiple Challenges">Other / Multiple Challenges</option>
-                </select>
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50 resize-none"
+                  placeholder="Briefly describe your marketing challenge or what you're looking to accomplish..."
+                />
               </div>
 
               {/* Budget */}
@@ -764,46 +755,37 @@ export default function Home() {
               )}
             </div>
           </form>
+
+          <p className="mt-8 text-center text-sm text-gray-500">
+            Questions? Email{" "}
+            <a href="mailto:mike@mherron.com" className="text-black font-[600] hover:text-yellow-600">
+              mike@mherron.com
+            </a>
+          </p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#2a2927] py-12 px-8 border-t border-gray-800">
+      <footer className="bg-white py-12 px-8 border-t border-gray-100">
         <div className="max-w-5xl mx-auto text-center">
           <Image
             src="/MH-logo.png"
             alt="Michael Herron Logo"
-            width={60}
-            height={60}
-            className="w-16 h-auto mx-auto mb-6 opacity-90"
+            width={40}
+            height={40}
+            className="w-10 h-auto mx-auto mb-6"
           />
-          
-          {/* Social Links */}
-          <div className="mb-6">
-            <a 
-              href="https://www.linkedin.com/in/mherron54" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white hover:text-yellow-400 transition text-sm font-[600]"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              Connect on LinkedIn
-            </a>
-          </div>
-          
-          <p className="text-xs text-gray-400 leading-relaxed max-w-3xl mx-auto mb-4">
+          <p className="text-xs text-gray-500 leading-relaxed max-w-3xl mx-auto mb-4">
             All trademarks, logos, and brand names displayed on this website are the property of their respective owners. 
             They are used here strictly for identification and informational purposes to represent companies I have worked 
             for or partnered with throughout my career. Their appearance does not imply any endorsement, approval, 
             sponsorship, or affiliation with this website or with me personally. Any references to past work, partnerships, 
             or collaborations are historical in nature and are presented solely to provide context regarding my professional experience.
           </p>
-          <p className="text-xs text-gray-500 mb-2">©2026 Michael Herron LLC</p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400 mb-2">©2026 Michael Herron LLC</p>
+          <p className="text-xs text-gray-400">
             Designed in partnership with{" "}
-            <a href="https://nzmotiondesign.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://nzmotiondesign.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
               nzmotiondesign.com
             </a>
           </p>
