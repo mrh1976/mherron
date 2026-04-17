@@ -268,75 +268,75 @@ export default function Home() {
       </section>
 
       {/* STATS SECTION */}
-      <section className="py-16 md:py-20 px-4 md:px-8 bg-black text-white">
+      <section className="py-10 md:py-12 px-4 md:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 pb-12 border-b border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 pb-8 border-b border-white/10">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-2 tracking-tight">
                 20<span className="text-yellow-400">+</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Years Experience
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-2 tracking-tight">
                 6<span className="text-yellow-400">x</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 First Marketing Hire
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-2 tracking-tight">
                 $300M<span className="text-yellow-400">+</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Funds Raised
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-3 tracking-tight">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-[800] mb-2 tracking-tight">
                 50<span className="text-yellow-400">+</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Global Brands
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight leading-tight">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-2 tracking-tight leading-tight">
                 $12M<span className="text-yellow-400">→</span>$1.35B
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Unicorn Valuation
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-2 tracking-tight">
                 100<span className="text-yellow-400">+</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Team Members Hired
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-3 tracking-tight">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-[800] mb-2 tracking-tight">
                 30<span className="text-yellow-400">+</span>
               </div>
-              <div className="text-[11px] uppercase tracking-widest text-white/50">
+              <div className="text-[10px] uppercase tracking-widest text-white/50">
                 Product Launches
               </div>
             </div>
           </div>
 
-          <div className="pt-8 md:pt-12 border-t border-white/10 text-center">
-            <div className="text-[11px] uppercase tracking-widest text-white/50 mb-3">
+          <div className="pt-6 border-t border-white/10 text-center">
+            <div className="text-[10px] uppercase tracking-widest text-white/50 mb-2">
               Experience
             </div>
-            <div className="text-sm md:text-lg text-white/80 flex items-center justify-center gap-2 md:gap-3 flex-wrap">
+            <div className="text-sm md:text-base text-white/80 flex items-center justify-center gap-2 md:gap-3 flex-wrap">
               <span>Client Side</span>
               <span className="text-yellow-400">|</span>
               <span>Agency Side</span>
@@ -823,31 +823,19 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#2a2927] py-12 px-8 border-t border-gray-800">
-        <div className="max-w-5xl mx-auto text-center">
-          <Image
-            src="/MH-logo.png"
-            alt="Michael Herron Logo"
-            width={60}
-            height={60}
-            className="w-[60px] h-auto mx-auto mb-6 opacity-90"
-          />
-
-          <div className="mb-6">
-            <a
-              href="https://www.linkedin.com/in/mherron54"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white hover:text-yellow-400 transition text-sm font-[600]"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              Connect on LinkedIn
-            </a>
+      <footer className="bg-[#2a2927] py-16 px-8 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10">
+            <Image
+              src="/MH-logo.png"
+              alt="Michael Herron Logo"
+              width={56}
+              height={56}
+              className="w-14 h-auto opacity-90"
+            />
           </div>
 
-          <p className="text-xs text-gray-400 leading-relaxed max-w-3xl mx-auto mb-4">
+          <p className="text-[15px] md:text-[17px] leading-relaxed text-white/65 max-w-6xl mb-12">
             All trademarks, logos, and brand names displayed on this website are
             the property of their respective owners. They are used here strictly
             for identification and informational purposes to represent companies I
@@ -858,18 +846,35 @@ export default function Home() {
             and are presented solely to provide context regarding my professional
             experience.
           </p>
-          <p className="text-xs text-gray-500 mb-2">©2026 Michael Herron LLC</p>
-          <p className="text-xs text-gray-500">
-            Designed in partnership with{" "}
-            <a
-              href="https://nzmotiondesign.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-            >
-              nzmotiondesign.com
-            </a>
-          </p>
+
+          <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="text-white/60 text-[15px]">
+              ©2026 Michael Herron LLC
+            </div>
+
+            <div className="flex items-center gap-6 flex-wrap">
+              <a
+                href="https://www.linkedin.com/in/mherron54"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-yellow-400 transition text-[15px]"
+              >
+                LinkedIn
+              </a>
+
+              <p className="text-white/60 text-[15px]">
+                Designed in partnership with{" "}
+                <a
+                  href="https://nzmotiondesign.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-yellow-400 transition"
+                >
+                  nzmotiondesign.com
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </main>
