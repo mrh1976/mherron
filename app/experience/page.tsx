@@ -166,7 +166,7 @@ export default function ExperiencePage() {
                 alt="Michael Herron Logo"
                 width={60}
                 height={60}
-                className="w-15 h-auto hover:opacity-80 transition"
+                className="w-16 h-auto hover:opacity-80 transition"
               />
             </Link>
 
