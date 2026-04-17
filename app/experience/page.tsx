@@ -307,7 +307,7 @@ export default function ExperiencePage() {
             alt="Michael Herron Logo"
             width={60}
             height={60}
-            className="w-15 h-auto mx-auto mb-6 opacity-90"
+            className="w-16 h-auto mx-auto mb-6 opacity-90"
           />
           
           {/* Social Links */}
