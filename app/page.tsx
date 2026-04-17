@@ -88,15 +88,9 @@ export default function Home() {
             setActiveSection(entry.target.id);
           }
         });
-        
-        // Clear active section if we're at the top and no sections are intersecting
-        const anyIntersecting = entries.some(entry => entry.isIntersecting);
-        if (!anyIntersecting && window.scrollY < 300) {
-          setActiveSection('');
-        }
       },
       {
-        rootMargin: '-20% 0px -80% 0px',
+        rootMargin: '-100px 0px -60% 0px',
         threshold: 0
       }
     );
@@ -664,6 +658,24 @@ export default function Home() {
                 />
               </div>
 
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-[600] text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent disabled:opacity-50 disabled:bg-gray-50"
+                  placeholder="your@email.com"
+                />
+              </div>
+
               {/* Company */}
               <div>
                 <label htmlFor="company" className="block text-sm font-[600] text-gray-700 mb-2">
@@ -752,13 +764,6 @@ export default function Home() {
               )}
             </div>
           </form>
-
-          <p className="mt-8 text-center text-sm text-gray-500">
-            Questions? Email{" "}
-            <a href="mailto:mike@mherron.com" className="text-black font-[600] hover:text-yellow-600">
-              mike@mherron.com
-            </a>
-          </p>
         </div>
       </section>
 
@@ -770,7 +775,7 @@ export default function Home() {
             alt="Michael Herron Logo"
             width={60}
             height={60}
-            className="w-15 h-auto mx-auto mb-6 opacity-90"
+            className="w-16 h-auto mx-auto mb-6 opacity-90"
           />
           
           {/* Social Links */}
