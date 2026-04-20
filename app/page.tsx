@@ -505,29 +505,21 @@ What really stands out is how he connects leadership to results. He is not afrai
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;Working with Mike means being part of something that actually feels like a team. More than that, it feels like a movement toward something great. He has a natural ability to bring people together, align them, and push them to become more than what they were when they started.
-
-A lot of that comes from how he operates himself. Mike is always pushing to stay ahead, whether that’s through learning, experimenting, challenging the status quo, or simply building something on his own time. That mindset carries through to everyone around him.
-
-What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
+                &quot;Mike was great to work with. He always came prepared, understood the bigger picture, and knew how to keep things moving without creating unnecessary noise. A lot of people can bring ideas, but Mike is one of the few who can also execute and keep everyone aligned along the way. He understands partnerships, branding, and how to make programs successful. More importantly, he is someone people trust and enjoy working with..&quot;
               </p>
               <div className="text-sm">
-                <div className="font-[600]">John Geletka | Founder</div>
-                <div className="text-gray-500">Geletka+</div>
+                <div className="font-[600]">Brian Oates | Executive Director of Corporate Sales</div>
+                <div className="text-gray-500">New England Patriots</div>
               </div>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;Working with Mike means being part of something that actually feels like a team. More than that, it feels like a movement toward something great. He has a natural ability to bring people together, align them, and push them to become more than what they were when they started.
-
-A lot of that comes from how he operates himself. Mike is always pushing to stay ahead, whether that’s through learning, experimenting, challenging the status quo, or simply building something on his own time. That mindset carries through to everyone around him.
-
-What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
+                &quot;I’ve worked with Mike in different chapters of our careers, and what has always been consistent is the way he shows up. He’s smart, direct, dependable, and knows how to get things done. He has a strong marketing mind, but he also understands people, clients, and how to navigate real business challenges. Mike brings energy, ideas, and leadership to the table, and he has a way of making the people around him better. Any company would be better off having him in the room..&quot;
               </p>
               <div className="text-sm">
-                <div className="font-[600]">John Geletka | Founder</div>
-                <div className="text-gray-500">Geletka+</div>
+                <div className="font-[600]">Mark Skroch | SVP Client Leadership</div>
+                <div className="text-gray-500">RAPP</div>
               </div>
             </div>
 
