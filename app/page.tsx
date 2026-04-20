@@ -406,31 +406,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
+    {/* TESTIMONIALS SECTION */}
       <section className="py-24 md:py-32 px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-[800] mb-12 md:mb-16 leading-[1.05] tracking-[-2.5px] text-center">
             What People Say<span className="text-yellow-400">.</span>
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;Mike is second to none as a marketing leader. He keeps teams aligned, stakeholders informed, and stays focused on outcomes that matter. His command of the CMO role is universally impressive, and his honesty, transparency, and execution consistently show in the results.&quot;
+                &quot;Working with Mike means being part of something that actually feels like a team. More than that, it feels like a movement toward something great. He has a natural ability to bring people together, align them, and push them to become more than what they were when they started.
+
+A lot of that comes from how he operates himself. Mike is always pushing to stay ahead, whether that’s through learning, experimenting, challenging the status quo, or simply building something on his own time. That mindset carries through to everyone around him.
+
+What really stands out is how he connects leadership to results. He is not afraid of a KPI. In fact, he leans into them. And if they are not there, he makes sure they are. That clarity and accountability make every organization he is part of better..&quot;
               </p>
               <div className="text-sm">
-                <div className="font-[600]">CEO & Co-Founder</div>
-                <div className="text-gray-500">Web3 Infrastructure Company</div>
+                <div className="font-[600]">John Geletka | Founder</div>
+                <div className="text-gray-500">Geletka+</div>
               </div>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
-                &quot;Mike completely transformed how we think about our brand and positioning. His work went far beyond a typical rebrand. He defined our ideal customer profile, clarified our messaging, and created a strategic foundation that guided every aspect of our new identity. The result was a successful rebrand that truly reflects who we are and how we serve our clients. I was blown away by the depth and quality of his work.&quot;
+                &quot;Mike was great to work with. He always came prepared, understood the bigger picture, and knew how to keep things moving without creating unnecessary noise. A lot of people can bring ideas, but Mike is one of the few who can also execute and keep everyone aligned along the way. He understands partnerships, branding, and how to make programs successful. More importantly, he is someone people trust and enjoy working with..&quot;
               </p>
               <div className="text-sm">
-                <div className="font-[600]">Founder</div>
-                <div className="text-gray-500">Technical Recruitment Firm</div>
+                <div className="font-[600]">Brian Oates | Executive Director of Corporate Sales</div>
+                <div className="text-gray-500">New England Patriots</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;I’ve worked with Mike in different chapters of our careers, and what has always been consistent is the way he shows up. He’s smart, direct, dependable, and knows how to get things done. He has a strong marketing mind, but he also understands people, clients, and how to navigate real business challenges. Mike brings energy, ideas, and leadership to the table, and he has a way of making the people around him better. Any company would be better off having him in the room..&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">Mark Skroch | SVP Client Leadership</div>
+                <div className="text-gray-500">RAPP</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <p className="text-[#6b6b6b] text-[17px] leading-relaxed mb-6 italic">
+                &quot;Mike completely transformed how we think about our brand and positioning. This wasn’t just a rebrand, he helped us define our ideal customer, sharpen our messaging, and build a strategic foundation behind everything we do. The end result is a brand that finally feels aligned with who we are, how we serve our clients and has already given stronger inbound interest. I was genuinely blown away by the depth and quality of his work and very grateful for his efforts. .&quot;
+              </p>
+              <div className="text-sm">
+                <div className="font-[600]">Emily Landon | Founder</div>
+                <div className="text-gray-500">The Tech Recruiter</div>
               </div>
             </div>
           </div>
