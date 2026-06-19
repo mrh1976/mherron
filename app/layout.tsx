@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body>
         {/* Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1HLYS59QVZ"
@@ -32,8 +32,8 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Analytics */}
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
