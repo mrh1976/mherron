@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
-
+ 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mherron.com'),
   title: "Michael Herron | Fractional CMO | Free Audit | Chicago",
